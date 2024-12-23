@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 const mockMonthlyTheme = {
   title: "[Placeholder] Wellness & Prevention Month",
   description: "[Placeholder] Discover comprehensive wellness programs and preventive healthcare services available in Malaysia. Learn about health screening packages, lifestyle consultations, and more.",
-  imageUrl: "/placeholder.svg?height=300&width=400&text=Monthly+Theme",
+  imageUrl: "/images/mock-image-theme.webp",
   altText: "Monthly Health Theme Illustration"
 }
 
