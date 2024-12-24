@@ -102,7 +102,7 @@ export default function VideosPage() {
                 Experience World-Class Healthcare in Malaysia
               </h2>
               <p className="text-white/90">
-                A comprehensive look at Malaysia's healthcare excellence
+                A comprehensive look at Malaysia&apos;s healthcare excellence
               </p>
             </div>
           </div>

@@ -12,15 +12,22 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 
+// Add interface for search result type
+interface SearchResult {
+  id: number
+  title: string
+  type: 'treatment' | 'hospital' | 'doctor'
+}
+
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('')
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([])
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically call your search API
     // For now, we'll just simulate some results
-    const simulatedResults = [
+    const simulatedResults: SearchResult[] = [
       { id: 1, title: 'Cardiology Services in Kuala Lumpur', type: 'treatment' },
       { id: 2, title: 'Dr. Ahmad Specialist Hospital', type: 'hospital' },
       { id: 3, title: 'Dr. Sarah Lee, Oncologist', type: 'doctor' },
@@ -52,7 +59,7 @@ export default function Search() {
           <div className="mt-4">
             <h3 className="font-semibold mb-2">Results:</h3>
             <ul className="space-y-2">
-              {searchResults.map((result: any) => (
+              {searchResults.map((result: SearchResult) => (
                 <li key={result.id} className="p-2 bg-gray-100 rounded">
                   <span className="font-medium">{result.title}</span>
                   <span className="ml-2 text-sm text-gray-500">({result.type})</span>
