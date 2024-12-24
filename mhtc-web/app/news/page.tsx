@@ -15,21 +15,21 @@ const newsArticles = [
     title: 'Malaysia Ranked Top Healthcare Destination in Southeast Asia',
     excerpt: 'Malaysia has been recognized as the leading healthcare destination in Southeast Asia, according to a recent international survey.',
     date: '2023-05-15',
-    image: '/placeholder.svg?height=200&width=400&text=Healthcare+Ranking',
+    image: '/images/maalaysia-image.webp?height=200&width=400&text=Healthcare+Ranking',
   },
   {
     id: 2,
     title: 'New State-of-the-Art Cancer Treatment Center Opens in Kuala Lumpur',
     excerpt: 'A cutting-edge cancer treatment facility has been inaugurated in Kuala Lumpur, offering advanced therapies and personalized care.',
     date: '2023-04-28',
-    image: '/placeholder.svg?height=200&width=400&text=Cancer+Center',
+    image: '/images/maalaysia-image.webp?height=200&width=400&text=Cancer+Center',
   },
   {
     id: 3,
     title: 'MHTC Launches Digital Health Initiative for International Patients',
     excerpt: 'The Malaysia Healthcare Travel Council introduces a new digital platform to streamline services for international patients.',
     date: '2023-04-10',
-    image: '/placeholder.svg?height=200&width=400&text=Digital+Health',
+    image: '/images/maalaysia-image.webp?height=200&width=400&text=Digital+Health',
   },
 ]
 

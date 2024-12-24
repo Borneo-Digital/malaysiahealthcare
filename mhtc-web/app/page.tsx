@@ -1,17 +1,17 @@
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
 import JourneyBridge from '@/components/JourneyBridge'
 import QuickAccess from '@/components/QuickAccess'
-import Link from 'next/link'
 import Script from 'next/script'
 import MonthlyThemeBanner from '@/components/MonthlyThemeBanner'
+import AnimatedHero from '@/components/AnimatedHero'
+import ScrollIndicator from '@/components/ScrollIndicatior'
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center">
+        <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
           {/* Background with Malaysian elements */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -22,37 +22,24 @@ export default function Home() {
               className="object-cover opacity-90"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" style={{ marginBottom: '-2rem' }} />
           </div>
 
           {/* Hero Content */}
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-shadow-lg" tabIndex={0}>
-              Experience the Perfect Harmony of Healthcare and Hospitality
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-white text-shadow-md" tabIndex={0}>
-              Where world-class medical excellence meets Malaysian warmth
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/for-traveller">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto"
-                >
-                  Start Your Journey
-                </Button>
-              </Link>
-            </div>
-          </div>
+          <AnimatedHero />
+
+          {/* Scroll Indicator */}
+          <ScrollIndicator />
         </section>
 
         {/* Journey Bridge Section */}
-        <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-24" aria-labelledby="journey-title">
-          <div className="container mx-auto text-center mb-8">
-            <h2 id="journey-title" className="text-2xl sm:text-3xl font-bold text-primary mb-4" tabIndex={0}>
+        <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24" aria-labelledby="journey-title">
+          <div className="container mx-auto text-center mb-12">
+            <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Your Journey With Us</span>
+            <h2 id="journey-title" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" tabIndex={0}>
               Your Health Travel Journey
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto" tabIndex={0}>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg" tabIndex={0}>
               We&apos;re with you every step of the way. Explore our comprehensive health travel journey designed for your comfort and peace of mind.
             </p>
           </div>
@@ -60,7 +47,7 @@ export default function Home() {
         </section>
 
         {/* Quick Access Section */}
-        <section className="bg-gray-50 py-12 sm:py-24" aria-labelledby="quick-access-title">
+        <section className="bg-pattern bg-gray-50 py-16 sm:py-24" aria-labelledby="quick-access-title">
           <div className="container mx-auto">
             <h2 id="quick-access-title" className="text-2xl sm:text-3xl font-bold text-primary mb-8 text-center" tabIndex={0}>
               Quick Access

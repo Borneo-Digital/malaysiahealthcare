@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'Malaysia Healthcare Travel Council - World-Class Healthcare in Malaysia',
   description: 'Experience top-quality medical care and hospitality with Malaysia Healthcare Travel Council. Plan your healthcare journey in Malaysia today.',
   keywords: 'Malaysia healthcare, health travel, world-class healthcare, MHTC',
+  icons: {
+    icon: '/images/favicon.ico',
+    shortcut: 'images/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

@@ -49,7 +49,7 @@ export default function ForTraveller() {
     <div className="container mx-auto px-4 py-8 sm:py-16 mt-16">
       <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4 sm:mb-6" tabIndex={0}>For Travellers</h1>
       <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-3xl" tabIndex={0}>
-        Plan your healthcare journey to Malaysia with confidence. We're here to guide you through every step of your medical travel experience.
+        Plan your healthcare journey to Malaysia with confidence. We&apos;re here to guide you through every step of your medical travel experience.
       </p>
 
       {/* Quick Links Section */}
@@ -91,7 +91,7 @@ export default function ForTraveller() {
                 <p className="text-sm text-gray-600 mb-4">Learn about what to expect and how to prepare for this stage of your journey.</p>
               </CardContent>
               <CardFooter>
-                <Link href={`/journey/${stage.title.toLowerCase()}`} className="w-full">
+                <Link href={`/${stage.title.toLowerCase()}`} className="w-full">
                   <Button variant="outline" className="w-full">
                     <span className="sr-only">Explore {stage.title} stage</span>
                     Explore Stage
@@ -141,7 +141,7 @@ export default function ForTraveller() {
               <CardHeader>
                 <div className="flex items-center mb-4">
                   <Image
-                    src={`/placeholder.svg?height=50&width=50&text=Patient+${testimonial}`}
+                    src={`/images/patient-mock.jpeg?height=50&width=50&text=Patient+${testimonial}`}
                     alt=""
                     width={50}
                     height={50}
@@ -155,7 +155,7 @@ export default function ForTraveller() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+                  &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.&quot;
                 </p>
               </CardContent>
               <CardFooter>
@@ -180,7 +180,7 @@ export default function ForTraveller() {
           </CardHeader>
           <CardContent>
             <p className="mb-4" tabIndex={0}>
-              Get personalized support for your medical travel to Malaysia. We're here to answer your questions and help you plan your journey.
+              Get personalized support for your medical travel to Malaysia. We&apos;re here to answer your questions and help you plan your journey.
             </p>
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row justify-between items-center gap-4">

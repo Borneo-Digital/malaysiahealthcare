@@ -1,5 +1,9 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import { Button } from './ui/button'
+import { ArrowRight } from 'lucide-react'
 
 // Mock data for the monthly theme
 const mockMonthlyTheme = {
@@ -11,33 +15,41 @@ const mockMonthlyTheme = {
 
 export default function MonthlyThemeBanner() {
   return (
-    <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-lg overflow-hidden shadow-lg">
-      <div className="md:flex">
-        <div className="md:flex-shrink-0">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <div className="md:flex items-center">
+        <div className="md:w-2/5 relative">
           <Image
             src={mockMonthlyTheme.imageUrl}
             alt={mockMonthlyTheme.altText}
-            width={400}
-            height={300}
-            className="h-48 w-full object-cover md:h-full md:w-48"
+            width={600}
+            height={400}
+            className="h-64 w-full md:h-96 object-cover transform group-hover:scale-105 transition-transform duration-700"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
         </div>
-        <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-primary font-semibold">
-            Monthly Health Theme
-          </div>
-          <h2 className="mt-2 text-2xl font-semibold text-gray-900">
+        <div className="p-8 md:p-12 md:w-3/5">
+          <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            {new Date().toLocaleString('default', { month: 'long' })}
+          </span>
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             {mockMonthlyTheme.title}
-          </h2>
-          <p className="mt-3 text-gray-600">
+          </h3>
+          <p className="text-gray-600 mb-6 text-lg">
             {mockMonthlyTheme.description}
           </p>
-          <Button className="mt-4 bg-primary hover:bg-primary/90">
+          <Button className="group">
             Explore Theme
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

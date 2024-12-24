@@ -1,10 +1,17 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Plane, Hospital, Clipboard, Calculator } from 'lucide-react'
+import { 
+  Plane, 
+  Hospital, 
+  Clipboard, 
+  Calculator,  
+  CheckCircle,
+  Users,
+  Download 
+} from 'lucide-react'
+import { JourneyNavigation } from '@/components/JourneyNavigation'
 
 export const metadata: Metadata = {
   title: 'Pre-Arrival Information | Malaysia Healthcare Travel Council',
@@ -15,131 +22,201 @@ const preArrivalSteps = [
   {
     title: "Visa Requirements",
     icon: Plane,
-    content: "Learn about the visa requirements for medical travel to Malaysia. Most visitors can enter Malaysia without a visa for stays up to 90 days.",
-    link: "#visa-requirements"
+    content: "Most visitors can enter Malaysia without a visa for stays up to 90 days.",
+    link: "#visa-requirements",
+    features: [
+      "Check visa eligibility",
+      "Prepare required documents",
+      "Apply if necessary"
+    ],
+    details: {
+      description: "Understanding entry requirements is crucial for your healthcare journey.",
+      faqs: [
+        {
+          question: "Do I need a visa for medical treatment?",
+          answer: "Most visitors can enter Malaysia without a visa for stays up to 90 days. However, some nationalities may require a medical visa for longer stays."
+        },
+        {
+          question: "What documents should I prepare?",
+          answer: "You'll need a valid passport, medical documents from your current healthcare provider, and proof of sufficient funds."
+        }
+      ]
+    }
   },
   {
     title: "Hospital Selection",
     icon: Hospital,
-    content: "Browse our curated list of world-class hospitals and healthcare facilities across Malaysia.",
-    link: "#hospital-selection"
+    content: "Choose from our network of internationally accredited hospitals.",
+    link: "#hospital-selection",
+    features: [
+      "Compare facilities and specialties",
+      "Review accreditations",
+      "Check specialist availability"
+    ],
+    details: {
+      description: "Select from Malaysia's finest healthcare facilities.",
+      faqs: [
+        {
+          question: "How do I select the right hospital?",
+          answer: "Consider factors like specialization, location, and patient reviews. Our healthcare advisors can guide your decision."
+        }
+      ]
+    }
   },
   {
     title: "Treatment Planning",
     icon: Clipboard,
-    content: "Understand the process of planning your treatment, from initial consultations to scheduling procedures.",
-    link: "#treatment-planning"
+    content: "Plan your medical journey with our expert healthcare team.",
+    link: "#treatment-planning",
+    features: [
+      "Schedule consultations",
+      "Review treatment options",
+      "Plan your timeline"
+    ],
+    details: {
+      description: "Comprehensive treatment planning for peace of mind.",
+      faqs: [
+        {
+          question: "How do I start planning?",
+          answer: "Begin with an online consultation to discuss your needs and receive preliminary advice."
+        }
+      ]
+    }
   },
   {
     title: "Cost Estimation",
     icon: Calculator,
-    content: "Get an overview of healthcare costs in Malaysia and learn how to obtain detailed estimates for your treatment.",
-    link: "#cost-estimation"
+    content: "Get transparent cost estimates and payment options.",
+    link: "#cost-estimation",
+    features: [
+      "Receive detailed quotations",
+      "Explore insurance coverage",
+      "Understand payment methods"
+    ],
+    details: {
+      description: "Clear and transparent healthcare costs.",
+      faqs: [
+        {
+          question: "How can I get a cost estimate?",
+          answer: "Submit your medical reports for a comprehensive cost breakdown from our team."
+        }
+      ]
+    }
   }
 ]
 
 export default function PreArrival() {
   return (
-    <div className="container mx-auto px-4 py-16 mt-16">
-      <h1 className="text-4xl font-bold text-primary mb-6">Pre-Arrival Information</h1>
-      <p className="text-xl text-gray-600 mb-12">
-        Planning your healthcare journey to Malaysia is an important step towards receiving world-class medical care. Here's everything you need to know before you arrive.
-      </p>
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-28 pb-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Pre-Arrival Information
+          </h1>
+          <p className="text-lg text-gray-600 mb-12">
+            Begin your healthcare journey to Malaysia with confidence. Here&apos;s everything you need to know 
+            about planning your visit for world-class medical care.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        {preArrivalSteps.map((step, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <step.icon className="mr-2 h-6 w-6 text-primary" />
-                {step.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">{step.content}</p>
-              <Link href={step.link}>
-                <Button variant="outline">Learn More</Button>
-              </Link>
-            </CardContent>
-          </Card>
-        ))}
+        {/* Progress Steps */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="relative">
+            <div className="absolute left-0 right-0 h-0.5 bg-gray-200 top-1/2 -translate-y-1/2 z-0 hidden md:block" />
+            <div className="flex flex-col md:flex-row justify-between relative z-10">
+              {['Pre-Arrival', 'Arrival', 'Treatment', 'Post-Treatment'].map((step, i) => (
+                <div key={i} className="flex md:flex-col items-center mb-4 md:mb-0">
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                    i === 0 ? 'bg-primary text-white' : 'bg-white border-2 border-gray-200'
+                  }`}>
+                    {i === 0 ? <CheckCircle className="w-5 h-5" /> : (i + 1)}
+                  </div>
+                  <span className={`ml-3 md:ml-0 md:mt-2 font-medium ${
+                    i === 0 ? 'text-primary' : 'text-gray-500'
+                  }`}>
+                    {step}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {preArrivalSteps.map((step, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all">
+                <CardHeader className="space-y-1 pb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10">
+                      <step.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">{step.title}</CardTitle>
+                  </div>
+                  <p className="text-sm text-gray-600">{step.content}</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6">
+                    {step.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-primary/60" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Accordion type="single" collapsible>
+                    {step.details.faqs.map((faq, i) => (
+                      <AccordionItem key={i} value={`item-${i}`}>
+                        <AccordionTrigger className="text-sm hover:no-underline">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-sm text-gray-600">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Journey Navigation */}
+          <JourneyNavigation currentStep="pre-arrival" />
+
+          {/* CTA Section */}
+          <div className="mt-12">
+            <Card className="bg-primary text-white border-none">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-2">Ready to Start Your Healthcare Journey?</h2>
+                    <p className="text-white/90">Our care team is ready to assist with your pre-arrival planning.</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                    <Button 
+                      variant="secondary"
+                      className="w-full sm:w-auto bg-white text-primary hover:bg-white/90"
+                    >
+                      <Users className="w-4 h-4 mr-2" />
+                      Contact Care Team
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Guide
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
-
-      <section id="visa-requirements" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Visa Requirements</h2>
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Do I need a visa to enter Malaysia for medical treatment?</AccordionTrigger>
-            <AccordionContent>
-              Most visitors can enter Malaysia without a visa for stays up to 90 days. However, if you plan to stay longer or are from a country that requires a visa, you may need to apply for a medical visa. We recommend checking with the Malaysian embassy or consulate in your country for the most up-to-date information.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>How do I apply for a medical visa?</AccordionTrigger>
-            <AccordionContent>
-              To apply for a medical visa, you'll need to provide:
-              <ul className="list-disc pl-5 mt-2">
-                <li>A valid passport</li>
-                <li>Completed visa application form</li>
-                <li>Recent passport-sized photographs</li>
-                <li>Letter from the hospital in Malaysia confirming your treatment</li>
-                <li>Proof of sufficient funds for your stay</li>
-                <li>Return ticket</li>
-              </ul>
-              Contact your nearest Malaysian embassy or consulate for detailed application procedures.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </section>
-
-      <section id="hospital-selection" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Hospital Selection</h2>
-        <p className="mb-4">
-          Malaysia offers a wide range of internationally accredited hospitals and medical facilities. Our healthcare providers are known for their state-of-the-art technology, skilled medical professionals, and high standards of care.
-        </p>
-        <Link href="/medical-directory">
-          <Button>Browse Medical Directory</Button>
-        </Link>
-      </section>
-
-      <section id="treatment-planning" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Treatment Planning</h2>
-        <ol className="list-decimal pl-5 space-y-2">
-          <li>Research and choose your preferred hospital or healthcare provider</li>
-          <li>Contact the hospital's international patient center</li>
-          <li>Provide your medical records and receive an initial assessment</li>
-          <li>Discuss treatment options and receive a treatment plan</li>
-          <li>Schedule your appointment or procedure</li>
-          <li>Make travel arrangements</li>
-        </ol>
-      </section>
-
-      <section id="cost-estimation" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Cost Estimation</h2>
-        <p className="mb-4">
-          Healthcare costs in Malaysia are generally lower compared to many Western countries, without compromising on quality. To get an accurate cost estimate:
-        </p>
-        <ul className="list-disc pl-5 mb-4">
-          <li>Contact your chosen hospital's international patient center</li>
-          <li>Provide detailed information about your condition and required treatment</li>
-          <li>Request a detailed breakdown of estimated costs</li>
-          <li>Inquire about payment methods and any available packages</li>
-        </ul>
-        <p>
-          Remember to factor in additional costs such as accommodation, meals, and transportation when budgeting for your medical trip.
-        </p>
-      </section>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Need Assistance?</CardTitle>
-          <CardDescription>Our team is here to help you plan your healthcare journey to Malaysia.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button>Contact Us</Button>
-        </CardContent>
-      </Card>
-    </div>
+    </main>
   )
 }
-

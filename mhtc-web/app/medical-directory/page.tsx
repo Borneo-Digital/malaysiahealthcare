@@ -56,7 +56,7 @@ export default function MedicalDirectory() {
         {[1, 2, 3].map((provider) => (
           <div key={provider} className="bg-white rounded-lg shadow-md overflow-hidden">
             <Image
-              src={`/placeholder.svg?height=200&width=400&text=Provider+${provider}`}
+              src={`/images/provider-mock.jpeg?height=200&width=400&text=Provider+${provider}`}
               alt={`Featured Provider ${provider}`}
               width={400}
               height={200}

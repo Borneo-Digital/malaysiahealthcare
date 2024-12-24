@@ -74,3 +74,71 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23BE1E2D' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.animate-scroll {
+  animation: scroll 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.text-shadow-lg {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.text-shadow-md {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+@layer utilities {
+  .animate-in {
+    animation-duration: 700ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --tw-enter-opacity: initial;
+    --tw-enter-scale: initial;
+    --tw-enter-rotate: initial;
+    --tw-enter-translate-x: initial;
+    --tw-enter-translate-y: initial;
+  }
+
+  .fade-in {
+    animation-name: fade-in;
+  }
+
+  .slide-in-from-bottom-4 {
+    --tw-enter-translate-y: 1rem;
+    animation-name: slide-in-from-bottom;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-bottom {
+    from {
+      transform: translateY(var(--tw-enter-translate-y));
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
