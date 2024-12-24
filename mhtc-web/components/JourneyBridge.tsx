@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from '@/lib/i18n'
@@ -70,20 +71,16 @@ export default function JourneyBridge() {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4">
-      {/* Bridge Background */}
-      <div className="relative h-[200px] sm:h-[300px] mb-8 bg-[#F8E6E6] rounded-lg overflow-hidden">
-        {/* Central Pattern */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-32 h-32">
-            <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse" />
-            <div className="absolute inset-[15%] border-2 border-primary/20 rounded-full" />
-            <div className="absolute inset-[30%] border-2 border-primary/20 rounded-full" />
-          </div>
-        </div>
-        {/* Horizontal Lines */}
-        <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-primary/20 transform -translate-y-1/2" />
-        <div className="absolute top-1/3 left-0 right-0 h-[1px] bg-primary/20" />
-        <div className="absolute top-2/3 left-0 right-0 h-[1px] bg-primary/20" />
+      {/* Bridge Background Image */}
+      <div className="relative h-[200px] sm:h-[300px] mb-8 rounded-lg overflow-hidden">
+        <Image
+          src="/images/journey-bridge.webp"
+          alt="Placeholder for journey bridge image"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/70" />
       </div>
 
       {/* Journey Steps */}
@@ -115,7 +112,7 @@ export default function JourneyBridge() {
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="text-center">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FDF2F2] flex items-center justify-center mx-auto mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <span className="text-primary font-medium text-sm sm:text-base">{step.id}</span>
                   </div>
                   <h3 className="text-primary font-bold text-base sm:text-lg mb-2">{t(step.titleKey)}</h3>
@@ -148,7 +145,7 @@ export default function JourneyBridge() {
                           </li>
                         ))}
                       </ul>
-                      <Link 
+                      <Link
                         href={step.link}
                         className={cn(
                           "inline-flex w-full justify-center items-center px-4 py-2",
