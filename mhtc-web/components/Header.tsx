@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { MessageCircle } from 'lucide-react'
-import LanguageSwitcher from './LanguageSwitcher'
-import Search from './Search'
-import MobileMenu from './MobileMenu'
-import { useTranslation } from '@/lib/i18n'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Button } from '@/components/ui/button'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { MessageCircle } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import Search from "./Search";
+import MobileMenu from "./MobileMenu";
+import { useTranslation } from "@/lib/i18n";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { href: '/', labelKey: 'home' },
-  { href: '/medical-directory', labelKey: 'medicalDirectory' },
-  { href: '/for-traveller', labelKey: 'forTraveller' },
-  { href: '/news', labelKey: 'newsAndArticles' },
-  { href: '/about', labelKey: 'aboutUs' },
-  { href: '/contact', labelKey: 'contactUs' },
-]
+  { href: "/", labelKey: "Home" },
+  { href: "/member-hospital", labelKey: "Member Hospital" },
+  { href: "/healthcare-travel-guide", labelKey: "Healthcare Travel Guide" },
+  { href: "/mhtc-chronicles", labelKey: "MHTC Chronicles" },
+  { href: "/corporate-profile", labelKey: "Corporate Profile" },
+  { href: "/contact", labelKey: "Contact Us" },
+];
 
 export default function Header() {
-  const [lang, setLang] = useState('en')
-  const { t } = useTranslation(lang)
+  const [lang, setLang] = useState("en");
+  const { t } = useTranslation(lang);
 
   useEffect(() => {
-    const storedLang = localStorage.getItem('lang') || 'en'
-    setLang(storedLang)
-  }, [])
+    const storedLang = localStorage.getItem("lang") || "en";
+    setLang(storedLang);
+  }, []);
 
   return (
     <header className="fixed w-full top-0 z-50 bg-white shadow-md">
@@ -39,18 +39,25 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <MobileMenu navItems={navItems} lang={lang} />
-            <Link href="/" className="flex items-center ml-2 md:ml-0" aria-label="Malaysia Healthcare Home">
+            <Link
+              href="/"
+              className="flex items-center ml-2 md:ml-0"
+              aria-label="Malaysia Healthcare Home"
+            >
               <Image
-                src="/images/malaysiahealthcarelogo.webp"
-                alt=""
-                width={180}
+                src="/images/mhtc-logo.png"
+                alt="MHTC Logo"
+                width={100}
                 height={50}
                 className="h-10 sm:h-12 w-auto"
               />
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8" aria-label="Main Navigation">
+          <nav
+            className="hidden md:flex items-center space-x-4 lg:space-x-8"
+            aria-label="Main Navigation"
+          >
             <AnimatePresence>
               {navItems.map((item) => (
                 <motion.div
@@ -86,6 +93,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
-

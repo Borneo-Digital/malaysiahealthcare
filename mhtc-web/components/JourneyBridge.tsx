@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useTranslation } from '@/lib/i18n'
-import { ArrowRight, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
+import { ArrowRight, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 const journeySteps = [
   {
     id: 1,
@@ -17,8 +17,8 @@ const journeySteps = [
       "visaRequirements",
       "hospitalSelection",
       "treatmentPlanning",
-      "costEstimation"
-    ]
+      "costEstimation",
+    ],
   },
   {
     id: 2,
@@ -29,8 +29,8 @@ const journeySteps = [
       "meetAndGreet",
       "immigrationAssistance",
       "transportation",
-      "conciergeServices"
-    ]
+      "conciergeServices",
+    ],
   },
   {
     id: 3,
@@ -41,8 +41,8 @@ const journeySteps = [
       "medicalProcedures",
       "specialistConsultation",
       "patientCare",
-      "companionActivities"
-    ]
+      "companionActivities",
+    ],
   },
   {
     id: 4,
@@ -53,28 +53,28 @@ const journeySteps = [
       "followUpCare",
       "rehabilitation",
       "tourismActivities",
-      "returnPlanning"
-    ]
-  }
-]
+      "returnPlanning",
+    ],
+  },
+];
 
 export default function JourneyBridge() {
-  const [activeStep, setActiveStep] = useState<number | null>(null)
-  const { t } = useTranslation('en')
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+  const { t } = useTranslation("en");
 
   // Close modal when pressing escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setActiveStep(null)
-    }
-    window.addEventListener('keydown', handleEscape)
-    return () => window.removeEventListener('keydown', handleEscape)
-  }, [])
+      if (e.key === "Escape") setActiveStep(null);
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
 
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4">
       {/* Bridge Background Image */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -104,8 +104,8 @@ export default function JourneyBridge() {
             <motion.div
               className={cn(
                 "bg-white rounded-xl p-6 transition-all duration-300 h-full flex flex-col cursor-pointer",
-                activeStep === step.id 
-                  ? "ring-2 ring-primary shadow-lg" 
+                activeStep === step.id
+                  ? "ring-2 ring-primary shadow-lg"
                   : "hover:shadow-md hover:scale-[1.02]",
                 "touch-manipulation"
               )}
@@ -115,10 +115,16 @@ export default function JourneyBridge() {
             >
               <div className="text-center flex flex-col flex-1">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-primary font-semibold text-lg">{step.id}</span>
+                  <span className="text-primary font-semibold text-lg">
+                    {step.id}
+                  </span>
                 </div>
-                <h3 className="text-primary font-bold text-lg mb-3">{t(step.titleKey)}</h3>
-                <p className="text-gray-600 line-clamp-2">{t(step.descriptionKey)}</p>
+                <h3 className="text-primary font-bold text-lg mb-3">
+                  {t(step.titleKey)}
+                </h3>
+                <p className="text-gray-600 line-clamp-2">
+                  {t(step.descriptionKey)}
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -160,20 +166,22 @@ export default function JourneyBridge() {
                   <h4 className="text-2xl font-bold text-gray-900 mb-6 pr-8">
                     {t(journeySteps[activeStep - 1].titleKey)}
                   </h4>
-                  
+
                   <ul className="space-y-4 mb-8">
-                    {journeySteps[activeStep - 1].details.map((detail, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="text-gray-600 flex items-start text-base"
-                      >
-                        <span className="mr-3 text-primary text-lg">•</span>
-                        <span>{t(detail)}</span>
-                      </motion.li>
-                    ))}
+                    {journeySteps[activeStep - 1].details.map(
+                      (detail, index) => (
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                          className="text-gray-600 flex items-start text-base"
+                        >
+                          <span className="mr-3 text-primary text-lg">•</span>
+                          <span>{t(detail)}</span>
+                        </motion.li>
+                      )
+                    )}
                   </ul>
 
                   <Link
@@ -182,7 +190,7 @@ export default function JourneyBridge() {
                               bg-primary text-white text-lg font-semibold rounded-xl 
                               hover:bg-primary/90 transition-colors group mb-4"
                   >
-                    {t('learnMore')}
+                    {t("learnMore")}
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -194,12 +202,6 @@ export default function JourneyBridge() {
 
       {/* Add connecting lines between journey steps for better visual flow */}
       <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2 z-0" />
-
-      {/* Add step indicators */}
-      <div className="absolute top-0 left-0 bg-primary/10 px-3 py-1 rounded-full text-primary text-sm font-medium">
-        Step {activeStep} of 4
-      </div>
     </div>
-  )
+  );
 }
-
