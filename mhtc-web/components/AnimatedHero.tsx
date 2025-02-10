@@ -1,18 +1,19 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function AnimatedHero() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8 }
-  }
+    transition: { duration: 0.8 },
+  };
 
   return (
-    <motion.div 
+    <motion.div
       className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -20,7 +21,7 @@ export default function AnimatedHero() {
     >
       <motion.h1
         {...fadeInUp}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-shadow-lg"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-shadow-lg flex flex-col items-center gap-6"
         tabIndex={0}
       >
         <motion.span
@@ -28,34 +29,16 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Experience the Perfect
-        </motion.span>{' '}
+          Experience
+        </motion.span>
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-primary-light"
         >
-          Harmony
-        </motion.span>{' '}
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          of Healthcare and Hospitality
+          Malaysia Healthcare
         </motion.span>
       </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-white text-shadow-md"
-        tabIndex={0}
-      >
-        Where world-class medical excellence meets Malaysian warmth
-      </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +46,7 @@ export default function AnimatedHero() {
         transition={{ duration: 0.8, delay: 1 }}
         className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none"
       >
-        <Link href="/for-traveller" className="w-full sm:w-auto">
+        <Link href="/healthcare-travel-guide" className="w-full sm:w-auto">
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto px-8 group transition-all duration-300"
@@ -73,16 +56,7 @@ export default function AnimatedHero() {
             </span>
           </Button>
         </Link>
-        <Button
-          size="lg"
-          variant="outline"
-          className="border-2 border-white text-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto px-8 bg-black/20 group"
-        >
-          <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
-            Watch Our Story
-          </span>
-        </Button>
       </motion.div>
     </motion.div>
-  )
+  );
 }
