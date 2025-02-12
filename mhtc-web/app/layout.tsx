@@ -1,46 +1,48 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import ChatWidget from '@/components/ChatWidget'
-import Script from 'next/script'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
+import Script from "next/script";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Malaysia Healthcare Travel Council - World-Class Healthcare in Malaysia',
-  description: 'Experience top-quality medical care and hospitality with Malaysia Healthcare Travel Council. Plan your healthcare journey in Malaysia today.',
-  keywords: 'Malaysia healthcare, health travel, world-class healthcare, MHTC',
+  title:
+    "Malaysia Healthcare Travel Council - World-Class Healthcare in Malaysia",
+  description:
+    "Experience top-quality medical care and hospitality with Malaysia Healthcare Travel Council. Plan your healthcare journey in Malaysia today.",
+  keywords: "Malaysia healthcare, health travel, world-class healthcare, MHTC",
   icons: {
-    icon: '/images/favicon.ico',
-    shortcut: 'images/favicon.ico',
+    icon: "/images/favicon.ico",
+    shortcut: "images/favicon.ico",
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://malaysiahealthcare.org',
-    siteName: 'Malaysia Healthcare Travel Council',
+    type: "website",
+    locale: "en_US",
+    url: "https://malaysiahealthcare.org",
+    siteName: "Malaysia Healthcare Travel Council",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Malaysia Healthcare Travel Council',
+        alt: "Malaysia Healthcare Travel Council",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@MHTCMalaysia',
-    creator: '@MHTCMalaysia',
+    card: "summary_large_image",
+    site: "@MHTCMalaysia",
+    creator: "@MHTCMalaysia",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -74,6 +76,5 @@ export default function RootLayout({
         </Script>
       </body>
     </html>
-  )
+  );
 }
-

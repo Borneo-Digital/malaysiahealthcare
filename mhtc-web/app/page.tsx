@@ -90,11 +90,8 @@ export default function Home() {
         </section>
 
         {/* News Updates */}
-        <section
-          className="bg-white py-12 sm:py-16"
-          aria-labelledby="monthly-theme-title"
-        >
-          <div className="container mx-auto px-4">
+        <section className="bg-white py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto">
             <NewsUpdates />
           </div>
         </section>

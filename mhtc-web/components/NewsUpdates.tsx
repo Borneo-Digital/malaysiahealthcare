@@ -36,44 +36,44 @@ const newsItems = [
 
 export default function NewsUpdates() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Latest Updates</h2>
-          <Link href="/mhtc-chronicles">
-            <Button
-              variant="outline"
-              className="hover:bg-primary hover:text-white transition-colors"
-            >
-              View All News
-            </Button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {newsItems.map((item) => (
-            <Link key={item.id} href={item.link}>
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative h-48">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{item.date}</p>
-                  <h3 className="text-xl font-semibold mb-2 line-clamp-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 line-clamp-3">{item.excerpt}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="px-4">
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold">Latest Updates</h2>
+        <Link href="/mhtc-chronicles">
+          <Button
+            variant="outline"
+            className="hover:bg-primary hover:text-white transition-colors"
+          >
+            View All News
+          </Button>
+        </Link>
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {newsItems.map((item) => (
+          <Link key={item.id} href={item.link} className="block h-full">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+              <div className="relative w-full h-48">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <p className="text-sm text-gray-500 mb-2">{item.date}</p>
+                <h3 className="text-xl font-semibold mb-2 line-clamp-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 line-clamp-3 flex-grow">
+                  {item.excerpt}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
