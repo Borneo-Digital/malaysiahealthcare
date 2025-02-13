@@ -183,7 +183,7 @@ export default function PreArrival() {
             ))}
           </div>
 
-          {/* Journey Navigation */}
+          {/* Journey Navigation Here*/}
           <JourneyNavigation currentStep="pre-arrival" />
 
           {/* CTA Section */}
