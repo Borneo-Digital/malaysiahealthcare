@@ -79,13 +79,14 @@ export default function JourneyBridge() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="relative h-[200px] sm:h-[300px] mb-8 rounded-lg overflow-hidden"
+        className="relative h-[200px] sm:h-[500px] mb-8 rounded-lg overflow-hidden"
       >
         <Image
-          src="/images/journey-bridge.webp"
+          src="/images/journey-bridge.png"
           alt="Journey bridge visualization"
           layout="fill"
           objectFit="cover"
+          objectPosition="top center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-white/70" />
@@ -201,7 +202,7 @@ export default function JourneyBridge() {
       </AnimatePresence>
 
       {/* Add connecting lines between journey steps for better visual flow */}
-      <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2 z-0" />
+      {/* <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2 z-0" /> */}
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About MHTC | Malaysia Healthcare Travel Council",
@@ -112,7 +113,7 @@ export default function CorporateProfile() {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/travel3.webp?height=400&width=600&text=MHTC+Team"
+                src="/images/corporate-image.png"
                 alt="MHTC Team"
                 fill
                 className="object-cover"
@@ -185,18 +186,14 @@ export default function CorporateProfile() {
                   opportunities for collaboration.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    variant="secondary"
-                    className="bg-white text-primary hover:bg-white/90"
-                  >
-                    Contact Us
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary bg-transparent"
-                  >
-                    Learn More
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                      variant="secondary"
+                      className="bg-white text-primary hover:bg-white/90"
+                    >
+                      Contact Us
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
