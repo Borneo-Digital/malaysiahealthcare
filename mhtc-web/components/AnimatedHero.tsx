@@ -28,34 +28,16 @@ export default function AnimatedHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Experience
+          Malaysia Healthcare Travel Council:
         </motion.span>
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Malaysia Healthcare
+          Connecting You to Quality Healthcare in Malaysia
         </motion.span>
       </motion.h1>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none"
-      >
-        <Link href="/healthcare-travel-guide" className="w-full sm:w-auto">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto px-8 group transition-all duration-300"
-          >
-            <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
-              Start Your Journey
-            </span>
-          </Button>
-        </Link>
-      </motion.div>
     </motion.div>
   );
 }
