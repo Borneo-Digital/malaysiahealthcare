@@ -1,0 +1,18 @@
+{
+    "contactUs": "Hubungi Kami",
+    "organizationName": "Majlis Pelancongan Kesihatan Malaysia",
+    "address": "28 Menara 2, Jalan Rakyat, Brickfields, 50470 Kuala Lumpur",
+    "quickLinks": "Pautan Pantas",
+    "memberHospitals": "Hospital Ahli",
+    "healthcareTravelGuide": "Panduan Pelancongan Kesihatan",
+    "mhtcChronicles": "Kronik MHTC",
+    "corporateProfile": "Profil Korporat",
+    "followUs": "Ikuti Kami",
+    "socialMedia": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram"
+    },
+    "copyright": "© {{year}} Majlis Pelancongan Kesihatan Malaysia. Semua hak cipta terpelihara."
+}

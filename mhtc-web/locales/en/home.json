@@ -1,0 +1,87 @@
+{
+    "hero": {
+        "title": "Malaysia Healthcare Travel Council",
+        "subtitle": "Experience World-Class Healthcare in Malaysia"
+    },
+    "journey": {
+        "title": "Your Healthcare Journey",
+        "description": "We're with you every step of the way",
+        "learnMore": "Learn More",
+        "preArrival": "Pre-Arrival",
+        "arrival": "Arrival",
+        "treatment": "Treatment",
+        "postTreatment": "Post-Treatment",
+        "planYourJourney": "Plan Your Journey",
+        "welcomeToMalaysia": "Welcome to Malaysia",
+        "worldClassHealthcare": "World-Class Healthcare",
+        "recoveryAndBeyond": "Recovery & Beyond",
+        "visaRequirements": "Visa Requirements",
+        "hospitalSelection": "Hospital Selection",
+        "treatmentPlanning": "Treatment Planning",
+        "costEstimation": "Cost Estimation",
+        "meetAndGreet": "Meet & Greet",
+        "immigrationAssistance": "Immigration Assistance",
+        "transportation": "Transportation",
+        "conciergeServices": "Concierge Services",
+        "medicalProcedures": "Medical Procedures",
+        "specialistConsultation": "Specialist Consultation",
+        "patientCare": "Patient Care",
+        "companionActivities": "Companion Activities",
+        "followUpCare": "Follow-Up Care",
+        "rehabilitation": "Rehabilitation",
+        "tourismActivities": "Tourism Activities",
+        "returnPlanning": "Return Planning"
+    },
+    "carousel": {
+        "slides": [
+            {
+                "id": 1,
+                "image": "/images/carousel/slide1.jpg",
+                "title": "Welcome to Malaysia Healthcare",
+                "description": "Experience world-class healthcare services"
+            },
+            {
+                "id": 2,
+                "image": "/images/carousel/slide2.jpg",
+                "title": "State-of-the-Art Facilities",
+                "description": "Advanced medical technology and expert care"
+            },
+            {
+                "id": 3,
+                "image": "/images/carousel/slide3.jpg",
+                "title": "Your Health Journey",
+                "description": "Personalized care for your well-being"
+            }
+        ]
+    },
+    "news": {
+        "title": "Latest Updates",
+        "viewAll": "View All News",
+        "items": [
+            {
+                "id": 1,
+                "title": "Malaysia Healthcare Wins Global Recognition",
+                "date": "March 15, 2024",
+                "image": "/images/news/news1.jpg",
+                "excerpt": "Malaysia Healthcare has been recognized as one of the world's top healthcare destinations...",
+                "link": "/mhtc-chronicles/healthcare-recognition"
+            },
+            {
+                "id": 2,
+                "title": "New Medical Tourism Packages Launched",
+                "date": "March 10, 2024",
+                "image": "/images/news/news2.jpg",
+                "excerpt": "MHTC introduces comprehensive medical tourism packages for international patients...",
+                "link": "/mhtc-chronicles/new-packages"
+            },
+            {
+                "id": 3,
+                "title": "Healthcare Innovation Summit 2024",
+                "date": "March 5, 2024",
+                "image": "/images/news/news3.jpg",
+                "excerpt": "Join us for the upcoming Healthcare Innovation Summit featuring global healthcare leaders...",
+                "link": "/mhtc-chronicles/innovation-summit"
+            }
+        ]
+    }
+}

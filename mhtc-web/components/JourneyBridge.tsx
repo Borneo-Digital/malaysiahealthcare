@@ -1,66 +1,120 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "@/lib/i18n";
 import { ArrowRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-const journeySteps = [
-  {
-    id: 1,
-    titleKey: "preArrival",
-    descriptionKey: "planYourJourney",
-    link: "/pre-arrival",
-    details: [
-      "visaRequirements",
-      "hospitalSelection",
-      "treatmentPlanning",
-      "costEstimation",
-    ],
-  },
-  {
-    id: 2,
-    titleKey: "arrival",
-    descriptionKey: "welcomeToMalaysia",
-    link: "/arrival",
-    details: [
-      "meetAndGreet",
-      "immigrationAssistance",
-      "transportation",
-      "conciergeServices",
-    ],
-  },
-  {
-    id: 3,
-    titleKey: "treatment",
-    descriptionKey: "worldClassHealthcare",
-    link: "/treatment",
-    details: [
-      "medicalProcedures",
-      "specialistConsultation",
-      "patientCare",
-      "companionActivities",
-    ],
-  },
-  {
-    id: 4,
-    titleKey: "postTreatment",
-    descriptionKey: "recoveryAndBeyond",
-    link: "/post-treatment",
-    details: [
-      "followUpCare",
-      "rehabilitation",
-      "tourismActivities",
-      "returnPlanning",
-    ],
-  },
-];
 
-export default function JourneyBridge() {
+// Extract this interface for reuse across the application
+export interface JourneyTranslations {
+  title: string;
+  description: string;
+  learnMore: string;
+  preArrival: string;
+  arrival: string;
+  treatment: string;
+  postTreatment: string;
+  planYourJourney: string;
+  welcomeToMalaysia: string;
+  worldClassHealthcare: string;
+  recoveryAndBeyond: string;
+  visaRequirements: string;
+  hospitalSelection: string;
+  treatmentPlanning: string;
+  costEstimation: string;
+  meetAndGreet: string;
+  immigrationAssistance: string;
+  transportation: string;
+  conciergeServices: string;
+  medicalProcedures: string;
+  specialistConsultation: string;
+  patientCare: string;
+  companionActivities: string;
+  followUpCare: string;
+  rehabilitation: string;
+  tourismActivities: string;
+  returnPlanning: string;
+}
+
+interface JourneyBridgeProps {
+  translations: JourneyTranslations;
+  isRTL?: boolean;
+}
+
+export default function JourneyBridge({
+  translations,
+  isRTL = false,
+}: JourneyBridgeProps) {
   const [activeStep, setActiveStep] = useState<number | null>(null);
-  const { t } = useTranslation("en");
+
+  // Define the journey steps using the translations - memoized to prevent recalculation
+  const journeySteps = useMemo(
+    () => [
+      {
+        id: 1,
+        title: translations.preArrival,
+        description: translations.planYourJourney,
+        link: "/pre-arrival",
+        details: [
+          translations.visaRequirements,
+          translations.hospitalSelection,
+          translations.treatmentPlanning,
+          translations.costEstimation,
+        ],
+      },
+      {
+        id: 2,
+        title: translations.arrival,
+        description: translations.welcomeToMalaysia,
+        link: "/arrival",
+        details: [
+          translations.meetAndGreet,
+          translations.immigrationAssistance,
+          translations.transportation,
+          translations.conciergeServices,
+        ],
+      },
+      {
+        id: 3,
+        title: translations.treatment,
+        description: translations.worldClassHealthcare,
+        link: "/treatment",
+        details: [
+          translations.medicalProcedures,
+          translations.specialistConsultation,
+          translations.patientCare,
+          translations.companionActivities,
+        ],
+      },
+      {
+        id: 4,
+        title: translations.postTreatment,
+        description: translations.recoveryAndBeyond,
+        link: "/post-treatment",
+        details: [
+          translations.followUpCare,
+          translations.rehabilitation,
+          translations.tourismActivities,
+          translations.returnPlanning,
+        ],
+      },
+    ],
+    [translations]
+  );
+
+  // Helper function to safely get the selected step
+  const getSelectedStep = () => {
+    if (
+      activeStep === null ||
+      activeStep < 1 ||
+      activeStep > journeySteps.length
+    ) {
+      return null;
+    }
+    return journeySteps[activeStep - 1];
+  };
 
   // Close modal when pressing escape
   useEffect(() => {
@@ -72,7 +126,11 @@ export default function JourneyBridge() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-4">
+    <div
+      className={`relative w-full max-w-6xl mx-auto px-4 ${
+        isRTL ? "rtl" : "ltr"
+      }`}
+    >
       {/* Bridge Background Image */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -83,10 +141,9 @@ export default function JourneyBridge() {
       >
         <Image
           src="/images/journey-bridge.png"
-          alt="Journey bridge visualization"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="top center"
+          fill={true}
+          alt="Journey Bridge"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-white/70" />
@@ -113,6 +170,9 @@ export default function JourneyBridge() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setActiveStep(step.id)}
+              role="button"
+              aria-expanded={activeStep === step.id}
+              aria-controls={`journey-step-details-${step.id}`}
             >
               <div className="text-center flex flex-col flex-1">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
@@ -121,11 +181,9 @@ export default function JourneyBridge() {
                   </span>
                 </div>
                 <h3 className="text-primary font-bold text-lg mb-3">
-                  {t(step.titleKey)}
+                  {step.title}
                 </h3>
-                <p className="text-gray-600 line-clamp-2">
-                  {t(step.descriptionKey)}
-                </p>
+                <p className="text-gray-600 line-clamp-2">{step.description}</p>
               </div>
             </motion.div>
           </motion.div>
@@ -142,8 +200,9 @@ export default function JourneyBridge() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-center justify-center 
-                         hover:bg-black/65 transition-colors cursor-pointer"
+                       hover:bg-black/65 transition-colors cursor-pointer"
               onClick={() => setActiveStep(null)}
+              aria-hidden="true"
             >
               {/* Modal Content */}
               <motion.div
@@ -152,8 +211,12 @@ export default function JourneyBridge() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
                 className="relative w-[calc(100%-2rem)] sm:w-[90%] max-w-lg 
-                           bg-white shadow-xl rounded-2xl z-50 m-4 cursor-default"
+                         bg-white shadow-xl rounded-2xl z-50 m-4 cursor-default"
                 onClick={(e) => e.stopPropagation()}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={`journey-step-title-${activeStep}`}
+                id={`journey-step-details-${activeStep}`}
               >
                 <button
                   onClick={() => setActiveStep(null)}
@@ -164,34 +227,35 @@ export default function JourneyBridge() {
                 </button>
 
                 <div className="p-6 sm:p-8">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-6 pr-8">
-                    {t(journeySteps[activeStep - 1].titleKey)}
+                  <h4
+                    id={`journey-step-title-${activeStep}`}
+                    className="text-2xl font-bold text-gray-900 mb-6 pr-8"
+                  >
+                    {getSelectedStep()?.title || ""}
                   </h4>
 
                   <ul className="space-y-4 mb-8">
-                    {journeySteps[activeStep - 1].details.map(
-                      (detail, index) => (
-                        <motion.li
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="text-gray-600 flex items-start text-base"
-                        >
-                          <span className="mr-3 text-primary text-lg">•</span>
-                          <span>{t(detail)}</span>
-                        </motion.li>
-                      )
-                    )}
+                    {getSelectedStep()?.details.map((detail, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="text-gray-600 flex items-start text-base"
+                      >
+                        <span className="mr-3 text-primary text-lg">•</span>
+                        <span>{detail}</span>
+                      </motion.li>
+                    ))}
                   </ul>
 
                   <Link
-                    href={journeySteps[activeStep - 1].link}
+                    href={getSelectedStep()?.link || "#"}
                     className="inline-flex w-full items-center justify-center px-6 py-4 
                               bg-primary text-white text-lg font-semibold rounded-xl 
                               hover:bg-primary/90 transition-colors group mb-4"
                   >
-                    {t("learnMore")}
+                    {translations.learnMore}
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -200,9 +264,6 @@ export default function JourneyBridge() {
           </>
         )}
       </AnimatePresence>
-
-      {/* Add connecting lines between journey steps for better visual flow */}
-      {/* <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2 z-0" /> */}
     </div>
   );
 }

@@ -1,28 +1,42 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { FooterTranslations } from "@/types/translations";
 
 export default function Footer() {
+  const { t, isRTL } = useTranslation<FooterTranslations>("footer");
+  const currentYear = new Date().getFullYear();
+
+  // Replace the year placeholder in the copyright text
+  const copyright =
+    t.copyright?.replace("{{year}}", currentYear.toString()) ||
+    `© ${currentYear} Malaysia Healthcare Travel Council. All rights reserved.`;
+
   return (
-    <footer className="bg-primary">
+    <footer className={`bg-primary ${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Contact Us</h3>
-              <p className="text-white">Malaysia Healthcare Travel Council</p>
-              <p className="text-white">
-                28 Tower 2, Jalan Rakyat, Brickfields, 50470 Kuala Lumpur
-              </p>
+              <h3 className="text-lg font-bold mb-4 text-white">
+                {t.contactUs}
+              </h3>
+              <p className="text-white">{t.organizationName}</p>
+              <p className="text-white">{t.address}</p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">
+                {t.quickLinks}
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/member-hospitals"
                     className="text-white hover:text-gray-200"
                   >
-                    Member Hospitals
+                    {t.memberHospitals}
                   </Link>
                 </li>
                 <li>
@@ -30,7 +44,7 @@ export default function Footer() {
                     href="/healthcare-travel-guide"
                     className="text-white hover:text-gray-200"
                   >
-                    Healthcare Travel Guide
+                    {t.healthcareTravelGuide}
                   </Link>
                 </li>
                 <li>
@@ -38,7 +52,7 @@ export default function Footer() {
                     href="/mhtc-chronicles"
                     className="text-white hover:text-gray-200"
                   >
-                    MHTC Chronicles
+                    {t.mhtcChronicles}
                   </Link>
                 </li>
                 <li>
@@ -46,7 +60,7 @@ export default function Footer() {
                     href="/corporate-profile"
                     className="text-white hover:text-gray-200"
                   >
-                    Corporate Profile
+                    {t.corporateProfile}
                   </Link>
                 </li>
                 <li>
@@ -54,19 +68,21 @@ export default function Footer() {
                     href="/contact-us"
                     className="text-white hover:text-gray-200"
                   >
-                    Contact Us
+                    {t.contactUs}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Follow Us</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">
+                {t.followUs}
+              </h3>
               <div className="flex space-x-4">
                 <a
                   href="https://www.facebook.com/MHTCMalaysia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook"
+                  aria-label={t.socialMedia.facebook}
                   className="text-white hover:text-gray-200"
                 >
                   <Facebook className="h-6 w-6" />
@@ -75,7 +91,7 @@ export default function Footer() {
                   href="https://twitter.com/MHTCMalaysia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Twitter"
+                  aria-label={t.socialMedia.twitter}
                   className="text-white hover:text-gray-200"
                 >
                   <Twitter className="h-6 w-6" />
@@ -84,7 +100,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/malaysia-healthcare-travel-council"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
+                  aria-label={t.socialMedia.linkedin}
                   className="text-white hover:text-gray-200"
                 >
                   <Linkedin className="h-6 w-6" />
@@ -93,7 +109,7 @@ export default function Footer() {
                   href="https://www.instagram.com/malaysiahealthcare"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
+                  aria-label={t.socialMedia.instagram}
                   className="text-white hover:text-gray-200"
                 >
                   <Instagram className="h-6 w-6" />
@@ -102,10 +118,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-8 text-center text-white">
-            <p>
-              &copy; {new Date().getFullYear()} Malaysia Healthcare Travel
-              Council. All rights reserved.
-            </p>
+            <p>{copyright}</p>
           </div>
         </div>
       </div>

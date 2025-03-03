@@ -1,0 +1,87 @@
+{
+    "hero": {
+        "title": "马来西亚医疗旅游理事会",
+        "subtitle": "在马来西亚体验世界级医疗服务"
+    },
+    "journey": {
+        "title": "您的医疗旅程",
+        "description": "我们全程陪伴您",
+        "learnMore": "了解更多",
+        "preArrival": "抵达前",
+        "arrival": "抵达",
+        "treatment": "治疗",
+        "postTreatment": "治疗后",
+        "planYourJourney": "规划您的旅程",
+        "welcomeToMalaysia": "欢迎来到马来西亚",
+        "worldClassHealthcare": "世界级医疗服务",
+        "recoveryAndBeyond": "康复与未来",
+        "visaRequirements": "签证要求",
+        "hospitalSelection": "医院选择",
+        "treatmentPlanning": "治疗规划",
+        "costEstimation": "费用估算",
+        "meetAndGreet": "迎接服务",
+        "immigrationAssistance": "入境协助",
+        "transportation": "交通安排",
+        "conciergeServices": "礼宾服务",
+        "medicalProcedures": "医疗程序",
+        "specialistConsultation": "专家咨询",
+        "patientCare": "患者护理",
+        "companionActivities": "陪同人活动",
+        "followUpCare": "后续护理",
+        "rehabilitation": "康复服务",
+        "tourismActivities": "旅游活动",
+        "returnPlanning": "回程规划"
+    },
+    "carousel": {
+        "slides": [
+            {
+                "id": 1,
+                "image": "/images/carousel/slide1.jpg",
+                "title": "欢迎来到马来西亚医疗",
+                "description": "体验世界级医疗服务"
+            },
+            {
+                "id": 2,
+                "image": "/images/carousel/slide2.jpg",
+                "title": "先进设施",
+                "description": "先进医疗技术和专家护理"
+            },
+            {
+                "id": 3,
+                "image": "/images/carousel/slide3.jpg",
+                "title": "您的健康旅程",
+                "description": "为您的健康提供个性化护理"
+            }
+        ]
+    },
+    "news": {
+        "title": "最新动态",
+        "viewAll": "查看所有新闻",
+        "items": [
+            {
+                "id": 1,
+                "title": "马来西亚医疗获得全球认可",
+                "date": "2024年3月15日",
+                "image": "/images/news/news1.jpg",
+                "excerpt": "马来西亚医疗被认可为世界顶级医疗目的地之一...",
+                "link": "/mhtc-chronicles/healthcare-recognition"
+            },
+            {
+                "id": 2,
+                "title": "新医疗旅游套餐推出",
+                "date": "2024年3月10日",
+                "image": "/images/news/news2.jpg",
+                "excerpt": "MHTC为国际患者推出全面的医疗旅游套餐...",
+                "link": "/mhtc-chronicles/new-packages"
+            },
+            {
+                "id": 3,
+                "title": "2024年医疗创新峰会",
+                "date": "2024年3月5日",
+                "image": "/images/news/news3.jpg",
+                "excerpt": "请参加即将举行的医疗创新峰会，届时将有全球医疗领袖参与...",
+                "link": "/mhtc-chronicles/innovation-summit"
+            }
+        ]
+    }
+}

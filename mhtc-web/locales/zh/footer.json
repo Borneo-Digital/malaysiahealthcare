@@ -1,0 +1,18 @@
+{
+    "contactUs": "联系我们",
+    "organizationName": "马来西亚医疗旅游委员会",
+    "address": "吉隆坡布里克菲尔兹人民路28号2塔，邮编50470",
+    "quickLinks": "快速链接",
+    "memberHospitals": "成员医院",
+    "healthcareTravelGuide": "医疗旅游指南",
+    "mhtcChronicles": "MHTC纪事",
+    "corporateProfile": "公司简介",
+    "followUs": "关注我们",
+    "socialMedia": {
+        "facebook": "脸书",
+        "twitter": "推特",
+        "linkedin": "领英",
+        "instagram": "Instagram"
+    },
+    "copyright": "© {{year}} 马来西亚医疗旅游委员会。版权所有。"
+}

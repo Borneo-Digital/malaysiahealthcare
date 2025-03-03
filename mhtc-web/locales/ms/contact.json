@@ -1,0 +1,28 @@
+{
+    "getInTouch": "Hubungi Kami",
+    "form": {
+        "name": "Nama",
+        "email": "Emel",
+        "subject": "Subjek",
+        "message": "Mesej",
+        "submit": "Hantar Mesej",
+        "success": "Mesej anda telah berjaya dihantar. Kami akan menghubungi anda tidak lama lagi!",
+        "error": "Ralat berlaku semasa menghantar mesej anda. Sila cuba lagi.",
+        "validation": {
+            "name": "Sila masukkan nama anda",
+            "email": "Sila masukkan alamat emel yang sah",
+            "subject": "Sila masukkan subjek",
+            "message": "Sila masukkan mesej anda"
+        }
+    },
+    "contactInfo": {
+        "title": "Maklumat Perhubungan",
+        "address": "Alamat",
+        "phone": "Telefon",
+        "email": "Emel",
+        "hours": "Waktu Operasi"
+    },
+    "map": {
+        "title": "Cari Kami"
+    }
+}

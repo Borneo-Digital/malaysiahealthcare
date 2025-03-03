@@ -1,0 +1,28 @@
+{
+    "getInTouch": "Get in Touch",
+    "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message",
+        "success": "Your message has been sent successfully. We'll get back to you soon!",
+        "error": "An error occurred while sending your message. Please try again.",
+        "validation": {
+            "name": "Please enter your name",
+            "email": "Please enter a valid email address",
+            "subject": "Please enter a subject",
+            "message": "Please enter your message"
+        }
+    },
+    "contactInfo": {
+        "title": "Contact Information",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Operating Hours"
+    },
+    "map": {
+        "title": "Find Us"
+    }
+}

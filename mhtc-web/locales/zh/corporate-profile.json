@@ -1,0 +1,70 @@
+{
+    "pageTitle": "公司简介",
+    "hero": {
+        "title": "关于马来西亚医疗旅游委员会",
+        "subtitle": "引领医疗旅游的卓越发展"
+    },
+    "mission": {
+        "title": "我们的使命",
+        "content": "马来西亚医疗旅游委员会致力于促进和推广马来西亚的医疗旅游产业。我们努力将马来西亚定位为全球领先的医疗保健目的地，为国际患者提供世界级的高质量医疗服务。"
+    },
+    "vision": {
+        "title": "我们的愿景",
+        "content": "使马来西亚成为世界级医疗服务的首选目的地，通过医疗旅游促进可持续经济增长，同时确保最高标准的患者护理和满意度。"
+    },
+    "focusAreas": {
+        "title": "我们的重点领域",
+        "areas": {
+            "qualityAssurance": {
+                "title": "质量保证",
+                "description": "通过严格的质量控制和认证流程，确保医疗服务的最高标准。"
+            },
+            "patientExperience": {
+                "title": "患者体验",
+                "description": "为国际患者创造无缝舒适的医疗旅程，提供个性化的护理和支持。"
+            },
+            "industryCollaboration": {
+                "title": "行业合作",
+                "description": "与医疗服务提供者、促进者和行业利益相关者建立伙伴关系，加强马来西亚的医疗生态系统。"
+            },
+            "globalPromotion": {
+                "title": "全球推广",
+                "description": "通过战略营销和国际合作，将马来西亚推广为医疗旅游的领先目的地。"
+            },
+            "innovation": {
+                "title": "医疗创新",
+                "description": "采用尖端医疗技术和创新的医疗解决方案，提升患者护理水平。"
+            },
+            "capacityBuilding": {
+                "title": "能力建设",
+                "description": "通过培训、教育和知识共享，培养医疗专业人员和行业专业知识。"
+            }
+        }
+    },
+    "achievements": {
+        "title": "我们的成就",
+        "stats": {
+            "facilities": {
+                "number": "250+",
+                "label": "医疗机构"
+            },
+            "patients": {
+                "number": "1百万+",
+                "label": "国际患者"
+            },
+            "awards": {
+                "number": "30+",
+                "label": "行业奖项"
+            },
+            "years": {
+                "number": "10+",
+                "label": "卓越年份"
+            }
+        }
+    },
+    "cta": {
+        "title": "加入我们，共同塑造医疗旅游的未来",
+        "description": "与我们联系，了解更多关于我们的倡议和合作机会。",
+        "button": "联系我们"
+    }
+}

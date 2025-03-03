@@ -1,0 +1,18 @@
+{
+    "contactUs": "Contact Us",
+    "organizationName": "Malaysia Healthcare Travel Council",
+    "address": "28 Tower 2, Jalan Rakyat, Brickfields, 50470 Kuala Lumpur",
+    "quickLinks": "Quick Links",
+    "memberHospitals": "Member Hospitals",
+    "healthcareTravelGuide": "Healthcare Travel Guide",
+    "mhtcChronicles": "MHTC Chronicles",
+    "corporateProfile": "Corporate Profile",
+    "followUs": "Follow Us",
+    "socialMedia": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram"
+    },
+    "copyright": "© {{year}} Malaysia Healthcare Travel Council. All rights reserved."
+}

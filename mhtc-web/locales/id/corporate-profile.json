@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Profil Perusahaan",
+    "hero": {
+        "title": "Tentang MHTC",
+        "subtitle": "Mempelopori Keunggulan dalam Wisata Kesehatan"
+    },
+    "mission": {
+        "title": "Misi Kami",
+        "content": "Dewan Pariwisata Kesehatan Malaysia (MHTC) berkomitmen untuk memfasilitasi dan mempromosikan industri pariwisata kesehatan Malaysia. Kami berusaha untuk memposisikan Malaysia sebagai destinasi perawatan kesehatan global terkemuka, menawarkan layanan kesehatan berkualitas kelas dunia kepada pasien internasional."
+    },
+    "vision": {
+        "title": "Visi Kami",
+        "content": "Menjadikan Malaysia sebagai destinasi pilihan untuk layanan kesehatan kelas dunia, mendorong pertumbuhan ekonomi berkelanjutan melalui pariwisata medis sambil memastikan standar tertinggi dalam perawatan dan kepuasan pasien."
+    },
+    "focusAreas": {
+        "title": "Area Fokus Kami",
+        "areas": {
+            "qualityAssurance": {
+                "title": "Jaminan Kualitas",
+                "description": "Memastikan standar tertinggi dalam pemberian layanan kesehatan melalui kontrol kualitas yang ketat dan proses akreditasi."
+            },
+            "patientExperience": {
+                "title": "Pengalaman Pasien",
+                "description": "Menciptakan perjalanan kesehatan yang lancar dan nyaman untuk pasien internasional dengan perawatan dan dukungan yang dipersonalisasi."
+            },
+            "industryCollaboration": {
+                "title": "Kolaborasi Industri",
+                "description": "Membina kemitraan dengan penyedia layanan kesehatan, fasilitator, dan pemangku kepentingan industri untuk memperkuat ekosistem kesehatan Malaysia."
+            },
+            "globalPromotion": {
+                "title": "Promosi Global",
+                "description": "Mempromosikan Malaysia sebagai destinasi utama untuk wisata kesehatan melalui pemasaran strategis dan kemitraan internasional."
+            },
+            "innovation": {
+                "title": "Inovasi dalam Kesehatan",
+                "description": "Mengadopsi teknologi medis mutakhir dan solusi kesehatan inovatif untuk meningkatkan perawatan pasien."
+            },
+            "capacityBuilding": {
+                "title": "Pengembangan Kapasitas",
+                "description": "Mengembangkan profesional kesehatan dan keahlian industri melalui pelatihan, pendidikan, dan berbagi pengetahuan."
+            }
+        }
+    },
+    "achievements": {
+        "title": "Pencapaian Kami",
+        "stats": {
+            "facilities": {
+                "number": "250+",
+                "label": "Fasilitas Kesehatan"
+            },
+            "patients": {
+                "number": "1Jt+",
+                "label": "Pasien Internasional"
+            },
+            "awards": {
+                "number": "30+",
+                "label": "Penghargaan Industri"
+            },
+            "years": {
+                "number": "10+",
+                "label": "Tahun Keunggulan"
+            }
+        }
+    },
+    "cta": {
+        "title": "Bergabunglah dengan Kami dalam Membentuk Masa Depan Wisata Kesehatan",
+        "description": "Hubungi kami untuk mempelajari lebih lanjut tentang inisiatif kami dan peluang untuk kolaborasi.",
+        "button": "Hubungi Kami"
+    }
+}

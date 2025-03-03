@@ -1,0 +1,28 @@
+{
+    "getInTouch": "联系我们",
+    "form": {
+        "name": "姓名",
+        "email": "电子邮件",
+        "subject": "主题",
+        "message": "留言",
+        "submit": "发送信息",
+        "success": "您的信息已成功发送。我们将尽快与您联系！",
+        "error": "发送信息时出现错误。请重试。",
+        "validation": {
+            "name": "请输入您的姓名",
+            "email": "请输入有效的电子邮件地址",
+            "subject": "请输入主题",
+            "message": "请输入您的留言"
+        }
+    },
+    "contactInfo": {
+        "title": "联系信息",
+        "address": "地址",
+        "phone": "电话",
+        "email": "电子邮件",
+        "hours": "营业时间"
+    },
+    "map": {
+        "title": "查找我们"
+    }
+}

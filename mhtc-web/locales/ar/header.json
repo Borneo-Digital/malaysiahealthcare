@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "home": "الرئيسية",
+        "memberHospital": "المستشفيات الأعضاء",
+        "healthcareTravelGuide": "دليل السفر الصحي",
+        "mhtcChronicles": "أخبار MHTC",
+        "corporateProfile": "الملف التعريفي للشركة",
+        "contact": "اتصل بنا"
+    },
+    "accessibility": {
+        "search": "بحث",
+        "notifications": "إشعارات",
+        "toggleMenu": "تبديل القائمة",
+        "skipToContent": "انتقل إلى المحتوى"
+    }
+}

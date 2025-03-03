@@ -1,0 +1,18 @@
+{
+    "welcome": "欢迎",
+    "readMore": "阅读更多",
+    "backToHome": "返回首页",
+    "loading": "加载中",
+    "error": "错误",
+    "languages": {
+        "en": "英语",
+        "ms": "马来语",
+        "id": "印尼语",
+        "zh": "中文",
+        "ar": "阿拉伯语"
+    },
+    "accessibility": {
+        "languageSwitcher": "切换语言",
+        "switchTo": "切换到"
+    }
+}

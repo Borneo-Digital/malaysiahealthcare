@@ -4,53 +4,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const newsItems = [
-  {
-    id: 1,
-    title: "Malaysia Healthcare Wins Global Recognition",
-    date: "March 15, 2024",
-    image: "/images/news/news1.jpg",
-    excerpt:
-      "Malaysia Healthcare has been recognized as one of the world's top healthcare destinations...",
-    link: "/mhtc-chronicles/healthcare-recognition",
-  },
-  {
-    id: 2,
-    title: "New Medical Tourism Packages Launched",
-    date: "March 10, 2024",
-    image: "/images/news/news2.jpg",
-    excerpt:
-      "MHTC introduces comprehensive medical tourism packages for international patients...",
-    link: "/mhtc-chronicles/new-packages",
-  },
-  {
-    id: 3,
-    title: "Healthcare Innovation Summit 2024",
-    date: "March 5, 2024",
-    image: "/images/news/news3.jpg",
-    excerpt:
-      "Join us for the upcoming Healthcare Innovation Summit featuring global healthcare leaders...",
-    link: "/mhtc-chronicles/innovation-summit",
-  },
-];
+interface NewsUpdatesProps {
+  translations: {
+    title: string;
+    viewAll: string;
+    items: Array<{
+      id: number;
+      title: string;
+      date: string;
+      image: string;
+      excerpt: string;
+      link: string;
+    }>;
+  };
+  isRTL?: boolean;
+}
 
-export default function NewsUpdates() {
+export default function NewsUpdates({
+  translations,
+  isRTL = false,
+}: NewsUpdatesProps) {
   return (
-    <div className="px-4">
+    <div className={`px-4 ${isRTL ? "rtl" : "ltr"}`}>
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold">Latest Updates</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">{translations.title}</h2>
         <Link href="/mhtc-chronicles">
           <Button
             variant="outline"
             className="hover:bg-primary hover:text-white transition-colors"
           >
-            View All News
+            {translations.viewAll}
           </Button>
         </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {newsItems.map((item) => (
+        {translations.items.map((item) => (
           <Link key={item.id} href={item.link} className="block h-full">
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
               <div className="relative w-full h-48">
