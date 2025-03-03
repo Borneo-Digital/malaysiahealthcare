@@ -1,57 +1,128 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { ChevronDown } from 'lucide-react'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+import { useCallback, useState, useRef, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { CommonTranslations } from "@/types/translations";
 
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'ms', name: 'Bahasa Melayu' },
-  { code: 'id', name: 'Bahasa Indonesia' },
-  { code: 'zh', name: '中文' },
-  { code: 'ar', name: 'العربية' },
-]
-
-interface LanguageSwitcherProps {
-  onLanguageChange: (lang: string) => void;
+interface Language {
+  code: string;
+  region: string;
+  name: string;
+  nativeName: string;
 }
 
-export default function LanguageSwitcher({ onLanguageChange }: LanguageSwitcherProps) {
-  const [currentLang, setCurrentLang] = useState('en')
+const languages: Language[] = [
+  { code: "en", region: "GB", name: "English", nativeName: "English" },
+  { code: "ms", region: "MY", name: "Malay", nativeName: "Bahasa Melayu" },
+  {
+    code: "id",
+    region: "ID",
+    name: "Indonesian",
+    nativeName: "Bahasa Indonesia",
+  },
+  { code: "zh", region: "CN", name: "Chinese", nativeName: "中文" },
+  { code: "ar", region: "SA", name: "Arabic", nativeName: "العربية" },
+];
 
+export default function LanguageSwitcher() {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Add translation support
+  const { t } = useTranslation<CommonTranslations>("common");
+
+  // Get current locale from path
+  const currentLocale = pathname.split("/")[1] || "en";
+
+  const currentLanguage =
+    languages.find((lang) => lang.code === currentLocale) || languages[0];
+
+  // Close dropdown when clicking outside
   useEffect(() => {
-    const storedLang = localStorage.getItem('lang') || 'en'
-    setCurrentLang(storedLang)
-  }, [])
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
 
-  const handleLanguageChange = (langCode: string) => {
-    setCurrentLang(langCode)
-    localStorage.setItem('lang', langCode)
-    onLanguageChange(langCode)
-  }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const switchLanguage = useCallback(
+    (locale: string) => {
+      const newPath = pathname.replace(/^\/[^\/]+/, `/${locale}`);
+      router.push(newPath);
+      setIsOpen(false);
+    },
+    [pathname, router]
+  );
+
+  // Helper function to get translated language name
+  const getTranslatedName = (code: string): string => {
+    // If translations for language names exist in common.json
+    if (t.languages && t.languages[code]) {
+      return t.languages[code];
+    }
+    // Fallback to predefined names
+    const lang = languages.find((l) => l.code === code);
+    return lang ? lang.name : code;
+  };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="w-[80px]">
-          {currentLang.toUpperCase()}
-          <ChevronDown className="ml-2 h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => handleLanguageChange(lang.code)}>
-            {lang.name}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button
+        className="flex items-center space-x-2 text-sm font-medium px-2 py-1 hover:bg-gray-100 rounded"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-label={t.accessibility?.languageSwitcher || "Switch language"}
+      >
+        <span className="font-medium">{currentLanguage.region}</span>
+        <span>{currentLanguage.nativeName}</span>
+        <ChevronDown className="h-4 w-4" />
+      </button>
 
+      {isOpen && (
+        <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+          <div className="py-1">
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                className={`flex w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                  currentLocale === language.code
+                    ? "font-semibold bg-gray-50"
+                    : ""
+                }`}
+                onClick={() => switchLanguage(language.code)}
+                aria-label={
+                  t.accessibility?.switchTo
+                    ? `${t.accessibility.switchTo} ${getTranslatedName(
+                        language.code
+                      )}`
+                    : `Switch to ${language.name}`
+                }
+              >
+                <span className="w-8 font-medium">{language.region}</span>
+                <span>{language.nativeName}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

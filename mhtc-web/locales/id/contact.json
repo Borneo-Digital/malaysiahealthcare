@@ -1,0 +1,28 @@
+{
+    "getInTouch": "Hubungi Kami",
+    "form": {
+        "name": "Nama",
+        "email": "Email",
+        "subject": "Subjek",
+        "message": "Pesan",
+        "submit": "Kirim Pesan",
+        "success": "Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda!",
+        "error": "Terjadi kesalahan saat mengirim pesan Anda. Silakan coba lagi.",
+        "validation": {
+            "name": "Silakan masukkan nama Anda",
+            "email": "Silakan masukkan alamat email yang valid",
+            "subject": "Silakan masukkan subjek",
+            "message": "Silakan masukkan pesan Anda"
+        }
+    },
+    "contactInfo": {
+        "title": "Informasi Kontak",
+        "address": "Alamat",
+        "phone": "Telepon",
+        "email": "Email",
+        "hours": "Jam Operasional"
+    },
+    "map": {
+        "title": "Temukan Kami"
+    }
+}

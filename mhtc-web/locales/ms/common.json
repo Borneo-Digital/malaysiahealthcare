@@ -1,0 +1,18 @@
+{
+    "welcome": "Selamat Datang",
+    "readMore": "Baca Lagi",
+    "backToHome": "Kembali ke Laman Utama",
+    "loading": "Sedang Memuat",
+    "error": "Ralat",
+    "languages": {
+        "en": "Bahasa Inggeris",
+        "ms": "Bahasa Melayu",
+        "id": "Bahasa Indonesia",
+        "zh": "Bahasa Cina",
+        "ar": "Bahasa Arab"
+    },
+    "accessibility": {
+        "languageSwitcher": "Tukar bahasa",
+        "switchTo": "Tukar kepada"
+    }
+}

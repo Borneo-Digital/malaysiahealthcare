@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "home": "Beranda",
+        "memberHospital": "Rumah Sakit Anggota",
+        "healthcareTravelGuide": "Panduan Wisata Kesehatan",
+        "mhtcChronicles": "Kronik MHTC",
+        "corporateProfile": "Profil Perusahaan",
+        "contact": "Hubungi Kami"
+    },
+    "accessibility": {
+        "search": "Pencarian",
+        "notifications": "Notifikasi",
+        "toggleMenu": "Beralih menu",
+        "skipToContent": "Lewati ke konten"
+    }
+}

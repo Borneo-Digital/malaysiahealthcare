@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "home": "Home",
+        "memberHospital": "Member Hospital",
+        "healthcareTravelGuide": "Healthcare Travel Guide",
+        "mhtcChronicles": "MHTC Chronicles",
+        "corporateProfile": "Corporate Profile",
+        "contact": "Contact Us"
+    },
+    "accessibility": {
+        "search": "Search",
+        "notifications": "Notifications",
+        "toggleMenu": "Toggle menu",
+        "skipToContent": "Skip to content"
+    }
+}

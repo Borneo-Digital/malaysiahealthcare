@@ -1,0 +1,87 @@
+{
+    "hero": {
+        "title": "مجلس السياحة الصحية الماليزي",
+        "subtitle": "تجربة الرعاية الصحية العالمية في ماليزيا"
+    },
+    "journey": {
+        "title": "رحلتك الصحية",
+        "description": "نحن معك في كل خطوة",
+        "learnMore": "اعرف المزيد",
+        "preArrival": "ما قبل الوصول",
+        "arrival": "الوصول",
+        "treatment": "العلاج",
+        "postTreatment": "ما بعد العلاج",
+        "planYourJourney": "خطط لرحلتك",
+        "welcomeToMalaysia": "مرحبًا بك في ماليزيا",
+        "worldClassHealthcare": "رعاية صحية عالمية المستوى",
+        "recoveryAndBeyond": "التعافي وما بعده",
+        "visaRequirements": "متطلبات التأشيرة",
+        "hospitalSelection": "اختيار المستشفى",
+        "treatmentPlanning": "تخطيط العلاج",
+        "costEstimation": "تقدير التكلفة",
+        "meetAndGreet": "الاستقبال والترحيب",
+        "immigrationAssistance": "مساعدة الهجرة",
+        "transportation": "المواصلات",
+        "conciergeServices": "خدمات الكونسيرج",
+        "medicalProcedures": "الإجراءات الطبية",
+        "specialistConsultation": "استشارة الأخصائي",
+        "patientCare": "رعاية المريض",
+        "companionActivities": "أنشطة المرافق",
+        "followUpCare": "رعاية المتابعة",
+        "rehabilitation": "إعادة التأهيل",
+        "tourismActivities": "الأنشطة السياحية",
+        "returnPlanning": "تخطيط العودة"
+    },
+    "carousel": {
+        "slides": [
+            {
+                "id": 1,
+                "image": "/images/carousel/slide1.jpg",
+                "title": "مرحبًا بكم في الرعاية الصحية الماليزية",
+                "description": "تجربة خدمات الرعاية الصحية العالمية"
+            },
+            {
+                "id": 2,
+                "image": "/images/carousel/slide2.jpg",
+                "title": "مرافق متطورة",
+                "description": "تكنولوجيا طبية متقدمة ورعاية خبيرة"
+            },
+            {
+                "id": 3,
+                "image": "/images/carousel/slide3.jpg",
+                "title": "رحلتك الصحية",
+                "description": "رعاية شخصية لصحتك ورفاهيتك"
+            }
+        ]
+    },
+    "news": {
+        "title": "آخر التحديثات",
+        "viewAll": "عرض كافة الأخبار",
+        "items": [
+            {
+                "id": 1,
+                "title": "الرعاية الصحية الماليزية تفوز بالاعتراف العالمي",
+                "date": "15 مارس 2024",
+                "image": "/images/news/news1.jpg",
+                "excerpt": "تم الاعتراف بالرعاية الصحية الماليزية كإحدى أفضل وجهات الرعاية الصحية في العالم...",
+                "link": "/mhtc-chronicles/healthcare-recognition"
+            },
+            {
+                "id": 2,
+                "title": "إطلاق باقات جديدة للسياحة الطبية",
+                "date": "10 مارس 2024",
+                "image": "/images/news/news2.jpg",
+                "excerpt": "يقدم MHTC باقات شاملة للسياحة الطبية للمرضى الدوليين...",
+                "link": "/mhtc-chronicles/new-packages"
+            },
+            {
+                "id": 3,
+                "title": "قمة الابتكار الصحي 2024",
+                "date": "5 مارس 2024",
+                "image": "/images/news/news3.jpg",
+                "excerpt": "انضم إلينا في قمة الابتكار الصحي القادمة التي تضم قادة الرعاية الصحية العالميين...",
+                "link": "/mhtc-chronicles/innovation-summit"
+            }
+        ]
+    }
+}

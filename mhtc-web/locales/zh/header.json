@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "home": "首页",
+        "memberHospital": "会员医院",
+        "healthcareTravelGuide": "医疗旅游指南",
+        "mhtcChronicles": "MHTC 纪事",
+        "corporateProfile": "公司简介",
+        "contact": "联系我们"
+    },
+    "accessibility": {
+        "search": "搜索",
+        "notifications": "通知",
+        "toggleMenu": "切换菜单",
+        "skipToContent": "跳至内容"
+    }
+}

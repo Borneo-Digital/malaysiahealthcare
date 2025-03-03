@@ -1,0 +1,18 @@
+{
+    "welcome": "Welcome",
+    "readMore": "Read More",
+    "backToHome": "Back to Home",
+    "loading": "Loading",
+    "error": "Error",
+    "languages": {
+        "en": "English",
+        "ms": "Malay",
+        "id": "Indonesian",
+        "zh": "Chinese",
+        "ar": "Arabic"
+    },
+    "accessibility": {
+        "languageSwitcher": "Switch language",
+        "switchTo": "Switch to"
+    }
+}

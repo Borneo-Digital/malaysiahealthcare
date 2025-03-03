@@ -1,0 +1,18 @@
+{
+    "contactUs": "Hubungi Kami",
+    "organizationName": "Dewan Pariwisata Kesehatan Malaysia",
+    "address": "28 Tower 2, Jalan Rakyat, Brickfields, 50470 Kuala Lumpur",
+    "quickLinks": "Tautan Cepat",
+    "memberHospitals": "Rumah Sakit Anggota",
+    "healthcareTravelGuide": "Panduan Wisata Kesehatan",
+    "mhtcChronicles": "Kronik MHTC",
+    "corporateProfile": "Profil Perusahaan",
+    "followUs": "Ikuti Kami",
+    "socialMedia": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram"
+    },
+    "copyright": "© {{year}} Dewan Pariwisata Kesehatan Malaysia. Semua hak dilindungi."
+}

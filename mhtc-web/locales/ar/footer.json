@@ -1,0 +1,18 @@
+{
+    "contactUs": "اتصل بنا",
+    "organizationName": "مجلس السياحة الصحية الماليزي",
+    "address": "٢٨ برج ٢، شارع رعية، بريكفيلدز، ٥٠٤٧٠ كوالالمبور",
+    "quickLinks": "روابط سريعة",
+    "memberHospitals": "المستشفيات الأعضاء",
+    "healthcareTravelGuide": "دليل سياحة الرعاية الصحية",
+    "mhtcChronicles": "وقائع مجلس السياحة الصحية الماليزي",
+    "corporateProfile": "الملف المؤسسي",
+    "followUs": "تابعنا",
+    "socialMedia": {
+        "facebook": "فيسبوك",
+        "twitter": "تويتر",
+        "linkedin": "لينكد إن",
+        "instagram": "انستغرام"
+    },
+    "copyright": "© {{year}} مجلس السياحة الصحية الماليزي. جميع الحقوق محفوظة."
+}

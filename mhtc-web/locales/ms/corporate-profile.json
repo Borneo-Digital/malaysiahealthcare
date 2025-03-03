@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Profil Korporat",
+    "hero": {
+        "title": "Tentang MHTC",
+        "subtitle": "Menerajui Kecemerlangan dalam Pelancongan Kesihatan"
+    },
+    "mission": {
+        "title": "Misi Kami",
+        "content": "Majlis Pelancongan Kesihatan Malaysia (MHTC) komited untuk memudahkan dan mempromosikan industri pelancongan kesihatan Malaysia. Kami berusaha untuk menjadikan Malaysia sebagai destinasi penjagaan kesihatan global terkemuka, menawarkan perkhidmatan penjagaan kesihatan berkualiti kelas dunia kepada pesakit antarabangsa."
+    },
+    "vision": {
+        "title": "Visi Kami",
+        "content": "Untuk menjadikan Malaysia destinasi pilihan bagi perkhidmatan penjagaan kesihatan kelas dunia, memupuk pertumbuhan ekonomi mampan melalui pelancongan perubatan sambil memastikan standard tertinggi dalam penjagaan dan kepuasan pesakit."
+    },
+    "focusAreas": {
+        "title": "Bidang Fokus Kami",
+        "areas": {
+            "qualityAssurance": {
+                "title": "Jaminan Kualiti",
+                "description": "Memastikan standard tertinggi dalam penyampaian penjagaan kesihatan melalui kawalan kualiti yang ketat dan proses akreditasi."
+            },
+            "patientExperience": {
+                "title": "Pengalaman Pesakit",
+                "description": "Mewujudkan perjalanan penjagaan kesihatan yang lancar dan selesa untuk pesakit antarabangsa dengan penjagaan dan sokongan yang dipersonalisasi."
+            },
+            "industryCollaboration": {
+                "title": "Kerjasama Industri",
+                "description": "Memupuk perkongsian dengan penyedia penjagaan kesihatan, pemudah cara, dan pihak berkepentingan industri untuk memperkukuh ekosistem penjagaan kesihatan Malaysia."
+            },
+            "globalPromotion": {
+                "title": "Promosi Global",
+                "description": "Mempromosikan Malaysia sebagai destinasi utama untuk pelancongan kesihatan melalui pemasaran strategik dan perkongsian antarabangsa."
+            },
+            "innovation": {
+                "title": "Inovasi dalam Penjagaan Kesihatan",
+                "description": "Memanfaatkan teknologi perubatan terkini dan penyelesaian penjagaan kesihatan inovatif untuk meningkatkan penjagaan pesakit."
+            },
+            "capacityBuilding": {
+                "title": "Pembinaan Kapasiti",
+                "description": "Membangunkan profesional penjagaan kesihatan dan kepakaran industri melalui latihan, pendidikan, dan perkongsian pengetahuan."
+            }
+        }
+    },
+    "achievements": {
+        "title": "Pencapaian Kami",
+        "stats": {
+            "facilities": {
+                "number": "250+",
+                "label": "Fasiliti Penjagaan Kesihatan"
+            },
+            "patients": {
+                "number": "1J+",
+                "label": "Pesakit Antarabangsa"
+            },
+            "awards": {
+                "number": "30+",
+                "label": "Anugerah Industri"
+            },
+            "years": {
+                "number": "10+",
+                "label": "Tahun Kecemerlangan"
+            }
+        }
+    },
+    "cta": {
+        "title": "Sertai Kami dalam Membentuk Masa Depan Pelancongan Kesihatan",
+        "description": "Hubungi kami untuk mengetahui lebih lanjut tentang inisiatif kami dan peluang untuk kerjasama.",
+        "button": "Hubungi Kami"
+    }
+}

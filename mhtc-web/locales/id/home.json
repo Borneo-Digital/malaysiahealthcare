@@ -1,0 +1,87 @@
+{
+    "hero": {
+        "title": "Dewan Pariwisata Kesehatan Malaysia",
+        "subtitle": "Rasakan Layanan Kesehatan Kelas Dunia di Malaysia"
+    },
+    "journey": {
+        "title": "Perjalanan Kesehatan Anda",
+        "description": "Kami mendampingi Anda di setiap langkah",
+        "learnMore": "Pelajari Lebih Lanjut",
+        "preArrival": "Pra-Kedatangan",
+        "arrival": "Kedatangan",
+        "treatment": "Perawatan",
+        "postTreatment": "Pasca Perawatan",
+        "planYourJourney": "Rencanakan Perjalanan Anda",
+        "welcomeToMalaysia": "Selamat Datang di Malaysia",
+        "worldClassHealthcare": "Layanan Kesehatan Kelas Dunia",
+        "recoveryAndBeyond": "Pemulihan & Selanjutnya",
+        "visaRequirements": "Persyaratan Visa",
+        "hospitalSelection": "Pemilihan Rumah Sakit",
+        "treatmentPlanning": "Perencanaan Perawatan",
+        "costEstimation": "Estimasi Biaya",
+        "meetAndGreet": "Penyambutan",
+        "immigrationAssistance": "Bantuan Imigrasi",
+        "transportation": "Transportasi",
+        "conciergeServices": "Layanan Concierge",
+        "medicalProcedures": "Prosedur Medis",
+        "specialistConsultation": "Konsultasi Spesialis",
+        "patientCare": "Perawatan Pasien",
+        "companionActivities": "Aktivitas Pendamping",
+        "followUpCare": "Perawatan Lanjutan",
+        "rehabilitation": "Rehabilitasi",
+        "tourismActivities": "Aktivitas Pariwisata",
+        "returnPlanning": "Perencanaan Kepulangan"
+    },
+    "carousel": {
+        "slides": [
+            {
+                "id": 1,
+                "image": "/images/carousel/slide1.jpg",
+                "title": "Selamat Datang di Kesehatan Malaysia",
+                "description": "Rasakan layanan kesehatan kelas dunia"
+            },
+            {
+                "id": 2,
+                "image": "/images/carousel/slide2.jpg",
+                "title": "Fasilitas Mutakhir",
+                "description": "Teknologi medis canggih dan perawatan ahli"
+            },
+            {
+                "id": 3,
+                "image": "/images/carousel/slide3.jpg",
+                "title": "Perjalanan Kesehatan Anda",
+                "description": "Perawatan personal untuk kesejahteraan Anda"
+            }
+        ]
+    },
+    "news": {
+        "title": "Berita Terbaru",
+        "viewAll": "Lihat Semua Berita",
+        "items": [
+            {
+                "id": 1,
+                "title": "Kesehatan Malaysia Meraih Pengakuan Global",
+                "date": "15 Maret 2024",
+                "image": "/images/news/news1.jpg",
+                "excerpt": "Kesehatan Malaysia telah diakui sebagai salah satu destinasi kesehatan terbaik di dunia...",
+                "link": "/mhtc-chronicles/healthcare-recognition"
+            },
+            {
+                "id": 2,
+                "title": "Paket Pariwisata Medis Baru Diluncurkan",
+                "date": "10 Maret 2024",
+                "image": "/images/news/news2.jpg",
+                "excerpt": "MHTC memperkenalkan paket pariwisata medis komprehensif untuk pasien internasional...",
+                "link": "/mhtc-chronicles/new-packages"
+            },
+            {
+                "id": 3,
+                "title": "Konferensi Inovasi Kesehatan 2024",
+                "date": "5 Maret 2024",
+                "image": "/images/news/news3.jpg",
+                "excerpt": "Bergabunglah dengan kami untuk Konferensi Inovasi Kesehatan mendatang dengan para pemimpin kesehatan global...",
+                "link": "/mhtc-chronicles/innovation-summit"
+            }
+        ]
+    }
+}

@@ -7,28 +7,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const slides = [
-  {
-    id: 1,
-    image: "/images/carousel/slide1.jpg",
-    title: "Welcome to Malaysia Healthcare",
-    description: "Experience world-class healthcare services",
-  },
-  {
-    id: 2,
-    image: "/images/carousel/slide2.jpg",
-    title: "State-of-the-Art Facilities",
-    description: "Advanced medical technology and expert care",
-  },
-  {
-    id: 3,
-    image: "/images/carousel/slide3.jpg",
-    title: "Your Health Journey",
-    description: "Personalized care for your well-being",
-  },
-];
+interface HomeCarouselProps {
+  translations: {
+    slides: Array<{
+      id: number;
+      image: string;
+      title: string;
+      description: string;
+    }>;
+  };
+}
 
-export default function HomeCarousel() {
+export default function HomeCarousel({ translations }: HomeCarouselProps) {
+  const slides = translations.slides;
+
   return (
     <div className="relative w-full h-[600px]">
       <Swiper

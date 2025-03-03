@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Corporate Profile",
+    "hero": {
+        "title": "About MHTC",
+        "subtitle": "Pioneering Excellence in Healthcare Travel"
+    },
+    "mission": {
+        "title": "Our Mission",
+        "content": "The Malaysia Healthcare Travel Council (MHTC) is committed to facilitating and promoting the healthcare travel industry of Malaysia. We strive to position Malaysia as the leading global healthcare destination, offering world-class quality healthcare services to international patients."
+    },
+    "vision": {
+        "title": "Our Vision",
+        "content": "To make Malaysia the preferred destination for world-class healthcare services, fostering sustainable economic growth through medical tourism while ensuring the highest standards of patient care and satisfaction."
+    },
+    "focusAreas": {
+        "title": "Our Focus Areas",
+        "areas": {
+            "qualityAssurance": {
+                "title": "Quality Assurance",
+                "description": "Ensuring the highest standards of healthcare delivery through rigorous quality control and accreditation processes."
+            },
+            "patientExperience": {
+                "title": "Patient Experience",
+                "description": "Creating seamless and comfortable healthcare journeys for international patients with personalized care and support."
+            },
+            "industryCollaboration": {
+                "title": "Industry Collaboration",
+                "description": "Fostering partnerships with healthcare providers, facilitators, and industry stakeholders to strengthen Malaysia's healthcare ecosystem."
+            },
+            "globalPromotion": {
+                "title": "Global Promotion",
+                "description": "Promoting Malaysia as a leading destination for healthcare travel through strategic marketing and international partnerships."
+            },
+            "innovation": {
+                "title": "Innovation in Healthcare",
+                "description": "Embracing cutting-edge medical technologies and innovative healthcare solutions to enhance patient care."
+            },
+            "capacityBuilding": {
+                "title": "Capacity Building",
+                "description": "Developing healthcare professionals and industry expertise through training, education, and knowledge sharing."
+            }
+        }
+    },
+    "achievements": {
+        "title": "Our Achievements",
+        "stats": {
+            "facilities": {
+                "number": "250+",
+                "label": "Healthcare Facilities"
+            },
+            "patients": {
+                "number": "1M+",
+                "label": "International Patients"
+            },
+            "awards": {
+                "number": "30+",
+                "label": "Industry Awards"
+            },
+            "years": {
+                "number": "10+",
+                "label": "Years of Excellence"
+            }
+        }
+    },
+    "cta": {
+        "title": "Join Us in Shaping the Future of Healthcare Travel",
+        "description": "Connect with us to learn more about our initiatives and opportunities for collaboration.",
+        "button": "Contact Us"
+    }
+}

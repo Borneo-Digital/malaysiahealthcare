@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "home": "Laman Utama",
+        "memberHospital": "Hospital Ahli",
+        "healthcareTravelGuide": "Panduan Pelancongan Kesihatan",
+        "mhtcChronicles": "Kronologi MHTC",
+        "corporateProfile": "Profil Korporat",
+        "contact": "Hubungi Kami"
+    },
+    "accessibility": {
+        "search": "Carian",
+        "notifications": "Notifikasi",
+        "toggleMenu": "Togol menu",
+        "skipToContent": "Langkau ke kandungan"
+    }
+}
