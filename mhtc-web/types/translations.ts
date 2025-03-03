@@ -287,3 +287,58 @@ export interface NavbarTranslations {
     close: string;
   };
 }
+
+/**
+ * Member Hospital page translations
+ */
+export interface MemberHospitalTranslations {
+  pageTitle: string;
+  pageDescription: string;
+  search: {
+    title: string;
+    nameInput: string;
+    locationSelect: {
+      placeholder: string;
+      options: {
+        kualaLumpur: string;
+        penang: string;
+        johor: string;
+        malacca: string;
+        [key: string]: string;
+      };
+    };
+    typeSelect: {
+      placeholder: string;
+      options: {
+        hospital: string;
+        clinic: string;
+        specialist: string;
+        [key: string]: string;
+      };
+    };
+    button: string;
+  };
+  featured: {
+    title: string;
+    provider: {
+      namePrefix: string;
+      details: string;
+      specialty: string;
+      location: string;
+    };
+  };
+  specialties: {
+    title: string;
+    list: {
+      cardiology: string;
+      oncology: string;
+      orthopedics: string;
+      neurology: string;
+      pediatrics: string;
+      dermatology: string;
+      ophthalmology: string;
+      dentistry: string;
+      [key: string]: string;
+    };
+  };
+}

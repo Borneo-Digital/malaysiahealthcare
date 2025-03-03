@@ -1,0 +1,48 @@
+{
+    "pageTitle": "成员医院",
+    "pageDescription": "在马来西亚寻找世界级医院、诊所和医疗保健专业人员。",
+    "search": {
+        "title": "查找医疗保健提供者",
+        "nameInput": "按名称或专科搜索",
+        "locationSelect": {
+            "placeholder": "选择地点",
+            "options": {
+                "kualaLumpur": "吉隆坡",
+                "penang": "槟城",
+                "johor": "柔佛",
+                "malacca": "马六甲"
+            }
+        },
+        "typeSelect": {
+            "placeholder": "选择提供者类型",
+            "options": {
+                "hospital": "医院",
+                "clinic": "诊所",
+                "specialist": "专科医生"
+            }
+        },
+        "button": "搜索"
+    },
+    "featured": {
+        "title": "特色成员医院",
+        "provider": {
+            "namePrefix": "提供者名称",
+            "details": "查看详情",
+            "specialty": "专科",
+            "location": "地点"
+        }
+    },
+    "specialties": {
+        "title": "按专科浏览",
+        "list": {
+            "cardiology": "心脏科",
+            "oncology": "肿瘤科",
+            "orthopedics": "骨科",
+            "neurology": "神经科",
+            "pediatrics": "儿科",
+            "dermatology": "皮肤科",
+            "ophthalmology": "眼科",
+            "dentistry": "牙科"
+        }
+    }
+}

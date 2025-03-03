@@ -1,0 +1,48 @@
+{
+    "pageTitle": "Rumah Sakit Anggota",
+    "pageDescription": "Temukan rumah sakit, klinik, dan profesional kesehatan kelas dunia di Malaysia.",
+    "search": {
+        "title": "Cari Penyedia Layanan Kesehatan",
+        "nameInput": "Cari berdasarkan nama atau spesialisasi",
+        "locationSelect": {
+            "placeholder": "Pilih lokasi",
+            "options": {
+                "kualaLumpur": "Kuala Lumpur",
+                "penang": "Penang",
+                "johor": "Johor",
+                "malacca": "Malaka"
+            }
+        },
+        "typeSelect": {
+            "placeholder": "Pilih jenis penyedia",
+            "options": {
+                "hospital": "Rumah Sakit",
+                "clinic": "Klinik",
+                "specialist": "Spesialis"
+            }
+        },
+        "button": "Cari"
+    },
+    "featured": {
+        "title": "Rumah Sakit Anggota Unggulan",
+        "provider": {
+            "namePrefix": "Nama Penyedia",
+            "details": "Lihat Detail",
+            "specialty": "Spesialisasi",
+            "location": "Lokasi"
+        }
+    },
+    "specialties": {
+        "title": "Telusuri berdasarkan Spesialisasi",
+        "list": {
+            "cardiology": "Kardiologi",
+            "oncology": "Onkologi",
+            "orthopedics": "Ortopedi",
+            "neurology": "Neurologi",
+            "pediatrics": "Pediatri",
+            "dermatology": "Dermatologi",
+            "ophthalmology": "Oftalmologi",
+            "dentistry": "Kedokteran Gigi"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "pageTitle": "المستشفيات الأعضاء",
+    "pageDescription": "ابحث عن مستشفيات وعيادات ومتخصصي رعاية صحية على مستوى عالمي في ماليزيا.",
+    "search": {
+        "title": "البحث عن مقدمي الرعاية الصحية",
+        "nameInput": "البحث حسب الاسم أو التخصص",
+        "locationSelect": {
+            "placeholder": "اختر الموقع",
+            "options": {
+                "kualaLumpur": "كوالالمبور",
+                "penang": "بينانج",
+                "johor": "جوهور",
+                "malacca": "ملاكا"
+            }
+        },
+        "typeSelect": {
+            "placeholder": "اختر نوع مقدم الخدمة",
+            "options": {
+                "hospital": "مستشفى",
+                "clinic": "عيادة",
+                "specialist": "متخصص"
+            }
+        },
+        "button": "بحث"
+    },
+    "featured": {
+        "title": "المستشفيات الأعضاء المميزة",
+        "provider": {
+            "namePrefix": "اسم مقدم الخدمة",
+            "details": "عرض التفاصيل",
+            "specialty": "التخصص",
+            "location": "الموقع"
+        }
+    },
+    "specialties": {
+        "title": "تصفح حسب التخصص",
+        "list": {
+            "cardiology": "طب القلب",
+            "oncology": "طب الأورام",
+            "orthopedics": "جراحة العظام",
+            "neurology": "طب الأعصاب",
+            "pediatrics": "طب الأطفال",
+            "dermatology": "طب الجلدية",
+            "ophthalmology": "طب العيون",
+            "dentistry": "طب الأسنان"
+        }
+    }
+}

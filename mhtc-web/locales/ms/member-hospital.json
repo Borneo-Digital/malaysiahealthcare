@@ -1,0 +1,48 @@
+{
+    "pageTitle": "Hospital Ahli",
+    "pageDescription": "Cari hospital, klinik, dan profesional penjagaan kesihatan bertaraf dunia di Malaysia.",
+    "search": {
+        "title": "Cari Penyedia Penjagaan Kesihatan",
+        "nameInput": "Cari mengikut nama atau kepakaran",
+        "locationSelect": {
+            "placeholder": "Pilih lokasi",
+            "options": {
+                "kualaLumpur": "Kuala Lumpur",
+                "penang": "Pulau Pinang",
+                "johor": "Johor",
+                "malacca": "Melaka"
+            }
+        },
+        "typeSelect": {
+            "placeholder": "Pilih jenis penyedia",
+            "options": {
+                "hospital": "Hospital",
+                "clinic": "Klinik",
+                "specialist": "Pakar"
+            }
+        },
+        "button": "Cari"
+    },
+    "featured": {
+        "title": "Hospital Ahli Terkemuka",
+        "provider": {
+            "namePrefix": "Nama Penyedia",
+            "details": "Lihat Butiran",
+            "specialty": "Kepakaran",
+            "location": "Lokasi"
+        }
+    },
+    "specialties": {
+        "title": "Cari mengikut Kepakaran",
+        "list": {
+            "cardiology": "Kardiologi",
+            "oncology": "Onkologi",
+            "orthopedics": "Ortopedik",
+            "neurology": "Neurologi",
+            "pediatrics": "Pediatrik",
+            "dermatology": "Dermatologi",
+            "ophthalmology": "Oftalmologi",
+            "dentistry": "Pergigian"
+        }
+    }
+}
