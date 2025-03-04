@@ -342,3 +342,162 @@ export interface MemberHospitalTranslations {
     };
   };
 }
+
+/**
+ * Healthcare Travel Guide page translations
+ */
+export interface HealthcareTravelGuideTranslations {
+  pageTitle: string;
+  pageDescription: string;
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  sections: {
+    beforeTravel: {
+      title: string;
+      description: string;
+      steps: {
+        research: {
+          title: string;
+          description: string;
+        };
+        documentation: {
+          title: string;
+          description: string;
+          items: {
+            passport: string;
+            visa: string;
+            medicalDocuments: string;
+            insurance: string;
+          };
+        };
+        planning: {
+          title: string;
+          description: string;
+          items: {
+            accommodation: string;
+            transportation: string;
+            accompaniment: string;
+            expenses: string;
+          };
+        };
+      };
+    };
+    duringStay: {
+      title: string;
+      description: string;
+      steps: {
+        arrival: {
+          title: string;
+          description: string;
+          items: {
+            immigration: string;
+            transport: string;
+            checkin: string;
+            orientation: string;
+          };
+        };
+        treatment: {
+          title: string;
+          description: string;
+          items: {
+            consultation: string;
+            procedure: string;
+            recovery: string;
+            followup: string;
+          };
+        };
+        support: {
+          title: string;
+          description: string;
+          items: {
+            translation: string;
+            assistance: string;
+            emergency: string;
+            cultural: string;
+          };
+        };
+      };
+    };
+    afterCare: {
+      title: string;
+      description: string;
+      steps: {
+        recovery: {
+          title: string;
+          description: string;
+        };
+        followUp: {
+          title: string;
+          description: string;
+        };
+        continuedCare: {
+          title: string;
+          description: string;
+        };
+      };
+    };
+  };
+  resources: {
+    title: string;
+    description: string;
+    items: {
+      hospitals: {
+        title: string;
+        description: string;
+        link: string;
+      };
+      insurance: {
+        title: string;
+        description: string;
+        link: string;
+      };
+      visa: {
+        title: string;
+        description: string;
+        link: string;
+      };
+      tourism: {
+        title: string;
+        description: string;
+        link: string;
+      };
+    };
+  };
+  cta: {
+    title: string;
+    description: string;
+    button: string;
+  };
+  // New fields for FAQs, testimonials, quickLinks, and journeyStages
+  faqs?: {
+    title: string;
+    description: string;
+    viewAll: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  testimonials?: {
+    title: string;
+    description?: string;
+    readMore: string;
+    screenReaderPrefix?: string;
+    items: Array<{
+      patientName: string;
+      treatmentType: string;
+      quote: string;
+    }>;
+  };
+  quickLinks?: {
+    accommodation: string;
+    transportation: string;
+    financialPlanning: string;
+    learnMore: string;
+  };
+  journeyStages?: {
+    exploreStage: string;
+  };
+}

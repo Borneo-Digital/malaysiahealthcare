@@ -1,0 +1,179 @@
+{
+    "pageTitle": "医疗旅游指南",
+    "pageDescription": "马来西亚医疗旅游全方位指南 - 从规划到后续护理",
+    "hero": {
+        "title": "您的卓越医疗之旅",
+        "subtitle": "在马来西亚获取世界级医疗服务的分步指南"
+    },
+    "sections": {
+        "beforeTravel": {
+            "title": "出发前准备",
+            "description": "确保医疗旅程顺利的重要准备工作",
+            "steps": {
+                "research": {
+                    "title": "研究与选择",
+                    "description": "了解马来西亚的医疗设施、可用治疗方案，并选择适合您需求的医疗服务提供者。"
+                },
+                "documentation": {
+                    "title": "所需文件",
+                    "description": "确保您具备医疗旅行所需的所有文件",
+                    "items": {
+                        "passport": "有效期至少6个月的护照",
+                        "visa": "医疗签证或相关入境许可",
+                        "medicalDocuments": "病历和最新检查结果",
+                        "insurance": "旅行和医疗保险"
+                    }
+                },
+                "planning": {
+                    "title": "行程规划",
+                    "description": "规划您的医疗旅行后勤事宜",
+                    "items": {
+                        "accommodation": "预订靠近医疗设施的合适住宿",
+                        "transportation": "安排当地交通",
+                        "accompaniment": "如需要，安排陪同人员",
+                        "expenses": "医疗和生活费用预算"
+                    }
+                }
+            }
+        },
+        "duringStay": {
+            "title": "住院期间",
+            "description": "在马来西亚接受医疗治疗期间的注意事项",
+            "steps": {
+                "arrival": {
+                    "title": "抵达流程",
+                    "description": "抵达马来西亚后的首要步骤",
+                    "items": {
+                        "immigration": "快速通关服务",
+                        "transport": "医院接送服务",
+                        "checkin": "住宿登记协助",
+                        "orientation": "当地环境介绍"
+                    }
+                },
+                "treatment": {
+                    "title": "治疗阶段",
+                    "description": "您的医疗治疗过程",
+                    "items": {
+                        "consultation": "初步咨询和评估",
+                        "procedure": "治疗或手术",
+                        "recovery": "初期恢复",
+                        "followup": "后续预约"
+                    }
+                },
+                "support": {
+                    "title": "支持服务",
+                    "description": "提升您住院体验的附加服务",
+                    "items": {
+                        "translation": "语言翻译服务",
+                        "assistance": "24/7医疗礼宾服务",
+                        "emergency": "紧急支援",
+                        "cultural": "文化协助"
+                    }
+                }
+            }
+        },
+        "afterCare": {
+            "title": "后续护理",
+            "description": "确保治疗后的持续护理",
+            "steps": {
+                "recovery": {
+                    "title": "康复管理",
+                    "description": "治疗后的康复和复健指南"
+                },
+                "followUp": {
+                    "title": "后续护理",
+                    "description": "安排和管理后续咨询"
+                },
+                "continuedCare": {
+                    "title": "持续护理",
+                    "description": "长期护理计划和与当地医疗服务提供者的协调"
+                }
+            }
+        }
+    },
+    "resources": {
+        "title": "有用资源",
+        "description": "支持您医疗旅程的补充信息",
+        "items": {
+            "hospitals": {
+                "title": "成员医院",
+                "description": "浏览认证医疗设施网络",
+                "link": "查看医院"
+            },
+            "insurance": {
+                "title": "保险合作伙伴",
+                "description": "了解医疗旅行保险选项",
+                "link": "保险信息"
+            },
+            "visa": {
+                "title": "签证要求",
+                "description": "了解医疗签证申请流程",
+                "link": "签证指南"
+            },
+            "tourism": {
+                "title": "旅游信息",
+                "description": "在康复期间探索马来西亚",
+                "link": "探索马来西亚"
+            }
+        }
+    },
+    "cta": {
+        "title": "准备开始您的医疗之旅？",
+        "description": "联系我们获取规划赴马来西亚医疗旅行的个性化协助",
+        "button": "联系我们"
+    },
+    "faqs": {
+        "title": "常见问题",
+        "description": "关于医疗旅游的常见问题",
+        "viewAll": "查看所有常见问题",
+        "items": [
+            {
+                "question": "马来西亚提供哪些医疗程序？",
+                "answer": "马来西亚提供广泛的医疗程序，包括心脏病学、肿瘤学、骨科、生育治疗等。我们的医院配备最先进的技术，并由国际培训的医疗专业人员提供服务。"
+            },
+            {
+                "question": "我如何选择医疗服务提供者？",
+                "answer": "您可以浏览我们的医疗目录，查找认证医院和专科医生。我们建议考虑医院的专业领域、认证、患者评价和地理位置等因素。我们的团队也可以帮助您找到适合您需求的医疗服务提供者。"
+            },
+            {
+                "question": "医疗旅行的签证要求是什么？",
+                "answer": "大多数游客可以免签入境马来西亚停留最长90天。如果您需要更长时间的医疗治疗，可能需要申请医疗签证。我们可以协助您办理签证申请流程，并提供您所选医院的必要文件。"
+            },
+            {
+                "question": "医院有会说英语的工作人员吗？",
+                "answer": "是的，马来西亚大多数接待国际患者的医院都有会说英语的工作人员。马来西亚的许多医疗专业人员都接受过国际培训，能流利使用英语。一些医院还提供其他语言的翻译服务。"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "患者感言",
+        "readMore": "阅读全文",
+        "screenReaderPrefix": "阅读患者完整故事",
+        "items": [
+            {
+                "patientName": "李明",
+                "treatmentType": "心脏手术",
+                "quote": "我对在马来西亚接受的护理质量非常满意。医生和护士都非常专业，为我的康复提供了舒适的环境。"
+            },
+            {
+                "patientName": "王芳",
+                "treatmentType": "生育治疗",
+                "quote": "我到马来西亚接受生育治疗的经历改变了我的生活。我感到被专业的医疗团队理解和照顾得很好。"
+            },
+            {
+                "patientName": "张伟",
+                "treatmentType": "骨科手术",
+                "quote": "马来西亚医院的设施可与世界上任何顶级医院相媲美。会说英语的工作人员使沟通变得容易，治疗费用比我的国家便宜得多。"
+            }
+        ]
+    },
+    "quickLinks": {
+        "accommodation": "住宿",
+        "transportation": "当地交通",
+        "financialPlanning": "财务规划",
+        "learnMore": "了解更多"
+    },
+    "journeyStages": {
+        "exploreStage": "探索阶段"
+    }
+}

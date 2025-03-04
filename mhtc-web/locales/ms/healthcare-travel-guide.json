@@ -1,0 +1,179 @@
+{
+    "pageTitle": "Panduan Pelancongan Kesihatan",
+    "pageDescription": "Panduan lengkap untuk pelancongan kesihatan di Malaysia - dari perancangan hingga penjagaan lanjutan.",
+    "hero": {
+        "title": "Perjalanan Anda ke Kecemerlangan Penjagaan Kesihatan",
+        "subtitle": "Panduan langkah demi langkah untuk mendapatkan penjagaan perubatan bertaraf dunia di Malaysia"
+    },
+    "sections": {
+        "beforeTravel": {
+            "title": "Sebelum Perjalanan Anda",
+            "description": "Persediaan penting untuk memastikan perjalanan kesihatan yang lancar",
+            "steps": {
+                "research": {
+                    "title": "Penyelidikan dan Pemilihan",
+                    "description": "Ketahui tentang kemudahan penjagaan kesihatan Malaysia, rawatan yang tersedia, dan pilih penyedia yang sesuai dengan keperluan anda."
+                },
+                "documentation": {
+                    "title": "Dokumentasi yang Diperlukan",
+                    "description": "Pastikan anda mempunyai semua dokumen yang diperlukan untuk perjalanan perubatan anda",
+                    "items": {
+                        "passport": "Pasport yang sah dengan tempoh sah sekurang-kurangnya 6 bulan",
+                        "visa": "Visa perubatan atau permit masuk yang berkaitan",
+                        "medicalDocuments": "Sejarah perubatan dan keputusan ujian terkini",
+                        "insurance": "Perlindungan insurans perjalanan dan perubatan"
+                    }
+                },
+                "planning": {
+                    "title": "Perancangan Perjalanan",
+                    "description": "Rancang logistik perjalanan perubatan anda",
+                    "items": {
+                        "accommodation": "Tempah penginapan yang sesuai berhampiran kemudahan penjagaan kesihatan anda",
+                        "transportation": "Atur pengangkutan tempatan",
+                        "accompaniment": "Rancang untuk pengiring jika diperlukan",
+                        "expenses": "Bajet untuk perbelanjaan perubatan dan sara hidup"
+                    }
+                }
+            }
+        },
+        "duringStay": {
+            "title": "Semasa Penginapan Anda",
+            "description": "Apa yang boleh dijangka semasa rawatan perubatan anda di Malaysia",
+            "steps": {
+                "arrival": {
+                    "title": "Proses Ketibaan",
+                    "description": "Langkah pertama anda setelah tiba di Malaysia",
+                    "items": {
+                        "immigration": "Pelepasan imigresen secara pantas",
+                        "transport": "Perkhidmatan pemindahan hospital",
+                        "checkin": "Bantuan daftar masuk penginapan",
+                        "orientation": "Orientasi kawasan tempatan"
+                    }
+                },
+                "treatment": {
+                    "title": "Fasa Rawatan",
+                    "description": "Perjalanan rawatan perubatan anda",
+                    "items": {
+                        "consultation": "Perundingan dan penilaian awal",
+                        "procedure": "Rawatan atau prosedur",
+                        "recovery": "Tempoh pemulihan awal",
+                        "followup": "Temu janji susulan"
+                    }
+                },
+                "support": {
+                    "title": "Perkhidmatan Sokongan",
+                    "description": "Perkhidmatan tambahan untuk meningkatkan penginapan anda",
+                    "items": {
+                        "translation": "Perkhidmatan penterjemahan bahasa",
+                        "assistance": "Concierge perubatan 24/7",
+                        "emergency": "Sokongan kecemasan",
+                        "cultural": "Bantuan budaya"
+                    }
+                }
+            }
+        },
+        "afterCare": {
+            "title": "Penjagaan Selepas",
+            "description": "Memastikan penjagaan berterusan selepas rawatan anda",
+            "steps": {
+                "recovery": {
+                    "title": "Pengurusan Pemulihan",
+                    "description": "Garis panduan untuk pemulihan dan rehabilitasi selepas rawatan"
+                },
+                "followUp": {
+                    "title": "Penjagaan Susulan",
+                    "description": "Penjadualan dan pengurusan perundingan susulan"
+                },
+                "continuedCare": {
+                    "title": "Penjagaan Berterusan",
+                    "description": "Perancangan penjagaan jangka panjang dan koordinasi dengan penyedia penjagaan kesihatan tempatan"
+                }
+            }
+        }
+    },
+    "resources": {
+        "title": "Sumber Berguna",
+        "description": "Maklumat tambahan untuk menyokong perjalanan kesihatan anda",
+        "items": {
+            "hospitals": {
+                "title": "Hospital Ahli",
+                "description": "Layari rangkaian kemudahan penjagaan kesihatan yang diiktiraf",
+                "link": "Lihat Hospital"
+            },
+            "insurance": {
+                "title": "Rakan Insurans",
+                "description": "Ketahui tentang pilihan insurans perjalanan perubatan",
+                "link": "Maklumat Insurans"
+            },
+            "visa": {
+                "title": "Keperluan Visa",
+                "description": "Fahami proses permohonan visa perubatan",
+                "link": "Panduan Visa"
+            },
+            "tourism": {
+                "title": "Maklumat Pelancongan",
+                "description": "Terokai Malaysia semasa pemulihan anda",
+                "link": "Terokai Malaysia"
+            }
+        }
+    },
+    "cta": {
+        "title": "Bersedia untuk Memulakan Perjalanan Kesihatan Anda?",
+        "description": "Hubungi kami untuk bantuan peribadi dalam merancang perjalanan perubatan anda ke Malaysia",
+        "button": "Hubungi Kami"
+    },
+    "faqs": {
+        "title": "Soalan Lazim",
+        "description": "Soalan Biasa Tentang Pelancongan Kesihatan",
+        "viewAll": "Lihat Semua Soalan Lazim",
+        "items": [
+            {
+                "question": "Apakah prosedur perubatan yang tersedia di Malaysia?",
+                "answer": "Malaysia menawarkan pelbagai prosedur perubatan termasuk kardiologi, onkologi, ortopedik, rawatan kesuburan, dan banyak lagi. Hospital kami dilengkapi dengan teknologi terkini dan dikendalikan oleh profesional perubatan yang dilatih di peringkat antarabangsa."
+            },
+            {
+                "question": "Bagaimana saya memilih penyedia penjagaan kesihatan?",
+                "answer": "Anda boleh melayari Direktori Perubatan kami untuk mencari hospital dan pakar yang diiktiraf. Kami mengesyorkan untuk mempertimbangkan faktor seperti kepakaran hospital, akreditasi, ulasan pesakit, dan lokasi. Pasukan kami juga boleh membantu anda mencari penyedia penjagaan kesihatan yang sesuai dengan keperluan anda."
+            },
+            {
+                "question": "Apakah keperluan visa untuk perjalanan perubatan?",
+                "answer": "Kebanyakan pelawat boleh masuk ke Malaysia tanpa visa untuk penginapan sehingga 90 hari. Jika anda memerlukan penginapan yang lebih lama untuk rawatan perubatan, anda mungkin perlu memohon visa perubatan. Kami boleh membantu anda dengan proses permohonan visa dan menyediakan dokumentasi yang diperlukan dari hospital pilihan anda."
+            },
+            {
+                "question": "Adakah terdapat kakitangan yang boleh berbahasa Inggeris di hospital?",
+                "answer": "Ya, kebanyakan hospital di Malaysia yang melayani pesakit antarabangsa mempunyai kakitangan yang boleh berbahasa Inggeris. Banyak profesional perubatan di Malaysia dilatih di peringkat antarabangsa dan fasih berbahasa Inggeris. Sesetengah hospital juga menawarkan perkhidmatan penterjemahan untuk bahasa lain."
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimoni Pesakit",
+        "readMore": "Baca Kisah Penuh",
+        "screenReaderPrefix": "Baca kisah penuh Pesakit",
+        "items": [
+            {
+                "patientName": "Ahmad Bin Abdullah",
+                "treatmentType": "Pembedahan Jantung",
+                "quote": "Saya sangat berpuas hati dengan kualiti penjagaan yang saya terima di Malaysia. Doktor dan jururawat sangat profesional dan menyediakan persekitaran yang selesa untuk pemulihan saya."
+            },
+            {
+                "patientName": "Sarah Binti Mohamed",
+                "treatmentType": "Rawatan Kesuburan",
+                "quote": "Perjalanan saya ke Malaysia untuk rawatan kesuburan telah menjadi pengalaman yang mengubah hidup. Saya berasa difahami dan dijaga dengan baik oleh pasukan perubatan yang berdedikasi."
+            },
+            {
+                "patientName": "Tan Wei Ming",
+                "treatmentType": "Pembedahan Ortopedik",
+                "quote": "Kemudahan di hospital di Malaysia setanding dengan mana-mana hospital terbaik di dunia. Kakitangan yang berbahasa Inggeris memudahkan komunikasi, dan kos rawatan jauh lebih berpatutan daripada di negara saya."
+            }
+        ]
+    },
+    "quickLinks": {
+        "accommodation": "Penginapan",
+        "transportation": "Pengangkutan Tempatan",
+        "financialPlanning": "Perancangan Kewangan",
+        "learnMore": "Ketahui Lebih Lanjut"
+    },
+    "journeyStages": {
+        "exploreStage": "Terokai Peringkat"
+    }
+}
