@@ -26,12 +26,35 @@ import {
   Calendar,
   HelpCircle,
 } from "lucide-react";
+import { getServerTranslations, isRTL } from "@/utils/translations";
+import { Locale } from "@/types/i18n";
+import { HealthcareTravelGuideTranslations } from "@/types/translations";
 
-export const metadata: Metadata = {
-  title: "For Travellers | Malaysia Healthcare Travel Council",
-  description:
-    "Plan your healthcare journey to Malaysia with essential information and resources for medical travellers.",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const translations = getServerTranslations<HealthcareTravelGuideTranslations>(
+    locale,
+    "healthcare-travel-guide"
+  );
+
+  return {
+    title: `${translations.pageTitle} | Malaysia Healthcare Travel Council`,
+    description: translations.pageDescription,
+    alternates: {
+      canonical: `https://malaysiahealthcare.org/healthcare-travel-guide`,
+      languages: {
+        en: "https://malaysiahealthcare.org/en/healthcare-travel-guide",
+        ms: "https://malaysiahealthcare.org/ms/healthcare-travel-guide",
+        id: "https://malaysiahealthcare.org/id/healthcare-travel-guide",
+        zh: "https://malaysiahealthcare.org/zh/healthcare-travel-guide",
+        ar: "https://malaysiahealthcare.org/ar/healthcare-travel-guide",
+      },
+    },
+  };
+}
 
 const quickLinks = [
   {
@@ -71,43 +94,98 @@ const journeyStages = [
   { title: "Post-Treatment", description: "Recovery and beyond", icon: Users },
 ];
 
-const faqs = [
-  {
-    question: "What medical procedures are available in Malaysia?",
-    answer:
-      "Malaysia offers a wide range of medical procedures including cardiology, oncology, orthopedics, fertility treatments, and more. Our hospitals are equipped with state-of-the-art technology and staffed by internationally trained medical professionals.",
-  },
-  {
-    question: "How do I choose a healthcare provider?",
-    answer:
-      "You can browse our Medical Directory to find accredited hospitals and specialists. We recommend considering factors such as the hospital's specialties, accreditations, patient reviews, and location. Our team can also assist you in finding the right healthcare provider for your needs.",
-  },
-  {
-    question: "What are the visa requirements for medical travel?",
-    answer:
-      "Most visitors can enter Malaysia without a visa for stays up to 90 days. If you require a longer stay for medical treatment, you may need to apply for a medical visa. We can assist you with the visa application process and provide necessary documentation from your chosen hospital.",
-  },
-  {
-    question: "Are there English-speaking staff at hospitals?",
-    answer:
-      "Yes, most hospitals in Malaysia that cater to international patients have English-speaking staff. Many medical professionals in Malaysia are trained internationally and are fluent in English. Some hospitals also offer translation services for other languages.",
-  },
-];
+export default function HealthcareTravelGuide({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) {
+  const translations = getServerTranslations<HealthcareTravelGuideTranslations>(
+    locale,
+    "healthcare-travel-guide"
+  );
+  const rtl = isRTL(locale);
 
-export default function HealthcareTravelGuide() {
+  // Map translations to quickLinks data
+  const translatedQuickLinks = [
+    {
+      icon: Plane,
+      title: translations.resources?.items?.visa?.title || "Visa Information",
+      description:
+        translations.resources?.items?.visa?.description ||
+        "Entry requirements and visa processes",
+    },
+    {
+      icon: Hotel,
+      title: translations.quickLinks?.accommodation || "Accommodation",
+      description:
+        translations.sections?.beforeTravel?.steps?.planning?.items
+          ?.accommodation || "Find suitable places to stay",
+    },
+    {
+      icon: Car,
+      title: translations.quickLinks?.transportation || "Local Transportation",
+      description:
+        translations.sections?.beforeTravel?.steps?.planning?.items
+          ?.transportation || "Getting around in Malaysia",
+    },
+    {
+      icon: CreditCard,
+      title: translations.quickLinks?.financialPlanning || "Financial Planning",
+      description:
+        translations.sections?.beforeTravel?.steps?.planning?.items?.expenses ||
+        "Costs and payment information",
+    },
+  ];
+
+  // Map translations to journey stages
+  const translatedJourneyStages = [
+    {
+      title: translations.sections?.beforeTravel?.title || "Pre-Arrival",
+      description:
+        translations.sections?.beforeTravel?.description ||
+        "Prepare for your trip",
+      icon: Calendar,
+    },
+    {
+      title:
+        translations.sections?.duringStay?.steps?.arrival?.title || "Arrival",
+      description:
+        translations.sections?.duringStay?.steps?.arrival?.description ||
+        "Your welcome to Malaysia",
+      icon: Plane,
+    },
+    {
+      title:
+        translations.sections?.duringStay?.steps?.treatment?.title ||
+        "Treatment",
+      description:
+        translations.sections?.duringStay?.steps?.treatment?.description ||
+        "World-class healthcare",
+      icon: Stethoscope,
+    },
+    {
+      title: translations.sections?.afterCare?.title || "Post-Treatment",
+      description:
+        translations.sections?.afterCare?.description || "Recovery and beyond",
+      icon: Users,
+    },
+  ];
+
   return (
-    <div className="max-w-7xl mx-auto bg-white min-h-screen">
+    <div
+      className={`max-w-7xl mx-auto bg-white min-h-screen ${
+        rtl ? "rtl" : "ltr"
+      }`}
+    >
       <div className="container mx-auto px-4 py-16 mt-16">
         <h1 className="text-4xl font-bold text-primary mb-8">
-          Healthcare Travel Guide
+          {translations.pageTitle}
         </h1>
         <p
           className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-3xl"
           tabIndex={0}
         >
-          Plan your healthcare journey to Malaysia with confidence. We&apos;re
-          here to guide you through every step of your medical travel
-          experience.
+          {translations.pageDescription}
         </p>
 
         {/* Quick Links Section */}
@@ -117,10 +195,10 @@ export default function HealthcareTravelGuide() {
             className="text-2xl font-semibold mb-4 sm:mb-6"
             tabIndex={0}
           >
-            Essential Travel Information
+            {translations.resources?.title || "Essential Travel Information"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {quickLinks.map((link, index) => (
+            {translatedQuickLinks.map((link, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <link.icon
@@ -135,9 +213,9 @@ export default function HealthcareTravelGuide() {
                 <CardFooter>
                   <Button variant="outline" className="w-full">
                     <span className="sr-only">
-                      Learn more about {link.title}
+                      {translations.quickLinks?.learnMore || "Learn More"}
                     </span>
-                    Learn More
+                    {translations.quickLinks?.learnMore || "Learn More"}
                   </Button>
                 </CardFooter>
               </Card>
@@ -152,10 +230,10 @@ export default function HealthcareTravelGuide() {
             className="text-2xl font-semibold mb-4 sm:mb-6"
             tabIndex={0}
           >
-            Your Healthcare Journey
+            {translations.hero?.title || "Your Healthcare Journey"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {journeyStages.map((stage, index) => (
+            {translatedJourneyStages.map((stage, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <stage.icon
@@ -167,20 +245,21 @@ export default function HealthcareTravelGuide() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600 mb-4">
-                    Learn about what to expect and how to prepare for this stage
-                    of your journey.
+                    {translations.sections?.beforeTravel?.description ||
+                      "Learn about what to expect and how to prepare for this stage of your journey."}
                   </p>
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href={`/${stage.title.toLowerCase()}`}
+                    href={`/${locale}/${stage.title.toLowerCase()}`}
                     className="w-full"
                   >
                     <Button variant="outline" className="w-full">
                       <span className="sr-only">
                         Explore {stage.title} stage
                       </span>
-                      Explore Stage
+                      {translations.journeyStages?.exploreStage ||
+                        "Explore Stage"}
                     </Button>
                   </Link>
                 </CardFooter>
@@ -196,7 +275,7 @@ export default function HealthcareTravelGuide() {
             className="text-2xl font-semibold mb-4 sm:mb-6"
             tabIndex={0}
           >
-            Frequently Asked Questions
+            {translations.faqs?.title || "Frequently Asked Questions"}
           </h2>
           <Card>
             <CardHeader>
@@ -205,12 +284,13 @@ export default function HealthcareTravelGuide() {
                   className="h-5 w-5 sm:h-6 sm:w-6 mr-2 text-primary"
                   aria-hidden="true"
                 />
-                Common Questions About Healthcare Travel
+                {translations.faqs?.description ||
+                  "Common Questions About Healthcare Travel"}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {translations.faqs?.items?.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger>{faq.question}</AccordionTrigger>
                     <AccordionContent>{faq.answer}</AccordionContent>
@@ -221,9 +301,9 @@ export default function HealthcareTravelGuide() {
             <CardFooter>
               <Button variant="outline" className="w-full">
                 <span className="sr-only">
-                  View all frequently asked questions
+                  {translations.faqs?.viewAll || "View All FAQs"}
                 </span>
-                View All FAQs
+                {translations.faqs?.viewAll || "View All FAQs"}
               </Button>
             </CardFooter>
           </Card>
@@ -236,45 +316,47 @@ export default function HealthcareTravelGuide() {
             className="text-2xl font-semibold mb-4 sm:mb-6"
             tabIndex={0}
           >
-            Patient Testimonials
+            {translations.testimonials?.title || "Patient Testimonials"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[1, 2, 3].map((testimonial) => (
-              <Card
-                key={testimonial}
-                className="hover:shadow-lg transition-shadow"
-              >
+            {translations.testimonials?.items?.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center mb-4">
                     <Image
-                      src={`/images/patient-mock.jpeg?height=50&width=50&text=Patient+${testimonial}`}
+                      src={`/images/patient-mock.jpeg?height=50&width=50&text=Patient+${
+                        index + 1
+                      }`}
                       alt=""
                       width={50}
                       height={50}
                       className="rounded-full mr-4"
                     />
                     <div>
-                      <CardTitle className="text-lg">Patient Name</CardTitle>
-                      <CardDescription>Treatment Type</CardDescription>
+                      <CardTitle className="text-lg">
+                        {testimonial.patientName}
+                      </CardTitle>
+                      <CardDescription>
+                        {testimonial.treatmentType}
+                      </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    &quot;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Aenean euismod bibendum laoreet. Proin gravida dolor
-                    sit amet lacus accumsan et viverra justo commodo.&quot;
-                  </p>
+                  <p className="text-gray-600 mb-4">{testimonial.quote}</p>
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="/testimonials"
+                    href={`/${locale}/testimonials`}
                     className="text-primary hover:underline"
                   >
                     <span className="sr-only">
-                      Read full story of Patient {testimonial}
+                      {`${
+                        translations.testimonials?.screenReaderPrefix ||
+                        "Read full story of Patient"
+                      } ${index + 1}`}
                     </span>
-                    Read Full Story →
+                    {translations.testimonials?.readMore || "Read Full Story"} →
                   </Link>
                 </CardFooter>
               </Card>
@@ -291,30 +373,37 @@ export default function HealthcareTravelGuide() {
                 className="text-xl sm:text-2xl"
                 tabIndex={0}
               >
-                Ready to Start Your Healthcare Journey?
+                {translations.cta?.title ||
+                  "Ready to Start Your Healthcare Journey?"}
               </CardTitle>
               <CardDescription className="text-white/80">
-                Our team is here to assist you every step of the way.
+                {translations.cta?.description ||
+                  "Our team is here to assist you every step of the way."}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <p className="mb-4" tabIndex={0}>
-                Get personalized support for your medical travel to Malaysia.
-                We&apos;re here to answer your questions and help you plan your
-                journey.
+                {translations.resources?.description ||
+                  "Get personalized support for your medical travel to Malaysia. We're here to answer your questions and help you plan your journey."}
               </p>
             </CardContent>
             <CardFooter className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <Button variant="secondary" className="w-full sm:w-auto">
-                <span className="sr-only">Contact us for assistance</span>
-                Contact Us
+                <span className="sr-only">
+                  {translations.cta?.button || "Contact Us"}
+                </span>
+                {translations.cta?.button || "Contact Us"}
               </Button>
               <Button
                 variant="outline"
                 className="w-full sm:w-auto bg-transparent text-white hover:bg-white hover:text-primary"
               >
-                <span className="sr-only">Download our travel guide</span>
-                Download Travel Guide
+                <span className="sr-only">
+                  {translations.resources?.items?.tourism?.link ||
+                    "Download Travel Guide"}
+                </span>
+                {translations.resources?.items?.tourism?.link ||
+                  "Download Travel Guide"}
               </Button>
             </CardFooter>
           </Card>

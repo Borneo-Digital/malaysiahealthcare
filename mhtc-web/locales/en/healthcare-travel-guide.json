@@ -1,0 +1,179 @@
+{
+    "pageTitle": "Healthcare Travel Guide",
+    "pageDescription": "Your comprehensive guide to healthcare travel in Malaysia - from planning to aftercare.",
+    "hero": {
+        "title": "Your Journey to Healthcare Excellence",
+        "subtitle": "A step-by-step guide to receiving world-class medical care in Malaysia"
+    },
+    "sections": {
+        "beforeTravel": {
+            "title": "Before Your Travel",
+            "description": "Essential preparations to ensure a smooth healthcare journey",
+            "steps": {
+                "research": {
+                    "title": "Research and Selection",
+                    "description": "Learn about Malaysian healthcare facilities, treatments available, and choose the right provider for your needs."
+                },
+                "documentation": {
+                    "title": "Required Documentation",
+                    "description": "Ensure you have all necessary documents ready for your medical travel",
+                    "items": {
+                        "passport": "Valid passport with at least 6 months validity",
+                        "visa": "Medical visa or relevant entry permit",
+                        "medicalDocuments": "Medical history and recent test results",
+                        "insurance": "Travel and medical insurance coverage"
+                    }
+                },
+                "planning": {
+                    "title": "Trip Planning",
+                    "description": "Plan the logistics of your medical journey",
+                    "items": {
+                        "accommodation": "Book suitable accommodation near your healthcare facility",
+                        "transportation": "Arrange local transportation",
+                        "accompaniment": "Plan for a companion if needed",
+                        "expenses": "Budget for medical and living expenses"
+                    }
+                }
+            }
+        },
+        "duringStay": {
+            "title": "During Your Stay",
+            "description": "What to expect during your medical treatment in Malaysia",
+            "steps": {
+                "arrival": {
+                    "title": "Arrival Process",
+                    "description": "Your first steps upon arriving in Malaysia",
+                    "items": {
+                        "immigration": "Fast-track immigration clearance",
+                        "transport": "Hospital transfer service",
+                        "checkin": "Accommodation check-in assistance",
+                        "orientation": "Local area orientation"
+                    }
+                },
+                "treatment": {
+                    "title": "Treatment Phase",
+                    "description": "Your medical treatment journey",
+                    "items": {
+                        "consultation": "Initial consultation and assessment",
+                        "procedure": "Treatment or procedure",
+                        "recovery": "Initial recovery period",
+                        "followup": "Follow-up appointments"
+                    }
+                },
+                "support": {
+                    "title": "Support Services",
+                    "description": "Additional services to enhance your stay",
+                    "items": {
+                        "translation": "Language interpretation services",
+                        "assistance": "24/7 medical concierge",
+                        "emergency": "Emergency support",
+                        "cultural": "Cultural assistance"
+                    }
+                }
+            }
+        },
+        "afterCare": {
+            "title": "After Care",
+            "description": "Ensuring continued care after your treatment",
+            "steps": {
+                "recovery": {
+                    "title": "Recovery Management",
+                    "description": "Guidelines for post-treatment recovery and rehabilitation"
+                },
+                "followUp": {
+                    "title": "Follow-up Care",
+                    "description": "Scheduling and managing follow-up consultations"
+                },
+                "continuedCare": {
+                    "title": "Continued Care",
+                    "description": "Long-term care planning and coordination with local healthcare providers"
+                }
+            }
+        }
+    },
+    "resources": {
+        "title": "Helpful Resources",
+        "description": "Additional information to support your healthcare journey",
+        "items": {
+            "hospitals": {
+                "title": "Member Hospitals",
+                "description": "Browse our network of accredited healthcare facilities",
+                "link": "View Hospitals"
+            },
+            "insurance": {
+                "title": "Insurance Partners",
+                "description": "Learn about medical travel insurance options",
+                "link": "Insurance Information"
+            },
+            "visa": {
+                "title": "Visa Requirements",
+                "description": "Understand the medical visa application process",
+                "link": "Visa Guide"
+            },
+            "tourism": {
+                "title": "Tourism Information",
+                "description": "Discover Malaysia during your recovery",
+                "link": "Explore Malaysia"
+            }
+        }
+    },
+    "cta": {
+        "title": "Ready to Start Your Healthcare Journey?",
+        "description": "Contact us for personalized assistance in planning your medical travel to Malaysia",
+        "button": "Get in Touch"
+    },
+    "faqs": {
+        "title": "Frequently Asked Questions",
+        "description": "Common Questions About Healthcare Travel",
+        "viewAll": "View All FAQs",
+        "items": [
+            {
+                "question": "What medical procedures are available in Malaysia?",
+                "answer": "Malaysia offers a wide range of medical procedures including cardiology, oncology, orthopedics, fertility treatments, and more. Our hospitals are equipped with state-of-the-art technology and staffed by internationally trained medical professionals."
+            },
+            {
+                "question": "How do I choose a healthcare provider?",
+                "answer": "You can browse our Medical Directory to find accredited hospitals and specialists. We recommend considering factors such as the hospital's specialties, accreditations, patient reviews, and location. Our team can also assist you in finding the right healthcare provider for your needs."
+            },
+            {
+                "question": "What are the visa requirements for medical travel?",
+                "answer": "Most visitors can enter Malaysia without a visa for stays up to 90 days. If you require a longer stay for medical treatment, you may need to apply for a medical visa. We can assist you with the visa application process and provide necessary documentation from your chosen hospital."
+            },
+            {
+                "question": "Are there English-speaking staff at hospitals?",
+                "answer": "Yes, most hospitals in Malaysia that cater to international patients have English-speaking staff. Many medical professionals in Malaysia are trained internationally and are fluent in English. Some hospitals also offer translation services for other languages."
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Patient Testimonials",
+        "readMore": "Read Full Story",
+        "screenReaderPrefix": "Read full story of Patient",
+        "items": [
+            {
+                "patientName": "Patient Name",
+                "treatmentType": "Treatment Type",
+                "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+            },
+            {
+                "patientName": "Patient Name",
+                "treatmentType": "Treatment Type",
+                "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+            },
+            {
+                "patientName": "Patient Name",
+                "treatmentType": "Treatment Type",
+                "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+            }
+        ]
+    },
+    "quickLinks": {
+        "accommodation": "Accommodation",
+        "transportation": "Local Transportation",
+        "financialPlanning": "Financial Planning",
+        "learnMore": "Learn More"
+    },
+    "journeyStages": {
+        "exploreStage": "Explore Stage"
+    }
+}

@@ -16,6 +16,7 @@ export type Namespace =
   | 'header'
   | 'corporate-profile'
   | 'member-hospital'
+  | 'healthcare-travel-guide'
   | 'navbar'
   | 'footer';
 
