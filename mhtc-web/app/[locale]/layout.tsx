@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Your premier destination for world-class healthcare services in Malaysia",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -37,9 +37,10 @@ export default function RootLayout({
   // Check if the language is right-to-left
   const isRTL = locale === "ar";
 
-  // Server component approach
-  const headerT =
-    require(`@/locales/${locale}/header.json`) as HeaderTranslations;
+  // Server component approach - Using dynamic import instead of require
+  const headerT: HeaderTranslations = await import(`@/locales/${locale}/header.json`).then(
+    (module) => module.default || module
+  );
 
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={inter.variable}>

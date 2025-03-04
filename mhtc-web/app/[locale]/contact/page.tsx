@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
-  const { t, isRTL } = useTranslation<ContactTranslations>("contact");
+  const { t } = useTranslation<ContactTranslations>("contact");
   const [formData, setFormData] = useState({
     name: "",
     email: "",

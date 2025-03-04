@@ -23,7 +23,7 @@ export default function ErrorDisplay({
   reset,
   showHomeLink = true,
 }: ErrorDisplayProps) {
-  const { t, locale } = useTranslation<CommonTranslations>("common");
+  const { t } = useTranslation<CommonTranslations>("common");
 
   return (
     <div className="flex flex-col items-center justify-center p-8 text-center max-w-md mx-auto">

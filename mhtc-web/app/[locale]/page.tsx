@@ -66,7 +66,7 @@ export default function HomePage({
   // 2. Transform for HomeCarousel - Use slides directly instead of items
   const carouselTranslations = {
     // Access slides directly from carousel instead of items
-    slides: (translations.carousel as any).slides || [],
+    slides: translations.carousel.slides || [],
   };
 
   // 3. Transform for NewsUpdates
