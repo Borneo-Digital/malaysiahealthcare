@@ -1,0 +1,48 @@
+{
+    "pageTitle": "Member Hospitals",
+    "pageDescription": "Find world-class hospitals, clinics, and healthcare professionals in Malaysia.",
+    "search": {
+        "title": "Find Healthcare Providers",
+        "nameInput": "Search by name or specialty",
+        "locationSelect": {
+            "placeholder": "Select location",
+            "options": {
+                "kualaLumpur": "Kuala Lumpur",
+                "penang": "Penang",
+                "johor": "Johor",
+                "malacca": "Malacca"
+            }
+        },
+        "typeSelect": {
+            "placeholder": "Select provider type",
+            "options": {
+                "hospital": "Hospital",
+                "clinic": "Clinic",
+                "specialist": "Specialist"
+            }
+        },
+        "button": "Search"
+    },
+    "featured": {
+        "title": "Featured Member Hospitals",
+        "provider": {
+            "namePrefix": "Provider Name",
+            "details": "View Details",
+            "specialty": "Specialty",
+            "location": "Location"
+        }
+    },
+    "specialties": {
+        "title": "Browse by Specialty",
+        "list": {
+            "cardiology": "Cardiology",
+            "oncology": "Oncology",
+            "orthopedics": "Orthopedics",
+            "neurology": "Neurology",
+            "pediatrics": "Pediatrics",
+            "dermatology": "Dermatology",
+            "ophthalmology": "Ophthalmology",
+            "dentistry": "Dentistry"
+        }
+    }
+}
