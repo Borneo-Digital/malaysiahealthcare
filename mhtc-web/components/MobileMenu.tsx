@@ -9,7 +9,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { useTranslation } from '@/lib/i18n'
+import { useTranslation } from '@/hooks/useTranslation'
+import { Namespace } from '@/types/i18n'
 
 interface NavItem {
   href: string;
@@ -23,7 +24,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ navItems, lang }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const { t } = useTranslation(lang)
+  const { t } = useTranslation(lang as Namespace)
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -41,7 +42,7 @@ export default function MobileMenu({ navItems, lang }: MobileMenuProps) {
               className="text-lg font-medium hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
-              {t(item.labelKey)}
+              {t[item.labelKey] || item.labelKey}
             </Link>
           ))}
         </nav>

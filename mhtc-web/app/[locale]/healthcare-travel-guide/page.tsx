@@ -56,43 +56,43 @@ export async function generateMetadata({
   };
 }
 
-const quickLinks = [
-  {
-    icon: Plane,
-    title: "Visa Information",
-    description: "Entry requirements and visa processes",
-  },
-  {
-    icon: Hotel,
-    title: "Accommodation",
-    description: "Find suitable places to stay",
-  },
-  {
-    icon: Car,
-    title: "Local Transportation",
-    description: "Getting around in Malaysia",
-  },
-  {
-    icon: CreditCard,
-    title: "Financial Planning",
-    description: "Costs and payment information",
-  },
-];
+// const quickLinks = [
+//   {
+//     icon: Plane,
+//     title: "Visa Information",
+//     description: "Entry requirements and visa processes",
+//   },
+//   {
+//     icon: Hotel,
+//     title: "Accommodation",
+//     description: "Find suitable places to stay",
+//   },
+//   {
+//     icon: Car,
+//     title: "Local Transportation",
+//     description: "Getting around in Malaysia",
+//   },
+//   {
+//     icon: CreditCard,
+//     title: "Financial Planning",
+//     description: "Costs and payment information",
+//   },
+// ];
 
-const journeyStages = [
-  {
-    title: "Pre-Arrival",
-    description: "Prepare for your trip",
-    icon: Calendar,
-  },
-  { title: "Arrival", description: "Your welcome to Malaysia", icon: Plane },
-  {
-    title: "Treatment",
-    description: "World-class healthcare",
-    icon: Stethoscope,
-  },
-  { title: "Post-Treatment", description: "Recovery and beyond", icon: Users },
-];
+// const journeyStages = [
+//   {
+//     title: "Pre-Arrival",
+//     description: "Prepare for your trip",
+//     icon: Calendar,
+//   },
+//   { title: "Arrival", description: "Your welcome to Malaysia", icon: Plane },
+//   {
+//     title: "Treatment",
+//     description: "World-class healthcare",
+//     icon: Stethoscope,
+//   },
+//   { title: "Post-Treatment", description: "Recovery and beyond", icon: Users },
+// ];
 
 export default function HealthcareTravelGuide({
   params: { locale },
