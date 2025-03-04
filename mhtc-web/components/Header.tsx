@@ -117,7 +117,7 @@ export default function Header() {
             {/* Search Icon */}
             <button
               className="text-gray-600 hover:text-primary transition-colors duration-200"
-              aria-label={t.accessibility.search}
+              aria-label={t.accessibility.toggleSearch}
             >
               <Search className="h-5 w-5" />
             </button>
