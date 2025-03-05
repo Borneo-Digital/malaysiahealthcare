@@ -1,0 +1,23 @@
+{
+    "pageTitle": "Kronik MHTC",
+    "pageDescription": "Dapatkan berita, artikel, dan wawasan terbaru dari Dewan Perjalanan Kesehatan Malaysia.",
+    "categories": {
+        "title": "Kategori",
+        "items": {
+            "healthcareInnovations": "Inovasi Kesehatan",
+            "patientStories": "Kisah Pasien",
+            "industryUpdates": "Pembaruan Industri",
+            "events": "Acara",
+            "travelTips": "Tips Perjalanan"
+        }
+    },
+    "newsletter": {
+        "title": "Berlangganan Buletin Kami",
+        "description": "Tetap terkini dengan berita dan wawasan terbaru dari Dewan Perjalanan Kesehatan Malaysia.",
+        "emailPlaceholder": "Masukkan email Anda",
+        "subscribeButton": "Berlangganan"
+    },
+    "articles": {
+        "readMore": "Baca Selengkapnya"
+    }
+}

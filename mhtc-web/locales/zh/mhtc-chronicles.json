@@ -1,0 +1,23 @@
+{
+    "pageTitle": "MHTC 资讯专栏",
+    "pageDescription": "获取马来西亚医疗旅游理事会的最新新闻、文章和见解。",
+    "categories": {
+        "title": "分类",
+        "items": {
+            "healthcareInnovations": "医疗创新",
+            "patientStories": "患者故事",
+            "industryUpdates": "行业动态",
+            "events": "活动",
+            "travelTips": "旅行贴士"
+        }
+    },
+    "newsletter": {
+        "title": "订阅我们的电子报",
+        "description": "获取马来西亚医疗旅游理事会的最新新闻和见解。",
+        "emailPlaceholder": "输入您的电子邮箱",
+        "subscribeButton": "订阅"
+    },
+    "articles": {
+        "readMore": "阅读更多"
+    }
+}

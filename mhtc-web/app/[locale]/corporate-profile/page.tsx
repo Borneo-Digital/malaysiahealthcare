@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,8 +11,25 @@ import {
   BookOpen,
 } from "lucide-react";
 import Link from "next/link";
-import { useTranslation } from "@/hooks/useTranslation";
+import { getServerTranslations, isRTL } from "@/utils/translations";
+import { Locale } from "@/types/i18n";
 import { CorporateProfileTranslations } from "@/types/translations";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const translations = getServerTranslations<CorporateProfileTranslations>(
+    locale,
+    "corporate-profile"
+  );
+
+  return {
+    title: `${translations.hero.title} | Malaysia Healthcare Travel Council`,
+    description: translations.hero.subtitle,
+  };
+}
 
 const iconMap = {
   qualityAssurance: Award,
@@ -24,9 +40,16 @@ const iconMap = {
   capacityBuilding: BookOpen,
 };
 
-export default function CorporateProfile() {
-  const { t, isRTL } =
-    useTranslation<CorporateProfileTranslations>("corporate-profile");
+export default function CorporateProfile({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) {
+  const translations = getServerTranslations<CorporateProfileTranslations>(
+    locale,
+    "corporate-profile"
+  );
+  const rtl = isRTL(locale);
 
   const focusAreaKeys = [
     "qualityAssurance",
@@ -38,55 +61,74 @@ export default function CorporateProfile() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto bg-white min-h-screen">
-      <div className={`container mx-auto px-4 py-16 ${isRTL ? "rtl" : ""}`}>
-        {/* Hero Section */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            {t.hero.title}
-          </h1>
-          <p className="text-lg text-gray-600">{t.hero.subtitle}</p>
-        </div>
+    <div
+      className={`max-w-7xl mx-auto bg-white min-h-screen ${
+        rtl ? "rtl" : "ltr"
+      }`}
+    >
+      <div className="container mx-auto px-4 py-16 mt-16">
+        <h1 className="text-4xl font-bold text-primary mb-8">
+          {translations.pageTitle}
+        </h1>
+        <p
+          className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-3xl"
+          tabIndex={0}
+        >
+          {translations.hero.subtitle}
+        </p>
 
         {/* Mission & Vision Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-semibold text-primary mb-4">
-                {t.mission.title}
-              </h2>
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6">
-                  <p className="text-gray-600">{t.mission.content}</p>
-                </CardContent>
-              </Card>
+        <section className="mb-16" aria-labelledby="mission-vision-title">
+          <h2 id="mission-vision-title" className="sr-only">
+            {translations.mission.title} & {translations.vision.title}
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-semibold text-primary mb-4">
+                  {translations.mission.title}
+                </h2>
+                <Card className="border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-gray-600">
+                      {translations.mission.content}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold text-primary mb-4">
+                  {translations.vision.title}
+                </h2>
+                <Card className="border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-gray-600">
+                      {translations.vision.content}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-            <div>
-              <h2 className="text-2xl font-semibold text-primary mb-4">
-                {t.vision.title}
-              </h2>
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6">
-                  <p className="text-gray-600">{t.vision.content}</p>
-                </CardContent>
-              </Card>
+            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/images/corporate-image.png"
+                alt="MHTC Team"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
-          <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
-            <Image
-              src="/images/corporate-image.png"
-              alt="MHTC Team"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
+        </section>
 
         {/* Focus Areas Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-primary mb-8 text-center">
-            {t.focusAreas.title}
+        <section className="mb-16" aria-labelledby="focus-areas-title">
+          <h2
+            id="focus-areas-title"
+            className="text-2xl font-semibold text-primary mb-8 text-center"
+            tabIndex={0}
+          >
+            {translations.focusAreas.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {focusAreaKeys.map((key) => {
@@ -98,12 +140,15 @@ export default function CorporateProfile() {
                 >
                   <CardHeader className="space-y-1">
                     <div className="p-2 rounded-lg bg-primary/10 w-fit">
-                      <Icon className="w-5 h-5 text-primary" />
+                      <Icon
+                        className="w-5 h-5 text-primary"
+                        aria-hidden="true"
+                      />
                     </div>
                     <CardTitle className="text-xl">
                       {
-                        t.focusAreas.areas[
-                          key as keyof typeof t.focusAreas.areas
+                        translations.focusAreas.areas[
+                          key as keyof typeof translations.focusAreas.areas
                         ].title
                       }
                     </CardTitle>
@@ -111,8 +156,8 @@ export default function CorporateProfile() {
                   <CardContent>
                     <p className="text-gray-600">
                       {
-                        t.focusAreas.areas[
-                          key as keyof typeof t.focusAreas.areas
+                        translations.focusAreas.areas[
+                          key as keyof typeof translations.focusAreas.areas
                         ].description
                       }
                     </p>
@@ -124,9 +169,13 @@ export default function CorporateProfile() {
         </section>
 
         {/* Achievements Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-primary mb-8 text-center">
-            {t.achievements.title}
+        <section className="mb-16" aria-labelledby="achievements-title">
+          <h2
+            id="achievements-title"
+            className="text-2xl font-semibold text-primary mb-8 text-center"
+            tabIndex={0}
+          >
+            {translations.achievements.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {(["facilities", "patients", "awards", "years"] as const).map(
@@ -137,10 +186,10 @@ export default function CorporateProfile() {
                 >
                   <CardContent className="pt-6">
                     <p className="text-4xl font-bold text-primary mb-2">
-                      {t.achievements.stats[statKey].number}
+                      {translations.achievements.stats[statKey].number}
                     </p>
                     <p className="text-gray-600">
-                      {t.achievements.stats[statKey].label}
+                      {translations.achievements.stats[statKey].label}
                     </p>
                   </CardContent>
                 </Card>
@@ -150,24 +199,32 @@ export default function CorporateProfile() {
         </section>
 
         {/* CTA Section */}
-        <div className="text-center">
+        <section aria-labelledby="cta-title">
           <Card className="bg-primary text-white border-none">
             <CardContent className="p-8">
-              <h2 className="text-2xl font-bold mb-4">{t.cta.title}</h2>
-              <p className="text-white/90 mb-6">{t.cta.description}</p>
+              <h2
+                id="cta-title"
+                className="text-2xl font-bold mb-4"
+                tabIndex={0}
+              >
+                {translations.cta.title}
+              </h2>
+              <p className="text-white/90 mb-6">
+                {translations.cta.description}
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                   <Button
                     variant="secondary"
                     className="bg-white text-primary hover:bg-white/90"
                   >
-                    {t.cta.button}
+                    {translations.cta.button}
                   </Button>
                 </Link>
               </div>
             </CardContent>
           </Card>
-        </div>
+        </section>
       </div>
     </div>
   );
