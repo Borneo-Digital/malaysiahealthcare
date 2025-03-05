@@ -1,0 +1,23 @@
+{
+    "pageTitle": "Kronik MHTC",
+    "pageDescription": "Dapatkan berita, artikel, dan maklumat terkini dari Majlis Pelancongan Kesihatan Malaysia.",
+    "categories": {
+        "title": "Kategori",
+        "items": {
+            "healthcareInnovations": "Inovasi Penjagaan Kesihatan",
+            "patientStories": "Kisah Pesakit",
+            "industryUpdates": "Kemas Kini Industri",
+            "events": "Acara",
+            "travelTips": "Petua Perjalanan"
+        }
+    },
+    "newsletter": {
+        "title": "Langgan Surat Berita Kami",
+        "description": "Sentiasa dikemas kini dengan berita dan maklumat terkini dari Majlis Pelancongan Kesihatan Malaysia.",
+        "emailPlaceholder": "Masukkan e-mel anda",
+        "subscribeButton": "Langgan"
+    },
+    "articles": {
+        "readMore": "Baca Lagi"
+    }
+}

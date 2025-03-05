@@ -501,3 +501,30 @@ export interface HealthcareTravelGuideTranslations {
     exploreStage: string;
   };
 }
+
+/**
+ * MHTC Chronicles page translations
+ */
+export interface MHTCChroniclesTranslations {
+  pageTitle: string;
+  pageDescription: string;
+  categories: {
+    title: string;
+    items: {
+      healthcareInnovations: string;
+      patientStories: string;
+      industryUpdates: string;
+      events: string;
+      travelTips: string;
+    };
+  };
+  newsletter: {
+    title: string;
+    description: string;
+    emailPlaceholder: string;
+    subscribeButton: string;
+  };
+  articles: {
+    readMore: string;
+  };
+}

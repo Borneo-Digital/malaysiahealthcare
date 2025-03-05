@@ -17,6 +17,7 @@ export type Namespace =
   | 'corporate-profile'
   | 'member-hospital'
   | 'healthcare-travel-guide'
+  | 'mhtc-chronicles'
   | 'navbar'
   | 'footer';
 

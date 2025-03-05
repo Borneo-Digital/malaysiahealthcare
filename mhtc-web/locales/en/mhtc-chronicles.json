@@ -1,0 +1,23 @@
+{
+    "pageTitle": "MHTC Chronicles",
+    "pageDescription": "Stay updated with the latest news, articles, and insights from Malaysia Healthcare Travel Council.",
+    "categories": {
+        "title": "Categories",
+        "items": {
+            "healthcareInnovations": "Healthcare Innovations",
+            "patientStories": "Patient Stories",
+            "industryUpdates": "Industry Updates",
+            "events": "Events",
+            "travelTips": "Travel Tips"
+        }
+    },
+    "newsletter": {
+        "title": "Subscribe to Our Newsletter",
+        "description": "Stay updated with the latest news and insights from Malaysia Healthcare Travel Council.",
+        "emailPlaceholder": "Enter your email",
+        "subscribeButton": "Subscribe"
+    },
+    "articles": {
+        "readMore": "Read More"
+    }
+}

@@ -9,12 +9,25 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { getServerTranslations, isRTL } from "@/utils/translations";
+import { Locale } from "@/types/i18n";
+import { MHTCChroniclesTranslations } from "@/types/translations";
 
-export const metadata: Metadata = {
-  title: "News & Articles | Malaysia Healthcare Travel Council",
-  description:
-    "Stay updated with the latest news, articles, and insights from Malaysia Healthcare Travel Council.",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const translations = getServerTranslations<MHTCChroniclesTranslations>(
+    locale,
+    "mhtc-chronicles"
+  );
+
+  return {
+    title: `${translations.pageTitle} | Malaysia Healthcare Travel Council`,
+    description: translations.pageDescription,
+  };
+}
 
 const newsArticles = [
   {
@@ -46,12 +59,34 @@ const newsArticles = [
   },
 ];
 
-export default function MHTCChronicles() {
+export default function MHTCChronicles({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) {
+  const translations = getServerTranslations<MHTCChroniclesTranslations>(
+    locale,
+    "mhtc-chronicles"
+  );
+  const rtl = isRTL(locale);
+
+  const categoryItems = [
+    translations.categories.items.healthcareInnovations,
+    translations.categories.items.patientStories,
+    translations.categories.items.industryUpdates,
+    translations.categories.items.events,
+    translations.categories.items.travelTips,
+  ];
+
   return (
-    <div className="max-w-7xl mx-auto bg-white min-h-screen">
+    <div
+      className={`max-w-7xl mx-auto bg-white min-h-screen ${
+        rtl ? "rtl" : "ltr"
+      }`}
+    >
       <div className="container mx-auto px-4 py-16 mt-16">
         <h1 className="text-4xl font-bold text-primary mb-8">
-          MHTC Chronicles
+          {translations.pageTitle}
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -73,7 +108,9 @@ export default function MHTCChronicles() {
               </CardContent>
               <CardFooter>
                 <Button variant="outline" asChild>
-                  <Link href={`/news/${article.id}`}>Read More</Link>
+                  <Link href={`/news/${article.id}`}>
+                    {translations.articles.readMore}
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -81,15 +118,11 @@ export default function MHTCChronicles() {
         </div>
 
         <div className="mt-12">
-          <h2 className="text-2xl font-semibold mb-6">Categories</h2>
+          <h2 className="text-2xl font-semibold mb-6">
+            {translations.categories.title}
+          </h2>
           <div className="flex flex-wrap gap-4">
-            {[
-              "Healthcare Innovations",
-              "Patient Stories",
-              "Industry Updates",
-              "Events",
-              "Travel Tips",
-            ].map((category) => (
+            {categoryItems.map((category) => (
               <Button key={category} variant="outline">
                 {category}
               </Button>
@@ -99,21 +132,18 @@ export default function MHTCChronicles() {
 
         <div className="mt-12">
           <h2 className="text-2xl font-semibold mb-6">
-            Subscribe to Our Newsletter
+            {translations.newsletter.title}
           </h2>
           <Card>
             <CardContent className="pt-6">
-              <p className="mb-4">
-                Stay updated with the latest news and insights from Malaysia
-                Healthcare Travel Council.
-              </p>
+              <p className="mb-4">{translations.newsletter.description}</p>
               <div className="flex gap-4">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={translations.newsletter.emailPlaceholder}
                   className="flex-grow px-4 py-2 border rounded-md"
                 />
-                <Button>Subscribe</Button>
+                <Button>{translations.newsletter.subscribeButton}</Button>
               </div>
             </CardContent>
           </Card>

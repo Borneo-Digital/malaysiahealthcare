@@ -1,0 +1,23 @@
+{
+    "pageTitle": "أخبار ومقالات MHTC",
+    "pageDescription": "ابق على اطلاع بأحدث الأخبار والمقالات والرؤى من مجلس السياحة الصحية الماليزي.",
+    "categories": {
+        "title": "الفئات",
+        "items": {
+            "healthcareInnovations": "ابتكارات الرعاية الصحية",
+            "patientStories": "قصص المرضى",
+            "industryUpdates": "تحديثات الصناعة",
+            "events": "الفعاليات",
+            "travelTips": "نصائح السفر"
+        }
+    },
+    "newsletter": {
+        "title": "اشترك في نشرتنا الإخبارية",
+        "description": "ابق على اطلاع بأحدث الأخبار والرؤى من مجلس السياحة الصحية الماليزي.",
+        "emailPlaceholder": "أدخل بريدك الإلكتروني",
+        "subscribeButton": "اشترك"
+    },
+    "articles": {
+        "readMore": "قراءة المزيد"
+    }
+}
