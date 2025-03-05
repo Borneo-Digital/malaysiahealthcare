@@ -79,16 +79,16 @@ export default function CorporateProfile({
 
         {/* Mission & Vision Section */}
         <section className="mb-16" aria-labelledby="mission-vision-title">
-          <h2 id="mission-vision-title" className="sr-only">
+          <h3 id="mission-vision-title" className="sr-only">
             {translations.mission.title} & {translations.vision.title}
-          </h2>
+          </h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold text-primary mb-4">
+                <h2 className="text-2xl font-semibold mb-4">
                   {translations.mission.title}
                 </h2>
-                <Card className="border-none shadow-lg">
+                <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <p className="text-gray-600">
                       {translations.mission.content}
@@ -97,10 +97,10 @@ export default function CorporateProfile({
                 </Card>
               </div>
               <div>
-                <h2 className="text-2xl font-semibold text-primary mb-4">
+                <h3 className="text-2xl font-semibold mb-4">
                   {translations.vision.title}
-                </h2>
-                <Card className="border-none shadow-lg">
+                </h3>
+                <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <p className="text-gray-600">
                       {translations.vision.content}
@@ -125,7 +125,7 @@ export default function CorporateProfile({
         <section className="mb-16" aria-labelledby="focus-areas-title">
           <h2
             id="focus-areas-title"
-            className="text-2xl font-semibold text-primary mb-8 text-center"
+            className="text-2xl font-semibold text-primary mb-8"
             tabIndex={0}
           >
             {translations.focusAreas.title}
@@ -134,10 +134,7 @@ export default function CorporateProfile({
             {focusAreaKeys.map((key) => {
               const Icon = iconMap[key as keyof typeof iconMap];
               return (
-                <Card
-                  key={key}
-                  className="border-none shadow-lg hover:shadow-xl transition-all"
-                >
+                <Card key={key} className="hover:shadow-lg transition-shadow">
                   <CardHeader className="space-y-1">
                     <div className="p-2 rounded-lg bg-primary/10 w-fit">
                       <Icon
@@ -172,7 +169,7 @@ export default function CorporateProfile({
         <section className="mb-16" aria-labelledby="achievements-title">
           <h2
             id="achievements-title"
-            className="text-2xl font-semibold text-primary mb-8 text-center"
+            className="text-2xl font-semibold text-primary mb-8"
             tabIndex={0}
           >
             {translations.achievements.title}
@@ -182,13 +179,13 @@ export default function CorporateProfile({
               (statKey) => (
                 <Card
                   key={statKey}
-                  className="text-center border-none shadow-lg hover:shadow-xl transition-all"
+                  className="hover:shadow-lg transition-shadow"
                 >
                   <CardContent className="pt-6">
-                    <p className="text-4xl font-bold text-primary mb-2">
+                    <p className="text-4xl font-bold text-primary mb-2 text-center">
                       {translations.achievements.stats[statKey].number}
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-center">
                       {translations.achievements.stats[statKey].label}
                     </p>
                   </CardContent>
@@ -204,12 +201,12 @@ export default function CorporateProfile({
             <CardContent className="p-8">
               <h2
                 id="cta-title"
-                className="text-2xl font-bold mb-4"
+                className="text-2xl font-bold mb-4 text-center"
                 tabIndex={0}
               >
                 {translations.cta.title}
               </h2>
-              <p className="text-white/90 mb-6">
+              <p className="text-white/90 mb-6 text-center">
                 {translations.cta.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

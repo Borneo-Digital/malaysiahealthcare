@@ -91,7 +91,7 @@ export default function LanguageSwitcher() {
         aria-haspopup="true"
         aria-label={t.accessibility?.languageSwitcher || "Switch language"}
       >
-        <span className="font-medium">{currentLanguage.region}</span>
+        {/*<span className="font-medium">{currentLanguage.region}</span>*/}
         <span>{currentLanguage.nativeName}</span>
         <ChevronDown className="h-4 w-4" />
       </button>
@@ -116,7 +116,7 @@ export default function LanguageSwitcher() {
                     : `Switch to ${language.name}`
                 }
               >
-                <span className="w-8 font-medium">{language.region}</span>
+                {/*<span className="w-8 font-medium">{language.region}</span>*/}
                 <span>{language.nativeName}</span>
               </button>
             ))}
