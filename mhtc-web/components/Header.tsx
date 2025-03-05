@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import LocaleLink from "./LocaleLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image";
-import { Search, Bell, Menu, X } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { HeaderTranslations } from "@/types/translations";
 
@@ -122,13 +122,13 @@ export default function Header() {
               <Search className="h-5 w-5" />
             </button>
 
-            {/* Notification Bell */}
+            {/* Notification Bell 
             <button
               className="text-gray-600 hover:text-primary transition-colors duration-200"
               aria-label={t.accessibility.notifications}
             >
               <Bell className="h-5 w-5" />
-            </button>
+            </button>*/}
 
             {/* Language Switcher */}
             <LanguageSwitcher />
