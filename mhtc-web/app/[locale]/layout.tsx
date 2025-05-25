@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
+import TopNavBar from "@/components/TopNavBar";
 
 // Load Inter font
 const inter = Inter({
@@ -57,6 +58,7 @@ export default async function RootLayout({
           {headerT.accessibility.skipToContent}
         </a>
 
+        <TopNavBar />
         <Header />
 
         <main id="main-content" className="flex-grow">

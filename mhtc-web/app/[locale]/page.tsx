@@ -8,6 +8,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import ErrorDisplay from "@/components/ErrorDisplay";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import { JourneyTranslations } from "@/components/JourneyBridge";
+import { redirect } from "next/navigation";
 
 // Your existing components
 import AnimatedHero from "@/components/AnimatedHero";
@@ -38,81 +39,7 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage({
-  params: { locale },
-}: {
-  params: { locale: Locale };
-}) {
-  // Get translations
-  const translations = getServerTranslations<HomeTranslations>(locale, "home");
-  const rtl = isRTL(locale);
-
-  // 1. Transform for JourneyBridge
-  const journeyTranslations: JourneyTranslations = {
-    ...translations.journey,
-    // Add missing properties - these already exist in your JSON files but not in the type
-    meetAndGreet: "Meet & Greet",
-    immigrationAssistance: "Immigration Assistance",
-    transportation: "Transportation",
-    conciergeServices: "Concierge Services",
-    medicalProcedures: "Medical Procedures",
-    specialistConsultation: "Specialist Consultation",
-    patientCare: "Patient Care",
-    companionActivities: "Companion Activities",
-    rehabilitation: "Rehabilitation",
-    tourismActivities: "Tourism Activities",
-  };
-
-  // 2. Transform for HomeCarousel - Use slides directly instead of items
-  const carouselTranslations = {
-    // Access slides directly from carousel instead of items
-    slides: translations.carousel.slides || [],
-  };
-
-  // 3. Transform for NewsUpdates
-  const newsTranslations = {
-    title: translations.news.title,
-    viewAll: translations.news.viewAll,
-    items: translations.news.items || [],
-  };
-
-  return (
-    <div className={`home-page ${rtl ? "rtl" : "ltr"}`}>
-      {/* Hero Section */}
-      <section className="w-full">
-        <AnimatedHero translations={translations.hero} />
-      </section>
-
-      {/* Journey Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="py-16 md:py-24 bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-              <JourneyBridge translations={journeyTranslations} isRTL={rtl} />
-            </div>
-          </section>
-        </Suspense>
-      </ErrorBoundary>
-
-      {/* Carousel Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="w-full">
-            <HomeCarousel translations={carouselTranslations} />
-          </section>
-        </Suspense>
-      </ErrorBoundary>
-
-      {/* News Updates Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="py-16 md:py-24 bg-gray-50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-              <NewsUpdates translations={newsTranslations} isRTL={rtl} />
-            </div>
-          </section>
-        </Suspense>
-      </ErrorBoundary>
-    </div>
-  );
+export default function Page() {
+  redirect("/home1");
+  return null;
 }
