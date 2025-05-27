@@ -18,10 +18,10 @@ export default function HeroBanner() {
         {/* Cinemagraph effect with video background */}
         <div className="absolute inset-0 bg-black/20 z-10"></div>
         <video autoPlay muted loop playsInline className="absolute w-full h-full object-cover">
-          <source src="/placeholder.mp4" type="video/mp4" />
+          <source src="/images/home2/hero-video.mp4" type="video/mp4" />
           {/* Fallback image if video doesn't load */}
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/images/home2/medical-tourism.jpg"
             alt="Malaysia Healthcare Facilities"
             fill
             className="object-cover"
@@ -63,8 +63,8 @@ export default function HeroBanner() {
             >
               EXPLORE TREATMENTS
             </Button>
-            {/* Pulse animation for CTA button */}
-            <span className="absolute inset-0 rounded-md bg-[#C8102E] animate-pulse opacity-30 z-0"></span>
+            {/* Pulse animation for CTA button 
+            <span className="absolute inset-0 rounded-md bg-[#C8102E] animate-pulse opacity-30 z-0"></span>*/}
           </motion.div>
         </div>
       </div>
