@@ -59,13 +59,13 @@ export default async function RootLayout({
         </a>
 
         <TopNavBar />
-        <Header />
+        {/* <Header /> */}
 
         <main id="main-content" className="flex-grow">
           {children}
         </main>
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

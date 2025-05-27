@@ -11,6 +11,8 @@ import AnimatedHero from "@/components/AnimatedHero";
 import JourneyBridge from "@/components/JourneyBridge";
 import HomeCarousel from "@/components/HomeCarousel";
 import NewsUpdates from "@/components/NewsUpdates";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export async function generateMetadata({
   params: { locale },
@@ -68,42 +70,46 @@ export default function Home1Page({
   };
 
   return (
-    <div className={`home-page ${rtl ? "rtl" : "ltr"}`}>
-      {/* Hero Section */}
-      <section className="w-full">
-        <AnimatedHero translations={translations.hero} />
-      </section>
+    <>
+      <Header />
+      <div className={`home-page ${rtl ? "rtl" : "ltr"}`}>
+        {/* Hero Section */}
+        <section className="w-full">
+          <AnimatedHero translations={translations.hero} />
+        </section>
 
-      {/* Journey Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="py-16 md:py-24 bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-              <JourneyBridge translations={journeyTranslations} isRTL={rtl} />
-            </div>
-          </section>
-        </Suspense>
-      </ErrorBoundary>
+        {/* Journey Section */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="py-16 md:py-24 bg-white">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <JourneyBridge translations={journeyTranslations} isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
 
-      {/* Carousel Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="w-full">
-            <HomeCarousel translations={carouselTranslations} />
-          </section>
-        </Suspense>
-      </ErrorBoundary>
+        {/* Carousel Section */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="w-full">
+              <HomeCarousel translations={carouselTranslations} />
+            </section>
+          </Suspense>
+        </ErrorBoundary>
 
-      {/* News Updates Section */}
-      <ErrorBoundary fallback={ErrorDisplay}>
-        <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-          <section className="py-16 md:py-24 bg-gray-50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-              <NewsUpdates translations={newsTranslations} isRTL={rtl} />
-            </div>
-          </section>
-        </Suspense>
-      </ErrorBoundary>
-    </div>
+        {/* News Updates Section */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="py-16 md:py-24 bg-gray-50">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <NewsUpdates translations={newsTranslations} isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+      </div>
+      <Footer />
+    </>
   );
 } 
