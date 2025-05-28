@@ -1,5 +1,4 @@
 // components/LoadingSpinner.tsx
-import React from "react";
 
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large";

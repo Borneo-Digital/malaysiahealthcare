@@ -1,4 +1,4 @@
-// app/[locale]/page.tsx
+
 import { Metadata } from "next";
 import { Locale } from "@/types/i18n";
 import { getServerTranslations } from "@/utils/translations";
