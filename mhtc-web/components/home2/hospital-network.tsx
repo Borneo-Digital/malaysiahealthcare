@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "../ui/scroll-area"
 import { motion, useInView } from "framer-motion"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip"
+import { TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip"
 
 export default function HospitalNetwork() {
   const [activeSpecialty, setActiveSpecialty] = useState("all")

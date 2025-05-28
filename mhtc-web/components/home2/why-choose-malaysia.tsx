@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { Button } from "@/components/ui/button"
 import { Award, DollarSign, Route, ChevronDown, ChevronUp } from "lucide-react"
 import { motion, useInView } from "framer-motion"
 
