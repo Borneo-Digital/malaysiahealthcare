@@ -1,9 +1,9 @@
+
 import { Metadata } from "next";
 import { Locale } from "@/types/i18n";
 import { getServerTranslations } from "@/utils/translations";
 import { HomeTranslations } from "@/types/translations";
 import { redirect } from "next/navigation";
-
 
 export async function generateMetadata({
   params: { locale },

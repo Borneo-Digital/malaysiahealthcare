@@ -130,7 +130,9 @@ export default function HealingJourney() {
                           hoveredStep === step.id ? "opacity-100 max-h-20" : "opacity-0 max-h-0 overflow-hidden"
                         }`}
                       >
-                        &ldquo;{step.story}&rdquo;
+
+                        &quot;{step.story}&quot;
+
                       </div>
 
                       <div className="mt-auto flex items-center text-[#C8102E] font-medium">
