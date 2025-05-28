@@ -10,7 +10,6 @@ import PatientStories from "@/components/home2/patient-stories"
 import NewsEvents from "@/components/home2/news-events"
 import CallToAction from "@/components/home2/call-to-action"
 import Footer from "@/components/home2/footer"
-import JourneyPath from "@/components/home2/journey-path"
 import QuickJumpMenu from "@/components/home2/quick-jump-menu"
 
 export default function Home2Page() {

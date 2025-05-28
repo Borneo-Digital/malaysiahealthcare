@@ -3,8 +3,6 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { locales } from "@/middleware";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
 import TopNavBar from "@/components/TopNavBar";
