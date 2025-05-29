@@ -15,7 +15,7 @@ export default function WhyChooseMalaysia() {
       icon: Award,
       title: "JCI-Accredited Facilities",
       description:
-        "Our hospitals meet the highest international standards for quality and patient safety, with numerous JCI and other international accreditations.",
+        "Malaysia's hospitals meet the highest international standards for quality and patient safety, with numerous JCI and other international accreditations across the country.",
       stat: "40+ internationally accredited hospitals",
     },
     {
@@ -23,7 +23,7 @@ export default function WhyChooseMalaysia() {
       icon: DollarSign,
       title: "World-Class Care at Competitive Rates",
       description:
-        "Receive premium healthcare services at a fraction of the cost compared to Western countries, without compromising on quality or outcomes.",
+        "Experience premium healthcare services at a fraction of the cost compared to Western countries, without compromising on quality or clinical outcomes.",
       stat: "Up to 70% savings compared to US healthcare costs",
     },
     {
@@ -31,7 +31,7 @@ export default function WhyChooseMalaysia() {
       icon: Route,
       title: "Seamless Healthcare Journey",
       description:
-        "From pre-arrival planning to post-treatment care, we ensure a smooth experience with dedicated concierge services and support at every step.",
+        "From pre-arrival planning to post-treatment care, Malaysia's healthcare ecosystem ensures a smooth experience with dedicated support services at every step.",
       stat: "95% patient satisfaction rating",
     },
   ]
@@ -45,10 +45,10 @@ export default function WhyChooseMalaysia() {
   }
 
   return (
-    <section className="py-20 bg-gray-50" ref={sectionRef}>
+    <section className="py-20 md:py-28 bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto max-w-[1200px] px-4">
         <motion.h2
-          className="text-[36px] font-bold text-center mb-16 text-[#C8102E]"
+          className="text-3xl md:text-4xl lg:text-[40px] font-bold text-center mb-6 text-[#C8102E]"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
@@ -56,7 +56,16 @@ export default function WhyChooseMalaysia() {
           WHY CHOOSE MALAYSIA HEALTHCARE?
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.p
+          className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-20 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Experience world-class healthcare that combines clinical excellence with exceptional value and warm hospitality
+        </motion.p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
           {advantages.map((advantage, index) => (
             <motion.div
               key={advantage.number}

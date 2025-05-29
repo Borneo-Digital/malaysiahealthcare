@@ -3,14 +3,77 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand Typography - Helvetica Neue Lt Std */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --mhtc-primary: #c8102e; /* MHTC Red color from logo */
-  --mhtc-primary-hover: #a40e24;
+  --mhtc-primary: #BE1E2D; /* Official MHTC Red color from brand guidelines */
+  --mhtc-primary-hover: #A50E25;
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
+  
+  /* Brand Typography Variables */
+  --font-helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-just-wright: "Just Wright", cursive;
 }
 
-/* ... existing styles ... */
+/* Base font family application */
+.font-helvetica {
+  font-family: var(--font-helvetica);
+}
+
+.font-just-wright {
+  font-family: var(--font-just-wright);
+}
+
+/* Brand Typography Classes */
+@layer components {
+  /* Headlines: 35 Thin (preferably all caps) */
+  .headline-primary {
+    font-family: var(--font-helvetica);
+    font-weight: 200; /* Thin equivalent */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+  
+  /* Body Copy: 55 Roman (sentence case) */
+  .body-text {
+    font-family: var(--font-helvetica);
+    font-weight: 400; /* Roman equivalent */
+    line-height: 1.6;
+  }
+  
+  /* Subheadings: 55 Roman (sentence case) */
+  .subheading {
+    font-family: var(--font-helvetica);
+    font-weight: 400; /* Roman equivalent */
+    line-height: 1.4;
+  }
+  
+  /* Bold Text: 65 Medium or 75 Bold */
+  .text-medium {
+    font-family: var(--font-helvetica);
+    font-weight: 500; /* Medium equivalent */
+  }
+  
+  .text-bold {
+    font-family: var(--font-helvetica);
+    font-weight: 700; /* Bold equivalent */
+  }
+  
+  /* Light Text: 45 Light */
+  .text-light {
+    font-family: var(--font-helvetica);
+    font-weight: 300; /* Light equivalent */
+  }
+  
+  /* Script emphasis with Just Wright */
+  .text-script {
+    font-family: var(--font-just-wright);
+    font-style: italic;
+  }
+}
 
 /* Color utility classes - make sure these come AFTER Tailwind utilities */
 @layer utilities {
@@ -31,7 +94,7 @@
   }
   
   .bg-mhtc-primary\/10 {
-    background-color: rgba(200, 16, 46, 0.1) !important;
+    background-color: rgba(190, 30, 45, 0.1) !important;
   }
 }
 

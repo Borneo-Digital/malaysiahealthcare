@@ -19,11 +19,11 @@ export default function PatientStories() {
       flag: "🇦🇪",
       quote:
         "The care I received in Malaysia was exceptional. The doctors were highly skilled and the staff made me feel at home despite being far from my country.",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/placeholder.svg",
       treatment: "Cardiac Surgery",
       rating: 5,
-      beforeImage: "/placeholder.svg?height=80&width=80",
-      afterImage: "/placeholder.svg?height=80&width=80",
+      beforeImage: "/placeholder.svg",
+      afterImage: "/placeholder.svg",
     },
     {
       id: 2,
@@ -32,11 +32,11 @@ export default function PatientStories() {
       flag: "🇨🇳",
       quote:
         "I chose Malaysia for my treatment because of the quality healthcare and the cultural familiarity. The results exceeded my expectations.",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/placeholder.svg",
       treatment: "Orthopedic Surgery",
       rating: 5,
-      beforeImage: "/placeholder.svg?height=80&width=80",
-      afterImage: "/placeholder.svg?height=80&width=80",
+      beforeImage: "/placeholder.svg",
+      afterImage: "/placeholder.svg",
     },
     {
       id: 3,
@@ -45,11 +45,11 @@ export default function PatientStories() {
       flag: "🇦🇺",
       quote:
         "The combination of world-class medical care and the opportunity to recover in such a beautiful country made my health journey truly healing.",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/placeholder.svg",
       treatment: "Fertility Treatment",
       rating: 5,
-      beforeImage: "/placeholder.svg?height=80&width=80",
-      afterImage: "/placeholder.svg?height=80&width=80",
+      beforeImage: "/placeholder.svg",
+      afterImage: "/placeholder.svg",
     },
   ]
 
