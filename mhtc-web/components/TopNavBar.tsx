@@ -12,14 +12,6 @@ const navItems = [
       { label: "Home 3", href: "/home3" },
     ],
   },
-  {
-    label: "Journey",
-    items: [
-      { label: "Journey 1", href: "/journey1" },
-      { label: "Journey 2", href: "/journey2" },
-      { label: "Journey 3", href: "/journey3" },
-    ],
-  },
 ];
 
 export default function TopNavBar() {
