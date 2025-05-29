@@ -27,7 +27,7 @@ export default function TopNavBar() {
               >
                 {nav.label}
               </button>
-              <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200 z-[100] border border-gray-200">
+              <ul className="absolute left-0 top-full w-40 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] border border-gray-200">
                 {nav.items.map((item) => (
                   <li key={item.href}>
                     <Link
