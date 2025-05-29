@@ -57,12 +57,18 @@ export default function SpecializedTreatments() {
     activeCategory === "all" ? treatments : treatments.filter((treatment) => treatment.category === activeCategory)
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto max-w-[1200px] px-4">
-        <h2 className="text-[36px] font-bold text-center mb-12 text-[#C8102E]">SPECIALIZED TREATMENTS</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-center mb-4 text-[#C8102E]">
+          SPECIALIZED TREATMENTS
+        </h2>
+        
+        <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+          Explore Malaysia&apos;s comprehensive range of world-class medical treatments delivered by expert specialists across our network hospitals
+        </p>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center mb-12 gap-2">
+        <div className="flex flex-wrap justify-center mb-16 gap-3">
           {categories.map((category) => (
             <Button
               key={category.id}

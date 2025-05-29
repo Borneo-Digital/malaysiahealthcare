@@ -14,6 +14,13 @@ import NewsUpdates from "@/components/NewsUpdates";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// New enhanced components for home1
+import WhyChooseUs from "@/components/home1/WhyChooseUs";
+import TestimonialsSection from "@/components/home1/TestimonialsSection";
+import StatsSection from "@/components/home1/StatsSection";
+import CTASection from "@/components/home1/CTASection";
+import JourneySectionHeader from "@/components/home1/JourneySectionHeader";
+
 export async function generateMetadata({
   params: { locale },
 }: {
@@ -78,32 +85,88 @@ export default function Home1Page({
           <AnimatedHero translations={translations.hero} />
         </section>
 
-        {/* Journey Section */}
+        {/* Your Healthcare Journey Section - Emphasized and placed right after hero */}
         <ErrorBoundary fallback={ErrorDisplay}>
           <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-            <section className="py-16 md:py-24 bg-white">
+            <section className="py-16 md:py-20 bg-white">
               <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <div className="text-center mb-12">
+                  <JourneySectionHeader isRTL={rtl} />
+                </div>
                 <JourneyBridge translations={journeyTranslations} isRTL={rtl} />
               </div>
             </section>
           </Suspense>
         </ErrorBoundary>
 
-        {/* Carousel Section */}
+        {/* Why Choose Us Section - Core value proposition */}
         <ErrorBoundary fallback={ErrorDisplay}>
           <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-            <section className="w-full">
+            <section className="py-16 md:py-20 bg-gray-50">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <WhyChooseUs isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+
+        {/* Stats Section - Social proof */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="py-12 md:py-16 bg-primary text-white">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <StatsSection isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+
+        {/* Carousel Section - Visual showcase */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="w-full bg-white">
               <HomeCarousel translations={carouselTranslations} />
             </section>
           </Suspense>
         </ErrorBoundary>
 
-        {/* News Updates Section */}
+        {/* Testimonials Section - Social proof */}
         <ErrorBoundary fallback={ErrorDisplay}>
           <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
-            <section className="py-16 md:py-24 bg-gray-50">
+            <section className="py-16 md:py-20 bg-gray-50">
               <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <TestimonialsSection isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+
+        {/* News Updates Section - Latest information */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="py-16 md:py-20 bg-white">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    {newsTranslations.title}
+                  </h2>
+                  <p className="text-lg text-gray-600">
+                    Latest updates from Malaysia Healthcare
+                  </p>
+                </div>
                 <NewsUpdates translations={newsTranslations} isRTL={rtl} />
+              </div>
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+
+        {/* Final CTA Section - Conversion */}
+        <ErrorBoundary fallback={ErrorDisplay}>
+          <Suspense fallback={<LoadingSpinner size="large" className="py-12" />}>
+            <section className="py-16 md:py-20 relative overflow-hidden bg-gray-50">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-100" />
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+                <CTASection isRTL={rtl} />
               </div>
             </section>
           </Suspense>

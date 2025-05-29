@@ -26,7 +26,7 @@ export default function HospitalNetwork() {
     {
       id: 1,
       name: "Gleneagles Kuala Lumpur",
-      logo: "/images/hospitals/gleneagles-logo.png",
+      logo: "/placeholder.svg",
       specialties: ["cardiology", "orthopedics", "oncology"],
       location: { x: 140.3, y: 210.9 },
       city: "Kuala Lumpur",
@@ -35,7 +35,7 @@ export default function HospitalNetwork() {
     {
       id: 2,
       name: "Sunway Medical Centre",
-      logo: "/images/hospitals/sunway-logo.png",
+      logo: "/placeholder.svg",
       specialties: ["fertility", "orthopedics", "neurology"],
       location: { x: 131.5, y: 198.2 },
       city: "Petaling Jaya",
@@ -44,7 +44,7 @@ export default function HospitalNetwork() {
     {
       id: 3,
       name: "Prince Court Medical Centre",
-      logo: "/images/hospitals/princecourt-logo.webp",
+      logo: "/placeholder.svg",
       specialties: ["cardiology", "oncology", "neurology"],
       location: { x: 140.3, y: 210.9 },
       city: "Kuala Lumpur",
@@ -53,7 +53,7 @@ export default function HospitalNetwork() {
     {
       id: 4,
       name: "Island Hospital Penang",
-      logo: "/images/hospit als/islandhospital-logo.png.webp",
+      logo: "/placeholder.svg",
       specialties: ["fertility", "orthopedics", "cardiology"],
       location: { x: 83.1, y: 106.1 },
       city: "Penang",
@@ -62,7 +62,7 @@ export default function HospitalNetwork() {
     {
       id: 5,
       name: "KPJ Ampang Puteri",
-      logo: "/images/hospitals/kpj-ampang-puteri-logo.png",
+      logo: "/placeholder.svg",
       specialties: ["oncology", "neurology", "fertility"],
       location: { x: 140.3, y: 210.9 },
       city: "Ampang",
@@ -71,7 +71,7 @@ export default function HospitalNetwork() {
     {
       id: 6,
       name: "Thomson Hospital Kota Damansara",
-      logo: "/images/hospitals/thomson-logo.png",
+      logo: "/placeholder.svg",
       specialties: ["cardiology", "fertility", "orthopedics"],
       location: { x: 131.5, y: 198.2 },
       city: "Kota Damansara",

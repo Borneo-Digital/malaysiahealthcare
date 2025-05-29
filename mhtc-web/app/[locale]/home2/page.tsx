@@ -11,50 +11,70 @@ import NewsEvents from "@/components/home2/news-events"
 import CallToAction from "@/components/home2/call-to-action"
 import Footer from "@/components/home2/footer"
 import QuickJumpMenu from "@/components/home2/quick-jump-menu"
+import SectionDivider from "@/components/home2/section-divider"
 
 export default function Home2Page() {
   return (
     <main className="flex min-h-screen flex-col">
+      {/* Navigation */}
       <TopBar />
       <MainNavigation />
-
-      {/* Background journey path that follows scroll 
-      <JourneyPath />*/}
-
-      {/* Quick jump navigation */}
       <QuickJumpMenu />
 
-      <div id="hero">
-        <HeroBanner />
-      </div>
+      {/* Hero Section - Primary Entry Point */}
+      <HeroBanner />
 
-      <div id="healing-journey">
+      {/* Core Journey Section - Strategic spacing with larger bottom margin */}
+      <div id="healing-journey" className="relative">
         <HealingJourney />
       </div>
 
-      <BreastCancerBanner />
+      <SectionDivider variant="gradient" />
 
-      <div id="treatments">
-        <SpecializedTreatments />
+      {/* Service Sections - Grouped with consistent rhythm */}
+      <div className="bg-gradient-to-b from-white to-gray-50/50">
+        <div id="treatments" className="relative">
+          <SpecializedTreatments />
+        </div>
+
+        {/* Strategic placement of breast cancer banner within treatments context */}
+        <div className="relative -mt-10 mb-10">
+          <BreastCancerBanner />
+        </div>
+
+        <div id="why-choose" className="relative">
+          <WhyChooseMalaysia />
+        </div>
       </div>
 
-      <div id="why-choose">
-        <WhyChooseMalaysia />
+      <SectionDivider variant="minimal" />
+
+      {/* Infrastructure & Social Proof - Different background for clear section break */}
+      <div className="bg-white">
+        <div id="hospitals" className="relative">
+          <HospitalNetwork />
+        </div>
+
+        <div id="stories" className="relative -mt-8">
+          <PatientStories />
+        </div>
       </div>
 
-      <div id="hospitals">
-        <HospitalNetwork />
+      <SectionDivider variant="gradient" />
+
+      {/* Content & Engagement - Final grouping */}
+      <div className="bg-gray-50/30">
+        <div id="news" className="relative">
+          <NewsEvents />
+        </div>
       </div>
 
-      <div id="stories">
-        <PatientStories />
-      </div>
-
-      <div id="news">
-        <NewsEvents />
-      </div>
-
+      {/* Call to Action - Now with built-in sophisticated design */}
       <CallToAction />
+
+      {/* Subtle visual transition to footer */}
+      <div className="h-1 bg-gradient-to-r from-[#A50E25] via-[#BE1E2D] to-[#A50E25]"></div>
+
       <Footer />
     </main>
   )

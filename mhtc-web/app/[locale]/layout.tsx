@@ -1,18 +1,10 @@
 // app/[locale]/layout.tsx
 import { ReactNode } from "react";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { locales } from "@/middleware";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
 import TopNavBar from "@/components/TopNavBar";
-
-// Load Inter font
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 // Generate static paths for all locales
 export async function generateStaticParams() {
@@ -42,11 +34,11 @@ export default async function RootLayout({
   );
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={inter.variable}>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className="font-helvetica">
       <body
         className={`${
           isRTL ? "rtl" : "ltr"
-        } flex flex-col min-h-screen bg-white`}
+        } flex flex-col min-h-screen bg-white font-helvetica`}
       >
         {/* Skip to content link for accessibility */}
         <a

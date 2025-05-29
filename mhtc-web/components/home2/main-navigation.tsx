@@ -45,7 +45,7 @@ export default function MainNavigation() {
           <ul className="flex space-x-8">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="text-gray-800 font-medium hover:text-[#C8102E] transition-colors">
+                <Link href={link.href} className="subheading text-gray-800 text-medium hover:text-[#BE1E2D] transition-colors">
                   {link.name}
                 </Link>
               </li>
@@ -57,7 +57,7 @@ export default function MainNavigation() {
         <div className="flex items-center space-x-4">
           {/* Language Selector */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-[#C8102E] transition-colors">
+            <DropdownMenuTrigger className="flex items-center text-sm text-medium text-gray-700 hover:text-[#BE1E2D] transition-colors">
               <span className="mr-1">EN</span>
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
@@ -73,7 +73,7 @@ export default function MainNavigation() {
 
           {/* Search */}
           <button
-            className="text-gray-700 hover:text-[#C8102E] transition-colors"
+            className="text-gray-700 hover:text-[#BE1E2D] transition-colors"
             onClick={() => setIsSearchOpen(!isSearchOpen)}
           >
             <Search className="h-5 w-5" />
@@ -81,7 +81,7 @@ export default function MainNavigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 hover:text-[#C8102E] transition-colors"
+            className="lg:hidden text-gray-700 hover:text-[#BE1E2D] transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -98,7 +98,7 @@ export default function MainNavigation() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="block text-gray-800 font-medium hover:text-[#C8102E] transition-colors"
+                    className="block subheading text-gray-800 text-medium hover:text-[#BE1E2D] transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
@@ -110,11 +110,11 @@ export default function MainNavigation() {
             <div className="mt-6 pt-6 border-t border-gray-200">
               <div className="flex items-center space-x-4">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-sm text-gray-600">+603 2726 8688</span>
+                <span className="text-sm body-text text-gray-600">+603 2726 8688</span>
               </div>
               <div className="flex items-center space-x-4 mt-2">
                 <Mail className="h-4 w-4 text-gray-600" />
-                <span className="text-sm text-gray-600">callcentre@mhtc.org.my</span>
+                <span className="text-sm body-text text-gray-600">callcentre@mhtc.org.my</span>
               </div>
             </div>
           </div>
@@ -129,11 +129,11 @@ export default function MainNavigation() {
               <input
                 type="search"
                 placeholder="Search..."
-                className="w-full p-3 border border-gray-300 rounded-md pr-10"
+                className="w-full p-3 border border-gray-300 rounded-md pr-10 body-text"
                 autoFocus
               />
               <button
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#C8102E]"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#BE1E2D]"
                 onClick={() => setIsSearchOpen(false)}
               >
                 <X className="h-5 w-5" />
