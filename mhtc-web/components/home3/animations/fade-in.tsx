@@ -10,7 +10,6 @@ interface FadeInProps {
   className?: string
   direction?: "up" | "down" | "left" | "right" | "none"
   delay?: number
-  duration?: number
   threshold?: number
   once?: boolean
 }
@@ -20,7 +19,6 @@ export function FadeIn({
   className,
   direction = "up",
   delay = 0,
-  duration = 0.5,
   threshold = 0.2,
   once = true,
 }: FadeInProps) {

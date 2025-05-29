@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/home3/ui/button"
@@ -11,12 +10,10 @@ import { Badge } from "@/components/ui/badge"
 import { MapPin, Search, Star } from "lucide-react"
 
 export function HospitalFinder() {
-  const [view, setView] = useState<"map" | "list">("map")
-
   return (
     <div className="rounded-lg border bg-card shadow-sm">
       <div className="p-6">
-        <Tabs defaultValue="map" onValueChange={(value) => setView(value as "map" | "list")}>
+        <Tabs defaultValue="map">
           <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h3 className="text-xl font-bold">Find Hospitals Near You</h3>

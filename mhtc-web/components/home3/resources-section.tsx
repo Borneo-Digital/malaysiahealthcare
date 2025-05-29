@@ -110,8 +110,8 @@ export function ResourcesSection() {
                 <AccordionTrigger>Do I need to bring my medical records?</AccordionTrigger>
                 <AccordionContent>
                   <p>
-                    Yes, it's essential to bring all relevant medical records, including test results, imaging reports,
-                    and previous treatment history. Having these translated to English is recommended if they're in
+                    Yes, it&apos;s essential to bring all relevant medical records, including test results, imaging reports,
+                    and previous treatment history. Having these translated to English is recommended if they&apos;re in
                     another language. This helps Malaysian healthcare providers understand your medical history.
                   </p>
                 </AccordionContent>
@@ -131,7 +131,7 @@ export function ResourcesSection() {
                 <AccordionContent>
                   <p>
                     MHTC member hospitals typically accept various payment methods including credit cards, bank
-                    transfers, and cash. Many hospitals require a deposit before confirming treatment. It's advisable to
+                    transfers, and cash. Many hospitals require a deposit before confirming treatment. It&apos;s advisable to
                     check with your specific hospital about their payment policies.
                   </p>
                 </AccordionContent>

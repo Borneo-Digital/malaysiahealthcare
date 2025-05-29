@@ -227,7 +227,7 @@ export function PreArrivalTabs() {
           <div>
             <h3 className="mb-4 text-2xl font-bold">Planning Your Treatment</h3>
             <p className="mb-6 text-muted-foreground">
-              Proper preparation is essential for a successful healthcare journey. Follow these steps to ensure you're
+              Proper preparation is essential for a successful healthcare journey. Follow these steps to ensure you&apos;re
               ready for your medical treatment in Malaysia.
             </p>
 
