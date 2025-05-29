@@ -11,11 +11,11 @@ export default function MainNavigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const navLinks = [
-    { name: "ABOUT US", href: "/home2" },
-    { name: "TREATMENTS", href: "/home2" },
-    { name: "HOSPITALS", href: "/home2" },
-    { name: "PATIENT GUIDE", href: "/home2" },
-    { name: "CONTACT", href: "/home2" },
+    { name: "ABOUT US", href: "/home2#why-choose" },
+    { name: "TREATMENTS", href: "/home2#treatments" },
+    { name: "HOSPITALS", href: "/home2#hospitals" },
+    { name: "PATIENT GUIDE", href: "/home2#healing-journey" },
+    { name: "CONTACT", href: "#footer" },
   ]
 
   const languages = [
@@ -30,7 +30,7 @@ export default function MainNavigation() {
     <header className="bg-white h-[80px] shadow-md sticky top-0 z-50">
       <div className="container mx-auto h-full max-w-[1200px] px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
+        <Link href="/home2" className="flex-shrink-0">
           <Image
             src="/images/mhtc-logo.png"
             alt="MHTC Logo"

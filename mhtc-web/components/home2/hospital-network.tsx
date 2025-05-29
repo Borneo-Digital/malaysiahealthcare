@@ -29,8 +29,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["cardiology", "orthopedics", "oncology"],
       location: { x: 140.3, y: 210.9 },
-      city: "Kuala Lumpur",
-      beds: 330,
+      city: "Kuala Lumpur"
     },
     {
       id: 2,
@@ -38,8 +37,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["fertility", "orthopedics", "neurology"],
       location: { x: 131.5, y: 198.2 },
-      city: "Petaling Jaya",
-      beds: 600,
+      city: "Petaling Jaya"
     },
     {
       id: 3,
@@ -47,8 +45,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["cardiology", "oncology", "neurology"],
       location: { x: 140.3, y: 210.9 },
-      city: "Kuala Lumpur",
-      beds: 270,
+      city: "Kuala Lumpur"
     },
     {
       id: 4,
@@ -56,8 +53,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["fertility", "orthopedics", "cardiology"],
       location: { x: 83.1, y: 106.1 },
-      city: "Penang",
-      beds: 300,
+      city: "Penang"
     },
     {
       id: 5,
@@ -65,8 +61,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["oncology", "neurology", "fertility"],
       location: { x: 140.3, y: 210.9 },
-      city: "Ampang",
-      beds: 200,
+      city: "Ampang"
     },
     {
       id: 6,
@@ -74,8 +69,7 @@ export default function HospitalNetwork() {
       logo: "/placeholder.svg",
       specialties: ["cardiology", "fertility", "orthopedics"],
       location: { x: 131.5, y: 198.2 },
-      city: "Kota Damansara",
-      beds: 250,
+      city: "Kota Damansara"
     },
   ]
 
@@ -165,7 +159,6 @@ export default function HospitalNetwork() {
                     <div className="p-1">
                       <p className="font-bold">{hospital.name}</p>
                       <p className="text-xs">{hospital.city}</p>
-                      <p className="text-xs">{hospital.beds} beds</p>
                       <div className="flex flex-wrap gap-1 mt-1">
                         {hospital.specialties.map((spec) => (
                           <span key={spec} className="text-[10px] bg-gray-100 px-1 rounded">

@@ -103,16 +103,16 @@ export default function CallToAction() {
             transition={{ duration: 0.8, delay: 1.0 }}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl text-bold text-white mb-2">40+</div>
-              <div className="text-white/80 text-medium">JCI Accredited Hospitals</div>
+              <div className="text-3xl md:text-4xl text-bold text-white mb-2">Government</div>
+              <div className="text-white/80 text-medium">Backed Initiative</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl text-bold text-white mb-2">500K+</div>
-              <div className="text-white/80 text-medium">Patients Guided Annually</div>
+              <div className="text-3xl md:text-4xl text-bold text-white mb-2">Malaysia</div>
+              <div className="text-white/80 text-medium">Healthcare Promotion</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl text-bold text-white mb-2">95%</div>
-              <div className="text-white/80 text-medium">Patient Satisfaction</div>
+              <div className="text-3xl md:text-4xl text-bold text-white mb-2">Trusted</div>
+              <div className="text-white/80 text-medium">Healthcare Guidance</div>
             </div>
           </motion.div>
 

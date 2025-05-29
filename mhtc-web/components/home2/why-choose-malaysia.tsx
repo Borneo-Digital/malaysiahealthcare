@@ -16,15 +16,15 @@ export default function WhyChooseMalaysia() {
       title: "JCI-Accredited Facilities",
       description:
         "Malaysia's hospitals meet the highest international standards for quality and patient safety, with numerous JCI and other international accreditations across the country.",
-      stat: "40+ internationally accredited hospitals",
+      stat: "Internationally accredited hospitals",
     },
     {
       number: 2,
       icon: DollarSign,
       title: "World-Class Care at Competitive Rates",
       description:
-        "Experience premium healthcare services at a fraction of the cost compared to Western countries, without compromising on quality or clinical outcomes.",
-      stat: "Up to 70% savings compared to US healthcare costs",
+        "Experience premium healthcare services at competitive rates compared to Western countries, without compromising on quality or clinical outcomes.",
+      stat: "Cost-effective healthcare solutions",
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ export default function WhyChooseMalaysia() {
       title: "Seamless Healthcare Journey",
       description:
         "From pre-arrival planning to post-treatment care, Malaysia's healthcare ecosystem ensures a smooth experience with dedicated support services at every step.",
-      stat: "95% patient satisfaction rating",
+      stat: "Complete healthcare travel support",
     },
   ]
 
