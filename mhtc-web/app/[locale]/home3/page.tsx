@@ -8,14 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Container } from "@/components/home3/ui/container"
 
 export default function HomePage() {
-  const patientImages = [
-    "/images/home3/man1.jpg",
-    "/images/home3/woman1.jpg",
-    "/images/home3/man2.jpg",
-    "/images/home3/woman1.jpg.avif",
-    // ...add more as needed
-  ];
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -58,7 +50,7 @@ export default function HomePage() {
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Your Healing Journey</h2>
               <p className="mx-auto max-w-2xl text-muted-foreground">
-                We're with you every step of the way. Explore each stage of your healthcare travel experience in
+                We&apos;re with you every step of the way. Explore each stage of your healthcare travel experience in
                 Malaysia.
               </p>
             </div>
