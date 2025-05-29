@@ -89,7 +89,7 @@ export default function HealingJourney() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
               >
                 <Link
-                  href={`/journey/${step.id}`}
+                  href={`/home2-${step.id}`}
                   onMouseEnter={() => setHoveredStep(step.id)}
                   onMouseLeave={() => setHoveredStep(null)}
                   className="block h-full"
