@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        'luxe': ['Luxe Uno', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        'primary': ['Luxe Uno', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -3,8 +3,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brand Typography - Helvetica Neue Lt Std */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Luxe Uno Font Family */
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Luxe Uno';
+  src: url('/fonts/LuxeUno-HeavyItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --mhtc-primary: #BE1E2D; /* Official MHTC Red color from brand guidelines */
@@ -12,60 +122,73 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   
-  /* Brand Typography Variables */
-  --font-helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  /* Brand Typography Variables - Updated to use Luxe Uno */
+  --font-primary: "Luxe Uno", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   --font-just-wright: "Just Wright", cursive;
 }
 
 /* Base font family application */
-.font-helvetica {
-  font-family: var(--font-helvetica);
+.font-primary {
+  font-family: var(--font-primary);
 }
 
 .font-just-wright {
   font-family: var(--font-just-wright);
 }
 
-/* Brand Typography Classes */
+/* Brand Typography Classes - Updated to use Luxe Uno */
 @layer components {
-  /* Headlines: 35 Thin (preferably all caps) */
+  /* Headlines: Ultra Light (preferably all caps) */
   .headline-primary {
-    font-family: var(--font-helvetica);
-    font-weight: 200; /* Thin equivalent */
+    font-family: var(--font-primary);
+    font-weight: 200; /* Ultra Light */
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1;
   }
   
-  /* Body Copy: 55 Roman (sentence case) */
+  /* Body Copy: Regular (sentence case) */
   .body-text {
-    font-family: var(--font-helvetica);
-    font-weight: 400; /* Roman equivalent */
+    font-family: var(--font-primary);
+    font-weight: 400; /* Regular */
     line-height: 1.6;
   }
   
-  /* Subheadings: 55 Roman (sentence case) */
+  /* Subheadings: Regular (sentence case) */
   .subheading {
-    font-family: var(--font-helvetica);
-    font-weight: 400; /* Roman equivalent */
+    font-family: var(--font-primary);
+    font-weight: 400; /* Regular */
     line-height: 1.4;
   }
   
-  /* Bold Text: 65 Medium or 75 Bold */
+  /* Medium Text: Semi Bold */
   .text-medium {
-    font-family: var(--font-helvetica);
-    font-weight: 500; /* Medium equivalent */
+    font-family: var(--font-primary);
+    font-weight: 600; /* Semi Bold */
   }
   
+  /* Bold Text: Bold */
   .text-bold {
-    font-family: var(--font-helvetica);
-    font-weight: 700; /* Bold equivalent */
+    font-family: var(--font-primary);
+    font-weight: 700; /* Bold */
   }
   
-  /* Light Text: 45 Light */
+  /* Light Text: Light */
   .text-light {
-    font-family: var(--font-helvetica);
-    font-weight: 300; /* Light equivalent */
+    font-family: var(--font-primary);
+    font-weight: 300; /* Light */
+  }
+  
+  /* Ultra Light Text: Ultra Light */
+  .text-ultra-light {
+    font-family: var(--font-primary);
+    font-weight: 200; /* Ultra Light */
+  }
+  
+  /* Heavy Text: Heavy */
+  .text-heavy {
+    font-family: var(--font-primary);
+    font-weight: 800; /* Heavy */
   }
   
   /* Script emphasis with Just Wright */
@@ -116,3 +239,9 @@
 }
 
 /* ... rest of existing styles ... */
+
+@layer base {
+  html {
+    font-family: 'Luxe Uno', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  }
+}
