@@ -1,11 +1,11 @@
 import Image from "next/image"
-import { Header } from "@/components/home3/header"
-import { Footer } from "@/components/home3/footer"
-import { InteractiveHero } from "@/components/home3/interactive-hero"
-import HealingJourney from "@/components/home2/healing-journey"
-import StatsSection from "@/components/home1/StatsSection"
-import { Button } from "@/components/ui/button"
-import { Container } from "@/components/home3/ui/container"
+import { Header } from "@/components/home4/header"
+import { Footer } from "@/components/home4/footer"
+import Hero4 from "@/components/home4/hero4"
+import HealingJourney from "@/components/home4/healing-journey"
+import StatsSection from "@/components/home4/stats"
+import { Button } from "@/components/home4/ui/button"
+import { Container } from "@/components/home4/ui/container"
 
 export default function Home4Page() {
   return (
@@ -13,7 +13,7 @@ export default function Home4Page() {
       <Header />
       <main className="flex-1">
         {/* Interactive Hero Section */}
-        <InteractiveHero />
+        <Hero4 />
 
         {/* Healing Journey Section */}
         <HealingJourney />
