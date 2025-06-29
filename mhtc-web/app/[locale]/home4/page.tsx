@@ -6,6 +6,8 @@ import HealingJourney from "@/components/home4/healing-journey"
 import StatsSection from "@/components/home4/stats"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
+import Banner from "@/components/home4/banner"
+
 
 export default function Home4Page() {
   return (
@@ -24,6 +26,11 @@ export default function Home4Page() {
             <StatsSection />
           </Container>
         </section>
+
+        {/* Strategic placement of breast cancer banner within treatments context */}
+        <div className="relative -mt-10 mb-10">
+          <Banner />
+        </div>
 
         {/* CTA Section */}
         <section className="relative overflow-hidden bg-[#BE1E2D] py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 text-white">

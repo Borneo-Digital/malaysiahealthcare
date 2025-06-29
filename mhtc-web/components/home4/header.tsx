@@ -91,8 +91,8 @@ export function Header() {
             <Link href="/" className="mr-6 flex items-center space-x-2">
               <div className="relative h-10 w-40">
               <Image
-              src="/images/mhtc-logo.png"
-              alt="MHTC Logo"
+              src="/images/logo-malaysiahealthcare.png"
+              alt="Malaysia Healthcare Logo"
               width={120}
               height={40}
               className="h-10 w-auto"
@@ -120,7 +120,7 @@ export function Header() {
                           <ChevronDown className="h-4 w-4" />
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-48">
+                      <DropdownMenuContent align="start" className="w-48 bg-white border border-gray-200 shadow-lg">
                         {item.children.map((child) => (
                           <DropdownMenuItem key={child.href} asChild>
                             <Link
@@ -166,7 +166,7 @@ export function Header() {
                   <span className="hidden sm:inline-block">English</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg">
                 {languages.map((lang) => (
                   <DropdownMenuItem key={lang.code}>
                     <button

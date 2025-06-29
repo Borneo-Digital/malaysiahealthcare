@@ -117,8 +117,34 @@
 }
 
 :root {
+  /* Primary Brand Colors */
   --mhtc-primary: #BE1E2D; /* Official MHTC Red color from brand guidelines */
   --mhtc-primary-hover: #A50E25;
+  
+  /* Grey Color Palette */
+  --grey-50: #F9FAFB;
+  --grey-100: #F3F4F6;
+  --grey-200: #E5E7EB;
+  --grey-300: #D1D5DB;
+  --grey-400: #9CA3AF;
+  --grey-500: #6B7280;
+  --grey-600: #4B5563;
+  --grey-700: #374151;
+  --grey-800: #1F2937;
+  --grey-900: #111827;
+  
+  /* Disable/Disabled Colors */
+  --disabled-bg: #F3F4F6; /* Light grey background for disabled elements */
+  --disabled-text: #9CA3AF; /* Grey text for disabled elements */
+  --disabled-border: #E5E7EB; /* Grey border for disabled elements */
+  
+  /* Status Colors */
+  --success: #10B981; /* Green for success states */
+  --warning: #F59E0B; /* Amber for warning states */
+  --error: #EF4444; /* Red for error states */
+  --info: #3B82F6; /* Blue for info states */
+  
+  /* Background and Foreground */
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   
@@ -219,6 +245,53 @@
   .bg-mhtc-primary\/10 {
     background-color: rgba(190, 30, 45, 0.1) !important;
   }
+  
+  /* Grey utilities */
+  .text-grey-50 { color: var(--grey-50) !important; }
+  .text-grey-100 { color: var(--grey-100) !important; }
+  .text-grey-200 { color: var(--grey-200) !important; }
+  .text-grey-300 { color: var(--grey-300) !important; }
+  .text-grey-400 { color: var(--grey-400) !important; }
+  .text-grey-500 { color: var(--grey-500) !important; }
+  .text-grey-600 { color: var(--grey-600) !important; }
+  .text-grey-700 { color: var(--grey-700) !important; }
+  .text-grey-800 { color: var(--grey-800) !important; }
+  .text-grey-900 { color: var(--grey-900) !important; }
+  
+  .bg-grey-50 { background-color: var(--grey-50) !important; }
+  .bg-grey-100 { background-color: var(--grey-100) !important; }
+  .bg-grey-200 { background-color: var(--grey-200) !important; }
+  .bg-grey-300 { background-color: var(--grey-300) !important; }
+  .bg-grey-400 { background-color: var(--grey-400) !important; }
+  .bg-grey-500 { background-color: var(--grey-500) !important; }
+  .bg-grey-600 { background-color: var(--grey-600) !important; }
+  .bg-grey-700 { background-color: var(--grey-700) !important; }
+  .bg-grey-800 { background-color: var(--grey-800) !important; }
+  .bg-grey-900 { background-color: var(--grey-900) !important; }
+  
+  /* Disabled utilities */
+  .disabled {
+    background-color: var(--disabled-bg) !important;
+    color: var(--disabled-text) !important;
+    border-color: var(--disabled-border) !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+  }
+  
+  .text-disabled { color: var(--disabled-text) !important; }
+  .bg-disabled { background-color: var(--disabled-bg) !important; }
+  .border-disabled { border-color: var(--disabled-border) !important; }
+  
+  /* Status utilities */
+  .text-success { color: var(--success) !important; }
+  .text-warning { color: var(--warning) !important; }
+  .text-error { color: var(--error) !important; }
+  .text-info { color: var(--info) !important; }
+  
+  .bg-success { background-color: var(--success) !important; }
+  .bg-warning { background-color: var(--warning) !important; }
+  .bg-error { background-color: var(--error) !important; }
+  .bg-info { background-color: var(--info) !important; }
 }
 
 /* Keep the existing utilities as fallback */
