@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { Header } from "@/components/home4/header";
+import { Footer } from "@/components/home4/footer";
 
 export const metadata: Metadata = {
   title: "Contact Us | Malaysia Healthcare Travel Council",
@@ -11,5 +13,13 @@ export default function ContactLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
 }

@@ -53,11 +53,11 @@ export default function HealingJourney() {
       }}
     >
       <div className="container mx-auto max-w-[1200px] px-4 relative z-10">
-        <motion.h2
-          className="headline-primary text-3xl md:text-4xl lg:text-[42px] text-center mb-6 text-[#BE1E2D]"
+      <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-grey-900 mb-4 text-center"
         >
           THE HEALING JOURNEY
         </motion.h2>
@@ -97,7 +97,7 @@ export default function HealingJourney() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
               >
                 <Link
-                  href={`/home3-${step.id}`}
+                  href={`/home4-${step.id}`}
                   onMouseEnter={() => setHoveredStep(step.id)}
                   onMouseLeave={() => setHoveredStep(null)}
                   className="block h-full"

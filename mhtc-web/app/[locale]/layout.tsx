@@ -48,7 +48,7 @@ export default async function RootLayout({
           {headerT.accessibility.skipToContent}
         </a>
 
-        <TopNavBar />
+        {/* <TopNavBar /> */}
         {/* <Header /> */}
 
         <main id="main-content" className="flex-grow">
