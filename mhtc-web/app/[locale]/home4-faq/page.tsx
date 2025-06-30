@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/home4/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Container } from '@/components/home3/ui/container'
-import { Search, HelpCircle, Plane, Hospital, DollarSign, FileText, Users, Shield } from 'lucide-react'
+import { Search, HelpCircle, Plane, Hospital, DollarSign, Users, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Malaysia Healthcare Travel Council',
@@ -193,7 +193,7 @@ export default function FAQPage() {
               </h1>
               <p className="text-xl text-grey-700 mb-8">
                 Find answers to common questions about healthcare travel to Malaysia. 
-                Can't find what you're looking for? Contact our support team.
+                Can&apos;t find what you&apos;re looking for? Contact our support team.
               </p>
               
               {/* Search Bar */}

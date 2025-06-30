@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p className="text-grey-600 mb-8">
                 If you have any questions about our privacy policy or terms of use, 
-                please don't hesitate to contact us.
+                please don&apos;t hesitate to contact us.
               </p>
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="grid md:grid-cols-2 gap-6 text-left">

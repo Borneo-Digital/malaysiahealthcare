@@ -9,8 +9,7 @@ import {
   ArrowRight,
   Clock,
   Users,
-  Heart,
-  Shield
+  Heart
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/home4/ui/button"
@@ -83,12 +82,7 @@ const treatmentSteps = [
   }
 ]
 
-const qualityMetrics = [
-  { label: "Treatment Success Rate", value: "96.5%", icon: CheckCircle },
-  { label: "Patient Satisfaction", value: "4.8/5", icon: Heart },
-  { label: "Safety Standards", value: "JCI Accredited", icon: Shield },
-  { label: "Average Length of Stay", value: "3.2 days", icon: Clock }
-]
+
 
 export function TreatmentFlowVisual() {
   const [activeStep, setActiveStep] = useState<string>("consultation")

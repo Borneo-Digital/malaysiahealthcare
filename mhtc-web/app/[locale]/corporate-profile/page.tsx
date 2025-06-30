@@ -17,14 +17,7 @@ export const metadata: Metadata = {
   description: "Learn about the Malaysia Healthcare Travel Council, our mission, vision, and commitment to world-class healthcare.",
 };
 
-const iconMap = {
-  qualityAssurance: Award,
-  patientExperience: Users,
-  industryCollaboration: Building,
-  globalPromotion: Globe,
-  innovation: Sparkles,
-  capacityBuilding: BookOpen,
-};
+
 
 const focusAreas = [
   {

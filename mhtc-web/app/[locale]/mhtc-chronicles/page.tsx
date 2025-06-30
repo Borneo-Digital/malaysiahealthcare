@@ -13,10 +13,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/home3/ui/container";
-import { getServerTranslations, isRTL } from "@/utils/translations";
+import { getServerTranslations } from "@/utils/translations";
 import { Locale } from "@/types/i18n";
 import { MHTCChroniclesTranslations } from "@/types/translations";
-import { Newspaper, Calendar, ArrowRight, Mail } from "lucide-react";
+import { Newspaper, Calendar, ArrowRight } from "lucide-react";
 
 export async function generateMetadata({
   params: { locale },
@@ -106,15 +106,6 @@ export default function MHTCChronicles({
     locale,
     "mhtc-chronicles"
   );
-  const rtl = isRTL(locale);
-
-  const categoryItems = [
-    translations.categories.items.healthcareInnovations,
-    translations.categories.items.patientStories,
-    translations.categories.items.industryUpdates,
-    translations.categories.items.events,
-    translations.categories.items.travelTips,
-  ];
 
   return (
     <div className="min-h-screen bg-grey-50">
@@ -133,7 +124,7 @@ export default function MHTCChronicles({
                 {translations.pageTitle}
               </h1>
               <p className="text-xl text-grey-700 mb-8">
-                Stay updated with the latest news, innovations, and stories from Malaysia's healthcare industry.
+                Stay updated with the latest news, innovations, and stories from Malaysia&apos;s healthcare industry.
               </p>
             </div>
           </Container>

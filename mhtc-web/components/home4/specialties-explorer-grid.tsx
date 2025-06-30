@@ -10,7 +10,6 @@ import {
   Baby,
   ArrowRight,
   Users,
-  Award,
   Star,
   Building
 } from "lucide-react"

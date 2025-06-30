@@ -7,7 +7,6 @@ import {
   Plane, 
   DollarSign, 
   ChevronDown, 
-  ChevronRight,
   Download,
   ExternalLink 
 } from "lucide-react"

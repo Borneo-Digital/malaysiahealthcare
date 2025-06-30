@@ -38,7 +38,7 @@ const preArrivalSteps = [
         },
         {
           question: "What documents should I prepare?",
-          answer: "You'll need a valid passport, medical documents from your current healthcare provider, and proof of sufficient funds."
+          answer: "You&apos;ll need a valid passport, medical documents from your current healthcare provider, and proof of sufficient funds."
         }
       ]
     }

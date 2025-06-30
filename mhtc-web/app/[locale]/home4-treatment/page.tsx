@@ -2,12 +2,9 @@ import { Metadata } from 'next'
 import { Header } from '@/components/home4/header'
 import { Footer } from '@/components/home4/footer'
 import { Container } from '@/components/home4/ui/container'
-import { Home4JourneyNavigation } from '@/components/home4/home4-journey-navigation'
 import { Home4TreatmentHero } from '@/components/home4/home4-treatment-hero'
 import { SpecialtiesExplorerGrid } from '@/components/home4/specialties-explorer-grid'
 import { TreatmentFlowVisual } from '@/components/home4/treatment-flow-visual'
-import { QualityTrustSection } from '@/components/home3/quality-trust-section'
-import { Home3ExpertConsultCTA } from '@/components/home3/home3-expert-consult-cta'
 import { CTATreatment } from '@/components/home4/cta-treatment'
 
 export const metadata: Metadata = {

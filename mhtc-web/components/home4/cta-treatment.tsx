@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Heart } from "lucide-react"
+import { Heart } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/home4/ui/button"
 import { motion } from "framer-motion"
