@@ -7,7 +7,7 @@ import {
   Plane, 
   DollarSign, 
   ChevronDown, 
-  Download,
+  // Download,
   ExternalLink 
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -203,13 +203,13 @@ export function Home4PlanningSteps() {
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.3, delay: 0.4 }}
                             >
-                              <Button 
+                              {/* <Button 
                                 variant="outline" 
                                 className="w-full justify-start border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary/5 hover:scale-105 transition-all duration-200"
                               >
                                 <Download className="h-4 w-4 mr-2" />
                                 Download Planning Guide
-                              </Button>
+                              </Button> */}
                             </motion.div>
                             <motion.div
                               initial={{ opacity: 0, y: 10 }}

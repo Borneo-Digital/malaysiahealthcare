@@ -8,13 +8,13 @@ import {
   Bone, 
   Zap, 
   Baby,
-  ArrowRight,
+  // ArrowRight,
   Users,
   Star,
   Building
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/home4/ui/button"
+// import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const medicalSpecialties = [
@@ -176,7 +176,7 @@ export function SpecialtiesExplorerGrid() {
                     )}
 
                     {/* Action */}
-                    <div className="pt-4">
+                    {/* <div className="pt-4">
                       <Button 
                         variant="outline" 
                         size="sm"
@@ -185,7 +185,7 @@ export function SpecialtiesExplorerGrid() {
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </CardContent>
@@ -234,13 +234,13 @@ export function SpecialtiesExplorerGrid() {
                   </p>
 
                   {/* Action */}
-                  <Button 
+                  {/* <Button 
                     variant="outline" 
                     size="sm"
                     className="w-full border-[#BE1E2D] text-[#BE1E2D] hover:bg-[#BE1E2D] hover:text-white text-xs"
                   >
                     Explore
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

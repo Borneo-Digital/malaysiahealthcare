@@ -89,9 +89,9 @@ export function Home4ArrivalHero() {
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </LocaleLink>
-              <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
+              {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
                 Transport Options
-              </Button>
+              </Button> */}
             </div>
           </div>
 

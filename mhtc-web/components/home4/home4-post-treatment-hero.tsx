@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Heart, Users, Home, ArrowRight, CheckCircle } from "lucide-react"
+import { Heart, Users, Home, CheckCircle } from "lucide-react"
 import { Button } from "@/components/home4/ui/button"
+import LocaleLink from "@/components/LocaleLink"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -82,13 +83,14 @@ export function Home4PostTreatmentHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                Explore Support Options
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
+              <LocaleLink href="/contact">
+                <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
+                  Contact us
+                </Button>
+              </LocaleLink>
+              {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
                 Recovery Resources
-              </Button>
+              </Button> */}
             </div>
           </div>
 

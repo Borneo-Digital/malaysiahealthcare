@@ -6,13 +6,13 @@ import {
   Stethoscope, 
   Activity,
   CheckCircle,
-  ArrowRight,
+  // ArrowRight,
   Clock,
   Users,
   Heart
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/home4/ui/button"
+// import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const treatmentSteps = [
@@ -214,13 +214,13 @@ export function TreatmentFlowVisual() {
                 </div>
 
                 {/* Action */}
-                <Button 
+                {/* <Button 
                   size="lg" 
                   className="w-full bg-[#BE1E2D] hover:bg-[#A01825]"
                 >
                   Learn More About This Step
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>
