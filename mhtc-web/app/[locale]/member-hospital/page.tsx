@@ -113,12 +113,15 @@ export default function MemberHospital() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {membersData.ordinaryMembers[activeTab as keyof typeof membersData.ordinaryMembers]?.map((member, index) => (
-                <div
+                <a
                   key={index}
-                  className="bg-white p-4 rounded-lg text-sm text-center hover:shadow-md transition-shadow border border-gray-200"
+                  href={member.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-4 rounded-lg text-sm text-center hover:shadow-md transition-shadow border border-gray-200 cursor-pointer hover:scale-105 transform transition-transform block"
                 >
-                  {member}
-                </div>
+                  {member.name}
+                </a>
               ))}
             </div>
           </div>

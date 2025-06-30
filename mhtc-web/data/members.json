@@ -155,88 +155,286 @@
   ],
   "ordinaryMembers": {
     "wilayahPersekutuan": [
-      "ALPS Medical Centre",
-      "ALTU Orthopaedic Hospital",
-      "Artius Dental Specialist Center",
-      "Hospital Pusrawi",
-      "International Specialist Eye Centre (ISEC)",
-      "KL Fertility Centre",
-      "Kheng Dental",
-      "KPJ Pusat Pakar Mata Centre for Sight",
-      "KPJ Sentosa KL Specialist Hospital",
-      "KPJ Tawakkal KL Specialist Hospital",
-      "Life Care Diagnostic Medical Centre",
-      "OasisEye Specialists",
-      "Optimax Eye Specialist Centre",
-      "ParkCity Medical Centre",
-      "Pristine Dental Centre",
-      "Sunway Medical Centre Velocity",
-      "Sunway Fertility Centre @ Velocity",
-      "Tawakkal Health Centre",
-      "Tung Shin Hospital",
-      "UKM Specialist Centre",
-      "UM Specialist Centre (UMSC)",
-      "National Sports Medicine Centre (PPSN)",
-      "Cenglid G.I. Medical Centre"
+      {
+        "name": "ALPS Medical Centre",
+        "website": "https://alpsmedical.com/"
+      },
+      {
+        "name": "ALTU Orthopaedic Hospital",
+        "website": "https://www.altyortho.com/"
+      },
+      {
+        "name": "Artius Dental Specialist Center",
+        "website": "https://www.artiusdental.com/"
+      },
+      {
+        "name": "Hospital Pusrawi",
+        "website": "https://pusrawi.com.my/"
+      },
+      {
+        "name": "International Specialist Eye Centre (ISEC)",
+        "website": "https://www.isec.my/"
+      },
+      {
+        "name": "KL Fertility Centre",
+        "website": "https://www.klfertility.com/"
+      },
+      {
+        "name": "Kheng Dental",
+        "website": "https://www.khengdental.com/"
+      },
+      {
+        "name": "KPJ Pusat Pakar Mata Centre for Sight",
+        "website": "https://kpjhealth.com.my/"
+      },
+      {
+        "name": "KPJ Sentosa KL Specialist Hospital",
+        "website": "https://kpjhealth.com.my/sentosa"
+      },
+      {
+        "name": "KPJ Tawakkal KL Specialist Hospital",
+        "website": "https://kpjhealth.com.my/tawakkal"
+      },
+      {
+        "name": "Life Care Diagnostic Medical Centre",
+        "website": "https://www.lifecare.com.my/"
+      },
+      {
+        "name": "OasisEye Specialists",
+        "website": "https://www.oasiseye.com/"
+      },
+      {
+        "name": "Optimax Eye Specialist Centre",
+        "website": "https://www.optimax.com.my/"
+      },
+      {
+        "name": "ParkCity Medical Centre",
+        "website": "https://parkcitymedicalcentre.com/"
+      },
+      {
+        "name": "Pristine Dental Centre",
+        "website": "https://www.pristinedental.com.my/"
+      },
+      {
+        "name": "Sunway Medical Centre Velocity",
+        "website": "https://www.sunwaymedicalvelocity.com.my/en/"
+      },
+      {
+        "name": "Sunway Fertility Centre @ Velocity",
+        "website": "https://sunwayfertility.com.my/"
+      },
+      {
+        "name": "Tawakkal Health Centre",
+        "website": "https://kpjhealth.com.my/thc/"
+      },
+      {
+        "name": "Tung Shin Hospital",
+        "website": "https://www.tungshin.com.my/"
+      },
+      {
+        "name": "UKM Specialist Centre",
+        "website": "https://www.ukmsc.com.my/"
+      },
+      {
+        "name": "UM Specialist Centre (UMSC)",
+        "website": "https://umsc.my/"
+      },
+      {
+        "name": "National Sports Medicine Centre (PPSN)",
+        "website": "https://ppsn.isn.gov.my/"
+      },
+      {
+        "name": "Cenglid G.I. Medical Centre",
+        "website": "https://cengild.com/"
+      }
     ],
     "selangor": [
-      "Avisena Specialist Hospital",
-      "Ara Damansara Medical Centre",
-      "AVISENA Women's & Children's Specialist Hospital",
-      "Beacon Hospital",
-      "Columbia Asia Hospital - Bukit Rimau",
-      "Columbia Asia Hospital - Petaling Jaya",
-      "Ever-Link Fertility Centre",
-      "Hospital Picaso",
-      "KPJ Klang Specialist Hospital",
-      "Metro IVF @ Setiawalk",
-      "MSU Medical Centre",
-      "Sophea Fertility Centre",
-      "Topvision Eye Specialist Centre",
-      "Signature Dental Centre",
-      "Sunway Medical Centre Damansara",
-      "Sunway Fertility Centre @ Sunway City",
-      "ALTU Orthopaedic Hospital",
-      "KL Fertility Centre",
-      "Pacific Dental Centre",
-      "Damansara Specialist Hospital"
+      {
+        "name": "Avisena Specialist Hospital",
+        "website": "https://www.avisena.com.my/"
+      },
+      {
+        "name": "Ara Damansara Medical Centre",
+        "website": "https://aradamansaramedicalcentre.com/"
+      },
+      {
+        "name": "AVISENA Women's & Children's Specialist Hospital",
+        "website": "https://www.avisena.com.my/"
+      },
+      {
+        "name": "Beacon Hospital",
+        "website": "https://www.beaconhospital.com.my/"
+      },
+      {
+        "name": "Columbia Asia Hospital - Bukit Rimau",
+        "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-rimau/"
+      },
+      {
+        "name": "Columbia Asia Hospital - Petaling Jaya",
+        "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/"
+      },
+      {
+        "name": "Ever-Link Fertility Centre",
+        "website": "https://everlinkivf.com.my/"
+      },
+      {
+        "name": "Hospital Picaso",
+        "website": "https://www.hospitalpicaso.com/en/"
+      },
+      {
+        "name": "KPJ Klang Specialist Hospital",
+        "website": "https://kpjhealth.com.my/klang"
+      },
+      {
+        "name": "Metro IVF @ Setiawalk",
+        "website": "https://www.metro.com.my/"
+      },
+      {
+        "name": "MSU Medical Centre",
+        "website": "https://www.msumedicalcentre.com/"
+      },
+      {
+        "name": "Sophea Fertility Centre",
+        "website": "https://www.sopheafertility.com/"
+      },
+      {
+        "name": "Topvision Eye Specialist Centre",
+        "website": "https://www.tvesc.com/en/"
+      },
+      {
+        "name": "Signature Dental Centre",
+        "website": "https://www.signaturedental.com.my/"
+      },
+      {
+        "name": "Sunway Medical Centre Damansara",
+        "website": "https://www.sunwaymedical.com/"
+      },
+      {
+        "name": "Sunway Fertility Centre @ Sunway City",
+        "website": "https://www.sunwaymedical.com/en/centres-of-excellence/fertility-centre"
+      },
+      {
+        "name": "ALTU Orthopaedic Hospital",
+        "website": "https://www.altyortho.com/"
+      },
+      {
+        "name": "KL Fertility Centre",
+        "website": "https://www.klfertility.com/"
+      },
+      {
+        "name": "Pacific Dental Centre",
+        "website": "https://www.pacificdentalkepong.com/"
+      },
+      {
+        "name": "Damansara Specialist Hospital",
+        "website": "https://kpjhealth.com.my/damansara"
+      }
     ],
     "johor": [
-      "Gleneagles Hospital Medini Johor",
-      "Columbia Asia Hospital - Iskandar Puteri",
-      "KPJ Pasir Gudang Specialist Hospital",
-      "KPJ Puteri Specialist Hospital"
+      {
+        "name": "Gleneagles Hospital Medini Johor",
+        "website": "https://gleneagles.com.my/johor"
+      },
+      {
+        "name": "Columbia Asia Hospital - Iskandar Puteri",
+        "website": "https://www.columbiaasia.com/malaysia/ms/hospitals/iskandar-puteri/"
+      },
+      {
+        "name": "KPJ Pasir Gudang Specialist Hospital",
+        "website": "https://kpjhealth.com.my/pasir-gudang"
+      },
+      {
+        "name": "KPJ Puteri Specialist Hospital",
+        "website": "https://kpjhealth.com.my/puteri"
+      }
     ],
     "negeriSembilan": [
-      "Aurelius Hospital Negeri Sembilan",
-      "UCSI Hospital"
+      {
+        "name": "Aurelius Hospital Negeri Sembilan",
+        "website": "https://www.aurelius.com.my/"
+      },
+      {
+        "name": "UCSI Hospital",
+        "website": "https://www.ucsihospital.com/"
+      }
     ],
     "penang": [
-      "Bagan Specialist Centre",
-      "KPJ Penang Specialist Hospital",
-      "Northern Heart Hospital Penang",
-      "Pantai Hospital Penang",
-      "Sunway Medical Centre Penang",
-      "Star Fertility Penang"
+      {
+        "name": "Bagan Specialist Centre",
+        "website": "https://www.bsc.com.my/"
+      },
+      {
+        "name": "KPJ Penang Specialist Hospital",
+        "website": "https://kpjhealth.com.my/penang"
+      },
+      {
+        "name": "Northern Heart Hospital Penang",
+        "website": "https://nhearthospital.com/"
+      },
+      {
+        "name": "Pantai Hospital Penang",
+        "website": "https://www.pantai.com.my/penang"
+      },
+      {
+        "name": "Sunway Medical Centre Penang",
+        "website": "https://www.sunwaymedical.com/"
+      },
+      {
+        "name": "Star Fertility Penang",
+        "website": "https://starfertility.life/"
+      }
     ],
     "perak": [
-      "Hospital Seri Botani"
+      {
+        "name": "Hospital Seri Botani",
+        "website": "https://www.hospitalseribotani.com.my/"
+      }
     ],
     "melaka": [
-      "Oriental Melaka Straits Medical Centre",
-      "Pantai Hospital Ayer Keroh",
-      "Putra Specialist Hospital (Melaka)"
+      {
+        "name": "Oriental Melaka Straits Medical Centre",
+        "website": "https://orientalmedical.com.my/"
+      },
+      {
+        "name": "Pantai Hospital Ayer Keroh",
+        "website": "https://www.pantai.com.my/ayer-keroh"
+      },
+      {
+        "name": "Putra Specialist Hospital (Melaka)",
+        "website": "https://putrahospitalmelaka.com/"
+      }
     ],
     "sabah": [
-      "Gleneagles Hospital Kota Kinabalu",
-      "Jesselton Medical Centre",
-      "KPJ Sabah Specialist Hospital"
+      {
+        "name": "Gleneagles Hospital Kota Kinabalu",
+        "website": "https://gleneagles.com.my/kota-kinabalu"
+      },
+      {
+        "name": "Jesselton Medical Centre",
+        "website": "https://jmc.my/"
+      },
+      {
+        "name": "KPJ Sabah Specialist Hospital",
+        "website": "https://kpjhealth.com.my/sabah"
+      }
     ],
     "sarawak": [
-      "Normah Medical Specialist Centre",
-      "KPJ Kuching Specialist Hospital",
-      "Borneo Medical Centre(Miri)",
-      "Sunway Fertility Centre @ Kuching"
+      {
+        "name": "Normah Medical Specialist Centre",
+        "website": "https://normah.com.my/"
+      },
+      {
+        "name": "KPJ Kuching Specialist Hospital",
+        "website": "https://kpjhealth.com.my/kuching"
+      },
+      {
+        "name": "Borneo Medical Centre(Miri)",
+        "website": "https://www.bmcmiri.com/"
+      },
+      {
+        "name": "Sunway Fertility Centre @ Kuching",
+        "website": "https://www.sunfert.com/"
+      }
     ]
   }
 } 
