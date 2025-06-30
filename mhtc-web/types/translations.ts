@@ -294,6 +294,22 @@ export interface NavbarTranslations {
 export interface MemberHospitalTranslations {
   pageTitle: string;
   pageDescription: string;
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  elitePartners: {
+    title: string;
+    description: string;
+  };
+  ordinaryMembers: {
+    title: string;
+    description: string;
+  };
+  supporters: {
+    title: string;
+    subtitle: string;
+  };
   search: {
     title: string;
     nameInput: string;
@@ -317,15 +333,6 @@ export interface MemberHospitalTranslations {
       };
     };
     button: string;
-  };
-  featured: {
-    title: string;
-    provider: {
-      namePrefix: string;
-      details: string;
-      specialty: string;
-      location: string;
-    };
   };
   specialties: {
     title: string;
