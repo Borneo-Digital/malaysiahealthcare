@@ -33,9 +33,9 @@ export function CTAArrival() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white">
+            {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white">
               Download Complete Guide
-            </Button>
+            </Button> */}
           </motion.div>
         </div>
             </div>

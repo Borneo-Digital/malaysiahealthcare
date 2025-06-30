@@ -43,9 +43,9 @@ export default function Home4PostTreatment() {
                 Access ongoing support, resources, and connections to ensure your continued wellness and recovery.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-mhtc-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                {/* <button className="bg-white text-mhtc-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Access Support Resources
-                </button>
+                </button> */}
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-mhtc-primary transition-colors">
                   Contact Support Team
                 </button>

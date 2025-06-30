@@ -5,7 +5,7 @@ import {
   Calendar, 
   Clock, 
   CheckCircle, 
-  ArrowRight,
+  // ArrowRight,
   Heart,
   Activity,
   Users,
@@ -16,7 +16,7 @@ import {
   Star
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/home4/ui/button"
+// import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const recoveryPhases = [
@@ -238,13 +238,13 @@ export function RecoveryTimelineView() {
 
             {/* Action */}
             <div className="mt-6 pt-6 border-t border-gray-200">
-              <Button 
+              {/* <Button 
                 size="lg" 
                 className="w-full bg-[#BE1E2D] hover:bg-[#A01825]"
               >
                 Get Detailed {activePhaseData.title} Guide
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              </Button> */}
             </div>
           </CardContent>
         </Card>

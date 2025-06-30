@@ -242,9 +242,9 @@ export function ContinuumOfCareInteractive() {
           <Button size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825]">
             Contact MHTC for Information
           </Button>
-          <Button size="lg" variant="outline" className="border-[#BE1E2D] text-[#BE1E2D]">
+          {/* <Button size="lg" variant="outline" className="border-[#BE1E2D] text-[#BE1E2D]">
             Download Service Directory
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

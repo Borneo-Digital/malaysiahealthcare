@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { MapPin, DollarSign, Globe, Clock, Star, CheckCircle, Users, Sparkles, ArrowRight, Heart } from "lucide-react"
+import { MapPin, DollarSign, Globe, Clock, Star, CheckCircle, Users, Sparkles, Heart } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/home4/ui/button"
+// import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const aftercareBenefits = [
@@ -260,13 +260,13 @@ export function MalaysianAftercareBenefits() {
           exceptional post-treatment care in a welcoming, multicultural environment.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825]">
+          {/* <Button size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825]">
             Plan My Recovery
             <ArrowRight className="h-5 w-5 ml-2" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-[#BE1E2D] text-[#BE1E2D]">
+          </Button> */}
+          {/* <Button size="lg" variant="outline" className="border-[#BE1E2D] text-[#BE1E2D]">
             View Recovery Options
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>
