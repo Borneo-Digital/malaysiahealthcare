@@ -130,36 +130,14 @@ export default function Hero4() {
             {/* Main Image */}
             <div className="relative h-64 sm:h-80 lg:h-[70vh] xl:h-[80vh] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl">
               <Image
-                src="https://placehold.co/1000x1200/fafafa/cccccc?text=Malaysia+Healthcare"
-                alt="Malaysia Healthcare Excellence"
+                src="/images/home4/MHTC.png"
+                alt="Malaysian Healthcare Professionals - Quality Medical Care"
                 fill
                 className="object-cover"
                 priority
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-              
-              {/* Floating Stats Cards - Mobile Optimized */}
-              <div className="absolute top-3 right-3 sm:top-6 sm:right-6 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-[#BE1E2D]">100+</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Hospitals</div>
-                </div>
-              </div>
-              
-              <div className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-[#BE1E2D]">50+</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Countries</div>
-                </div>
-              </div>
-              
-              <div className="absolute top-1/2 left-3 sm:left-6 transform -translate-y-1/2 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-lg">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-[#BE1E2D]">24/7</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Support</div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
 
             {/* Decorative Elements */}
