@@ -12,7 +12,8 @@ import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
 
 import MHWellnessEvents from "@/components/home4/mh-wellness-events"
-import { ArrowRight, Download } from "lucide-react"
+import Testimonials from "@/components/home4/testimonials"
+import { ArrowRight } from "lucide-react"
 
 export async function generateMetadata({
   params: { locale },
@@ -62,6 +63,13 @@ export default function HomePage() {
           </Container>
         </section>
 
+        {/* Patient Testimonials */}
+        <section className="py-16 md:py-20 bg-white">
+          <Container>
+            <Testimonials />
+          </Container>
+        </section>
+
         {/* CTA Section */}
         <section className="relative overflow-hidden bg-mhtc-primary py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 text-white">
           <div className="absolute inset-0 z-0 opacity-10">
@@ -97,8 +105,8 @@ export default function HomePage() {
                   className="group relative overflow-hidden border-2 border-white text-white bg-transparent hover:bg-white hover:text-mhtc-primary hover:border-white transition-all duration-300 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-semibold hover:scale-105 rounded-[10px]"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Download Guide
-                    <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+                    Our Healing Journey
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Button>
               </div>
