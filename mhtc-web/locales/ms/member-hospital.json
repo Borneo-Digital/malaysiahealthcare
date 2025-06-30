@@ -1,6 +1,22 @@
 {
-    "pageTitle": "Hospital Ahli",
-    "pageDescription": "Cari hospital, klinik, dan profesional penjagaan kesihatan bertaraf dunia di Malaysia.",
+    "pageTitle": "Ahli MHTC",
+    "pageDescription": "Cari penyedia penjagaan kesihatan anda di kalangan Rakan Kongsi Elite dan Biasa MHTC",
+    "hero": {
+        "title": "Ahli MHTC",
+        "subtitle": "Cari penyedia penjagaan kesihatan anda di kalangan Rakan Kongsi Elite dan Biasa MHTC"
+    },
+    "elitePartners": {
+        "title": "Keahlian Rakan Kongsi Elite MHTC",
+        "description": "Rakan Kongsi Elite MHTC mewakili institusi penjagaan kesihatan swasta yang paling berprestij di negara ini. Semua Rakan Kongsi Elite diakreditasi oleh agensi akreditasi penjagaan kesihatan antarabangsa dan beberapa pilihan diiktiraf untuk Kualiti Penjagaan Kepakaran atau Kesihatan (SCQH), Persatuan Malaysia untuk Kualiti dalam Kesihatan (MSQH), Majlis Australia untuk Penjagaan Kesihatan dan Piawaian (ACHS), Baldis International dan Planetree untuk Jawatankuasa Akreditasi Teknologi (PTAC)."
+    },
+    "ordinaryMembers": {
+        "title": "Ahli Biasa MHTC",
+        "description": "Sebuah jawatankuasa terpilih yang terdiri daripada wakil-wakil dari kedua-dua sektor swasta dan kerajaan dengan teliti menilai dan memilih penyedia perubatan tersebut untuk memastikan bahawa standard perkhidmatan dan kualiti penjagaan perubatan yang disediakan dalam industri terus dijunjung. Hospital-hospital ini juga memiliki sekurang-kurangnya satu akreditasi daripada akreditasi penjagaan kesihatan antarabangsa dan mewakili wajah Penjagaan Kesihatan Malaysia."
+    },
+    "supporters": {
+        "title": "Kami",
+        "subtitle": "Penyokong"
+    },
     "search": {
         "title": "Cari Penyedia Penjagaan Kesihatan",
         "nameInput": "Cari mengikut nama atau kepakaran",
@@ -22,15 +38,6 @@
             }
         },
         "button": "Cari"
-    },
-    "featured": {
-        "title": "Hospital Ahli Terkemuka",
-        "provider": {
-            "namePrefix": "Nama Penyedia",
-            "details": "Lihat Butiran",
-            "specialty": "Kepakaran",
-            "location": "Lokasi"
-        }
     },
     "specialties": {
         "title": "Cari mengikut Kepakaran",

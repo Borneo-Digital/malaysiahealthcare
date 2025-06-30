@@ -1,125 +1,133 @@
 "use client";
 
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useTranslation } from "@/hooks/useTranslation";
 import { MemberHospitalTranslations } from "@/types/translations";
+import membersData from "@/data/members.json";
+import { Header } from "@/components/home4/header";
+import { Footer } from "@/components/home4/footer";
+import { useState } from "react";
 
 export default function MemberHospital() {
   const { t, isRTL } =
     useTranslation<MemberHospitalTranslations>("member-hospital");
 
-  const specialties = [
-    "cardiology",
-    "oncology",
-    "orthopedics",
-    "neurology",
-    "pediatrics",
-    "dermatology",
-    "ophthalmology",
-    "dentistry",
-  ] as const;
+  const [activeTab, setActiveTab] = useState<string>("wilayahPersekutuan");
 
-  const locations = ["kualaLumpur", "penang", "johor", "malacca"] as const;
-  const providerTypes = ["hospital", "clinic", "specialist"] as const;
+
+
+  const stateLabels = {
+    wilayahPersekutuan: "Wilayah Persekutuan",
+    selangor: "Selangor",
+    johor: "Johor",
+    negeriSembilan: "Negeri Sembilan",
+    penang: "Penang",
+    perak: "Perak",
+    melaka: "Melaka",
+    sabah: "Sabah",
+    sarawak: "Sarawak",
+  };
 
   return (
-    <div className="max-w-7xl mx-auto bg-white min-h-screen">
-      <div
-        className={`container mx-auto px-4 py-16 mt-16 ${isRTL ? "rtl" : ""}`}
-      >
-        {/* Search and Filter Section */}
-        <div className="bg-gray-100 p-6 rounded-lg mb-12">
-          <h2 className="text-2xl font-semibold mb-4">{t.search.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Input placeholder={t.search.nameInput} />
-            <Select>
-              <SelectTrigger>
-                <SelectValue
-                  placeholder={t.search.locationSelect.placeholder}
-                />
-              </SelectTrigger>
-              <SelectContent>
-                {locations.map((key) => (
-                  <SelectItem key={key} value={key}>
-                    {t.search.locationSelect.options[key]}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <Select>
-              <SelectTrigger>
-                <SelectValue placeholder={t.search.typeSelect.placeholder} />
-              </SelectTrigger>
-              <SelectContent>
-                {providerTypes.map((key) => (
-                  <SelectItem key={key} value={key}>
-                    {t.search.typeSelect.options[key]}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        <div
+          className={`container mx-auto px-4 py-16 ${isRTL ? "rtl" : ""}`}
+        >
+        {/* Elite Partners Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-6">{t.elitePartners.title}</h2>
+            <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              {t.elitePartners.description}
+            </p>
           </div>
-          <Button className="mt-4">{t.search.button}</Button>
-        </div>
-
-        {/* Featured Providers */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6">{t.featured.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((provider) => (
-              <div
-                key={provider}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+          
+          {/* Elite Partners Grid - Logos will be added later */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+            {membersData.elitePartners.map((partner) => (
+              <a
+                key={partner.id}
+                href={partner.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center justify-center min-h-[120px] border cursor-pointer hover:scale-105 transform transition-transform"
               >
-                <Image
-                  src={`/images/provider-mock.jpeg?height=200&width=400&text=Provider+${provider}`}
-                  alt={`${t.featured.provider.namePrefix} ${provider}`}
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {t.featured.provider.namePrefix} {provider}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {t.featured.provider.specialty} •{" "}
-                    {t.featured.provider.location}
-                  </p>
-                  <Button variant="outline">
-                    {t.featured.provider.details}
-                  </Button>
+                {/* Hospital Logo */}
+                <div className="w-full h-20 mb-3 flex items-center justify-center">
+                  <img
+                    src={partner.logoPath}
+                    alt={`${partner.name} logo`}
+                    className="w-24 h-16 object-contain"
+                    onError={(e) => {
+                      // Fallback to text if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'block';
+                    }}
+                  />
+                  <div className="w-24 h-16 bg-gray-100 rounded-lg hidden items-center justify-center">
+                    <span className="text-xs text-gray-500 text-center px-2">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
+                <p className="text-xs text-gray-600 text-center">{partner.name}</p>
+              </a>
             ))}
           </div>
         </div>
 
-        {/* Specialties Section */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-6">{t.specialties.title}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {specialties.map((specialty) => (
-              <Button
-                key={specialty}
-                variant="outline"
-                className="justify-start"
+        {/* Ordinary Members Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-6">{t.ordinaryMembers.title}</h2>
+            <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              {t.ordinaryMembers.description}
+            </p>
+          </div>
+
+          {/* State Tabs */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {Object.keys(membersData.ordinaryMembers).map((stateKey) => (
+              <button
+                key={stateKey}
+                onClick={() => setActiveTab(stateKey)}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  activeTab === stateKey
+                    ? "bg-red-600 text-white"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                }`}
               >
-                {t.specialties.list[specialty]}
-              </Button>
+                {stateLabels[stateKey as keyof typeof stateLabels]}
+              </button>
             ))}
           </div>
+
+          {/* Active State Members */}
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-red-600">
+              {stateLabels[activeTab as keyof typeof stateLabels]}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {membersData.ordinaryMembers[activeTab as keyof typeof membersData.ordinaryMembers]?.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-4 rounded-lg text-sm text-center hover:shadow-md transition-shadow border border-gray-200"
+                >
+                  {member}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+
+        </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 }

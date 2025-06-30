@@ -25,7 +25,7 @@ const medicalSpecialties = [
     icon: Heart,
     color: "bg-red-50 border-red-200 text-red-700",
     procedures: ["Bypass Surgery", "Angioplasty", "Heart Valve Repair", "Pacemaker Implant"],
-    stats: { patients: "2,500+", success: "98%" },
+ 
     featured: true
   },
   {
@@ -145,17 +145,15 @@ export function SpecialtiesExplorerGrid() {
                       </div>
                     </div>
 
-                    {/* Stats */}
+                    {/* Stats
                     <div className="flex gap-6 py-4">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-[#BE1E2D]">{specialty.stats.patients}</div>
                         <div className="text-sm text-gray-600">Patients Treated</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-[#BE1E2D]">{specialty.stats.success}</div>
                         <div className="text-sm text-gray-600">Success Rate</div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Description */}
                     <p className="text-gray-700 leading-relaxed">
@@ -221,16 +219,14 @@ export function SpecialtiesExplorerGrid() {
                   </div>
 
                   {/* Stats */}
-                  <div className="flex justify-between py-2">
+                  {/* <div className="flex justify-between py-2">
                     <div className="text-center">
-                      <div className="text-lg font-bold text-[#BE1E2D]">{specialty.stats.patients}</div>
                       <div className="text-xs text-gray-600">Patients</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-lg font-bold text-[#BE1E2D]">{specialty.stats.success}</div>
                       <div className="text-xs text-gray-600">Success</div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Description */}
                   <p className="text-sm text-gray-700 leading-relaxed line-clamp-2">

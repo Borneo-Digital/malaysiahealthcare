@@ -1,6 +1,22 @@
 {
-    "pageTitle": "Rumah Sakit Anggota",
-    "pageDescription": "Temukan rumah sakit, klinik, dan profesional kesehatan kelas dunia di Malaysia.",
+    "pageTitle": "Anggota MHTC",
+    "pageDescription": "Temukan penyedia layanan kesehatan Anda di antara Mitra Elite dan Biasa MHTC",
+    "hero": {
+        "title": "Anggota MHTC",
+        "subtitle": "Temukan penyedia layanan kesehatan Anda di antara Mitra Elite dan Biasa MHTC"
+    },
+    "elitePartners": {
+        "title": "Keanggotaan Mitra Elite MHTC",
+        "description": "Mitra Elite MHTC mewakili institusi layanan kesehatan swasta paling bergengsi di negara ini. Semua Mitra Elite terakreditasi oleh badan akreditasi layanan kesehatan internasional dan beberapa yang terpilih diakui untuk Kualitas Perawatan Spesialis atau Kesehatan (SCQH), Malaysian Society for Quality in Health (MSQH), Australian Council on Healthcare and Standards (ACHS), Baldis International dan Planetree untuk Komite Akreditasi Teknologi (PTAC)."
+    },
+    "ordinaryMembers": {
+        "title": "Anggota Biasa MHTC",
+        "description": "Komite selektif yang terdiri dari perwakilan sektor swasta dan pemerintah dengan ketat mengevaluasi dan memilih penyedia medis tersebut untuk memastikan bahwa standar layanan dan kualitas perawatan medis yang diberikan dalam industri terus dijunjung tinggi. Rumah sakit ini juga memiliki setidaknya satu akreditasi dari akreditasi layanan kesehatan internasional dan mewakili wajah Layanan Kesehatan Malaysia."
+    },
+    "supporters": {
+        "title": "Kami",
+        "subtitle": "Pendukung"
+    },
     "search": {
         "title": "Cari Penyedia Layanan Kesehatan",
         "nameInput": "Cari berdasarkan nama atau spesialisasi",

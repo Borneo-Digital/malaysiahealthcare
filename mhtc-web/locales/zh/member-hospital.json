@@ -1,6 +1,22 @@
 {
-    "pageTitle": "成员医院",
-    "pageDescription": "在马来西亚寻找世界级医院、诊所和医疗保健专业人员。",
+    "pageTitle": "MHTC 成员",
+    "pageDescription": "在 MHTC 精英合作伙伴和普通合作伙伴中寻找您的医疗保健提供者",
+    "hero": {
+        "title": "MHTC 成员",
+        "subtitle": "在 MHTC 精英合作伙伴和普通合作伙伴中寻找您的医疗保健提供者"
+    },
+    "elitePartners": {
+        "title": "MHTC 精英合作伙伴会员资格",
+        "description": "MHTC 精英合作伙伴代表该国最负盛名的私人医疗机构。所有精英合作伙伴都获得国际医疗认证机构的认证，少数精选机构被认可为专科护理质量或健康 (SCQH)、马来西亚健康质量协会 (MSQH)、澳大利亚医疗保健和标准委员会 (ACHS)、Baldis International 和 Planetree 技术认证委员会 (PTAC)。"
+    },
+    "ordinaryMembers": {
+        "title": "MHTC 普通会员",
+        "description": "由来自私营和政府部门代表组成的选择性委员会严格评估和选择这些医疗提供者，以确保持续维护行业内服务标准和优质医疗护理。这些医院还至少拥有一项国际医疗认证，代表马来西亚医疗保健的形象。"
+    },
+    "supporters": {
+        "title": "我们的",
+        "subtitle": "支持者"
+    },
     "search": {
         "title": "查找医疗保健提供者",
         "nameInput": "按名称或专科搜索",

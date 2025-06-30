@@ -1,0 +1,242 @@
+{
+  "elitePartners": [
+    {
+      "id": "thomson-kota-damansara",
+      "name": "Thomson Hospital Kota Damansara",
+      "location": "Selangor",
+      "logoPath": "/images/hospitals/thomson-logo.png",
+      "website": "https://www.thomsonhospitals.com/",
+      "specialties": ["Cardiology", "Oncology", "Orthopedics"]
+    },
+    {
+      "id": "sunway-medical-centre",
+      "name": "Sunway Medical Centre",
+      "location": "Selangor",
+      "logoPath": "/images/hospitals/sunway.jpeg",
+      "website": "https://www.sunwaymedical.com/en/",
+      "specialties": ["Oncology", "Cardiology", "Neurology"]
+    },
+    {
+      "id": "sunfert-bangsar-south",
+      "name": "Sunfert at Bangsar South",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/sunfertbs-logo.png",
+      "website": "https://www.sunfert.com/clinics/bangsar-south",
+      "specialties": ["IVF", "Women's Health", "Pediatrics"]
+    },
+    {
+      "id": "subang-jaya-medical-centre",
+      "name": "Subang Jaya Medical Centre",
+      "location": "Selangor",
+      "logoPath": "/images/hospitals/sjmc-logo.png",
+      "website": "https://subangjayamedicalcentre.com/",
+      "specialties": ["Cardiology", "Orthopedics", "Oncology"]
+    },
+    {
+      "id": "regency-specialist-hospital",
+      "name": "Regency Specialist Hospital",
+      "location": "Johor",
+      "logoPath": "/images/hospitals/regency.webp",
+      "website": "https://www.regencyspecialist.com/",
+      "specialties": ["Cardiology", "Neurology", "Orthopedics"]
+    },
+    {
+      "id": "prince-court-medical-centre",
+      "name": "Prince Court Medical Centre",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/prince-court-logo.webp",
+      "website": "https://princecourt.com/",
+      "specialties": ["Oncology", "Cardiology", "Transplant"]
+    },
+    {
+      "id": "penang-adventist-hospital",
+      "name": "Penang Adventist Hospital",
+      "location": "Penang",
+      "logoPath": "/images/hospitals/adventist-logo.png",
+      "website": "https://pah.com.my/",
+      "specialties": ["Cardiology", "Oncology", "Orthopedics"]
+    },
+    {
+      "id": "pantai-hospital-kuala-lumpur",
+      "name": "Pantai Hospital Kuala Lumpur",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/pantai-kl-logo.webp",
+      "website": "https://www.pantai.com.my/kuala-lumpur/ms",
+      "specialties": ["Emergency Medicine", "Cardiology", "Surgery"]
+    },
+    {
+      "id": "institut-jantung-negara",
+      "name": "Institut Jantung Negara",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/Institut_Jantung_Negara_logo.svg",
+      "website": "https://www.ijn.com.my",
+      "specialties": ["Cardiology", "Cardiac Surgery", "Heart Transplant"]
+    },
+    {
+      "id": "mahkota-medical-centre",
+      "name": "Mahkota Medical Centre",
+      "location": "Melaka",
+      "logoPath": "/images/hospitals/mahkota.webp",
+      "website": "https://www.mahkotamedical.com/",
+      "specialties": ["Oncology", "Cardiology", "Orthopedics"]
+    },
+    {
+      "id": "loh-guan-lye-specialists",
+      "name": "Loh Guan Lye Specialists Hospital",
+      "location": "Penang",
+      "logoPath": "/images/hospitals/lgl-logo.png",
+      "website": "https://www.lohguanlye.com/",
+      "specialties": ["Cardiology", "Oncology", "Neurology"]
+    },
+    {
+      "id": "kpj-johor-specialist-hospital",
+      "name": "KPJ Johor Specialist Hospital",
+      "location": "Johor",
+      "logoPath": "/images/hospitals/kpj-johor-logo.jpg",
+      "website": "https://kpjhealth.com.my/johor",
+      "specialties": ["Cardiology", "Orthopedics", "Emergency Medicine"]
+    },
+    {
+      "id": "kpj-damansara-specialist",
+      "name": "KPJ Damansara Specialist Hospital",
+      "location": "Selangor",
+      "logoPath": "/images/hospitals/kpj-damansara-logo.png",
+      "website": "https://kpjhealth.com.my/damansara",
+      "specialties": ["Oncology", "Cardiology", "Surgery"]
+    },
+    {
+      "id": "kpj-ampang-puteri",
+      "name": "KPJ Ampang Puteri Specialist Hospital",
+      "location": "Selangor",
+      "logoPath": "/images/hospitals/kpj-ampang-logo.png",
+      "website": "https://kpjhealth.com.my/ampang",
+      "specialties": ["Orthopedics", "Neurology", "Emergency Medicine"]
+    },
+    {
+      "id": "island-hospital",
+      "name": "Island Hospital",
+      "location": "Penang",
+      "logoPath": "/images/hospitals/island-hospital.webp",
+      "website": "https://islandhospital.com/",
+      "specialties": ["Cardiology", "Oncology", "Transplant"]
+    },
+    {
+      "id": "gleneagles-penang",
+      "name": "Gleneagles Penang",
+      "location": "Penang",
+      "logoPath": "/images/hospitals/gleneagles-penang.webp",
+      "website": "https://gleneagles.com.my/penang",
+      "specialties": ["Cardiology", "Oncology", "Neurology"]
+    },
+    {
+      "id": "gleneagles-kuala-lumpur",
+      "name": "Gleneagles Kuala Lumpur",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/gleneagles-kl-1.webp",
+      "website": "https://gleneagles.com.my/kuala-lumpur",
+      "specialties": ["Oncology", "Cardiology", "Surgery"]
+    },
+    {
+      "id": "cardiac-vascular-sentral",
+      "name": "Cardiac Vascular Sentral Kuala Lumpur",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/cvskl-1.webp",
+      "website": "https://www.cvskl.com/",
+      "specialties": ["Cardiology", "Vascular Surgery", "Cardiac Surgery"]
+    },
+    {
+      "id": "alpha-ivf-womens",
+      "name": "Alpha IVF & Women's Specialists Centre",
+      "location": "Kuala Lumpur",
+      "logoPath": "/images/hospitals/alpha-ivf-logo.webp",
+      "website": "https://www.alphafertilitycentre.com/",
+      "specialties": ["IVF", "Women's Health", "Reproductive Medicine"]
+    }
+  ],
+  "ordinaryMembers": {
+    "wilayahPersekutuan": [
+      "ALPS Medical Centre",
+      "ALTU Orthopaedic Hospital",
+      "Artius Dental Specialist Center",
+      "Hospital Pusrawi",
+      "International Specialist Eye Centre (ISEC)",
+      "KL Fertility Centre",
+      "Kheng Dental",
+      "KPJ Pusat Pakar Mata Centre for Sight",
+      "KPJ Sentosa KL Specialist Hospital",
+      "KPJ Tawakkal KL Specialist Hospital",
+      "Life Care Diagnostic Medical Centre",
+      "OasisEye Specialists",
+      "Optimax Eye Specialist Centre",
+      "ParkCity Medical Centre",
+      "Pristine Dental Centre",
+      "Sunway Medical Centre Velocity",
+      "Sunway Fertility Centre @ Velocity",
+      "Tawakkal Health Centre",
+      "Tung Shin Hospital",
+      "UKM Specialist Centre",
+      "UM Specialist Centre (UMSC)",
+      "National Sports Medicine Centre (PPSN)",
+      "Cenglid G.I. Medical Centre"
+    ],
+    "selangor": [
+      "Avisena Specialist Hospital",
+      "Ara Damansara Medical Centre",
+      "AVISENA Women's & Children's Specialist Hospital",
+      "Beacon Hospital",
+      "Columbia Asia Hospital - Bukit Rimau",
+      "Columbia Asia Hospital - Petaling Jaya",
+      "Ever-Link Fertility Centre",
+      "Hospital Picaso",
+      "KPJ Klang Specialist Hospital",
+      "Metro IVF @ Setiawalk",
+      "MSU Medical Centre",
+      "Sophea Fertility Centre",
+      "Topvision Eye Specialist Centre",
+      "Signature Dental Centre",
+      "Sunway Medical Centre Damansara",
+      "Sunway Fertility Centre @ Sunway City",
+      "ALTU Orthopaedic Hospital",
+      "KL Fertility Centre",
+      "Pacific Dental Centre",
+      "Damansara Specialist Hospital"
+    ],
+    "johor": [
+      "Gleneagles Hospital Medini Johor",
+      "Columbia Asia Hospital - Iskandar Puteri",
+      "KPJ Pasir Gudang Specialist Hospital",
+      "KPJ Puteri Specialist Hospital"
+    ],
+    "negeriSembilan": [
+      "Aurelius Hospital Negeri Sembilan",
+      "UCSI Hospital"
+    ],
+    "penang": [
+      "Bagan Specialist Centre",
+      "KPJ Penang Specialist Hospital",
+      "Northern Heart Hospital Penang",
+      "Pantai Hospital Penang",
+      "Sunway Medical Centre Penang",
+      "Star Fertility Penang"
+    ],
+    "perak": [
+      "Hospital Seri Botani"
+    ],
+    "melaka": [
+      "Oriental Melaka Straits Medical Centre",
+      "Pantai Hospital Ayer Keroh",
+      "Putra Specialist Hospital (Melaka)"
+    ],
+    "sabah": [
+      "Gleneagles Hospital Kota Kinabalu",
+      "Jesselton Medical Centre",
+      "KPJ Sabah Specialist Hospital"
+    ],
+    "sarawak": [
+      "Normah Medical Specialist Centre",
+      "KPJ Kuching Specialist Hospital",
+      "Borneo Medical Centre(Miri)",
+      "Sunway Fertility Centre @ Kuching"
+    ]
+  }
+} 
