@@ -63,28 +63,28 @@ function Counter({ end, duration = 2, suffix = "", prefix = "", isPercentage = f
 export default function StatsSection({ isRTL = false }: StatsSectionProps) {
   const stats = [
     {
-      value: 150,
-      suffix: "+",
-      label: "Healthcare Facilities",
-      description: "Member hospitals",
-    },
-    {
-      value: 40,
-      suffix: "+",
-      label: "JCI Accredited",
-      description: "Hospitals",
-    },
-    {
-      value: 15,
-      suffix: "+",
-      label: "Years of Service",
-      description: "Since 2009",
-    },
-    {
-      value: 5,
+      value: 58,
       suffix: "",
-      label: "Key Languages",
-      description: "Supported",
+      label: "Hospitals",
+      description: "Member facilities",
+    },
+    {
+      value: 20,
+      suffix: "",
+      label: "Ambulatory Care Centres",
+      description: "Specialized care",
+    },
+    {
+      value: 4,
+      suffix: "",
+      label: "Dental Clinics",
+      description: "Oral healthcare",
+    },
+    {
+      value: 6,
+      suffix: "",
+      label: "Accreditation Bodies",
+      description: "International standards",
     },
   ];
 
@@ -135,42 +135,59 @@ export default function StatsSection({ isRTL = false }: StatsSectionProps) {
         ))}
       </div>
 
-      {/* Additional Information */}
+      {/* Healthcare Accreditation Standards */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6 }}
-        className="mt-10 text-center"
+        className="mt-12 text-center"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-white mb-1">
-              Government Agency
-            </h4>
-            <p className="text-white/80 text-xs">
-              Under Ministry of Health
-            </p>
+        <h3 className="text-xl font-semibold text-white mb-6">
+          International Healthcare Accreditation Standards
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">ISQua</h4>
+            <p className="text-white/80 text-xs">International Society for Quality in Health Care</p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-white mb-1">
-              Coordination Services
-            </h4>
-            <p className="text-white/80 text-xs">
-              Healthcare travel facilitation
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">MSQH</h4>
+            <p className="text-white/80 text-xs">Malaysian Society for Quality in Health</p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-white mb-1">
-              International Reach
-            </h4>
-            <p className="text-white/80 text-xs">
-              Global patient support
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">JCI</h4>
+            <p className="text-white/80 text-xs">Joint Commission International</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">ACHS</h4>
+            <p className="text-white/80 text-xs">Australian Council on Healthcare Standards</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">RTAC</h4>
+            <p className="text-white/80 text-xs">Reproductive Technology Accreditation Committee</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+            <h4 className="text-sm font-bold text-white mb-1">Temos</h4>
+            <p className="text-white/80 text-xs">Temos International Healthcare Accreditation</p>
           </div>
         </div>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8 }}
+          className="text-white/90 text-sm mt-6 max-w-3xl mx-auto"
+        >
+          MHTC member facilities maintain certifications across multiple international and regional 
+          quality standards, ensuring world-class healthcare delivery and patient safety.
+        </motion.p>
       </motion.div>
     </div>
   );

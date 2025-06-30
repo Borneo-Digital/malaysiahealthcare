@@ -1,40 +1,35 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import { Search, Clock, DollarSign, Heart, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import Link from "next/link"
+import { ArrowRight, BookOpen, Hospital, LifeBuoy } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 
 const quickPaths = [
   {
-    title: "Healthcare Guide", 
-    description: "Comprehensive travel guide for medical tourism",
-    icon: Clock,
+    title: "Healthcare Guide",
+    description: "Your complete guide to medical travel in Malaysia.",
+    icon: BookOpen,
     color: "bg-green-50 border-green-200 text-green-700",
-    href: "/healthcare-travel-guide"
+    href: "/healthcare-travel-guide",
   },
   {
     title: "Member Hospitals",
-    description: "Explore our network of accredited facilities",
-    icon: Heart,
+    description: "Access our network of world-class facilities.",
+    icon: Hospital,
     color: "bg-rose-50 border-rose-200 text-rose-700",
-    href: "/member-hospital"
+    href: "/member-hospital",
   },
   {
-    title: "Contact MHTC",
-    description: "Get assistance from our healthcare travel team",
-    icon: DollarSign,
+    title: "Dedicated Support",
+    description: "Our team is here to assist you 24/7.",
+    icon: LifeBuoy,
     color: "bg-amber-50 border-amber-200 text-amber-700",
-    href: "/contact"
-  }
+    href: "/contact",
+  },
 ]
 
 export default function Hero4() {
-  const [searchQuery, setSearchQuery] = useState("")
-
   return (
     <section
       className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-white to-blue-50/30"
@@ -44,9 +39,43 @@ export default function Hero4() {
         backgroundPosition: 'bottom center',
       }}
     >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/30 pointer-events-none"></div>
-      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-0 relative z-10">
+      {/* Bunga Raya Traditional Malaysian Background Pattern */}
+      <div className="absolute inset-0 z-5 pointer-events-none">
+        {/* Full hero background pattern - large screens */}
+        <div className="absolute inset-0 hidden lg:block opacity-30">
+          <Image
+            src="/images/Bunga Raya Asset-01.png"
+            alt="Bunga Raya - Traditional Malaysian hibiscus background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+        {/* Medium screens - covers most of hero */}
+        <div className="absolute inset-0 lg:hidden md:block hidden opacity-25">
+          <Image
+            src="/images/Bunga Raya Asset-01.png"
+            alt="Bunga Raya background pattern"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+        {/* Mobile - subtle full background */}
+        <div className="absolute inset-0 md:hidden opacity-20">
+          <Image
+            src="/images/Bunga Raya Asset-01.png"
+            alt="Bunga Raya background pattern"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+      </div>
+      
+      {/* Enhanced overlay for content readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/30 to-white/20 pointer-events-none z-10"></div>
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-0 relative z-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           
           {/* Left Side - Interactive Content */}
@@ -69,57 +98,30 @@ export default function Hero4() {
               </p>
             </div>
 
-            {/* Search Interface */}
-            <Card className="border-2 border-gray-200 shadow-lg">
-              <CardContent className="p-4 sm:p-6">
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex flex-col gap-3">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 sm:h-5 sm:w-5" />
-                      <Input
-                        placeholder="Search hospitals, specialties, or healthcare information..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-9 sm:pl-10 h-10 sm:h-12 text-sm sm:text-base border-gray-300 focus:border-[#BE1E2D] focus:ring-[#BE1E2D]"
-                      />
-                    </div>
-                    <Button variant="default" size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825] h-10 sm:h-12 px-6 sm:px-8 w-full sm:w-auto">
-                      Search
-                    </Button>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-xs sm:text-sm text-gray-500">Popular:</span>
-                    {["Heart Surgery", "Cancer Care", "Fertility Treatment", "Orthopedics"].map((term) => (
-                      <Badge key={term} variant="secondary" className="cursor-pointer hover:bg-[#BE1E2D] hover:text-white transition-colors text-xs">
-                        {term}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Quick Action Paths */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-              {quickPaths.map((path) => (
-                <Card key={path.title} className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="flex items-start space-x-3 sm:space-x-4">
-                      <div className={`rounded-lg p-2 sm:p-3 ${path.color} flex-shrink-0`}>
-                        <path.icon className="h-5 w-5 sm:h-6 sm:w-6" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-sm sm:text-base text-gray-900 group-hover:text-[#BE1E2D] transition-colors">
-                          {path.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-gray-600 mt-1 line-clamp-2">{path.description}</p>
-                      </div>
-                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 group-hover:text-[#BE1E2D] group-hover:translate-x-1 transition-all flex-shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="pt-8">
+              <div className="flex flex-col gap-4">
+                {quickPaths.map((path) => (
+                  <Link href={path.href} key={path.title} className="block group">
+                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 group-hover:border-[#BE1E2D]">
+                      <CardContent className="p-4">
+                        <div className="flex items-center space-x-4">
+                          <div className={`rounded-lg p-3 ${path.color} flex-shrink-0`}>
+                            <path.icon className="h-6 w-6" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-semibold text-base text-gray-900 group-hover:text-[#BE1E2D] transition-colors">
+                              {path.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-1">{path.description}</p>
+                          </div>
+                          <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-[#BE1E2D] group-hover:translate-x-1 transition-all flex-shrink-0" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -128,7 +130,7 @@ export default function Hero4() {
             {/* Main Image */}
             <div className="relative h-64 sm:h-80 lg:h-[70vh] xl:h-[80vh] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl">
               <Image
-                src="/images/home3/hero-home3.jpg"
+                src="https://placehold.co/1000x1200/fafafa/cccccc?text=Malaysia+Healthcare"
                 alt="Malaysia Healthcare Excellence"
                 fill
                 className="object-cover"

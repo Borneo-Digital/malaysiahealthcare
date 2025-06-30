@@ -76,7 +76,7 @@ Please fill out this template with the requested information. For sections marke
   _________________________________________________
 - **Full Article**: [Please attach or provide link]
 - **Featured Image**: [Please attach]
-
+https://docs.google.com/document/u/0/?authuser=0&usp=docs_web
 ### Upcoming Event 1
 - **Event Name**: _____________________
 - **Date**: _____________________

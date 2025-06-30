@@ -11,8 +11,7 @@ import StatsSection from "@/components/home4/stats"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
 
-import { MonthlyTheme } from "@/components/home4/monthly-theme"
-import NewsUpdates from "@/components/home4/news-events"
+import MHWellnessEvents from "@/components/home4/mh-wellness-events"
 import { ArrowRight, Download } from "lucide-react"
 
 export async function generateMetadata({
@@ -56,16 +55,11 @@ export default function HomePage() {
           </Container>
         </section>
 
-        {/* Monthly Theme */}
-        <section className="bg-slate-50 py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32">
+        {/* MH Wellness Events for Expat Communities */}
+        <section className="py-16 md:py-20 bg-slate-50">
           <Container>
-            <MonthlyTheme />
+            <MHWellnessEvents />
           </Container>
-        </section>
-
-        {/* News Updates Section - Latest information */}
-        <section className="py-16 md:py-20 bg-white">
-          <NewsUpdates />
         </section>
 
         {/* CTA Section */}
