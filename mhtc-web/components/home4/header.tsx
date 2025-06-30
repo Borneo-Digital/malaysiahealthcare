@@ -13,7 +13,8 @@ import { cn } from "@/lib/utils"
 const mainNavItems = [
   {
     title: "Corporate Profile",
-    href: "/corporate-profile",
+    href: "https://www.mhtc.org.my",
+    external: true,
   },
   {
     title: "Member Hospital",
@@ -131,7 +132,17 @@ export function Header() {
                         pathname === item.href ? "text-[#C8102E]" : "text-foreground",
                       )}
                     >
-                      <Link href={item.href}>{item.title}</Link>
+                      {item.external ? (
+                        <a 
+                          href={item.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <Link href={item.href}>{item.title}</Link>
+                      )}
                     </Button>
                   )}
                 </li>
@@ -169,7 +180,7 @@ export function Header() {
             {/* Contact Button */}
             <Button
               size="sm"
-              className="hidden bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25] sm:inline-flex"
+              className="bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]"
               asChild
             >
               <Link href="/contact">Contact Us</Link>
@@ -216,15 +227,31 @@ export function Header() {
                       </ul>
                     </>
                   ) : (
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "block font-medium transition-colors duration-150",
-                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                    <>
+                      {item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "block font-medium transition-colors duration-150",
+                            pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                          )}
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "block font-medium transition-colors duration-150",
+                            pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                          )}
+                        >
+                          {item.title}
+                        </Link>
                       )}
-                    >
-                      {item.title}
-                    </Link>
+                    </>
                   )}
                 </div>
               ))}
