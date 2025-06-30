@@ -2,20 +2,13 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Search, MapPin, Clock, DollarSign, Heart, ArrowRight } from "lucide-react"
+import { Search, Clock, DollarSign, Heart, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 const quickPaths = [
-  {
-    title: "Find Hospitals",
-    description: "Browse 100+ accredited healthcare facilities",
-    icon: MapPin,
-    color: "bg-blue-50 border-blue-200 text-blue-700",
-    href: "/hospitals"
-  },
   {
     title: "Healthcare Guide", 
     description: "Comprehensive travel guide for medical tourism",
@@ -43,24 +36,28 @@ export default function Hero4() {
   const [searchQuery, setSearchQuery] = useState("")
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/images/home2/pattern.svg')] bg-repeat"></div>
-      </div>
-
-      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-0">
+    <section
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-white to-blue-50/30"
+      style={{
+        backgroundImage: "url('/home4/flowers.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom center',
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-white/30 pointer-events-none"></div>
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-0 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           
           {/* Left Side - Interactive Content */}
           <div className="space-y-6 lg:space-y-8 lg:pr-8 order-2 lg:order-1">
             {/* Main Heading */}
             <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-[#BE1E2D]/10 text-[#BE1E2D] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
+              {/* <div className="inline-flex items-center gap-2 bg-[#BE1E2D]/10 text-[#BE1E2D] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
                 <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span className="hidden sm:inline">Malaysia Healthcare Travel Council</span>
                 <span className="sm:hidden">MHTC</span>
-              </div>
+              </div> */}
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                 Your Healthcare
@@ -86,7 +83,7 @@ export default function Hero4() {
                         className="pl-9 sm:pl-10 h-10 sm:h-12 text-sm sm:text-base border-gray-300 focus:border-[#BE1E2D] focus:ring-[#BE1E2D]"
                       />
                     </div>
-                    <Button size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825] h-10 sm:h-12 px-6 sm:px-8 w-full sm:w-auto">
+                    <Button variant="default" size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825] h-10 sm:h-12 px-6 sm:px-8 w-full sm:w-auto">
                       Search
                     </Button>
                   </div>
@@ -104,7 +101,7 @@ export default function Hero4() {
             </Card>
 
             {/* Quick Action Paths */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {quickPaths.map((path) => (
                 <Card key={path.title} className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2">
                   <CardContent className="p-4 sm:p-6">
