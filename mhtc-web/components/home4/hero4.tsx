@@ -2,20 +2,13 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Search, MapPin, Clock, DollarSign, Heart, ArrowRight } from "lucide-react"
+import { Search, Clock, DollarSign, Heart, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 const quickPaths = [
-  {
-    title: "Find Hospitals",
-    description: "Browse 100+ accredited healthcare facilities",
-    icon: MapPin,
-    color: "bg-blue-50 border-blue-200 text-blue-700",
-    href: "/hospitals"
-  },
   {
     title: "Healthcare Guide", 
     description: "Comprehensive travel guide for medical tourism",
@@ -108,7 +101,7 @@ export default function Hero4() {
             </Card>
 
             {/* Quick Action Paths */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {quickPaths.map((path) => (
                 <Card key={path.title} className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2">
                   <CardContent className="p-4 sm:p-6">

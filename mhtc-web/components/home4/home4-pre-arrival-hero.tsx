@@ -5,6 +5,7 @@ import { MapPin, Compass, Globe, ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/home4/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import LocaleLink from "@/components/LocaleLink"
 
 const preparationTasks = [
   "Research Malaysian healthcare facilities",
@@ -82,10 +83,12 @@ export function Home4PreArrivalHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                Start Planning
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
+              <LocaleLink href="/home4-arrival">
+                <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
+                  Start Planning
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </LocaleLink>
               <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
                 Download Guide
               </Button>
