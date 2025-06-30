@@ -26,7 +26,7 @@ export default function Search() {
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically call your search API
-    // For now, we'll just simulate some results
+    // For now, we&apos;ll just simulate some results
     const simulatedResults: SearchResult[] = [
       { id: 1, title: 'Cardiology Services in Kuala Lumpur', type: 'treatment' },
       { id: 2, title: 'Dr. Ahmad Specialist Hospital', type: 'hospital' },

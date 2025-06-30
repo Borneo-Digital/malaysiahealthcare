@@ -39,7 +39,7 @@ export default function ContactPage() {
     }
 
     // Form submission logic would go here
-    // For demo purposes, we'll just simulate a successful submission
+    // For demo purposes, we&apos;ll just simulate a successful submission
     // TODO: Implement actual form submission to backend API
     setFormStatus("success");
 

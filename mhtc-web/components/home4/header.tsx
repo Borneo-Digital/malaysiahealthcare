@@ -12,43 +12,29 @@ import { cn } from "@/lib/utils"
 
 const mainNavItems = [
   {
-    title: "About",
-    href: "/about",
-    children: [
-      { title: "About MHTC", href: "/about/mhtc" },
-      { title: "Our Services", href: "/about/services" },
-      { title: "Malaysia Healthcare", href: "/about/healthcare" },
-    ],
+    title: "Corporate Profile",
+    href: "/corporate-profile",
   },
   {
-    title: "Treatments",
-    href: "/treatments",
-    children: [
-      { title: "Medical Specialties", href: "/treatments/specialties" },
-      { title: "Wellness & Lifestyle", href: "/treatments/wellness" },
-      { title: "Fertility & Reproductive Health", href: "/treatments/fertility" },
-    ],
-  },
-  {
-    title: "Hospitals",
-    href: "/hospitals",
+    title: "Member Hospital",
+    href: "/member-hospital",
   },
   {
     title: "Plan Your Visit",
     href: "/plan",
     children: [
-      { title: "Getting Started", href: "/plan/getting-started" },
-      { title: "Visa Information", href: "/plan/visa" },
-      { title: "Accommodations", href: "/plan/accommodations" },
+      { title: "Pre Arrival", href: "/home4-pre-arrival" },
+      { title: "Arrival", href: "/home4-arrival" },
+      { title: "Treatment", href: "/home4-treatment" },
+      { title: "Post Treatment", href: "/home4-post-arrival" },
     ],
   },
   {
     title: "Resources",
     href: "/resources",
     children: [
-      { title: "News & Articles", href: "/resources/news" },
-      { title: "Events", href: "/resources/events" },
-      { title: "FAQs", href: "/resources/faqs" },
+      { title: "MHTC Chronicles", href: "/mhtc-chronicles" },
+      { title: "FAQs", href: "/home4-faq" },
     ],
   },
 ]
@@ -88,11 +74,11 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between md:h-20">
           <div className="flex items-center">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Link href="/home4" className="mr-6 flex items-center space-x-2">
               <div className="relative h-10 w-40">
               <Image
-              src="/images/mhtc-logo.png"
-              alt="MHTC Logo"
+              src="/images/logo-malaysiahealthcare.png"
+              alt="Malaysia Healthcare Logo"
               width={120}
               height={40}
               className="h-10 w-auto"
@@ -120,7 +106,7 @@ export function Header() {
                           <ChevronDown className="h-4 w-4" />
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-48">
+                      <DropdownMenuContent align="start" className="w-48 bg-white border border-gray-200 shadow-lg">
                         {item.children.map((child) => (
                           <DropdownMenuItem key={child.href} asChild>
                             <Link
@@ -166,7 +152,7 @@ export function Header() {
                   <span className="hidden sm:inline-block">English</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg">
                 {languages.map((lang) => (
                   <DropdownMenuItem key={lang.code}>
                     <button
@@ -183,9 +169,10 @@ export function Header() {
             {/* Contact Button */}
             <Button
               size="sm"
-              className="hidden bg-[#C8102E] text-white transition-colors duration-150 hover:bg-[#A00F26] sm:inline-flex"
+              className="hidden bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25] sm:inline-flex"
+              asChild
             >
-              Contact Us
+              <Link href="/contact">Contact Us</Link>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -241,8 +228,8 @@ export function Header() {
                   )}
                 </div>
               ))}
-              <Button className="mt-4 w-full bg-[#C8102E] text-white transition-colors duration-150 hover:bg-[#A00F26]">
-                Contact Us
+              <Button className="mt-4 w-full bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]" asChild>
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </nav>
           </Container>

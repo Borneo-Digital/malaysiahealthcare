@@ -43,13 +43,21 @@ export default function HealingJourney() {
   ]
 
   return (
-    <section className="py-24 md:py-32 bg-white relative" ref={sectionRef}>
-      <div className="container mx-auto max-w-[1200px] px-4">
-        <motion.h2
-          className="headline-primary text-3xl md:text-4xl lg:text-[42px] text-center mb-6 text-[#BE1E2D]"
+    <section
+      className="py-24 md:py-32 bg-white relative min-h-[60vh]"
+      ref={sectionRef}
+      style={{
+        backgroundImage: "url('/home4/flowers.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom center',
+      }}
+    >
+      <div className="container mx-auto max-w-[1200px] px-4 relative z-10">
+      <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-grey-900 mb-4 text-center"
         >
           THE HEALING JOURNEY
         </motion.h2>
@@ -89,7 +97,7 @@ export default function HealingJourney() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
               >
                 <Link
-                  href={`/home2-${step.id}`}
+                  href={`/home4-${step.id}`}
                   onMouseEnter={() => setHoveredStep(step.id)}
                   onMouseLeave={() => setHoveredStep(null)}
                   className="block h-full"

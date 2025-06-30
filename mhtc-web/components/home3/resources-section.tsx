@@ -36,7 +36,7 @@ export function ResourcesSection() {
             },
             {
               title: "Travel Document Checklist",
-              description: "Passport, visa, and other travel documents you'll need",
+              description: "Passport, visa, and other travel documents you&apos;ll need",
               icon: FileText,
             },
             {

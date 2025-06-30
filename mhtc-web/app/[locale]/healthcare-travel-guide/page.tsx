@@ -384,7 +384,7 @@ export default function HealthcareTravelGuide({
             <CardContent>
               <p className="mb-4" tabIndex={0}>
                 {translations.resources?.description ||
-                  "Get personalized support for your medical travel to Malaysia. We're here to answer your questions and help you plan your journey."}
+                  "Get personalized support for your medical travel to Malaysia. We&apos;re here to answer your questions and help you plan your journey."}
               </p>
             </CardContent>
             <CardFooter className="flex flex-col sm:flex-row justify-between items-center gap-4">

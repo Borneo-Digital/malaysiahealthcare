@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import { locales } from "@/middleware";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
-import TopNavBar from "@/components/TopNavBar";
 
 // Generate static paths for all locales
 export async function generateStaticParams() {
@@ -48,14 +47,7 @@ export default async function RootLayout({
           {headerT.accessibility.skipToContent}
         </a>
 
-        <TopNavBar />
-        {/* <Header /> */}
-
-        <main id="main-content" className="flex-grow">
-          {children}
-        </main>
-
-        {/* <Footer /> */}
+        {children}
       </body>
     </html>
   );
