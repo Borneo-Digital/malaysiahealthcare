@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
-import { MapPin, DollarSign, Globe, Clock, Star, CheckCircle, Users, Sparkles, Heart } from "lucide-react"
+// import Image from "next/image"
+import { MapPin, DollarSign, Globe, CheckCircle, Sparkles } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 // import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -70,33 +70,33 @@ const aftercareBenefits = [
   }
 ]
 
-const recoveryEnvironments = [
-  {
-    title: "Luxury Recovery Resorts",
-    image: "/images/home3/woman1.jpg",
-    description: "Resort-style facilities combining medical supervision with vacation amenities",
-    features: ["Spa treatments", "Pool therapy", "Gourmet healthy cuisine", "Cultural excursions"]
-  },
-  {
-    title: "Urban Wellness Centers", 
-    image: "/images/home3/man1.jpg",
-    description: "Modern city facilities with comprehensive rehabilitation programs",
-    features: ["Advanced equipment", "City conveniences", "Shopping therapy", "Cultural attractions"]
-  },
-  {
-    title: "Tropical Healing Retreats",
-    image: "/images/home3/woman2.jpg", 
-    description: "Nature-based recovery in Malaysia&apos;s pristine tropical settings",
-    features: ["Beach therapy", "Nature walks", "Meditation spaces", "Traditional healing"]
-  }
-]
+// const recoveryEnvironments = [
+//   {
+//     title: "Luxury Recovery Resorts",
+//     image: "/images/home3/woman1.jpg",
+//     description: "Resort-style facilities combining medical supervision with vacation amenities",
+//     features: ["Spa treatments", "Pool therapy", "Gourmet healthy cuisine", "Cultural excursions"]
+//   },
+//   {
+//     title: "Urban Wellness Centers", 
+//     image: "/images/home3/man1.jpg",
+//     description: "Modern city facilities with comprehensive rehabilitation programs",
+//     features: ["Advanced equipment", "City conveniences", "Shopping therapy", "Cultural attractions"]
+//   },
+//   {
+//     title: "Tropical Healing Retreats",
+//     image: "/images/home3/woman2.jpg", 
+//     description: "Nature-based recovery in Malaysia&apos;s pristine tropical settings",
+//     features: ["Beach therapy", "Nature walks", "Meditation spaces", "Traditional healing"]
+//   }
+// ]
 
-const testimonialStats = [
-  { value: "4.9/5", label: "Recovery Experience Rating", icon: Star },
-  { value: "94%", label: "Would Choose Malaysia Again", icon: Heart },
-  { value: "85%", label: "Faster Recovery vs Home", icon: Clock },
-  { value: "12K+", label: "International Patients Annually", icon: Users }
-]
+// const testimonialStats = [
+//   { value: "4.9/5", label: "Recovery Experience Rating", icon: Star },
+//   { value: "94%", label: "Would Choose Malaysia Again", icon: Heart },
+//   { value: "85%", label: "Faster Recovery vs Home", icon: Clock },
+//   { value: "12K+", label: "International Patients Annually", icon: Users }
+// ]
 
 export function MalaysianAftercareBenefits() {
   const [activeBenefit, setActiveBenefit] = useState(0)
@@ -162,55 +162,10 @@ export function MalaysianAftercareBenefits() {
         ))}
       </div>
 
-      {/* Recovery Environments Showcase */}
-      <div className="space-y-8">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            Recovery Environments
-          </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose from diverse recovery settings designed to match your preferences and medical needs
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {recoveryEnvironments.map((environment, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <div className="relative h-48 overflow-hidden">
-                <Image 
-                  src={environment.image} 
-                  alt={environment.title}
-                  width={400}
-                  height={200}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h4 className="text-white font-bold text-lg mb-1">{environment.title}</h4>
-                </div>
-              </div>
-              
-              <CardContent className="p-6">
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {environment.description}
-                </p>
-                
-                <div className="grid grid-cols-2 gap-2">
-                  {environment.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#BE1E2D]"></div>
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+      
 
       {/* Testimonial Statistics */}
-      <div className="bg-gradient-to-r from-[#BE1E2D] to-[#A01825] rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+      {/* <div className="bg-gradient-to-r from-[#BE1E2D] to-[#A01825] rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 opacity-10">
           <Star className="w-32 h-32" />
         </div>
@@ -248,7 +203,7 @@ export function MalaysianAftercareBenefits() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="text-center pt-8 border-t border-gray-200">
