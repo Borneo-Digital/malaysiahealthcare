@@ -83,7 +83,7 @@ export function Home4ArrivalHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <LocaleLink href="/home4-treatment">
+              <LocaleLink href="/treatment">
                 <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
                   Arrival Information
                   <ArrowRight className="h-5 w-5 ml-2" />
