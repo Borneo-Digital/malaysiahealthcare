@@ -4,6 +4,16 @@
       "id": "thomson-kota-damansara",
       "name": "Thomson Hospital Kota Damansara",
       "location": "Selangor",
+      "address": [
+        "11, Jalan Teknologi,",
+        "Taman Sains Selangor 1,",
+        "PJU 5, Kota Damansara,",
+        "47810 Petaling Jaya,",
+        "Selangor Darul Ehsan,",
+        "Malaysia"
+      ],
+      "phone": "+6018-2111567",
+      "email": "",
       "logoPath": "/images/hospitals/thomson-logo.png",
       "website": "https://www.thomsonhospitals.com/",
       "specialties": ["Cardiology", "Oncology", "Orthopedics"]
@@ -12,6 +22,9 @@
       "id": "sunway-medical-centre",
       "name": "Sunway Medical Centre",
       "location": "Selangor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/sunway.jpeg",
       "website": "https://www.sunwaymedical.com/en/",
       "specialties": ["Oncology", "Cardiology", "Neurology"]
@@ -20,6 +33,9 @@
       "id": "sunfert-bangsar-south",
       "name": "Sunfert at Bangsar South",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/sunfertbs-logo.png",
       "website": "https://www.sunfert.com/clinics/bangsar-south",
       "specialties": ["IVF", "Women's Health", "Pediatrics"]
@@ -28,6 +44,9 @@
       "id": "subang-jaya-medical-centre",
       "name": "Subang Jaya Medical Centre",
       "location": "Selangor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/sjmc-logo.png",
       "website": "https://subangjayamedicalcentre.com/",
       "specialties": ["Cardiology", "Orthopedics", "Oncology"]
@@ -36,6 +55,9 @@
       "id": "regency-specialist-hospital",
       "name": "Regency Specialist Hospital",
       "location": "Johor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/regency.webp",
       "website": "https://www.regencyspecialist.com/",
       "specialties": ["Cardiology", "Neurology", "Orthopedics"]
@@ -44,6 +66,9 @@
       "id": "prince-court-medical-centre",
       "name": "Prince Court Medical Centre",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/prince-court-logo.webp",
       "website": "https://princecourt.com/",
       "specialties": ["Oncology", "Cardiology", "Transplant"]
@@ -52,6 +77,9 @@
       "id": "penang-adventist-hospital",
       "name": "Penang Adventist Hospital",
       "location": "Penang",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/adventist-logo.png",
       "website": "https://pah.com.my/",
       "specialties": ["Cardiology", "Oncology", "Orthopedics"]
@@ -60,6 +88,9 @@
       "id": "pantai-hospital-kuala-lumpur",
       "name": "Pantai Hospital Kuala Lumpur",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/pantai-kl-logo.webp",
       "website": "https://www.pantai.com.my/kuala-lumpur/ms",
       "specialties": ["Emergency Medicine", "Cardiology", "Surgery"]
@@ -68,6 +99,9 @@
       "id": "institut-jantung-negara",
       "name": "Institut Jantung Negara",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/Institut_Jantung_Negara_logo.svg",
       "website": "https://www.ijn.com.my",
       "specialties": ["Cardiology", "Cardiac Surgery", "Heart Transplant"]
@@ -76,6 +110,9 @@
       "id": "mahkota-medical-centre",
       "name": "Mahkota Medical Centre",
       "location": "Melaka",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/mahkota.webp",
       "website": "https://www.mahkotamedical.com/",
       "specialties": ["Oncology", "Cardiology", "Orthopedics"]
@@ -84,6 +121,9 @@
       "id": "loh-guan-lye-specialists",
       "name": "Loh Guan Lye Specialists Hospital",
       "location": "Penang",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/lgl-logo.png",
       "website": "https://www.lohguanlye.com/",
       "specialties": ["Cardiology", "Oncology", "Neurology"]
@@ -92,6 +132,9 @@
       "id": "kpj-johor-specialist-hospital",
       "name": "KPJ Johor Specialist Hospital",
       "location": "Johor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/kpj-johor-logo.jpg",
       "website": "https://kpjhealth.com.my/johor",
       "specialties": ["Cardiology", "Orthopedics", "Emergency Medicine"]
@@ -100,6 +143,9 @@
       "id": "kpj-damansara-specialist",
       "name": "KPJ Damansara Specialist Hospital",
       "location": "Selangor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/kpj-damansara-logo.png",
       "website": "https://kpjhealth.com.my/damansara",
       "specialties": ["Oncology", "Cardiology", "Surgery"]
@@ -108,6 +154,9 @@
       "id": "kpj-ampang-puteri",
       "name": "KPJ Ampang Puteri Specialist Hospital",
       "location": "Selangor",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/kpj-ampang-logo.png",
       "website": "https://kpjhealth.com.my/ampang",
       "specialties": ["Orthopedics", "Neurology", "Emergency Medicine"]
@@ -116,6 +165,9 @@
       "id": "island-hospital",
       "name": "Island Hospital",
       "location": "Penang",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/island-hospital.webp",
       "website": "https://islandhospital.com/",
       "specialties": ["Cardiology", "Oncology", "Transplant"]
@@ -124,6 +176,9 @@
       "id": "gleneagles-penang",
       "name": "Gleneagles Penang",
       "location": "Penang",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/gleneagles-penang.webp",
       "website": "https://gleneagles.com.my/penang",
       "specialties": ["Cardiology", "Oncology", "Neurology"]
@@ -132,6 +187,9 @@
       "id": "gleneagles-kuala-lumpur",
       "name": "Gleneagles Kuala Lumpur",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/gleneagles-kl-1.webp",
       "website": "https://gleneagles.com.my/kuala-lumpur",
       "specialties": ["Oncology", "Cardiology", "Surgery"]
@@ -140,6 +198,9 @@
       "id": "cardiac-vascular-sentral",
       "name": "Cardiac Vascular Sentral Kuala Lumpur",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/cvskl-1.webp",
       "website": "https://www.cvskl.com/",
       "specialties": ["Cardiology", "Vascular Surgery", "Cardiac Surgery"]
@@ -148,6 +209,9 @@
       "id": "alpha-ivf-womens",
       "name": "Alpha IVF & Women's Specialists Centre",
       "location": "Kuala Lumpur",
+      "address": [],
+      "phone": "",
+      "email": "",
       "logoPath": "/images/hospitals/alpha-ivf-logo.webp",
       "website": "https://www.alphafertilitycentre.com/",
       "specialties": ["IVF", "Women's Health", "Reproductive Medicine"]
@@ -157,282 +221,480 @@
     "wilayahPersekutuan": [
       {
         "name": "ALPS Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://alpsmedical.com/"
       },
       {
         "name": "ALTU Orthopaedic Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.altyortho.com/"
       },
       {
         "name": "Artius Dental Specialist Center",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.artiusdental.com/"
       },
       {
         "name": "Hospital Pusrawi",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://pusrawi.com.my/"
       },
       {
         "name": "International Specialist Eye Centre (ISEC)",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.isec.my/"
       },
       {
         "name": "KL Fertility Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.klfertility.com/"
       },
       {
         "name": "Kheng Dental",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.khengdental.com/"
       },
       {
         "name": "KPJ Pusat Pakar Mata Centre for Sight",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/"
       },
       {
         "name": "KPJ Sentosa KL Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/sentosa"
       },
       {
         "name": "KPJ Tawakkal KL Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/tawakkal"
       },
       {
         "name": "Life Care Diagnostic Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.lifecare.com.my/"
       },
       {
         "name": "OasisEye Specialists",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.oasiseye.com/"
       },
       {
         "name": "Optimax Eye Specialist Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.optimax.com.my/"
       },
       {
         "name": "ParkCity Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://parkcitymedicalcentre.com/"
       },
       {
         "name": "Pristine Dental Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.pristinedental.com.my/"
       },
       {
         "name": "Sunway Medical Centre Velocity",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sunwaymedicalvelocity.com.my/en/"
       },
       {
         "name": "Sunway Fertility Centre @ Velocity",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://sunwayfertility.com.my/"
       },
       {
         "name": "Tawakkal Health Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/thc/"
       },
       {
         "name": "Tung Shin Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.tungshin.com.my/"
       },
       {
         "name": "UKM Specialist Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.ukmsc.com.my/"
       },
       {
         "name": "UM Specialist Centre (UMSC)",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://umsc.my/"
       },
       {
         "name": "National Sports Medicine Centre (PPSN)",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://ppsn.isn.gov.my/"
       },
       {
         "name": "Cenglid G.I. Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://cengild.com/"
       }
     ],
     "selangor": [
       {
         "name": "Avisena Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.avisena.com.my/"
       },
       {
         "name": "Ara Damansara Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://aradamansaramedicalcentre.com/"
       },
       {
         "name": "AVISENA Women's & Children's Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.avisena.com.my/"
       },
       {
         "name": "Beacon Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.beaconhospital.com.my/"
       },
       {
         "name": "Columbia Asia Hospital - Bukit Rimau",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-rimau/"
       },
       {
         "name": "Columbia Asia Hospital - Petaling Jaya",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/"
       },
       {
         "name": "Ever-Link Fertility Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://everlinkivf.com.my/"
       },
       {
         "name": "Hospital Picaso",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.hospitalpicaso.com/en/"
       },
       {
         "name": "KPJ Klang Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/klang"
       },
       {
         "name": "Metro IVF @ Setiawalk",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.metro.com.my/"
       },
       {
         "name": "MSU Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.msumedicalcentre.com/"
       },
       {
         "name": "Sophea Fertility Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sopheafertility.com/"
       },
       {
         "name": "Topvision Eye Specialist Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.tvesc.com/en/"
       },
       {
         "name": "Signature Dental Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.signaturedental.com.my/"
       },
       {
         "name": "Sunway Medical Centre Damansara",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sunwaymedical.com/"
       },
       {
         "name": "Sunway Fertility Centre @ Sunway City",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sunwaymedical.com/en/centres-of-excellence/fertility-centre"
       },
       {
         "name": "ALTU Orthopaedic Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.altyortho.com/"
       },
       {
         "name": "KL Fertility Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.klfertility.com/"
       },
       {
         "name": "Pacific Dental Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.pacificdentalkepong.com/"
       },
       {
         "name": "Damansara Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/damansara"
       }
     ],
     "johor": [
       {
         "name": "Gleneagles Hospital Medini Johor",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://gleneagles.com.my/johor"
       },
       {
         "name": "Columbia Asia Hospital - Iskandar Puteri",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.columbiaasia.com/malaysia/ms/hospitals/iskandar-puteri/"
       },
       {
         "name": "KPJ Pasir Gudang Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/pasir-gudang"
       },
       {
         "name": "KPJ Puteri Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/puteri"
       }
     ],
     "negeriSembilan": [
       {
         "name": "Aurelius Hospital Negeri Sembilan",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.aurelius.com.my/"
       },
       {
         "name": "UCSI Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.ucsihospital.com/"
       }
     ],
     "penang": [
       {
         "name": "Bagan Specialist Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.bsc.com.my/"
       },
       {
         "name": "KPJ Penang Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/penang"
       },
       {
         "name": "Northern Heart Hospital Penang",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://nhearthospital.com/"
       },
       {
         "name": "Pantai Hospital Penang",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.pantai.com.my/penang"
       },
       {
         "name": "Sunway Medical Centre Penang",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sunwaymedical.com/"
       },
       {
         "name": "Star Fertility Penang",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://starfertility.life/"
       }
     ],
     "perak": [
       {
         "name": "Hospital Seri Botani",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.hospitalseribotani.com.my/"
       }
     ],
     "melaka": [
       {
         "name": "Oriental Melaka Straits Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://orientalmedical.com.my/"
       },
       {
         "name": "Pantai Hospital Ayer Keroh",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.pantai.com.my/ayer-keroh"
       },
       {
         "name": "Putra Specialist Hospital (Melaka)",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://putrahospitalmelaka.com/"
       }
     ],
     "sabah": [
       {
         "name": "Gleneagles Hospital Kota Kinabalu",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://gleneagles.com.my/kota-kinabalu"
       },
       {
         "name": "Jesselton Medical Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://jmc.my/"
       },
       {
         "name": "KPJ Sabah Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/sabah"
       }
     ],
     "sarawak": [
       {
         "name": "Normah Medical Specialist Centre",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://normah.com.my/"
       },
       {
         "name": "KPJ Kuching Specialist Hospital",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://kpjhealth.com.my/kuching"
       },
       {
         "name": "Borneo Medical Centre(Miri)",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.bmcmiri.com/"
       },
       {
         "name": "Sunway Fertility Centre @ Kuching",
+        "address": [],
+        "phone": "",
+        "email": "",
         "website": "https://www.sunfert.com/"
       }
     ]

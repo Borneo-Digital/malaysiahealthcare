@@ -24,10 +24,10 @@ const mainNavItems = [
     title: "Plan Your Visit",
     href: "/plan",
     children: [
-      { title: "Pre Arrival", href: "/home4-pre-arrival" },
-      { title: "Arrival", href: "/home4-arrival" },
-      { title: "Treatment", href: "/home4-treatment" },
-      { title: "Post Treatment", href: "/home4-post-arrival" },
+              { title: "Pre Arrival", href: "/pre-arrival" },
+        { title: "Arrival", href: "/arrival" },
+        { title: "Treatment", href: "/treatment" },
+        { title: "Post Treatment", href: "/post-arrival" },
     ],
   },
   {
@@ -75,7 +75,7 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between md:h-20">
           <div className="flex items-center">
-            <Link href="/home4" className="mr-6 flex items-center space-x-2">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
               <div className="relative h-10 w-40">
               <Image
               src="/images/logo-malaysiahealthcare.png"
