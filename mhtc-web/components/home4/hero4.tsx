@@ -78,16 +78,10 @@ export default function Hero4() {
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-0 relative z-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           
-          {/* Left Side - Interactive Content */}
+          {/* Left Side - Content */}
           <div className="space-y-6 lg:space-y-8 lg:pr-8 order-2 lg:order-1">
             {/* Main Heading */}
             <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
-              {/* <div className="inline-flex items-center gap-2 bg-[#BE1E2D]/10 text-[#BE1E2D] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
-                <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
-                <span className="hidden sm:inline">Malaysia Healthcare Travel Council</span>
-                <span className="sm:hidden">MHTC</span>
-              </div> */}
-              
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                 Your Healthcare
                 <span className="block text-[#BE1E2D]">Journey Starts Here</span>
@@ -128,16 +122,15 @@ export default function Hero4() {
           {/* Right Side - Visual Content */}
           <div className="relative order-1 lg:order-2">
             {/* Main Image */}
-            <div className="relative h-64 sm:h-80 lg:h-[70vh] xl:h-[80vh] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl">
+            <div className="relative h-80 sm:h-96 lg:h-[80vh] xl:h-[90vh]">
               <Image
-                src="/images/home4/MHTC.png"
+                src="/images/home4/home4.png"
                 alt="Malaysian Healthcare Professionals - Quality Medical Care"
                 fill
-                className="object-cover"
+                className="object-contain object-center"
                 priority
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 70vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
 
             {/* Decorative Elements */}
