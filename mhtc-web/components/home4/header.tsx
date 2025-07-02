@@ -31,12 +31,8 @@ const mainNavItems = [
     ],
   },
   {
-    title: "Resources",
-    href: "/resources",
-    children: [
-      { title: "MHTC Chronicles", href: "/mhtc-chronicles" },
-      { title: "FAQs", href: "/home4-faq" },
-    ],
+    title: "FAQs",
+    href: "/faq",
   },
 ]
 
