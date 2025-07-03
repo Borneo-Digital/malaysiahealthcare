@@ -301,6 +301,17 @@ export interface MemberHospitalTranslations {
   elitePartners: {
     title: string;
     description: string;
+    details: {
+      address: string;
+      phone: string;
+      email: string;
+      specialties: string;
+      website: string;
+      hoverHint: string;
+      clickHint: string;
+      contactInfo: string;
+      close: string;
+    };
   };
   ordinaryMembers: {
     title: string;

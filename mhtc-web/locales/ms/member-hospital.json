@@ -7,7 +7,18 @@
     },
     "elitePartners": {
         "title": "Keahlian Rakan Kongsi Elite MHTC",
-        "description": "Rakan Kongsi Elite MHTC mewakili institusi penjagaan kesihatan swasta yang paling berprestij di negara ini. Semua Rakan Kongsi Elite diakreditasi oleh agensi akreditasi penjagaan kesihatan antarabangsa dan beberapa pilihan diiktiraf untuk Kualiti Penjagaan Kepakaran atau Kesihatan (SCQH), Persatuan Malaysia untuk Kualiti dalam Kesihatan (MSQH), Majlis Australia untuk Penjagaan Kesihatan dan Piawaian (ACHS), Baldis International dan Planetree untuk Jawatankuasa Akreditasi Teknologi (PTAC)."
+        "description": "Rakan Kongsi Elite MHTC mewakili institusi penjagaan kesihatan swasta yang paling berprestij di negara ini. Semua Rakan Kongsi Elite diakreditasi oleh agensi akreditasi penjagaan kesihatan antarabangsa dan beberapa pilihan diiktiraf untuk Kualiti Penjagaan Kepakaran atau Kesihatan (SCQH), Persatuan Malaysia untuk Kualiti dalam Kesihatan (MSQH), Majlis Australia untuk Penjagaan Kesihatan dan Piawaian (ACHS), Baldis International dan Planetree untuk Jawatankuasa Akreditasi Teknologi (PTAC).",
+        "details": {
+            "address": "Alamat",
+            "phone": "Telefon",
+            "email": "E-mel",
+            "specialties": "Kepakaran",
+            "website": "Lawati Laman Web",
+            "hoverHint": "Hover untuk butiran",
+            "clickHint": "Klik untuk butiran",
+            "contactInfo": "Maklumat Hubungan",
+            "close": "Tutup"
+        }
     },
     "ordinaryMembers": {
         "title": "Ahli Biasa MHTC",
