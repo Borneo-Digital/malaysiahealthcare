@@ -7,7 +7,18 @@
     },
     "elitePartners": {
         "title": "MHTC 精英合作伙伴会员资格",
-        "description": "MHTC 精英合作伙伴代表该国最负盛名的私人医疗机构。所有精英合作伙伴都获得国际医疗认证机构的认证，少数精选机构被认可为专科护理质量或健康 (SCQH)、马来西亚健康质量协会 (MSQH)、澳大利亚医疗保健和标准委员会 (ACHS)、Baldis International 和 Planetree 技术认证委员会 (PTAC)。"
+        "description": "MHTC 精英合作伙伴代表该国最负盛名的私人医疗机构。所有精英合作伙伴都获得国际医疗认证机构的认证，少数精选机构被认可为专科护理质量或健康 (SCQH)、马来西亚健康质量协会 (MSQH)、澳大利亚医疗保健和标准委员会 (ACHS)、Baldis International 和 Planetree 技术认证委员会 (PTAC)。",
+        "details": {
+            "address": "地址",
+            "phone": "电话",
+            "email": "电子邮箱",
+            "specialties": "专科",
+            "website": "访问网站",
+            "hoverHint": "悬停查看详情",
+            "clickHint": "点击查看详情",
+            "contactInfo": "联系信息",
+            "close": "关闭"
+        }
     },
     "ordinaryMembers": {
         "title": "MHTC 普通会员",
