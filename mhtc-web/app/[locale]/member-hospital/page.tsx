@@ -6,6 +6,7 @@ import membersData from "@/data/members.json";
 import { Header } from "@/components/home4/header";
 import { Footer } from "@/components/home4/footer";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function MemberHospital() {
   const { t, isRTL } =
@@ -76,22 +77,16 @@ export default function MemberHospital() {
                 >
                   {/* Hospital Logo */}
                   <div className="w-full h-20 mb-3 flex items-center justify-center">
-                    <img
+                    <Image
                       src={partner.logoPath}
                       alt={`${partner.name} logo`}
+                      width={96}
+                      height={64}
                       className="w-24 h-16 object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        const fallback = target.nextElementSibling as HTMLElement;
-                        if (fallback) fallback.style.display = 'block';
+                      onError={() => {
+                        // Fallback will be handled by Next.js Image component
                       }}
                     />
-                    <div className="w-24 h-16 bg-gray-100 rounded-lg hidden items-center justify-center">
-                      <span className="text-xs text-gray-500 text-center px-2">
-                        {partner.name}
-                      </span>
-                    </div>
                   </div>
                   <p className="text-xs text-gray-600 text-center mb-2">{partner.name}</p>
                   <p className="text-xs text-gray-400 text-center">{t.elitePartners.details.clickHint}</p>
