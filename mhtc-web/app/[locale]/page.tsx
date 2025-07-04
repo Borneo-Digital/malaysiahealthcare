@@ -7,11 +7,11 @@ import { Header } from "@/components/home4/header"
 import { Footer } from "@/components/home4/footer"
 import Hero4 from "@/components/home4/hero4"
 import HealingJourney from "@/components/home4/healing-journey"
-import StatsSection from "@/components/home4/stats"
+// import StatsSection from "@/components/home4/stats"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
 
-import MHWellnessEvents from "@/components/home4/mh-wellness-events"
+// import MHWellnessEvents from "@/components/home4/mh-wellness-events"
 import Testimonials from "@/components/home4/testimonials"
 import { ArrowRight } from "lucide-react"
 
@@ -50,18 +50,18 @@ export default function HomePage() {
         <HealingJourney />
 
         {/* Stats Section */}
-        <section className="bg-[#BE1E2D] py-16 md:py-24">
+        {/* <section className="bg-[#BE1E2D] py-16 md:py-24">
           <Container>
             <StatsSection />
           </Container>
-        </section>
+        </section> */}
 
         {/* MH Wellness Events for Expat Communities */}
-        <section className="py-16 md:py-20 bg-slate-50">
+        {/* <section className="py-16 md:py-20 bg-slate-50">
           <Container>
             <MHWellnessEvents />
           </Container>
-        </section>
+        </section> */}
 
         {/* Patient Testimonials */}
         <section className="py-16 md:py-20 bg-white">
@@ -157,7 +157,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Quick Contact Info */}
-                  <div className="flex flex-wrap gap-6 text-white/80 text-sm">
+                  {/* <div className="flex flex-wrap gap-6 text-white/80 text-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
                       <span>24/7 Support</span>
@@ -170,7 +170,7 @@ export default function HomePage() {
                       <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
                       <span>58 Hospitals Network</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

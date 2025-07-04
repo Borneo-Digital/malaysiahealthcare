@@ -14,15 +14,15 @@ const quickPaths = [
     href: "/healthcare-travel-guide",
   },
   {
-    title: "Member Hospitals",
-    description: "Access our network of world-class facilities.",
+    title: "Members",
+    description: "Access our network of premier facilities.",
     icon: Hospital,
     color: "bg-rose-50 border-rose-200 text-rose-700",
     href: "/member-hospital",
   },
   {
     title: "Dedicated Support",
-    description: "Our team is here to assist you 24/7.",
+    description: "Our team is here to assist you.",
     icon: LifeBuoy,
     color: "bg-amber-50 border-amber-200 text-amber-700",
     href: "/contact",
@@ -88,7 +88,7 @@ export default function Hero4() {
               </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Discover world-class healthcare with Malaysian hospitality. Quality care for your peace of mind.
+                Discover premier healthcare with Malaysian hospitality. Quality care for your peace of mind.
               </p>
             </div>
 

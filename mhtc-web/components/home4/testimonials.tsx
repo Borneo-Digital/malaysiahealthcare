@@ -37,7 +37,7 @@ export default function Testimonials() {
           Patient <span className="text-[#BE1E2D]">Stories</span>
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Real experiences from patients who have received care through Malaysia&apos;s healthcare system
+         Real #experienceMalaysiaHealthcare stories from international patients who received premier medical care and Malaysian hospitality.
         </p>
       </motion.div>
 
@@ -104,11 +104,7 @@ export default function Testimonials() {
         viewport={{ once: true }}
         className="text-center"
       >
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          These patients represent thousands of international patients who have received 
-          quality healthcare in Malaysia. Each journey is unique, and our commitment 
-          remains the same - providing world-class medical care with Malaysian hospitality.
-        </p>
+      
       </motion.div>
     </div>
   )
