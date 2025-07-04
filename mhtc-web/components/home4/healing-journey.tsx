@@ -68,7 +68,7 @@ export default function HealingJourney() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          We guide you through every stage of your healthcare journey in Malaysia to ensure a seamless experience
+          We guide you through every stage of your healthcare journey in Malaysia for a seamless experience.
         </motion.p>
 
         <div className="relative">

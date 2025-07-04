@@ -3,10 +3,10 @@ import { Header } from "@/components/home4/header"
 import { Footer } from "@/components/home4/footer"
 import Hero4 from "@/components/home4/hero4"
 import HealingJourney from "@/components/home4/healing-journey"
-import StatsSection from "@/components/home4/stats"
+// import StatsSection from "@/components/home4/stats"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
-import MHWellnessEvents from "@/components/home4/mh-wellness-events"
+// import MHWellnessEvents from "@/components/home4/mh-wellness-events"
 import { ArrowRight, Download } from "lucide-react"
 
 
@@ -22,18 +22,18 @@ export default function Home4Page() {
         <HealingJourney />
 
         {/* Stats Section */}
-        <section className="bg-[#BE1E2D] py-16 md:py-24">
+        {/* <section className="bg-[#BE1E2D] py-16 md:py-24">
           <Container>
             <StatsSection />
           </Container>
-        </section>
+        </section> */}
 
         {/* MH Wellness Events for Expat Communities */}
-        <section className="py-16 md:py-20 bg-slate-50">
+        {/* <section className="py-16 md:py-20 bg-slate-50">
           <Container>
             <MHWellnessEvents />
           </Container>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="relative overflow-hidden bg-mhtc-primary py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 text-white">

@@ -90,9 +90,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Get in <span className="text-[#BE1E2D]">Touch</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Contact our dedicated healthcare travel concierge team for personalized assistance and experience quality care for your peace of mind.
-            </p>
+            
           </motion.div>
 
           {/* Contact Information Cards */}
@@ -123,11 +121,13 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-sm text-gray-600 mb-1">
-                  <a href="tel:+60327851814" className="hover:text-[#BE1E2D] transition-colors">
+                  <a href="tel:+603 2785 1814" className="hover:text-[#BE1E2D] transition-colors">
                     +603 2785 1814
                   </a>
                 </p>
                 <p className="text-xs text-gray-500">Main Office</p>
+                <p className="text-sm text-gray-600 mb-1">Mon – Sunday (9.00am – 6.00pm)</p>
+
               </CardContent>
             </Card>
 
@@ -155,10 +155,10 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
                 <p className="text-sm text-gray-600 mb-1">
                   <a href="https://wa.me/60188700100" className="hover:text-[#BE1E2D] transition-colors">
-                    +6018 870 0100
+                  +6018 870 0100
                   </a>
                 </p>
-                <p className="text-xs text-gray-500">24/7 Support</p>
+                
               </CardContent>
             </Card>
           </motion.div>
