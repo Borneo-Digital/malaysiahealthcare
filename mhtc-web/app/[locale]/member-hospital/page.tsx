@@ -63,7 +63,7 @@ export default function MemberHospital() {
           </div>
           
           {/* Elite Partners Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
             {membersData.elitePartners.map((partner) => (
               <div
                 key={partner.id}
@@ -72,27 +72,27 @@ export default function MemberHospital() {
               >
                 {/* Hospital Card */}
                 <div 
-                  className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-[120px] border cursor-pointer hover:scale-105 transform"
+                  className="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-col items-center justify-center min-h-[120px] border cursor-pointer hover:scale-105 transform"
                   onClick={() => setSelectedHospital(selectedHospital === partner.id ? null : partner.id)}
                 >
                   {/* Hospital Logo */}
-                  <div className="w-full h-20 mb-3 flex items-center justify-center">
+                  <div className="w-full h-16 sm:h-20 mb-2 sm:mb-3 flex items-center justify-center">
                     <Image
                       src={partner.logoPath}
                       alt={`${partner.name} logo`}
                       width={96}
                       height={64}
-                      className="w-24 h-16 object-contain"
+                      className="w-20 h-12 sm:w-24 sm:h-16 object-contain"
                       onError={() => {
                         // Fallback will be handled by Next.js Image component
                       }}
                     />
                   </div>
-                  <p className="text-xs text-gray-600 text-center mb-2">{partner.name}</p>
+                  <p className="text-xs sm:text-xs text-gray-600 text-center mb-1 sm:mb-2 font-medium">{partner.name}</p>
                   <p className="text-xs text-gray-400 text-center">{t.elitePartners.details.clickHint}</p>
                   
                   {/* Dropdown Arrow */}
-                  <div className="mt-2">
+                  <div className="mt-1 sm:mt-2">
                     <svg 
                       className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                         selectedHospital === partner.id ? 'rotate-180' : ''
@@ -244,7 +244,7 @@ export default function MemberHospital() {
             <h3 className="text-2xl font-semibold mb-6 text-center text-red-600">
               {stateLabels[activeTab as keyof typeof stateLabels]}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
               {membersData.ordinaryMembers[activeTab as keyof typeof membersData.ordinaryMembers]?.map((member, index) => (
                 <div
                   key={index}
@@ -253,14 +253,14 @@ export default function MemberHospital() {
                 >
                   {/* Hospital Card */}
                   <div 
-                    className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-[120px] border cursor-pointer hover:scale-105 transform"
+                    className="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-[120px] border cursor-pointer hover:scale-105 transform"
                     onClick={() => setSelectedHospital(selectedHospital === `${activeTab}-${index}` ? null : `${activeTab}-${index}`)}
                   >
-                    <p className="text-xs text-gray-700 text-center mb-2 font-medium">{member.name}</p>
+                    <p className="text-xs sm:text-sm text-gray-700 text-center mb-1 sm:mb-2 font-medium">{member.name}</p>
                     <p className="text-xs text-gray-400 text-center">{t.elitePartners.details.clickHint}</p>
                     
                     {/* Dropdown Arrow */}
-                    <div className="mt-2">
+                    <div className="mt-1 sm:mt-2">
                       <svg 
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           selectedHospital === `${activeTab}-${index}` ? 'rotate-180' : ''
