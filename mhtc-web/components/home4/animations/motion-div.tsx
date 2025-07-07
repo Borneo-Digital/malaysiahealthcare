@@ -2,7 +2,7 @@
 
 import { motion, type MotionProps } from "framer-motion"
 import type { HTMLAttributes, ReactNode } from "react"
-import { useReducedMotion } from "@/components/home3/hooks/use-reduced-motion"
+import { useReducedMotion } from "@/components/home4/hooks/use-reduced-motion"
 
 interface MotionDivProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
