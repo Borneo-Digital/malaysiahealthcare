@@ -2,8 +2,8 @@
 
 import { motion, useInView } from "framer-motion"
 import { type ReactNode, useRef } from "react"
-import { useReducedMotion } from "@/components/home3/hooks/use-reduced-motion"
-import { fadeInUp, slideInLeft, slideInRight, springTransition } from "@/components/home3/animations/motion-variants"
+import { useReducedMotion } from "@/components/home4/hooks/use-reduced-motion"
+import { fadeInUp, slideInLeft, slideInRight, springTransition } from "@/components/home4/animations/motion-variants"
 
 interface FadeInProps {
   children: ReactNode

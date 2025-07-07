@@ -32,5 +32,4 @@ export function useScrollPosition(): ScrollPosition {
   }, [scrollPosition.lastScrollY])
 
   return scrollPosition
-}
-
+} 

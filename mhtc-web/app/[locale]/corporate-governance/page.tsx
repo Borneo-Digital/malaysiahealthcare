@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Header } from '@/components/home4/header'
 import { Footer } from '@/components/home4/footer'
-import { Container } from '@/components/home3/ui/container'
+import { Container } from '@/components/home4/ui/container'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/home4/ui/button'
