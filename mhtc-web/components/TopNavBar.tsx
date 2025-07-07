@@ -7,9 +7,6 @@ const navItems = [
   {
     label: "Home",
     items: [
-      { label: "Home 1", href: "/home1" },
-      { label: "Home 2", href: "/home2" },
-      { label: "Home 3", href: "/home3" },
       { label: "Home 4", href: "/home4" },
     ],
   },
