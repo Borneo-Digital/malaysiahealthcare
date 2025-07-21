@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, FileText, Plane, Hospital, Heart } from "lucide-react"
+import { FileText, Plane, Hospital, Heart } from "lucide-react"
 import { motion, useInView } from "framer-motion"
 
 export default function HealingJourney() {
@@ -141,14 +141,14 @@ export default function HealingJourney() {
                         &quot;{step.story}&quot;
                       </div>
 
-                      <div className="mt-auto flex items-center text-[#BE1E2D] text-medium">
+                      {/* <div className="mt-auto flex items-center text-[#BE1E2D] text-medium">
                         <span>Learn More</span>
                         <ArrowRight
                           className={`h-4 w-4 ml-1 transition-transform duration-300 ${
                             hoveredStep === step.id ? "translate-x-1" : ""
                           }`}
                         />
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </Link>
