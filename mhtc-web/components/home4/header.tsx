@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, X, ChevronDown, Globe } from "lucide-react"
+import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Container } from "@/components/home4/ui/container"
@@ -12,27 +12,8 @@ import { cn } from "@/lib/utils"
 
 const mainNavItems = [
   {
-    title: "Corporate Profile",
-    href: "https://www.mhtc.org.my",
-    external: true,
-  },
-  {
     title: "Member Hospital",
     href: "/member-hospital",
-  },
-  {
-    title: "Plan Your Visit",
-    href: "/plan",
-    children: [
-              { title: "Pre Arrival", href: "/pre-arrival" },
-        { title: "Arrival", href: "/arrival" },
-        { title: "Treatment", href: "/treatment" },
-        { title: "Post Treatment", href: "/post-arrival" },
-    ],
-  },
-  {
-    title: "FAQs",
-    href: "/faq",
   },
 ]
 
@@ -89,58 +70,16 @@ export function Header() {
             <ul className="flex space-x-1">
               {mainNavItems.map((item) => (
                 <li key={item.href} className="relative">
-                  {item.children ? (
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          className={cn(
-                            "flex items-center space-x-1 text-base transition-colors duration-150",
-                            pathname.startsWith(item.href) ? "text-[#C8102E]" : "text-foreground",
-                          )}
-                        >
-                          <span>{item.title}</span>
-                          <ChevronDown className="h-4 w-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-48 bg-white border border-gray-200 shadow-lg">
-                        {item.children.map((child) => (
-                          <DropdownMenuItem key={child.href} asChild>
-                            <Link
-                              href={child.href}
-                              className={cn(
-                                "transition-colors duration-150",
-                                pathname === child.href ? "bg-accent text-accent-foreground" : "",
-                              )}
-                            >
-                              {child.title}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ) : (
-                    <Button
-                      asChild
-                      variant="ghost"
-                      className={cn(
-                        "text-base transition-colors duration-150",
-                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
-                      )}
-                    >
-                      {item.external ? (
-                        <a 
-                          href={item.href} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          {item.title}
-                        </a>
-                      ) : (
-                        <Link href={item.href}>{item.title}</Link>
-                      )}
-                    </Button>
-                  )}
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className={cn(
+                      "text-base transition-colors duration-150",
+                      pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                    )}
+                  >
+                    <Link href={item.href}>{item.title}</Link>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -203,52 +142,15 @@ export function Header() {
             <nav className="flex flex-col space-y-4">
               {mainNavItems.map((item) => (
                 <div key={item.href} className="border-b border-gray-100 pb-4">
-                  {item.children ? (
-                    <>
-                      <div className="mb-2 font-medium">{item.title}</div>
-                      <ul className="ml-4 space-y-2">
-                        {item.children.map((child) => (
-                          <li key={child.href}>
-                            <Link
-                              href={child.href}
-                              className={cn(
-                                "block text-sm transition-colors duration-150",
-                                pathname === child.href ? "text-[#C8102E]" : "text-muted-foreground",
-                              )}
-                            >
-                              {child.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <>
-                      {item.external ? (
-                        <a
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            "block font-medium transition-colors duration-150",
-                            pathname === item.href ? "text-[#C8102E]" : "text-foreground",
-                          )}
-                        >
-                          {item.title}
-                        </a>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          className={cn(
-                            "block font-medium transition-colors duration-150",
-                            pathname === item.href ? "text-[#C8102E]" : "text-foreground",
-                          )}
-                        >
-                          {item.title}
-                        </Link>
-                      )}
-                    </>
-                  )}
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "block font-medium transition-colors duration-150",
+                      pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                    )}
+                  >
+                    {item.title}
+                  </Link>
                 </div>
               ))}
               <Button className="mt-4 w-full bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]" asChild>

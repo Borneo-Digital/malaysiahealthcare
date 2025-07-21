@@ -94,14 +94,14 @@ export default function Header() {
             >
               {t.navigation.mhtcChronicles}
             </LocaleLink>
-            <LocaleLink
+            {/* <LocaleLink
               href="/corporate-profile"
               className={`text-gray-800 hover:text-primary transition-colors duration-200 text-sm font-medium ${
                 pathname.includes("/corporate-profile") ? "text-primary" : ""
               }`}
             >
               {t.navigation.corporateProfile}
-            </LocaleLink>
+            </LocaleLink> */}
             <LocaleLink
               href="/contact"
               className={`text-gray-800 hover:text-primary transition-colors duration-200 text-sm font-medium ${
@@ -193,7 +193,7 @@ export default function Header() {
             >
               {t.navigation.mhtcChronicles}
             </LocaleLink>
-            <LocaleLink
+            {/* <LocaleLink
               href="/corporate-profile"
               className={`text-gray-800 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100 ${
                 pathname.includes("/corporate-profile") ? "text-primary" : ""
@@ -201,7 +201,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             >
               {t.navigation.corporateProfile}
-            </LocaleLink>
+            </LocaleLink> */}
             <LocaleLink
               href="/contact"
               className={`text-gray-800 hover:text-primary transition-colors duration-200 py-2 ${

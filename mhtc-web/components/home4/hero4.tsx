@@ -2,17 +2,17 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, BookOpen, Hospital, LifeBuoy } from "lucide-react"
+import { ArrowRight, Hospital, LifeBuoy } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 const quickPaths = [
-  {
-    title: "Healthcare Guide",
-    description: "Your complete guide to medical travel in Malaysia.",
-    icon: BookOpen,
-    color: "bg-green-50 border-green-200 text-green-700",
-    href: "/healthcare-travel-guide",
-  },
+  // {
+  //   title: "Healthcare Guide",
+  //   description: "Your complete guide to medical travel in Malaysia.",
+  //   icon: BookOpen,
+  //   color: "bg-green-50 border-green-200 text-green-700",
+  //   href: "/healthcare-travel-guide",
+  // },
   {
     title: "Members",
     description: "Access our network of premier facilities.",
