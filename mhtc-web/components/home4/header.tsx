@@ -15,6 +15,10 @@ const mainNavItems = [
     title: "Member Hospital",
     href: "/member-hospital",
   },
+  {
+    title: "MYMT 2026",
+    href: "/",
+  },
 ]
 
 const languages = [
