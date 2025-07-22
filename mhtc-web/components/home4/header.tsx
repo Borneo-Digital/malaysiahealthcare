@@ -10,14 +10,21 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Container } from "@/components/home4/ui/container"
 import { cn } from "@/lib/utils"
 
-const mainNavItems = [
+interface NavItem {
+  title: string
+  href: string
+  external?: boolean
+}
+
+const mainNavItems: NavItem[] = [
   {
     title: "Member Hospital",
     href: "/member-hospital",
   },
   {
     title: "MYMT 2026",
-    href: "/",
+    href: "https://www.mhtc.org.my/mymt-2026/",
+    external: true,
   },
 ]
 
@@ -82,7 +89,17 @@ export function Header() {
                       pathname === item.href ? "text-[#C8102E]" : "text-foreground",
                     )}
                   >
-                    <Link href={item.href}>{item.title}</Link>
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link href={item.href}>{item.title}</Link>
+                    )}
                   </Button>
                 </li>
               ))}
@@ -146,15 +163,29 @@ export function Header() {
             <nav className="flex flex-col space-y-4">
               {mainNavItems.map((item) => (
                 <div key={item.href} className="border-b border-gray-100 pb-4">
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "block font-medium transition-colors duration-150",
-                      pathname === item.href ? "text-[#C8102E]" : "text-foreground",
-                    )}
-                  >
-                    {item.title}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(
+                        "block font-medium transition-colors duration-150",
+                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                      )}
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "block font-medium transition-colors duration-150",
+                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                      )}
+                    >
+                      {item.title}
+                    </Link>
+                  )}
                 </div>
               ))}
               <Button className="mt-4 w-full bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]" asChild>
