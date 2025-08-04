@@ -1,6 +1,7 @@
 // app/[locale]/layout.tsx
 import { ReactNode } from "react";
 import { Metadata } from "next";
+import Script from "next/script";
 import { locales } from "@/middleware";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
@@ -46,6 +47,20 @@ export default async function RootLayout({
         >
           {headerT.accessibility.skipToContent}
         </a>
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XF937XX8XL" 
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XF937XX8XL');
+          `}
+        </Script>
 
         {children}
       </body>
