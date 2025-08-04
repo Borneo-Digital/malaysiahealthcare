@@ -7,7 +7,7 @@ import { MalaysianAftercareBenefits } from '@/components/home4/malaysian-afterca
 import { RecoveryTimelineView } from '@/components/home4/recovery-timeline-view'
 
 export const metadata: Metadata = {
-  title: 'Post-Treatment Support | Home4 Healthcare Journey | Malaysia Healthcare Travel Council',
+  title: 'Post-Treatment Support | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Continue your recovery journey with comprehensive post-treatment support and resources from Malaysia Healthcare Travel Council.',
 }
 

@@ -24,7 +24,7 @@ const mainNavItems: NavItem[] = [
   {
     title: "MYMT 2026",
     href: "/mymt2026",
-    external: true,
+   
   },
 ]
 

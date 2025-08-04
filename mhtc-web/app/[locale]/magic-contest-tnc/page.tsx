@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { Header } from "@/components/home4/header";
 import { Footer } from "@/components/home4/footer";
+
+export const metadata: Metadata = {
+  title: "Magic Contest Terms and Condition | Malaysia Healthcare Travel Council",
+  description: "#UnboxTheMYMT2026Magic Contest Terms and Conditions - Join our creative unboxing contest and showcase your MYMT2026 experience on social media.",
+};
 
 export default function MagicContestTnCPage() {
   return (

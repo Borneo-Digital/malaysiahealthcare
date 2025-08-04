@@ -10,7 +10,7 @@ import { Home4PlanningSteps } from '@/components/home4/home4-planning-steps'
 import { CTAPreArrival } from '@/components/home4/cta-pre-arrival'
 
 export const metadata: Metadata = {
-  title: 'Pre-Arrival Planning | Home4 Healthcare Journey | Malaysia Healthcare Travel Council',
+  title: 'Pre-Arrival Planning | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Begin your healthcare journey with confidence. Comprehensive pre-arrival planning guide for your medical travel to Malaysia.',
 }
 
