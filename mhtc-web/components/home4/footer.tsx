@@ -11,38 +11,15 @@ export function Footer() {
   return (
     <footer className="z-10 border-t border-grey-200">
       <div className="bg-grey-50 relative overflow-hidden">
-        {/* Bunga Raya Decorative Pattern - Traditional Malaysian Floral Design */}
+        {/* Flower Background - Full Coverage */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Main decorative pattern - visible on larger screens */}
-          <div className="absolute top-0 right-0 w-2/5 h-full hidden lg:block opacity-25">
-            <Image
-              src="/images/Bunga Raya Asset-01.png"
-              alt="Bunga Raya - Malaysian hibiscus floral pattern"
-              fill
-              className="object-cover object-right-top"
-              sizes="(max-width: 1024px) 0vw, 40vw"
-            />
-          </div>
-          {/* Subtle corner accent for medium screens */}
-          <div className="absolute bottom-0 right-0 w-64 h-64 lg:hidden md:block hidden opacity-20">
-            <Image
-              src="/images/Bunga Raya Asset-01.png"
-              alt="Bunga Raya decorative accent"
-              fill
-              className="object-cover object-bottom-right"
-              sizes="256px"
-            />
-          </div>
-          {/* Mobile subtle accent */}
-          <div className="absolute bottom-0 right-0 w-32 h-32 md:hidden opacity-15">
-            <Image
-              src="/images/Bunga Raya Asset-01.png"
-              alt="Bunga Raya decorative accent"
-              fill
-              className="object-cover object-bottom-right"
-              sizes="128px"
-            />
-          </div>
+          {/* Full flower background covering entire footer */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ 
+              backgroundImage: "url('/images/home4/flowers.png')"
+            }}
+          ></div>
         </div>
         <div className="relative z-10">
           <Container>
