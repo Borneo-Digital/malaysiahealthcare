@@ -37,6 +37,7 @@ export interface HeaderTranslations {
     healthcareTravelGuide: string;
     mhtcChronicles: string;
     corporateProfile: string;
+    mymt2026: string;
     contact: string;
   };
   accessibility: {
@@ -544,5 +545,18 @@ export interface MHTCChroniclesTranslations {
   };
   articles: {
     readMore: string;
+  };
+}
+
+export interface MYMT2026Translations {
+  hero: {
+    title: string;
+    description: string;
+    cta: string;
+    date: string;
+  };
+  meta: {
+    title: string;
+    description: string;
   };
 }
