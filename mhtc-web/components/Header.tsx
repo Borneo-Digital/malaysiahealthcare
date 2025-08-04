@@ -94,6 +94,14 @@ export default function Header() {
             >
               {t.navigation.mhtcChronicles}
             </LocaleLink>
+            <LocaleLink
+              href="/mymt2026"
+              className={`text-gray-800 hover:text-primary transition-colors duration-200 text-sm font-medium ${
+                pathname.includes("/mymt2026") ? "text-primary" : ""
+              }`}
+            >
+              {t.navigation.mymt2026}
+            </LocaleLink>
             {/* <LocaleLink
               href="/corporate-profile"
               className={`text-gray-800 hover:text-primary transition-colors duration-200 text-sm font-medium ${
@@ -192,6 +200,15 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             >
               {t.navigation.mhtcChronicles}
+            </LocaleLink>
+            <LocaleLink
+              href="/mymt2026"
+              className={`text-gray-800 hover:text-primary transition-colors duration-200 py-2 border-b border-gray-100 ${
+                pathname.includes("/mymt2026") ? "text-primary" : ""
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {t.navigation.mymt2026}
             </LocaleLink>
             {/* <LocaleLink
               href="/corporate-profile"

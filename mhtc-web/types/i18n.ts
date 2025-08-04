@@ -19,7 +19,8 @@ export type Namespace =
   | 'healthcare-travel-guide'
   | 'mhtc-chronicles'
   | 'navbar'
-  | 'footer';
+  | 'footer'
+  | 'mymt2026';
 
 /**
  * Return type for the useTranslation hook
