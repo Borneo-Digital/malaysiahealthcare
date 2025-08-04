@@ -8,7 +8,7 @@ import { TreatmentFlowVisual } from '@/components/home4/treatment-flow-visual'
 import { CTATreatment } from '@/components/home4/cta-treatment'
 
 export const metadata: Metadata = {
-  title: 'Treatment Excellence | Home4 Healthcare Journey | Malaysia Healthcare Travel Council',
+  title: 'Treatment Excellence | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Advanced care, personalized for you. Leading medical expertise with compassionate delivery in Malaysia.',
 }
 

@@ -10,7 +10,7 @@ import { MalaysianAftercareBenefits } from '@/components/home4/malaysian-afterca
 import { Home4ContinuedSupportCTA } from '@/components/home4/home4-continued-support-cta'
 
 export const metadata: Metadata = {
-  title: 'Post-Treatment Care | Home4 Healthcare Journey | Malaysia Healthcare Travel Council',
+  title: 'Post-Treatment Care | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Comprehensive recovery and ongoing support. Your healing continues with world-class aftercare in Malaysia.',
 }
 
