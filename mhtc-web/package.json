@@ -27,7 +27,8 @@
     "react-dom": "^18",
     "swiper": "^11.2.2",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",
