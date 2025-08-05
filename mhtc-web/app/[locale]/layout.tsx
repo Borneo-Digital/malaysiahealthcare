@@ -46,10 +46,12 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE', // Replace this with your actual verification code from Google Search Console
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined, // Only include if env var is set
   },
   other: {
-    'google-site-verification': 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE', // Replace this with your actual verification code
+    ...(process.env.GOOGLE_SITE_VERIFICATION && {
+      'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION
+    })
   },
   openGraph: {
     type: 'website',

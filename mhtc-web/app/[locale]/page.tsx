@@ -82,6 +82,7 @@ export default function HomePage() {
                 fill
                 className="object-cover object-center"
                 sizes="100vw"
+                priority={false}
               />
             </div>
             {/* Secondary Bunga Raya pattern - right side for depth */}
@@ -92,6 +93,7 @@ export default function HomePage() {
                 fill
                 className="object-cover object-right-top scale-110"
                 sizes="67vw"
+                priority={false}
               />
             </div>
             {/* Home4 decorative motif - spread more evenly */}
@@ -102,6 +104,7 @@ export default function HomePage() {
                 fill
                 className="object-contain object-bottom-center"
                 sizes="50vw"
+                priority={false}
               />
             </div>
           </div>
