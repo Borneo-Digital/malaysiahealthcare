@@ -5,9 +5,13 @@ interface GoogleSearchConsoleProps {
 }
 
 export function GoogleSearchConsole({ verificationCode }: GoogleSearchConsoleProps) {
-  // You can replace this with your actual verification code from Google Search Console
-  const defaultVerificationCode = 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE'
-  const finalVerificationCode = verificationCode || defaultVerificationCode
+  // Use environment variable or prop, but don't include script if neither is available
+  const finalVerificationCode = verificationCode || process.env.GOOGLE_SITE_VERIFICATION
+  
+  // Don't render anything if no verification code is provided
+  if (!finalVerificationCode || finalVerificationCode.includes('REPLACE_WITH_YOUR')) {
+    return null
+  }
 
   return (
     <>
@@ -21,7 +25,7 @@ export function GoogleSearchConsole({ verificationCode }: GoogleSearchConsolePro
             if (typeof window !== 'undefined') {
               // Store verification code in global scope for debugging
               window.googleVerificationCode = '${finalVerificationCode}';
-              console.log('Google Search Console verification loaded:', '${finalVerificationCode}');
+              console.log('Google Search Console verification loaded');
               
               // Additional Search Console tracking if needed
               if (typeof gtag !== 'undefined') {

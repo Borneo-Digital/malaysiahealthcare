@@ -82,6 +82,11 @@ export default function HomePage() {
                 fill
                 className="object-cover object-center"
                 sizes="100vw"
+                priority={false}
+                onError={(e) => {
+                  console.warn('Failed to load Bunga Raya pattern image');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             {/* Secondary Bunga Raya pattern - right side for depth */}
@@ -92,6 +97,11 @@ export default function HomePage() {
                 fill
                 className="object-cover object-right-top scale-110"
                 sizes="67vw"
+                priority={false}
+                onError={(e) => {
+                  console.warn('Failed to load secondary Bunga Raya pattern');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             {/* Home4 decorative motif - spread more evenly */}
@@ -102,6 +112,11 @@ export default function HomePage() {
                 fill
                 className="object-contain object-bottom-center"
                 sizes="50vw"
+                priority={false}
+                onError={(e) => {
+                  console.warn('Failed to load home4 motif image');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
           </div>
