@@ -1,13 +1,13 @@
 // Core Web Vitals tracking utilities
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
 
 export interface WebVitalMetric {
-  name: 'CLS' | 'FCP' | 'FID' | 'LCP' | 'TTFB';
+  name: 'CLS' | 'FCP' | 'INP' | 'LCP' | 'TTFB';
   value: number;
   id: string;
   delta: number;
@@ -42,6 +42,7 @@ export function reportWebVitals(metric: WebVitalMetric) {
       value: metric.value,
       rating: metric.rating,
       delta: metric.delta,
+      note: metric.name === 'INP' ? 'INP replaces FID as Core Web Vital in 2024' : undefined,
     });
   }
 }
@@ -55,7 +56,7 @@ export function trackPageView(url: string, title?: string) {
   }
 }
 
-export function trackEvent(eventName: string, parameters: Record<string, any> = {}) {
+export function trackEvent(eventName: string, parameters: Record<string, unknown> = {}) {
   if (typeof window.gtag !== 'undefined') {
     window.gtag('event', eventName, parameters);
   }
@@ -67,7 +68,7 @@ export function trackHealthcareInteraction(action: string, data: {
   hospital?: string;
   treatment?: string;
   language?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) {
   trackEvent('healthcare_interaction', {
     action,
