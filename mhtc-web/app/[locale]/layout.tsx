@@ -5,6 +5,10 @@ import Script from "next/script";
 import { locales } from "@/middleware";
 import "../globals.css";
 import { HeaderTranslations } from "@/types/translations";
+import { OrganizationSchema, WebsiteSchema } from "@/components/JsonLdSchema";
+import { HealthcareSchema, MedicalTourismSchema } from "@/components/HealthcareSchema";
+import WebVitals from "@/components/WebVitals";
+import GoogleSearchConsole from "@/components/GoogleSearchConsole";
 
 // Generate static paths for all locales
 export async function generateStaticParams() {
@@ -15,7 +19,62 @@ export async function generateStaticParams() {
 export const metadata: Metadata = {
   title: "Malaysia Healthcare Travel Council",
   description:
-    "Your premier destination for world-class healthcare services in Malaysia",
+    "Your premier destination for world-class healthcare services in Malaysia. Discover JCI-accredited hospitals, world-class medical specialists, and comprehensive healthcare tourism services.",
+  keywords: [
+    "Malaysia healthcare",
+    "medical tourism",
+    "JCI accredited hospitals",
+    "healthcare travel",
+    "medical treatment Malaysia",
+    "MHTC",
+    "medical tourism Malaysia",
+    "health tourism",
+    "international healthcare"
+  ],
+  authors: [{ name: "Malaysia Healthcare Travel Council" }],
+  creator: "Malaysia Healthcare Travel Council",
+  publisher: "Malaysia Healthcare Travel Council",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE', // Replace this with your actual verification code from Google Search Console
+  },
+  other: {
+    'google-site-verification': 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE', // Replace this with your actual verification code
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_MY',
+    url: 'https://malaysiahealthcare.org',
+    siteName: 'Malaysia Healthcare Travel Council',
+    title: 'Malaysia Healthcare Travel Council - World-Class Healthcare Services',
+    description: 'Discover world-class healthcare in Malaysia with MHTC - your trusted guide to medical tourism with JCI-accredited hospitals and international-standard medical care.',
+    images: [
+      {
+        url: 'https://malaysiahealthcare.org/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Malaysia Healthcare Travel Council',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@malaysiahealthcare',
+    creator: '@malaysiahealthcare',
+    title: 'Malaysia Healthcare Travel Council - World-Class Healthcare Services',
+    description: 'Discover world-class healthcare in Malaysia with MHTC - your trusted guide to medical tourism.',
+    images: ['https://malaysiahealthcare.org/og-image.jpg'],
+  },
 };
 
 export default async function RootLayout({
@@ -47,6 +106,18 @@ export default async function RootLayout({
         >
           {headerT.accessibility.skipToContent}
         </a>
+
+        {/* SEO Schema Markup */}
+        <OrganizationSchema locale={locale} />
+        <WebsiteSchema locale={locale} />
+        <HealthcareSchema />
+        <MedicalTourismSchema />
+
+        {/* Google Search Console */}
+        <GoogleSearchConsole />
+
+        {/* Web Vitals Tracking */}
+        <WebVitals />
 
         {/* Google Analytics */}
         <Script

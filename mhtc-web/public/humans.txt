@@ -1,0 +1,28 @@
+/* TEAM */
+Organization: Malaysia Healthcare Travel Council (MHTC)
+Contact: info@malaysiahealthcare.org
+Website: https://malaysiahealthcare.org
+Location: Kuala Lumpur, Malaysia
+
+Developer: Development Team
+Contact: dev@malaysiahealthcare.org
+From: Malaysia
+
+/* SITE */
+Last update: 2024/01/01
+Language: English, Malay, Indonesian, Chinese, Arabic
+Doctype: HTML5
+IDE: Next.js, TypeScript, Tailwind CSS
+Technologies: React, Next.js 14, TypeScript, Tailwind CSS, Framer Motion
+
+/* THANKS */
+Framework: Next.js - https://nextjs.org
+Styling: Tailwind CSS - https://tailwindcss.com
+Icons: Lucide React - https://lucide.dev
+Fonts: Helvetica
+Hosting: Vercel - https://vercel.com
+
+/* PURPOSE */
+Promoting Malaysia as a world-class healthcare destination
+Connecting international patients with quality medical care
+Supporting medical tourism industry growth in Malaysia

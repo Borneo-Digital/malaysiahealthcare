@@ -1,5 +1,24 @@
 User-agent: *
 Allow: /
 
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /api/auth/
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /private/
+
+# Allow specific API routes that should be crawled
+Allow: /api/sitemap
+Allow: /api/search
+
+# Sitemap location
 Sitemap: https://malaysiahealthcare.org/sitemap.xml
 
+# Crawl-delay to be respectful to search engines
+Crawl-delay: 1
+
+# Additional sitemaps for different content types
+# Sitemap: https://malaysiahealthcare.org/sitemap-hospitals.xml
+# Sitemap: https://malaysiahealthcare.org/sitemap-treatments.xml
+# Sitemap: https://malaysiahealthcare.org/sitemap-news.xml
