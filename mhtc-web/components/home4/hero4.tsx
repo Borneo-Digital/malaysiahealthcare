@@ -4,32 +4,31 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Hospital, LifeBuoy } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-
-const quickPaths = [
-  // {
-  //   title: "Healthcare Guide",
-  //   description: "Your complete guide to medical travel in Malaysia.",
-  //   icon: BookOpen,
-  //   color: "bg-green-50 border-green-200 text-green-700",
-  //   href: "/healthcare-travel-guide",
-  // },
-  {
-    title: "Members",
-    description: "Access our network of premier facilities.",
-    icon: Hospital,
-    color: "bg-rose-50 border-rose-200 text-rose-700",
-    href: "/member-hospital",
-  },
-  {
-    title: "Dedicated Support",
-    description: "Our team is here to assist you.",
-    icon: LifeBuoy,
-    color: "bg-amber-50 border-amber-200 text-amber-700",
-    href: "/contact",
-  },
-]
+import { useTranslation } from "@/hooks/useTranslation"
+import { HomepageHeroTranslations } from "@/types/translations"
+import { useParams } from "next/navigation"
 
 export default function Hero4() {
+  const { t } = useTranslation<HomepageHeroTranslations>("homepage/hero")
+  const params = useParams()
+  const currentLocale = (params?.locale as string) || "en"
+
+  const quickPaths = [
+    {
+      title: t.quickPaths?.members?.title || "Members",
+      description: t.quickPaths?.members?.description || "Access our network of premier facilities.",
+      icon: Hospital,
+      color: "bg-rose-50 border-rose-200 text-rose-700",
+      href: "/member-hospital",
+    },
+    {
+      title: t.quickPaths?.support?.title || "Dedicated Support",
+      description: t.quickPaths?.support?.description || "Our team is here to assist you.",
+      icon: LifeBuoy,
+      color: "bg-amber-50 border-amber-200 text-amber-700",
+      href: "/contact",
+    },
+  ]
   return (
     <section
       className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-white to-blue-50/30"
@@ -83,12 +82,11 @@ export default function Hero4() {
             {/* Main Heading */}
             <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                Your Healthcare
-                <span className="block text-[#BE1E2D]">Journey Starts Here</span>
+                {t.title || "Experience World-Class Healthcare in Malaysia"}
               </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Discover premier healthcare with Malaysian hospitality. Quality care for your peace of mind.
+                {t.subtitle || "Join thousands of international patients who have chosen Malaysia for their medical journey. Quality care, advanced technology, and warm hospitality await you."}
               </p>
             </div>
 
@@ -96,7 +94,7 @@ export default function Hero4() {
             <div className="pt-8">
               <div className="flex flex-col gap-4">
                 {quickPaths.map((path) => (
-                  <Link href={path.href} key={path.title} className="block group">
+                  <Link href={`/${currentLocale}${path.href}`} key={path.title} className="block group">
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 group-hover:border-[#BE1E2D]">
                       <CardContent className="p-4">
                         <div className="flex items-center space-x-4">

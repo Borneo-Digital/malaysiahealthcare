@@ -7,20 +7,32 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import LocaleLink from "@/components/LocaleLink"
 
-const preparationTasks = [
-  "Research Malaysian healthcare facilities",
-  "Prepare medical documentation", 
-  "Plan travel arrangements",
-  "Review cultural information"
-]
 
-const malaysiaHighlights = [
-  { icon: Globe, text: "Multi-cultural environment" },
-  { icon: MapPin, text: "Southeast Asia hub location" },
-  { icon: CheckCircle, text: "English widely spoken" }
-]
+interface HeroTranslations {
+  badge: string;
+  title: string;
+  description: string;
+  preparationTasks: string[];
+  malaysiaHighlights: Array<{
+    text: string;
+  }>;
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+}
 
-export function Home4PreArrivalHero() {
+interface Home4PreArrivalHeroProps {
+  heroTranslations: HeroTranslations;
+}
+
+export function Home4PreArrivalHero({ heroTranslations }: Home4PreArrivalHeroProps) {
+  const preparationTasks = heroTranslations.preparationTasks
+  const malaysiaHighlights = [
+    { icon: Globe, text: heroTranslations.malaysiaHighlights[0]?.text || "Multi-cultural environment" },
+    { icon: MapPin, text: heroTranslations.malaysiaHighlights[1]?.text || "Southeast Asia hub location" },
+    { icon: CheckCircle, text: heroTranslations.malaysiaHighlights[2]?.text || "English widely spoken" }
+  ]
   const [currentTask, setCurrentTask] = useState(0)
   const [completedTasks, setCompletedTasks] = useState<number[]>([])
 
@@ -38,7 +50,7 @@ export function Home4PreArrivalHero() {
     }, 2000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [preparationTasks.length])
 
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-blue-50 via-white to-grey-50/30 flex items-center overflow-hidden">
@@ -55,17 +67,15 @@ export function Home4PreArrivalHero() {
             <div>
               <Badge className="bg-mhtc-primary/10 text-mhtc-primary px-4 py-2 mb-6">
                 <Compass className="h-4 w-4 mr-2" />
-                PRE-ARRIVAL PLANNING
+                {heroTranslations.badge}
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-grey-900 leading-tight mb-6">
-                Plan Your
-                <span className="block text-mhtc-primary">Healthcare Journey</span>
+                {heroTranslations.title}
               </h1>
               
               <p className="text-xl text-grey-600 leading-relaxed mb-8 max-w-2xl">
-                Start your medical travel preparation with comprehensive guidance on Malaysia&apos;s 
-                healthcare destinations, facilities, and support services.
+                {heroTranslations.description}
               </p>
             </div>
 
@@ -85,12 +95,12 @@ export function Home4PreArrivalHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <LocaleLink href="/arrival">
                 <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                  Start Planning
+                  {heroTranslations.cta.primary}
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </LocaleLink>
               {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
-                Download Guide
+                {heroTranslations.cta.secondary}
               </Button> */}
             </div>
           </div>

@@ -7,20 +7,34 @@ import LocaleLink from "@/components/LocaleLink"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-const recoverySupport = [
-  "Follow-up care information",
-  "Recovery guidance resources",
-  "Support network connections",
-  "Travel assistance information"
-]
 
-const supportOptions = [
-  { icon: Heart, text: "Recovery resources" },
-  { icon: Users, text: "Support networks" },
-  { icon: Home, text: "Aftercare information" }
-]
+interface HeroTranslations {
+  badge: string;
+  title: string;
+  description: string;
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+}
 
-export function Home4PostTreatmentHero() {
+interface Home4PostTreatmentHeroProps {
+  heroTranslations: HeroTranslations;
+}
+
+export function Home4PostTreatmentHero({ heroTranslations }: Home4PostTreatmentHeroProps) {
+  const recoverySupport = [
+    "Follow-up care information",
+    "Recovery guidance resources",
+    "Support network connections",
+    "Travel assistance information"
+  ]
+
+  const supportOptions = [
+    { icon: Heart, text: "Recovery resources" },
+    { icon: Users, text: "Support networks" },
+    { icon: Home, text: "Aftercare information" }
+  ]
   const [currentSupport, setCurrentSupport] = useState(0)
   const [acknowledgedSupport, setAcknowledgedSupport] = useState<number[]>([])
 
@@ -38,7 +52,7 @@ export function Home4PostTreatmentHero() {
     }, 2500)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [recoverySupport.length])
 
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-purple-50 via-white to-grey-50/30 flex items-center overflow-hidden">
@@ -55,17 +69,15 @@ export function Home4PostTreatmentHero() {
             <div>
               <Badge className="bg-mhtc-primary/10 text-mhtc-primary px-4 py-2 mb-6">
                 <Heart className="h-4 w-4 mr-2" />
-                POST-TREATMENT SUPPORT
+                {heroTranslations.badge}
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-grey-900 leading-tight mb-6">
-                Continue Your
-                <span className="block text-mhtc-primary">Recovery Journey</span>
+                {heroTranslations.title}
               </h1>
               
               <p className="text-xl text-grey-600 leading-relaxed mb-8 max-w-2xl">
-                Access information about post-treatment support, recovery resources, 
-                and continued connections with Malaysia&apos;s healthcare community.
+                {heroTranslations.description}
               </p>
             </div>
 
@@ -85,11 +97,11 @@ export function Home4PostTreatmentHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <LocaleLink href="/contact">
                 <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                  Contact us
+                  {heroTranslations.cta.primary}
                 </Button>
               </LocaleLink>
               {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
-                Recovery Resources
+                {heroTranslations.cta.secondary}
               </Button> */}
             </div>
           </div>

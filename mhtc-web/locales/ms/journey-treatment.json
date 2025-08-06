@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "KECEMERLANGAN RAWATAN",
+    "title": "Penjagaan Lanjutan, Diperibadikan untuk Anda",
+    "description": "Alami kepakaran perubatan terkemuka dengan penyampaian yang penuh kasih sayang di kemudahan penjagaan kesihatan utama Malaysia.",
+    "cta": {
+      "primary": "Terokai Rawatan",
+      "secondary": "Cari Pakar"
+    }
+  },
+  "treatmentFlow": {
+    "title": "Perjalanan Rawatan Anda",
+    "subtitle": "Penjagaan perubatan komprehensif yang disesuaikan dengan keperluan khusus anda",
+    "steps": [
+      {
+        "title": "Perundingan Awal",
+        "subtitle": "Penilaian kesihatan komprehensif",
+        "duration": "1-2 jam",
+        "description": "Semakan sejarah perubatan terperinci, pemeriksaan fizikal, dan perancangan rawatan dengan pakar kami.",
+        "activities": [
+          "Semakan sejarah perubatan",
+          "Pemeriksaan fizikal", 
+          "Penilaian diagnostik",
+          "Perbincangan rancangan rawatan"
+        ],
+        "outcome": "Peta jalan rawatan yang diperibadikan"
+      },
+      {
+        "title": "Persediaan Pra-Rawatan",
+        "subtitle": "Mengoptimumkan kesihatan anda untuk rawatan",
+        "duration": "1-3 hari",
+        "description": "Ujian pra-operasi, penyesuaian ubat, dan protokol persediaan untuk memastikan hasil rawatan yang optimum.",
+        "activities": [
+          "Ujian makmal",
+          "Kajian pengimejan",
+          "Semakan ubat",
+          "Perancangan pra-operasi"
+        ],
+        "outcome": "Sedia untuk rawatan"
+      },
+      {
+        "title": "Penyampaian Rawatan",
+        "subtitle": "Intervensi perubatan pakar",
+        "duration": "Berubah-ubah",
+        "description": "Rawatan perubatan profesional yang disampaikan oleh pakar berpengalaman menggunakan teknologi canggih dan teknik terbukti.",
+        "activities": [
+          "Pelaksanaan prosedur",
+          "Pemantauan masa nyata",
+          "Pengurusan kesakitan",
+          "Jaminan kualiti"
+        ],
+        "outcome": "Penyiapan rawatan yang berjaya"
+      },
+      {
+        "title": "Pemulihan & Pemantauan",
+        "subtitle": "Penjagaan pasca-rawatan yang teliti",
+        "duration": "Berterusan",
+        "description": "Sokongan pemulihan komprehensif dengan pemantauan berterusan untuk memastikan penyembuhan optimum dan kejayaan rawatan.",
+        "activities": [
+          "Penjagaan bilik pemulihan",
+          "Pemantauan tanda vital",
+          "Pengurusan kesakitan dan keselesaan",
+          "Penilaian kemajuan"
+        ],
+        "outcome": "Kemajuan pemulihan yang optimum"
+      }
+    ]
+  },
+  "specialties": {
+    "title": "Kepakaran Perubatan",
+    "subtitle": "Kepakaran bertaraf dunia merentas pelbagai disiplin perubatan",
+    "categories": [
+      "Kardiologi",
+      "Onkologi", 
+      "Ortopedik",
+      "Neurologi",
+      "Rawatan Kesuburan",
+      "Pembedahan Kosmetik",
+      "Penjagaan Pergigian",
+      "Penjagaan Mata"
+    ]
+  },
+  "cta": {
+    "title": "Bersedia untuk Rawatan Anda?",
+    "description": "Pasukan kami di sini untuk membantu anda di setiap langkah. Biarkan kami mengendalikan butiran sementara anda fokus pada kesihatan anda.",
+    "button": "Hubungi MHTC"
+  }
+}

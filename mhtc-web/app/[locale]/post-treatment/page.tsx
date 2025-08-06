@@ -5,30 +5,38 @@ import { Container } from '@/components/home4/ui/container'
 import { Home4PostTreatmentHero } from '@/components/home4/home4-post-treatment-hero'
 import { MalaysianAftercareBenefits } from '@/components/home4/malaysian-aftercare-benefits'
 import { RecoveryTimelineView } from '@/components/home4/recovery-timeline-view'
+import { getServerTranslations } from '@/utils/translations'
+import { JourneyPostTreatmentTranslations } from '@/types/translations'
+import { Locale } from '@/types/i18n'
 
 export const metadata: Metadata = {
   title: 'Post-Treatment Support | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Continue your recovery journey with comprehensive post-treatment support and resources from Malaysia Healthcare Travel Council.',
 }
 
-export default function Home4PostTreatment() {
+interface PostTreatmentPageProps {
+  params: { locale: Locale }
+}
+
+export default function Home4PostTreatment({ params: { locale } }: PostTreatmentPageProps) {
+  const t = getServerTranslations<JourneyPostTreatmentTranslations>(locale, "journey-post-treatment")
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-grey-50/30">
       <Header />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <Home4PostTreatmentHero />
+        <Home4PostTreatmentHero heroTranslations={t.hero} />
         
         {/* Recovery Timeline Section */}
         <Container className="py-16">
-          <RecoveryTimelineView />
+          <RecoveryTimelineView timelineTranslations={t.recoveryTimeline} />
         </Container>
         
         {/* Malaysian Aftercare Benefits */}
         <section className="py-16 bg-white/50">
           <Container>
-            <MalaysianAftercareBenefits />
+            <MalaysianAftercareBenefits benefitsTranslations={t.aftercareBenefits} />
           </Container>
         </section>
         
@@ -37,17 +45,17 @@ export default function Home4PostTreatment() {
           <Container>
             <div className="text-center text-white">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Your Recovery Journey Continues
+                {t.continuedSupport.title}
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Access ongoing support, resources, and connections to ensure your continued wellness and recovery.
+                {t.continuedSupport.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {/* <button className="bg-white text-mhtc-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Access Support Resources
                 </button> */}
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-mhtc-primary transition-colors">
-                  Contact Support Team
+                  {t.continuedSupport.button}
                 </button>
               </div>
             </div>

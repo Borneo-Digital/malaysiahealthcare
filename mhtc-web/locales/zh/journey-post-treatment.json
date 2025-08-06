@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "治疗后支持",
+    "title": "您的康复之旅继续",
+    "description": "通过马来西亚医疗保健旅游理事会的全面治疗后支持和资源继续您的康复之旅。",
+    "cta": {
+      "primary": "康复资源",
+      "secondary": "支持服务"
+    }
+  },
+  "recoveryTimeline": {
+    "title": "康复和后续护理",
+    "subtitle": "为您的康复之旅提供结构化支持",
+    "phases": [
+      {
+        "title": "即时康复",
+        "duration": "前24-48小时",
+        "description": "密切监测和初期康复支持",
+        "activities": [
+          "术后监测",
+          "疼痛管理",
+          "初期活动评估",
+          "药物管理"
+        ]
+      },
+      {
+        "title": "短期康复",
+        "duration": "第一周",
+        "description": "逐步增加活动和伤口护理",
+        "activities": [
+          "每日进展评估",
+          "伤口护理和换药",
+          "物理治疗开始",
+          "营养指导"
+        ]
+      },
+      {
+        "title": "延长康复",
+        "duration": "2-4周",
+        "description": "持续愈合和活动进展",
+        "activities": [
+          "定期复诊预约",
+          "渐进式活动增加",
+          "药物调整",
+          "旅行许可评估"
+        ]
+      },
+      {
+        "title": "长期随访",
+        "duration": "持续",
+        "description": "持续护理协调和监测",
+        "activities": [
+          "远程咨询",
+          "当地提供者协调",
+          "进展监测",
+          "支持网络访问"
+        ]
+      }
+    ]
+  },
+  "aftercareBenefits": {
+    "title": "马来西亚后期护理益处",
+    "subtitle": "在马来西亚康复的独特优势",
+    "benefits": [
+      {
+        "title": "气候和环境",
+        "description": "有利于愈合和康复的热带气候"
+      },
+      {
+        "title": "文化多样性",
+        "description": "具有熟悉舒适感的多元文化环境"
+      },
+      {
+        "title": "可达性",
+        "description": "轻松访问医疗保健设施和支持服务"
+      },
+      {
+        "title": "成本效益",
+        "description": "经济实惠的延长住宿选择和服务"
+      }
+    ]
+  },
+  "continuedSupport": {
+    "title": "您的康复之旅继续",
+    "description": "获得持续的支持、资源和联系，确保您的持续健康和康复。",
+    "button": "联系支持团队"
+  }
+}

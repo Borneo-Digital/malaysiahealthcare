@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "PRE-ARRIVAL PLANNING",
+    "title": "Plan Your Healthcare Journey",
+    "description": "Start your medical travel preparation with comprehensive guidance on Malaysia's healthcare destinations, facilities, and support services.",
+    "preparationTasks": [
+      "Research Malaysian healthcare facilities",
+      "Prepare medical documentation", 
+      "Plan travel arrangements",
+      "Review cultural information"
+    ],
+    "malaysiaHighlights": [
+      {
+        "text": "Multi-cultural environment"
+      },
+      {
+        "text": "Southeast Asia hub location"
+      },
+      {
+        "text": "English widely spoken"
+      }
+    ],
+    "cta": {
+      "primary": "Begin Planning",
+      "secondary": "Healthcare Guide"
+    }
+  },
+  "planningSteps": {
+    "badge": "Planning Guide",
+    "title": "Healthcare Journey Planning",
+    "subtitle": "Essential information and steps to help you prepare for your medical travel to Malaysia.",
+    "steps": [
+      {
+        "title": "Research & Preparation",
+        "description": "Gather information about Malaysian healthcare options and prepare your documentation.",
+        "details": [
+          "Research accredited hospitals and facilities",
+          "Compile medical history and records",
+          "Check passport validity and visa requirements",
+          "Contact healthcare providers for preliminary consultations"
+        ]
+      },
+      {
+        "title": "Hospital & Specialist Information",
+        "description": "Learn about Malaysia's healthcare facilities and available medical specialties.",
+        "details": [
+          "Review internationally accredited hospitals",
+          "Information on specialist qualifications",
+          "Compare treatment options and approaches",
+          "Understand facility certifications and standards"
+        ]
+      },
+      {
+        "title": "Travel & Accommodation",
+        "description": "Plan your travel arrangements and accommodation options in Malaysia.",
+        "details": [
+          "Research flight options and travel routes",
+          "Explore accommodation near healthcare facilities",
+          "Consider visa requirements and travel insurance",
+          "Plan for extended stay if needed"
+        ]
+      },
+      {
+        "title": "Financial Planning",
+        "description": "Understand costs and payment options for your healthcare journey.",
+        "details": [
+          "Review treatment cost estimates",
+          "Understand payment methods accepted",
+          "Check insurance coverage and requirements",
+          "Plan for additional expenses and contingencies"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Your Journey?",
+    "description": "Our team is here to help you every step of the way. Let us handle the details while you focus on your health.",
+    "button": "Contact MHTC"
+  }
+}

@@ -1,16 +1,26 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Header } from "@/components/home4/header"
 import { Footer } from "@/components/home4/footer"
 import Hero4 from "@/components/home4/hero4"
 import HealingJourney from "@/components/home4/healing-journey"
+import Testimonials from "@/components/home4/testimonials"
+import FinalCTA from "@/components/home4/final-cta"
 // import StatsSection from "@/components/home4/stats"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
 // import MHWellnessEvents from "@/components/home4/mh-wellness-events"
 import { ArrowRight, Download } from "lucide-react"
+import { getServerTranslations } from "@/utils/translations"
+import { HomepageCTATranslations } from "@/types/translations"
+import { Locale } from "@/types/i18n"
 
+interface Home4PageProps {
+  params: { locale: Locale }
+}
 
-export default function Home4Page() {
+export default function Home4Page({ params: { locale } }: Home4PageProps) {
+  const t = getServerTranslations<HomepageCTATranslations>(locale, "homepage/cta")
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -20,6 +30,13 @@ export default function Home4Page() {
 
         {/* Healing Journey Section */}
         <HealingJourney />
+
+        {/* Patient Stories/Testimonials Section */}
+        <section className="py-16 md:py-20 bg-slate-50">
+          <Container>
+            <Testimonials />
+          </Container>
+        </section>
 
         {/* Stats Section */}
         {/* <section className="bg-[#BE1E2D] py-16 md:py-24">
@@ -40,7 +57,7 @@ export default function Home4Page() {
           <div className="absolute inset-0 z-0 opacity-10">
             <Image
               src="/images/home2/medical-tourism.jpg"
-              alt="Malaysian healthcare excellence"
+              alt={t.altText || "Malaysian healthcare excellence"}
               fill
               className="object-cover"
               sizes="100vw"
@@ -48,20 +65,25 @@ export default function Home4Page() {
           </div>
           <Container className="relative z-10">
             <div className="mx-auto max-w-4xl text-center px-4 sm:px-0">
-              <h2 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Ready to Begin Your Journey?</h2>
+              <h2 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                {t.title || "Ready to Begin Your Journey?"}
+              </h2>
               <p className="mb-8 sm:mb-10 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
-                Contact our dedicated healthcare travel concierge team for personalized assistance and experience quality care for your peace of mind.
+                {t.description || "Contact our dedicated healthcare travel concierge team for personalized assistance and experience quality care for your peace of mind."}
               </p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-6 sm:space-y-0">
                 <Button 
                   size="lg" 
                   className="group relative overflow-hidden bg-white text-mhtc-primary hover:bg-white/95 hover:scale-105 transition-all duration-300 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-semibold shadow-lg hover:shadow-xl border-2 border-white rounded-[10px]"
+                  asChild
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Contact Us
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-mhtc-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <Link href={`/${locale}/contact`}>
+                    <span className="relative z-10 flex items-center gap-2">
+                      {t.buttons?.contact || "Contact Us"}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-mhtc-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </Link>
                 </Button>
                 
                 <Button 
@@ -70,7 +92,7 @@ export default function Home4Page() {
                   className="group relative overflow-hidden border-2 border-white text-white bg-transparent hover:bg-white hover:text-mhtc-primary hover:border-white transition-all duration-300 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 font-semibold hover:scale-105 rounded-[10px]"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Download Guide
+                    {t.buttons?.downloadGuide || "Download Guide"}
                     <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
                   </span>
                 </Button>
@@ -78,6 +100,9 @@ export default function Home4Page() {
             </div>
           </Container>
         </section>
+
+        {/* Final CTA Section */}
+        <FinalCTA />
       </main>
       <Footer />
     </div>

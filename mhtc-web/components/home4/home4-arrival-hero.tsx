@@ -7,20 +7,32 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import LocaleLink from "@/components/LocaleLink"
 
-const arrivalMilestones = [
-  "Land in Malaysia",
-  "Airport assistance (if arranged)",
-  "Transport to accommodation",
-  "Check-in and orientation"
-]
 
-const malaysiaWelcome = [
-  { icon: Plane, text: "International airport access" },
-  { icon: MapPin, text: "Strategic location" },
-  { icon: Users, text: "Multicultural environment" }
-]
+interface HeroTranslations {
+  badge: string;
+  title: string;
+  description: string;
+  arrivalMilestones: string[];
+  malaysiaWelcome: Array<{
+    text: string;
+  }>;
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+}
 
-export function Home4ArrivalHero() {
+interface Home4ArrivalHeroProps {
+  heroTranslations: HeroTranslations;
+}
+
+export function Home4ArrivalHero({ heroTranslations }: Home4ArrivalHeroProps) {
+  const arrivalMilestones = heroTranslations.arrivalMilestones
+  const malaysiaWelcome = [
+    { icon: Plane, text: heroTranslations.malaysiaWelcome[0]?.text || "International airport access" },
+    { icon: MapPin, text: heroTranslations.malaysiaWelcome[1]?.text || "Strategic location" },
+    { icon: Users, text: heroTranslations.malaysiaWelcome[2]?.text || "24/7 support available" }
+  ]
   const [currentMilestone, setCurrentMilestone] = useState(0)
   const [completedMilestones, setCompletedMilestones] = useState<number[]>([])
 
@@ -38,7 +50,7 @@ export function Home4ArrivalHero() {
     }, 2500)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [arrivalMilestones.length])
 
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-grey-50 via-white to-blue-50/30 flex items-center overflow-hidden">
@@ -55,17 +67,15 @@ export function Home4ArrivalHero() {
             <div>
               <Badge className="bg-mhtc-primary/10 text-mhtc-primary px-4 py-2 mb-6">
                 <Plane className="h-4 w-4 mr-2" />
-                ARRIVAL EXPERIENCE
+                {heroTranslations.badge}
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-grey-900 leading-tight mb-6">
-                Welcome to
-                <span className="block text-mhtc-primary">Malaysia</span>
+                {heroTranslations.title}
               </h1>
               
               <p className="text-xl text-grey-600 leading-relaxed mb-8 max-w-2xl">
-                Begin your healthcare journey in Malaysia with helpful information about arrival 
-                procedures, transportation options, and available support services.
+                {heroTranslations.description}
               </p>
             </div>
 
@@ -85,12 +95,12 @@ export function Home4ArrivalHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <LocaleLink href="/treatment">
                 <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                  Arrival Information
+                  {heroTranslations.cta.primary}
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </LocaleLink>
               {/* <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
-                Transport Options
+                {heroTranslations.cta.secondary}
               </Button> */}
             </div>
           </div>

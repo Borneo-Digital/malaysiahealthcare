@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "POST-TREATMENT SUPPORT",
+    "title": "Your Recovery Journey Continues",
+    "description": "Continue your recovery journey with comprehensive post-treatment support and resources from Malaysia Healthcare Travel Council.",
+    "cta": {
+      "primary": "Recovery Resources",
+      "secondary": "Support Services"
+    }
+  },
+  "recoveryTimeline": {
+    "title": "Recovery & Follow-up Care",
+    "subtitle": "Structured support for your healing journey",
+    "phases": [
+      {
+        "title": "Immediate Recovery",
+        "duration": "First 24-48 hours",
+        "description": "Close monitoring and initial recovery support",
+        "activities": [
+          "Post-procedure monitoring",
+          "Pain management",
+          "Initial mobility assessment",
+          "Medication administration"
+        ]
+      },
+      {
+        "title": "Short-term Recovery",
+        "duration": "First week",
+        "description": "Gradual activity increase and wound care",
+        "activities": [
+          "Daily progress assessments",
+          "Wound care and dressing changes",
+          "Physical therapy initiation",
+          "Nutritional guidance"
+        ]
+      },
+      {
+        "title": "Extended Recovery",
+        "duration": "2-4 weeks",
+        "description": "Continued healing and activity progression",
+        "activities": [
+          "Regular follow-up appointments",
+          "Progressive activity increase",
+          "Medication adjustment",
+          "Travel clearance evaluation"
+        ]
+      },
+      {
+        "title": "Long-term Follow-up",
+        "duration": "Ongoing",
+        "description": "Sustained care coordination and monitoring",
+        "activities": [
+          "Remote consultations",
+          "Local provider coordination",
+          "Progress monitoring",
+          "Support network access"
+        ]
+      }
+    ]
+  },
+  "aftercareBenefits": {
+    "title": "Malaysian Aftercare Benefits",
+    "subtitle": "Unique advantages of recovery in Malaysia",
+    "benefits": [
+      {
+        "title": "Climate & Environment",
+        "description": "Tropical climate conducive to healing and recovery"
+      },
+      {
+        "title": "Cultural Diversity",
+        "description": "Multicultural environment with familiar comforts"
+      },
+      {
+        "title": "Accessibility",
+        "description": "Easy access to healthcare facilities and support services"
+      },
+      {
+        "title": "Cost-Effective",
+        "description": "Affordable extended stay options and services"
+      }
+    ]
+  },
+  "continuedSupport": {
+    "title": "Your Recovery Journey Continues",
+    "description": "Access ongoing support, resources, and connections to ensure your continued wellness and recovery.",
+    "button": "Contact Support Team"
+  }
+}

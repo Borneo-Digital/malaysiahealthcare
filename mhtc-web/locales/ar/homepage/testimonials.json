@@ -1,0 +1,25 @@
+{
+  "title": "قصص المرضى",
+  "subtitle": "قصص حقيقية #تجربةماليزياالصحية من المرضى الدوليين الذين تلقوا رعاية طبية متميزة وضيافة ماليزية.",
+  "watchVideo": "مشاهدة شهادة الفيديو",
+  "patients": [
+    {
+      "name": "محمد عبد القادر موسى",
+      "country": "الصومال",
+      "condition": "متلازمة الكلى",
+      "experience": "تجربة الوصول والترحيب",
+      "youtubeUrl": "https://youtu.be/wNYPg-C1slU?si=P-jSHaQlyAt9Ndt3"
+    },
+    {
+      "name": "نيتيا كاواتو",
+      "country": "إندونيسيا",
+      "condition": "سرطان الثدي",
+      "experience": "تجربة العلاج والرعاية",
+      "youtubeUrl": "https://youtu.be/9Qx2ns6XwPI?si=_FhFEkpadCEQNcrw"
+    }
+  ],
+  "labels": {
+    "from": "من:",
+    "condition": "الحالة:"
+  }
+}

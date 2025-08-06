@@ -1,0 +1,18 @@
+{
+  "title": "在马来西亚体验世界级医疗服务",
+  "subtitle": "加入成千上万选择马来西亚进行医疗旅程的国际患者。优质护理、先进技术和温暖的款待等待着您。",
+  "quickPaths": {
+    "members": {
+      "title": "成员机构",
+      "description": "访问我们的顶级医疗机构网络。"
+    },
+    "support": {
+      "title": "专属支持",
+      "description": "我们的团队随时为您提供帮助。"
+    }
+  },
+  "cta": {
+    "primary": "开始您的旅程",
+    "secondary": "了解更多"
+  }
+}

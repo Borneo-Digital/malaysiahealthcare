@@ -5,40 +5,46 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { FileText, Plane, Hospital, Heart } from "lucide-react"
 import { motion, useInView } from "framer-motion"
+import { useTranslation } from "@/hooks/useTranslation"
+import { HomepageHealingJourneyTranslations } from "@/types/translations"
+import { useParams } from "next/navigation"
 
 export default function HealingJourney() {
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
+  const { t } = useTranslation<HomepageHealingJourneyTranslations>("homepage/healing-journey")
+  const params = useParams()
+  const currentLocale = (params?.locale as string) || "en"
 
   const journeySteps = [
     {
       id: "pre-arrival",
-      title: "PLANNING YOUR VISIT",
-      description: "Everything you need to prepare for your healthcare journey",
+      title: t.steps?.preArrival?.title || "PLANNING YOUR VISIT",
+      description: t.steps?.preArrival?.description || "Everything you need to prepare for your healthcare journey",
       icon: FileText,
-      story: "Sarah from Australia found all the visa and medical information she needed before her trip.",
+      story: t.steps?.preArrival?.story || "Sarah from Australia found all the visa and medical information she needed before her trip.",
     },
     {
       id: "arrival",
-      title: "WELCOME TO MALAYSIA",
-      description: "Arrival information and support services",
+      title: t.steps?.arrival?.title || "WELCOME TO MALAYSIA",
+      description: t.steps?.arrival?.description || "Arrival information and support services",
       icon: Plane,
-      story: "Ahmed from UAE was greeted at the airport and transported directly to his accommodation.",
+      story: t.steps?.arrival?.story || "Ahmed from UAE was greeted at the airport and transported directly to his accommodation.",
     },
     {
       id: "treatment",
-      title: "DURING TREATMENT",
-      description: "What to expect during your medical care",
+      title: t.steps?.treatment?.title || "DURING TREATMENT",
+      description: t.steps?.treatment?.description || "What to expect during your medical care",
       icon: Hospital,
-      story: "Liu Wei from China received comprehensive care with translators available throughout.",
+      story: t.steps?.treatment?.story || "Liu Wei from China received comprehensive care with translators available throughout.",
     },
     {
       id: "post-treatment",
-      title: "AFTER CARE",
-      description: "Recovery services and follow-up care",
+      title: t.steps?.postTreatment?.title || "AFTER CARE",
+      description: t.steps?.postTreatment?.description || "Recovery services and follow-up care",
       icon: Heart,
-      story: "John from the UK enjoyed his recovery period at a beachside resort with regular check-ups.",
+      story: t.steps?.postTreatment?.story || "John from the UK enjoyed his recovery period at a beachside resort with regular check-ups.",
     },
   ]
 
@@ -59,7 +65,7 @@ export default function HealingJourney() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-grey-900 mb-4 text-center"
         >
-          THE HEALING JOURNEY
+          {t.title || "Your Healing Journey"}
         </motion.h2>
 
         <motion.p
@@ -68,7 +74,7 @@ export default function HealingJourney() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          We guide you through every stage of your healthcare journey in Malaysia for a seamless experience.
+          {t.subtitle || "A seamless healthcare experience designed around your needs"}
         </motion.p>
 
         <div className="relative">
@@ -97,7 +103,7 @@ export default function HealingJourney() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
               >
                 <Link
-                  href={`/${step.id}`}
+                  href={`/${currentLocale}/${step.id}`}
                   onMouseEnter={() => setHoveredStep(step.id)}
                   onMouseLeave={() => setHoveredStep(null)}
                   className="block h-full"

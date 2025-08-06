@@ -1,0 +1,30 @@
+{
+  "title": "Your Healing Journey",
+  "subtitle": "A seamless healthcare experience designed around your needs",
+  "steps": {
+    "preArrival": {
+      "title": "PLANNING YOUR VISIT",
+      "description": "Everything you need to prepare for your healthcare journey",
+      "story": "Sarah from Australia found all the visa and medical information she needed before her trip."
+    },
+    "arrival": {
+      "title": "WELCOME TO MALAYSIA", 
+      "description": "Arrival information and support services",
+      "story": "Ahmed from UAE was greeted at the airport and transported directly to his accommodation."
+    },
+    "treatment": {
+      "title": "DURING TREATMENT",
+      "description": "What to expect during your medical care", 
+      "story": "Liu Wei from China received comprehensive care with translators available throughout."
+    },
+    "postTreatment": {
+      "title": "AFTER CARE",
+      "description": "Recovery services and follow-up care",
+      "story": "John from the UK enjoyed his recovery period at a beachside resort with regular check-ups."
+    }
+  },
+  "cta": {
+    "button": "Explore Your Journey",
+    "description": "Learn more about each step of your healthcare experience"
+  }
+}

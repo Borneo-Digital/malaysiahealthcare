@@ -50,15 +50,6 @@
         },
         "button": "搜索"
     },
-    "featured": {
-        "title": "特色成员医院",
-        "provider": {
-            "namePrefix": "提供者名称",
-            "details": "查看详情",
-            "specialty": "专科",
-            "location": "地点"
-        }
-    },
     "specialties": {
         "title": "按专科浏览",
         "list": {

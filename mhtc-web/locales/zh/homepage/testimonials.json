@@ -1,0 +1,25 @@
+{
+  "title": "患者故事",
+  "subtitle": "来自国际患者的真实#体验马来西亚医疗故事，他们获得了优质的医疗护理和马来西亚的热情款待。",
+  "watchVideo": "观看视频见证",
+  "patients": [
+    {
+      "name": "Mohamed Abdiqadir Muse",
+      "country": "索马里",
+      "condition": "肾病综合征",
+      "experience": "抵达和欢迎体验",
+      "youtubeUrl": "https://youtu.be/wNYPg-C1slU?si=P-jSHaQlyAt9Ndt3"
+    },
+    {
+      "name": "Netya Kawatu",
+      "country": "印度尼西亚",
+      "condition": "乳腺癌",
+      "experience": "治疗和护理体验",
+      "youtubeUrl": "https://youtu.be/9Qx2ns6XwPI?si=_FhFEkpadCEQNcrw"
+    }
+  ],
+  "labels": {
+    "from": "来自：",
+    "condition": "病症："
+  }
+}

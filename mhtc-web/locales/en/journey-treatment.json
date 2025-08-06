@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "TREATMENT EXCELLENCE",
+    "title": "Advanced Care, Personalized for You",
+    "description": "Experience leading medical expertise with compassionate delivery at Malaysia's premier healthcare facilities.",
+    "cta": {
+      "primary": "Explore Treatments",
+      "secondary": "Find Specialists"
+    }
+  },
+  "treatmentFlow": {
+    "title": "Your Treatment Journey",
+    "subtitle": "Comprehensive medical care tailored to your specific needs",
+    "steps": [
+      {
+        "title": "Initial Consultation",
+        "subtitle": "Comprehensive health assessment",
+        "duration": "1-2 hours",
+        "description": "Detailed medical history review, physical examination, and treatment planning with our specialists.",
+        "activities": [
+          "Medical history review",
+          "Physical examination", 
+          "Diagnostic assessment",
+          "Treatment plan discussion"
+        ],
+        "outcome": "Personalized treatment roadmap"
+      },
+      {
+        "title": "Pre-Treatment Preparation",
+        "subtitle": "Optimizing your health for treatment",
+        "duration": "1-3 days",
+        "description": "Pre-operative tests, medication adjustments, and preparation protocols to ensure optimal treatment outcomes.",
+        "activities": [
+          "Laboratory tests",
+          "Imaging studies",
+          "Medication review",
+          "Pre-operative planning"
+        ],
+        "outcome": "Ready for treatment"
+      },
+      {
+        "title": "Treatment Delivery",
+        "subtitle": "Expert medical intervention",
+        "duration": "Variable",
+        "description": "Professional medical treatment delivered by experienced specialists using advanced technology and proven techniques.",
+        "activities": [
+          "Procedure execution",
+          "Real-time monitoring",
+          "Pain management",
+          "Quality assurance"
+        ],
+        "outcome": "Successful treatment completion"
+      },
+      {
+        "title": "Recovery & Monitoring",
+        "subtitle": "Careful post-treatment care",
+        "duration": "Ongoing",
+        "description": "Comprehensive recovery support with continuous monitoring to ensure optimal healing and treatment success.",
+        "activities": [
+          "Recovery room care",
+          "Vital signs monitoring",
+          "Pain and comfort management",
+          "Progress evaluation"
+        ],
+        "outcome": "Optimal recovery progress"
+      }
+    ]
+  },
+  "specialties": {
+    "title": "Medical Specialties",
+    "subtitle": "World-class expertise across multiple medical disciplines",
+    "categories": [
+      "Cardiology",
+      "Oncology", 
+      "Orthopedics",
+      "Neurology",
+      "Fertility Treatment",
+      "Cosmetic Surgery",
+      "Dental Care",
+      "Eye Care"
+    ]
+  },
+  "cta": {
+    "title": "Ready for Your Treatment?",
+    "description": "Our team is here to help you every step of the way. Let us handle the details while you focus on your health.",
+    "button": "Contact MHTC"
+  }
+}

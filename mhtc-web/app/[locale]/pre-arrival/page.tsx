@@ -8,20 +8,28 @@ import { Home4PlanningSteps } from '@/components/home4/home4-planning-steps'
 // import { QuickFactsSlider } from '@/components/home4/quick-facts-slider'
 
 import { CTAPreArrival } from '@/components/home4/cta-pre-arrival'
+import { getServerTranslations } from '@/utils/translations'
+import { JourneyPreArrivalTranslations } from '@/types/translations'
+import { Locale } from '@/types/i18n'
 
 export const metadata: Metadata = {
   title: 'Pre-Arrival Planning | Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Begin your healthcare journey with confidence. Comprehensive pre-arrival planning guide for your medical travel to Malaysia.',
 }
 
-export default function Home4PreArrival() {
+interface PreArrivalPageProps {
+  params: { locale: Locale }
+}
+
+export default function Home4PreArrival({ params: { locale } }: PreArrivalPageProps) {
+  const t = getServerTranslations<JourneyPreArrivalTranslations>(locale, "journey-pre-arrival")
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
       <Header />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <Home4PreArrivalHero />
+        <Home4PreArrivalHero heroTranslations={t.hero} />
         
         {/* Journey Navigation
         <Container className="py-8">
@@ -30,7 +38,7 @@ export default function Home4PreArrival() {
         
         {/* Planning Steps Section */}
         <Container className="py-16">
-          <Home4PlanningSteps />
+          <Home4PlanningSteps planningTranslations={t.planningSteps} />
         </Container>
         
         {/* Malaysia Quick Facts
@@ -42,7 +50,7 @@ export default function Home4PreArrival() {
 
         {/* CTA Steps */}
         <Container className="py-16">
-          <CTAPreArrival />
+          <CTAPreArrival ctaTranslations={t.cta} />
         </Container>
         
         {/* Dedicated Support CTA

@@ -19,35 +19,55 @@ import { Card, CardContent } from "@/components/ui/card"
 // import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const recoveryPhases = [
+interface TimelineTranslations {
+  title: string;
+  subtitle: string;
+  phases: Array<{
+    title: string;
+    duration: string;
+    description: string;
+    activities: string[];
+  }>;
+}
+
+interface RecoveryTimelineViewProps {
+  timelineTranslations: TimelineTranslations;
+}
+
+export function RecoveryTimelineView({ timelineTranslations }: RecoveryTimelineViewProps) {
+  const [activePhase, setActivePhase] = useState<string>("immediate")
+
+  const recoveryPhases = [
   {
     id: "immediate",
-    title: "Immediate Recovery",
-    subtitle: "First 24-48 hours",
+    title: timelineTranslations.phases[0]?.title || "Immediate Recovery",
+    subtitle: timelineTranslations.phases[0]?.duration || "First 24-48 hours",
     icon: Activity,
     color: "bg-red-50 border-red-200 text-red-700",
-    duration: "1-2 days",
-    description: "Critical monitoring period with round-the-clock medical supervision and comfort care.",
-    activities: [
-      "Vital signs monitoring",
+    duration: timelineTranslations.phases[0]?.duration || "1-2 days",
+    description: timelineTranslations.phases[0]?.description || "Close monitoring and initial recovery support",
+    activities: timelineTranslations.phases[0]?.activities || [
+      "Post-procedure monitoring",
       "Pain management",
-      "Medication administration",
-      "Initial mobility assessment"
+      "Initial mobility assessment",
+      "Medication administration"
     ],
     milestones: ["Stable vital signs", "Pain under control", "Alert and responsive"],
     support: "24/7 Medical Team"
   },
   {
     id: "early",
-    title: "Early Recovery",
-    subtitle: "Days 2-7",
+    title: timelineTranslations.phases[1]?.title || "Short-term Recovery",
+    subtitle: timelineTranslations.phases[1]?.duration || "First week",
     icon: Heart,
     color: "bg-orange-50 border-orange-200 text-orange-700",
-    duration: "5-6 days",
-    description: "Gradual improvement with increased activity and preparation for discharge planning.",
-    activities: [
+    duration: timelineTranslations.phases[1]?.duration || "5-6 days",
+    description: timelineTranslations.phases[1]?.description || "Gradual activity increase and wound care",
+    activities: timelineTranslations.phases[1]?.activities || [
+      "Daily progress assessments",
+      "Wound care and dressing changes",
       "Physical therapy initiation",
-      "Wound care management",
+      "Nutritional guidance",
       "Nutritional support",
       "Family education sessions"
     ],
@@ -97,9 +117,6 @@ const recoveryServices = [
   { icon: Heart, label: "Emotional Support", description: "Psychological care for patients and families" }
 ]
 
-export function RecoveryTimelineView() {
-  const [activePhase, setActivePhase] = useState<string>("immediate")
-
   const activePhaseData = recoveryPhases.find(phase => phase.id === activePhase)
 
   return (
@@ -111,11 +128,10 @@ export function RecoveryTimelineView() {
           Recovery Timeline
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Your Healing Journey Timeline
+          {timelineTranslations.title}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Every recovery is unique, but we&apos;ve outlined the typical phases of healing to help you 
-          understand what to expect and how we&apos;ll support you every step of the way.
+          {timelineTranslations.subtitle}
         </p>
       </div>
 

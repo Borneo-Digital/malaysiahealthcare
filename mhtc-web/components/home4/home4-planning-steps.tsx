@@ -15,62 +15,76 @@ import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
 
-const planningSteps = [
-  {
-    id: "research-prepare",
-    title: "Research & Preparation",
-    icon: FileText,
-    color: "bg-info/10 border-info/20 text-info",
-    description: "Gather information about Malaysian healthcare options and prepare your documentation.",
-    details: [
-      "Research accredited hospitals and facilities",
-      "Compile medical history and records",
-      "Check passport validity and visa requirements",
-      "Contact healthcare providers for preliminary consultations"
-    ]
-  },
-  {
-    id: "hospital-selection",
-    title: "Hospital & Specialist Information",
-    icon: Hospital,
-    color: "bg-success/10 border-success/20 text-success", 
-    description: "Learn about Malaysia's healthcare facilities and available medical specialties.",
-    details: [
-      "Review internationally accredited hospitals",
-      "Information on specialist qualifications",
-      "Compare treatment options and approaches",
-      "Understand facility certifications and standards"
-    ]
-  },
-  {
-    id: "travel-logistics",
-    title: "Travel & Accommodation",
-    icon: Plane,
-    color: "bg-warning/10 border-warning/20 text-warning",
-    description: "Plan your travel arrangements and accommodation options in Malaysia.",
-    details: [
-      "Research flight options and travel routes",
-      "Explore accommodation near healthcare facilities",
-      "Consider transportation within Malaysia", 
-      "Plan for extended stay if needed"
-    ]
-  },
-  {
-    id: "financial-planning",
-    title: "Financial Planning",
-    icon: DollarSign,
-    color: "bg-error/10 border-error/20 text-error",
-    description: "Understand costs and payment options for your healthcare journey.",
-    details: [
-      "Review treatment cost estimates",
-      "Understand payment methods accepted",
-      "Check insurance coverage and requirements",
-      "Plan for additional expenses and contingencies"
-    ]
-  }
-]
+interface PlanningTranslations {
+  badge: string;
+  title: string;
+  subtitle: string;
+  steps: Array<{
+    title: string;
+    description: string;
+    details: string[];
+  }>;
+}
 
-export function Home4PlanningSteps() {
+interface Home4PlanningStepsProps {
+  planningTranslations: PlanningTranslations;
+}
+
+export function Home4PlanningSteps({ planningTranslations }: Home4PlanningStepsProps) {
+  const planningSteps = [
+    {
+      id: "research-prepare",
+      title: planningTranslations.steps[0]?.title || "Research & Preparation",
+      icon: FileText,
+      color: "bg-info/10 border-info/20 text-info",
+      description: planningTranslations.steps[0]?.description || "Gather information about Malaysian healthcare options and prepare your documentation.",
+      details: planningTranslations.steps[0]?.details || [
+        "Research accredited hospitals and facilities",
+        "Compile medical history and records",
+        "Check passport validity and visa requirements",
+        "Contact healthcare providers for preliminary consultations"
+      ]
+    },
+    {
+      id: "hospital-selection",
+      title: planningTranslations.steps[1]?.title || "Hospital & Specialist Information",
+      icon: Hospital,
+      color: "bg-success/10 border-success/20 text-success", 
+      description: planningTranslations.steps[1]?.description || "Learn about Malaysia's healthcare facilities and available medical specialties.",
+      details: planningTranslations.steps[1]?.details || [
+        "Review internationally accredited hospitals",
+        "Information on specialist qualifications",
+        "Compare treatment options and approaches",
+        "Understand facility certifications and standards"
+      ]
+    },
+    {
+      id: "travel-logistics",
+      title: planningTranslations.steps[2]?.title || "Travel & Accommodation",
+      icon: Plane,
+      color: "bg-warning/10 border-warning/20 text-warning",
+      description: planningTranslations.steps[2]?.description || "Plan your travel arrangements and accommodation options in Malaysia.",
+      details: planningTranslations.steps[2]?.details || [
+        "Research flight options and travel routes",
+        "Explore accommodation near healthcare facilities",
+        "Consider transportation within Malaysia", 
+        "Plan for extended stay if needed"
+      ]
+    },
+    {
+      id: "financial-planning",
+      title: planningTranslations.steps[3]?.title || "Financial Planning",
+      icon: DollarSign,
+      color: "bg-error/10 border-error/20 text-error",
+      description: planningTranslations.steps[3]?.description || "Understand costs and payment options for your healthcare journey.",
+      details: planningTranslations.steps[3]?.details || [
+        "Review treatment cost estimates",
+        "Understand payment methods accepted",
+        "Check insurance coverage and requirements",
+        "Plan for additional expenses and contingencies"
+      ]
+    }
+  ]
   const [activeStep, setActiveStep] = useState<string | null>(null)
 
   const toggleStep = (stepId: string) => {
@@ -88,13 +102,13 @@ export function Home4PlanningSteps() {
       >
         <Badge className="bg-mhtc-primary/10 text-mhtc-primary px-4 py-2">
           <FileText className="h-4 w-4 mr-2" />
-          Planning Guide
+          {planningTranslations.badge}
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-grey-900">
-          Healthcare Journey Planning
+          {planningTranslations.title}
         </h2>
         <p className="text-lg text-grey-600 max-w-3xl mx-auto">
-          Essential information and steps to help you prepare for your medical travel to Malaysia.
+          {planningTranslations.subtitle}
         </p>
       </motion.div>
 

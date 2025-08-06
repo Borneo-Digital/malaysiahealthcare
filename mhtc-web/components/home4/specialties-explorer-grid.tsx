@@ -17,20 +17,31 @@ import { Card, CardContent } from "@/components/ui/card"
 // import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const medicalSpecialties = [
+interface SpecialtiesTranslations {
+  title: string;
+  subtitle: string;
+  categories: string[];
+}
+
+interface SpecialtiesExplorerGridProps {
+  specialtiesTranslations: SpecialtiesTranslations;
+}
+
+export function SpecialtiesExplorerGrid({ specialtiesTranslations }: SpecialtiesExplorerGridProps) {
+    const medicalSpecialties = [
   {
     id: "cardiology",
-    name: "Cardiology",
+    name: specialtiesTranslations.categories[0] || "Cardiology",
     description: "Comprehensive heart and cardiovascular care with advanced interventional procedures",
     icon: Heart,
     color: "bg-red-50 border-red-200 text-red-700",
     procedures: ["Bypass Surgery", "Angioplasty", "Heart Valve Repair", "Pacemaker Implant"],
- 
+    stats: { patients: "2,500+", success: "98%" },
     featured: true
   },
   {
     id: "neurology", 
-    name: "Neurology",
+    name: specialtiesTranslations.categories[3] || "Neurology",
     description: "Expert brain and nervous system treatment using cutting-edge technology",
     icon: Brain,
     color: "bg-purple-50 border-purple-200 text-purple-700",
@@ -40,7 +51,7 @@ const medicalSpecialties = [
   },
   {
     id: "orthopedics",
-    name: "Orthopedics", 
+    name: specialtiesTranslations.categories[2] || "Orthopedics", 
     description: "Advanced musculoskeletal care and joint replacement procedures",
     icon: Bone,
     color: "bg-blue-50 border-blue-200 text-blue-700",
@@ -79,8 +90,6 @@ const medicalSpecialties = [
     featured: false
   }
 ]
-
-export function SpecialtiesExplorerGrid() {
   const [selectedSpecialty, setSelectedSpecialty] = useState<string | null>(null)
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
@@ -96,11 +105,10 @@ export function SpecialtiesExplorerGrid() {
           Medical Specialties
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Explore Our Centers of Excellence
+          {specialtiesTranslations.title}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Discover world-class medical expertise across multiple specialties, each equipped with 
-          state-of-the-art technology and led by internationally trained specialists.
+          {specialtiesTranslations.subtitle}
         </p>
       </div>
 

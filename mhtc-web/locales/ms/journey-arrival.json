@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "PENGALAMAN KETIBAAN",
+    "title": "Selamat Datang ke Malaysia",
+    "description": "Mulakan perjalanan penjagaan kesihatan anda di Malaysia dengan maklumat berguna tentang prosedur ketibaan, pilihan pengangkutan, dan perkhidmatan sokongan yang tersedia.",
+    "arrivalMilestones": [
+      "Mendarat di Malaysia",
+      "Bantuan lapangan terbang (jika diatur)",
+      "Pengangkutan ke penginapan",
+      "Daftar masuk dan orientasi"
+    ],
+    "malaysiaWelcome": [
+      {
+        "text": "Akses lapangan terbang antarabangsa"
+      },
+      {
+        "text": "Lokasi strategik"
+      },
+      {
+        "text": "Sokongan 24/7 tersedia"
+      }
+    ],
+    "cta": {
+      "primary": "Terokai Ketibaan",
+      "secondary": "Perkhidmatan Sokongan"
+    }
+  },
+  "timeline": {
+    "title": "Garis Masa Ketibaan Anda",
+    "subtitle": "Panduan langkah demi langkah untuk ketibaan yang lancar dan jam-jam pertama di Malaysia",
+    "steps": [
+      {
+        "title": "Ketibaan di Lapangan Terbang",
+        "description": "Mendarat di Lapangan Terbang Antarabangsa Kuala Lumpur (KLIA) atau lapangan terbang utama Malaysia yang lain",
+        "duration": "Semasa ketibaan",
+        "details": [
+          "Penerbangan antarabangsa tiba di KLIA atau KLIA2",
+          "Prosedur imigresen dan kastam",
+          "Perkhidmatan pertukaran mata wang dan kad SIM tersedia",
+          "Meja maklumat lapangan terbang untuk bantuan"
+        ],
+        "tips": [
+          "Simpan dokumen penting dengan mudah dicapai",
+          "Ikut papan tanda lapangan terbang untuk imigresen",
+          "Periksa sebarang keperluan saringan kesihatan"
+        ]
+      },
+      {
+        "title": "Imigresen & Kemasukan",
+        "description": "Lengkapkan prosedur imigresen dan kemasukan ke Malaysia",
+        "duration": "15-30 minit",
+        "details": [
+          "Tunjukkan pasport dan dokumen kemasukan",
+          "Pengisytiharan kesihatan (jika diperlukan)",
+          "Pengesahan pegawai imigresen",
+          "Setem kemasukan dan selamat datang ke Malaysia"
+        ],
+        "tips": [
+          "Sediakan dokumentasi perubatan jika diminta",
+          "Pastikan kesahihan pasport 6+ bulan",
+          "Isytiharkan sebarang ubat-ubatan seperti yang diperlukan"
+        ]
+      },
+      {
+        "title": "Pilihan Pengangkutan",
+        "description": "Pilih pengangkutan anda ke penginapan atau kemudahan penjagaan kesihatan",
+        "duration": "30-60 minit",
+        "details": [
+          "Perkhidmatan teksi lapangan terbang tersedia",
+          "Pilihan sewa kereta di lapangan terbang",
+          "Pautan rel ekspres ke pusat bandar",
+          "Pemindahan yang diatur terlebih dahulu jika diorganisasikan"
+        ],
+        "tips": [
+          "Tempah pemindahan lapangan terbang terlebih dahulu untuk kemudahan",
+          "Muat turun aplikasi pengangkutan tempatan",
+          "Simpan alamat penginapan dengan mudah"
+        ]
+      },
+      {
+        "title": "Daftar Masuk Penginapan",
+        "description": "Menetap di penginapan anda dan mendapat orientasi",
+        "duration": "Berubah-ubah",
+        "details": [
+          "Daftar masuk hotel atau apartmen berkhidmat",
+          "Orientasi bilik dan tinjauan kemudahan",
+          "Maklumat kawasan tempatan dan perkhidmatan",
+          "Maklumat hubungan kecemasan"
+        ],
+        "tips": [
+          "Sahkan butiran hubungan kemudahan penjagaan kesihatan anda",
+          "Cari farmasi terdekat dan perkhidmatan kecemasan",
+          "Sediakan kaedah komunikasi tempatan"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bersedia untuk Ketibaan Anda?",
+    "description": "Pasukan concierge kami bersedia memastikan pengalaman ketibaan anda melepasi jangkaan. Biarkan kami mengendalikan butiran sementara anda fokus pada kesihatan anda.",
+    "button": "Hubungi MHTC"
+  }
+}

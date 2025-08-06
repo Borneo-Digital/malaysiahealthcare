@@ -8,20 +8,28 @@ import { InteractiveArrivalTimeline } from '@/components/home4/interactive-arriv
 // import { AirportConciergeGrid } from '@/components/home4/airport-concierge-grid'
 // import { MalaysianHospitalityFocus } from '@/components/home4/malaysian-hospitality-focus'
 import { CTAArrival } from '@/components/home4/cta-arrival'
+import { getServerTranslations } from '@/utils/translations'
+import { JourneyArrivalTranslations } from '@/types/translations'
+import { Locale } from '@/types/i18n'
 
 export const metadata: Metadata = {
   title: 'Arrival in Malaysia | Home4 Healthcare Journey | Malaysia Healthcare Travel Council',
   description: 'Your seamless welcome to healthcare excellence. Comprehensive arrival support and services in Malaysia.',
 }
 
-export default function Home4Arrival() {
+interface ArrivalPageProps {
+  params: { locale: Locale }
+}
+
+export default function Home4Arrival({ params: { locale } }: ArrivalPageProps) {
+  const t = getServerTranslations<JourneyArrivalTranslations>(locale, "journey-arrival")
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
       <Header />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <Home4ArrivalHero />
+        <Home4ArrivalHero heroTranslations={t.hero} />
         
         {/* Journey Navigation
         <Container className="py-8">
@@ -30,7 +38,7 @@ export default function Home4Arrival() {
         
         {/* Arrival Timeline Section */}
         <Container className="py-16">
-          <InteractiveArrivalTimeline />
+          <InteractiveArrivalTimeline timelineTranslations={t.timeline} />
         </Container>
         
         {/* Airport Concierge Services
@@ -42,7 +50,7 @@ export default function Home4Arrival() {
 
         {/* CTA Steps */}
         <Container className="py-16">
-          <CTAArrival />
+          <CTAArrival ctaTranslations={t.cta} />
         </Container>
         
         {/* Malaysian Hospitality

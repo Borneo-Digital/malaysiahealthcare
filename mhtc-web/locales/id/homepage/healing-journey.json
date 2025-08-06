@@ -1,0 +1,30 @@
+{
+  "title": "Perjalanan Kesembuhan Anda",
+  "subtitle": "Pengalaman layanan kesehatan yang mulus dirancang sesuai kebutuhan Anda",
+  "steps": {
+    "preArrival": {
+      "title": "MERENCANAKAN KUNJUNGAN ANDA",
+      "description": "Semua yang Anda butuhkan untuk mempersiapkan perjalanan kesehatan Anda",
+      "story": "Sarah dari Australia menemukan semua informasi visa dan medis yang dibutuhkannya sebelum perjalanan."
+    },
+    "arrival": {
+      "title": "SELAMAT DATANG DI MALAYSIA",
+      "description": "Informasi kedatangan dan layanan dukungan",
+      "story": "Ahmed dari UAE disambut di bandara dan langsung diantar ke akomodasinya."
+    },
+    "treatment": {
+      "title": "SELAMA PERAWATAN",
+      "description": "Apa yang diharapkan selama perawatan medis Anda",
+      "story": "Liu Wei dari China menerima perawatan komprehensif dengan penerjemah yang tersedia sepanjang waktu."
+    },
+    "postTreatment": {
+      "title": "PERAWATAN LANJUTAN",
+      "description": "Layanan pemulihan dan perawatan tindak lanjut",
+      "story": "John dari Inggris menikmati masa pemulihannya di resort tepi pantai dengan pemeriksaan rutin."
+    }
+  },
+  "cta": {
+    "button": "Jelajahi Perjalanan Anda",
+    "description": "Pelajari lebih lanjut tentang setiap langkah pengalaman layanan kesehatan Anda"
+  }
+}

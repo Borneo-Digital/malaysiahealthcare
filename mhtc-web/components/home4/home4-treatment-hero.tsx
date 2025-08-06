@@ -7,20 +7,34 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import LocaleLink from "@/components/LocaleLink"
 
-const treatmentFocus = [
-  "Quality healthcare facilities",
-  "International standards", 
-  "Skilled medical professionals",
-  "Advanced medical technology"
-]
 
-const malaysiaStrengths = [
-  { icon: Shield, text: "Accredited hospitals" },
-  { icon: Users, text: "Multilingual care teams" },
-  { icon: Award, text: "International recognition" }
-]
+interface HeroTranslations {
+  badge: string;
+  title: string;
+  description: string;
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+}
 
-export function Home4TreatmentHero() {
+interface Home4TreatmentHeroProps {
+  heroTranslations: HeroTranslations;
+}
+
+export function Home4TreatmentHero({ heroTranslations }: Home4TreatmentHeroProps) {
+  const treatmentFocus = [
+    "Quality healthcare facilities",
+    "International standards", 
+    "Skilled medical professionals",
+    "Advanced medical technology"
+  ]
+
+  const malaysiaStrengths = [
+    { icon: Shield, text: "Accredited hospitals" },
+    { icon: Users, text: "Multilingual care teams" },
+    { icon: Award, text: "International recognition" }
+  ]
   const [currentFocus, setCurrentFocus] = useState(0)
   const [highlightedFocus, setHighlightedFocus] = useState<number[]>([])
 
@@ -38,7 +52,7 @@ export function Home4TreatmentHero() {
     }, 2500)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [treatmentFocus.length])
 
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-emerald-50 via-white to-grey-50/30 flex items-center overflow-hidden">
@@ -55,17 +69,15 @@ export function Home4TreatmentHero() {
             <div>
               <Badge className="bg-mhtc-primary/10 text-mhtc-primary px-4 py-2 mb-6">
                 <Stethoscope className="h-4 w-4 mr-2" />
-                TREATMENT EXCELLENCE
+                {heroTranslations.badge}
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-grey-900 leading-tight mb-6">
-                Experience
-                <span className="block text-mhtc-primary">Quality Healthcare</span>
+                {heroTranslations.title}
               </h1>
               
               <p className="text-xl text-grey-600 leading-relaxed mb-8 max-w-2xl">
-                Discover Malaysia&apos;s healthcare excellence with internationally accredited 
-                hospitals, skilled specialists, and comprehensive medical services.
+                {heroTranslations.description}
               </p>
             </div>
 
@@ -85,13 +97,13 @@ export function Home4TreatmentHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <LocaleLink href="/post-treatment">
                 <Button size="lg" className="bg-mhtc-primary hover:bg-[#A50E25] px-8 py-6">
-                  Explore Specialties
+                  {heroTranslations.cta.primary}
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </LocaleLink>
               <LocaleLink href="/member-hospital">
                 <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white px-8 py-6">
-                  View Hospitals
+                  {heroTranslations.cta.secondary}
                 </Button>
               </LocaleLink>
             </div>

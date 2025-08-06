@@ -560,3 +560,248 @@ export interface MYMT2026Translations {
     description: string;
   };
 }
+
+/**
+ * Homepage Hero section translations
+ */
+export interface HomepageHeroTranslations {
+  title: string;
+  subtitle: string;
+  quickPaths: {
+    members: {
+      title: string;
+      description: string;
+    };
+    support: {
+      title: string;
+      description: string;
+    };
+  };
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+}
+
+/**
+ * Homepage Healing Journey section translations
+ */
+export interface HomepageHealingJourneyTranslations {
+  title: string;
+  subtitle: string;
+  steps: {
+    preArrival: {
+      title: string;
+      description: string;
+      story: string;
+    };
+    arrival: {
+      title: string;
+      description: string;
+      story: string;
+    };
+    treatment: {
+      title: string;
+      description: string;
+      story: string;
+    };
+    postTreatment: {
+      title: string;
+      description: string;
+      story: string;
+    };
+  };
+  cta: {
+    button: string;
+    description: string;
+  };
+}
+
+/**
+ * Homepage CTA section translations
+ */
+export interface HomepageCTATranslations {
+  title: string;
+  description: string;
+  buttons: {
+    contact: string;
+    downloadGuide: string;
+  };
+  altText: string;
+}
+
+/**
+ * Homepage Testimonials section translations
+ */
+export interface HomepageTestimonialsTranslations {
+  title: string;
+  subtitle: string;
+  watchVideo: string;
+  patients: Array<{
+    name: string;
+    country: string;
+    condition: string;
+    experience: string;
+    youtubeUrl: string;
+  }>;
+  labels: {
+    from: string;
+    condition: string;
+  };
+}
+
+/**
+ * Homepage Final CTA section translations
+ */
+export interface HomepageFinalCTATranslations {
+  title: string;
+  description: string;
+  buttons: {
+    contactTeam: string;
+    whatsapp: string;
+  };
+}
+
+/**
+ * Journey Pre-Arrival page translations
+ */
+export interface JourneyPreArrivalTranslations {
+  hero: {
+    badge: string;
+    title: string;
+    description: string;
+    preparationTasks: string[];
+    malaysiaHighlights: Array<{
+      text: string;
+    }>;
+    cta: {
+      primary: string;
+      secondary: string;
+    };
+  };
+  planningSteps: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    steps: Array<{
+      title: string;
+      description: string;
+      details: string[];
+    }>;
+  };
+  cta: {
+    title: string;
+    description: string;
+    button: string;
+  };
+}
+
+/**
+ * Journey Arrival page translations
+ */
+export interface JourneyArrivalTranslations {
+  hero: {
+    badge: string;
+    title: string;
+    description: string;
+    arrivalMilestones: string[];
+    malaysiaWelcome: Array<{
+      text: string;
+    }>;
+    cta: {
+      primary: string;
+      secondary: string;
+    };
+  };
+  timeline: {
+    title: string;
+    subtitle: string;
+    steps: Array<{
+      title: string;
+      description: string;
+      duration: string;
+      details: string[];
+      tips: string[];
+    }>;
+  };
+  cta: {
+    title: string;
+    description: string;
+    button: string;
+  };
+}
+
+/**
+ * Journey Treatment page translations
+ */
+export interface JourneyTreatmentTranslations {
+  hero: {
+    badge: string;
+    title: string;
+    description: string;
+    cta: {
+      primary: string;
+      secondary: string;
+    };
+  };
+  treatmentFlow: {
+    title: string;
+    subtitle: string;
+    steps: Array<{
+      title: string;
+      subtitle: string;
+      duration: string;
+      description: string;
+      activities: string[];
+      outcome: string;
+    }>;
+  };
+  specialties: {
+    title: string;
+    subtitle: string;
+    categories: string[];
+  };
+  cta: {
+    title: string;
+    description: string;
+    button: string;
+  };
+}
+
+/**
+ * Journey Post-Treatment page translations
+ */
+export interface JourneyPostTreatmentTranslations {
+  hero: {
+    badge: string;
+    title: string;
+    description: string;
+    cta: {
+      primary: string;
+      secondary: string;
+    };
+  };
+  recoveryTimeline: {
+    title: string;
+    subtitle: string;
+    phases: Array<{
+      title: string;
+      duration: string;
+      description: string;
+      activities: string[];
+    }>;
+  };
+  aftercareBenefits: {
+    title: string;
+    subtitle: string;
+    benefits: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  continuedSupport: {
+    title: string;
+    description: string;
+    button: string;
+  };
+}

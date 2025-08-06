@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "KEUNGGULAN PERAWATAN",
+    "title": "Perawatan Lanjutan, Dipersonalisasi untuk Anda",
+    "description": "Rasakan keunggulan medis terdepan dengan penyampaian yang penuh kasih di fasilitas kesehatan premier Malaysia.",
+    "cta": {
+      "primary": "Jelajahi Perawatan",
+      "secondary": "Cari Spesialis"
+    }
+  },
+  "treatmentFlow": {
+    "title": "Perjalanan Perawatan Anda",
+    "subtitle": "Perawatan medis komprehensif yang disesuaikan dengan kebutuhan spesifik Anda",
+    "steps": [
+      {
+        "title": "Konsultasi Awal",
+        "subtitle": "Penilaian kesehatan komprehensif",
+        "duration": "1-2 jam",
+        "description": "Tinjauan riwayat medis terperinci, pemeriksaan fisik, dan perencanaan perawatan dengan spesialis kami.",
+        "activities": [
+          "Tinjauan riwayat medis",
+          "Pemeriksaan fisik", 
+          "Penilaian diagnostik",
+          "Diskusi rencana perawatan"
+        ],
+        "outcome": "Roadmap perawatan yang dipersonalisasi"
+      },
+      {
+        "title": "Persiapan Pra-Perawatan",
+        "subtitle": "Mengoptimalkan kesehatan Anda untuk perawatan",
+        "duration": "1-3 hari",
+        "description": "Tes pra-operasi, penyesuaian obat, dan protokol persiapan untuk memastikan hasil perawatan yang optimal.",
+        "activities": [
+          "Tes laboratorium",
+          "Studi pencitraan",
+          "Tinjauan obat",
+          "Perencanaan pra-operasi"
+        ],
+        "outcome": "Siap untuk perawatan"
+      },
+      {
+        "title": "Pelaksanaan Perawatan",
+        "subtitle": "Intervensi medis ahli",
+        "duration": "Bervariasi",
+        "description": "Perawatan medis profesional yang diberikan oleh spesialis berpengalaman menggunakan teknologi canggih dan teknik terbukti.",
+        "activities": [
+          "Pelaksanaan prosedur",
+          "Pemantauan real-time",
+          "Manajemen nyeri",
+          "Jaminan kualitas"
+        ],
+        "outcome": "Penyelesaian perawatan yang sukses"
+      },
+      {
+        "title": "Pemulihan & Pemantauan",
+        "subtitle": "Perawatan pasca-perawatan yang hati-hati",
+        "duration": "Berkelanjutan",
+        "description": "Dukungan pemulihan komprehensif dengan pemantauan berkelanjutan untuk memastikan penyembuhan optimal dan kesuksesan perawatan.",
+        "activities": [
+          "Perawatan ruang pemulihan",
+          "Pemantauan tanda vital",
+          "Manajemen nyeri dan kenyamanan",
+          "Evaluasi kemajuan"
+        ],
+        "outcome": "Kemajuan pemulihan yang optimal"
+      }
+    ]
+  },
+  "specialties": {
+    "title": "Spesialisasi Medis",
+    "subtitle": "Keahlian kelas dunia di berbagai disiplin medis",
+    "categories": [
+      "Kardiologi",
+      "Onkologi", 
+      "Ortopedi",
+      "Neurologi",
+      "Perawatan Kesuburan",
+      "Bedah Kosmetik",
+      "Perawatan Gigi",
+      "Perawatan Mata"
+    ]
+  },
+  "cta": {
+    "title": "Siap untuk Perawatan Anda?",
+    "description": "Tim kami di sini untuk membantu Anda di setiap langkah. Biarkan kami menangani detailnya sementara Anda fokus pada kesehatan Anda.",
+    "button": "Hubungi MHTC"
+  }
+}

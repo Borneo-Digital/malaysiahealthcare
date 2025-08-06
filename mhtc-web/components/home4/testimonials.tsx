@@ -3,26 +3,11 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Quote, Play, ExternalLink } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
+import { HomepageTestimonialsTranslations } from "@/types/translations"
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Mohamed Abdiqadir Muse",
-      country: "Somalia",
-      condition: "Nephrotic Syndrome",
-      experience: "Arrival and Welcome Experience",
-      youtubeUrl: "https://youtu.be/wNYPg-C1slU?si=P-jSHaQlyAt9Ndt3"
-    },
-    {
-      id: 2,
-      name: "Netya Kawatu", 
-      country: "Indonesia",
-      condition: "Breast Cancer",
-      experience: "Treatment and Care Experience",
-      youtubeUrl: "https://youtu.be/9Qx2ns6XwPI?si=_FhFEkpadCEQNcrw"
-    }
-  ]
+  const { t } = useTranslation<HomepageTestimonialsTranslations>("homepage/testimonials")
 
   return (
     <div className="space-y-12">
@@ -34,18 +19,18 @@ export default function Testimonials() {
         className="text-center"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Patient <span className="text-[#BE1E2D]">Stories</span>
+          {t.title || "Patient Stories"}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-         Real #experienceMalaysiaHealthcare stories from international patients who received premier medical care and Malaysian hospitality.
+          {t.subtitle || "Real #experienceMalaysiaHealthcare stories from international patients who received premier medical care and Malaysian hospitality."}
         </p>
       </motion.div>
 
       {/* Testimonials Grid */}
       <div className="grid gap-8 md:grid-cols-2">
-        {testimonials.map((testimonial, index) => (
+        {(t.patients || []).map((testimonial, index) => (
           <motion.div
-            key={testimonial.id}
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -71,10 +56,10 @@ export default function Testimonials() {
                     {testimonial.name}
                   </h3>
                   <p className="text-gray-600 text-sm mb-1">
-                    <span className="font-medium">From:</span> {testimonial.country}
+                    <span className="font-medium">{t.labels?.from || "From:"}:</span> {testimonial.country}
                   </p>
                   <p className="text-gray-600 text-sm">
-                    <span className="font-medium">Condition:</span> {testimonial.condition}
+                    <span className="font-medium">{t.labels?.condition || "Condition:"}:</span> {testimonial.condition}
                   </p>
                 </div>
 
@@ -87,7 +72,7 @@ export default function Testimonials() {
                     className="inline-flex items-center gap-2 bg-[#BE1E2D] text-white px-4 py-2 rounded-lg hover:bg-[#BE1E2D]/90 transition-colors"
                   >
                     <Play className="h-4 w-4" />
-                    Watch Video Testimonial
+                    {t.watchVideo || "Watch Video Testimonial"}
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
