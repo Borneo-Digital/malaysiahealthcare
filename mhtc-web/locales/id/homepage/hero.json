@@ -1,0 +1,18 @@
+{
+  "title": "Rasakan Layanan Kesehatan Kelas Dunia di Malaysia",
+  "subtitle": "Bergabunglah dengan ribuan pasien internasional yang telah memilih Malaysia untuk perjalanan medis mereka. Perawatan berkualitas, teknologi canggih, dan keramahan hangat menanti Anda.",
+  "quickPaths": {
+    "members": {
+      "title": "Anggota",
+      "description": "Akses jaringan fasilitas unggulan kami."
+    },
+    "support": {
+      "title": "Dukungan Khusus",
+      "description": "Tim kami siap membantu Anda."
+    }
+  },
+  "cta": {
+    "primary": "Mulai Perjalanan Anda",
+    "secondary": "Pelajari Lebih Lanjut"
+  }
+}

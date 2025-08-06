@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "ARRIVAL EXPERIENCE",
+    "title": "Welcome to Malaysia",
+    "description": "Begin your healthcare journey in Malaysia with helpful information about arrival procedures, transportation options, and available support services.",
+    "arrivalMilestones": [
+      "Land in Malaysia",
+      "Airport assistance (if arranged)",
+      "Transport to accommodation",
+      "Check-in and orientation"
+    ],
+    "malaysiaWelcome": [
+      {
+        "text": "International airport access"
+      },
+      {
+        "text": "Strategic location"
+      },
+      {
+        "text": "24/7 support available"
+      }
+    ],
+    "cta": {
+      "primary": "Explore Arrival",
+      "secondary": "Support Services"
+    }
+  },
+  "timeline": {
+    "title": "Your Arrival Timeline",
+    "subtitle": "Step-by-step guide to your smooth arrival and first hours in Malaysia",
+    "steps": [
+      {
+        "title": "Arrival at Airport",
+        "description": "Land at Kuala Lumpur International Airport (KLIA) or other major Malaysian airports",
+        "duration": "Upon arrival",
+        "details": [
+          "International flights arrive at KLIA or KLIA2",
+          "Immigration and customs procedures",
+          "Currency exchange and SIM card services available",
+          "Airport information desks for assistance"
+        ],
+        "tips": [
+          "Keep important documents readily accessible",
+          "Follow airport signage for immigration",
+          "Check for any health screening requirements"
+        ]
+      },
+      {
+        "title": "Immigration & Entry",
+        "description": "Complete immigration procedures and entry into Malaysia",
+        "duration": "15-30 minutes",
+        "details": [
+          "Present passport and entry documents",
+          "Health declaration (if required)",
+          "Immigration officer verification",
+          "Entry stamp and welcome to Malaysia"
+        ],
+        "tips": [
+          "Have medical documentation ready if requested",
+          "Ensure passport validity of 6+ months",
+          "Declare any medications as required"
+        ]
+      },
+      {
+        "title": "Transportation Options",
+        "description": "Choose your transportation to accommodation or healthcare facility",
+        "duration": "30-60 minutes",
+        "details": [
+          "Airport taxi services available",
+          "Car rental options at airport",
+          "Express rail link to city center",
+          "Pre-arranged transfers if organized"
+        ],
+        "tips": [
+          "Book airport transfers in advance for convenience",
+          "Download local transportation apps",
+          "Keep accommodation address handy"
+        ]
+      },
+      {
+        "title": "Accommodation Check-in",
+        "description": "Settle into your accommodation and get oriented",
+        "duration": "Variable",
+        "details": [
+          "Hotel or serviced apartment check-in",
+          "Room orientation and amenities overview",
+          "Local area information and services",
+          "Emergency contact information"
+        ],
+        "tips": [
+          "Verify contact details for your healthcare facility",
+          "Locate nearest pharmacy and emergency services",
+          "Set up local communication methods"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Your Arrival?",
+    "description": "Our concierge team is standing by to ensure your arrival experience exceeds expectations. Let us handle the details while you focus on your health.",
+    "button": "Contact MHTC"
+  }
+}

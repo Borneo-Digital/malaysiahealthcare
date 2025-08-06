@@ -1,0 +1,25 @@
+{
+  "title": "Kisah Pesakit",
+  "subtitle": "Kisah benar #pengalamanKesehatanMalaysia daripada pesakit antarabangsa yang menerima penjagaan perubatan terbaik dan keramahan Malaysia.",
+  "watchVideo": "Tonton Testimoni Video",
+  "patients": [
+    {
+      "name": "Mohamed Abdiqadir Muse",
+      "country": "Somalia",
+      "condition": "Sindrom Nefrotik",
+      "experience": "Pengalaman Ketibaan dan Sambutan",
+      "youtubeUrl": "https://youtu.be/wNYPg-C1slU?si=P-jSHaQlyAt9Ndt3"
+    },
+    {
+      "name": "Netya Kawatu",
+      "country": "Indonesia",
+      "condition": "Kanser Payudara",
+      "experience": "Pengalaman Rawatan dan Penjagaan",
+      "youtubeUrl": "https://youtu.be/9Qx2ns6XwPI?si=_FhFEkpadCEQNcrw"
+    }
+  ],
+  "labels": {
+    "from": "Dari:",
+    "condition": "Keadaan:"
+  }
+}

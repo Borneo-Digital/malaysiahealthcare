@@ -1,0 +1,25 @@
+{
+  "title": "Patient Stories",
+  "subtitle": "Real #experienceMalaysiaHealthcare stories from international patients who received premier medical care and Malaysian hospitality.",
+  "watchVideo": "Watch Video Testimonial",
+  "patients": [
+    {
+      "name": "Mohamed Abdiqadir Muse",
+      "country": "Somalia", 
+      "condition": "Nephrotic Syndrome",
+      "experience": "Arrival and Welcome Experience",
+      "youtubeUrl": "https://youtu.be/wNYPg-C1slU?si=P-jSHaQlyAt9Ndt3"
+    },
+    {
+      "name": "Netya Kawatu",
+      "country": "Indonesia",
+      "condition": "Breast Cancer", 
+      "experience": "Treatment and Care Experience",
+      "youtubeUrl": "https://youtu.be/9Qx2ns6XwPI?si=_FhFEkpadCEQNcrw"
+    }
+  ],
+  "labels": {
+    "from": "From:",
+    "condition": "Condition:"
+  }
+}

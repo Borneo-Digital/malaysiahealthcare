@@ -5,7 +5,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/home4/ui/button"
 import { motion } from "framer-motion"
 
-export function CTATreatment() {
+interface CTATranslations {
+  title: string;
+  description: string;
+  button: string;
+}
+
+interface CTATreatmentProps {
+  ctaTranslations: CTATranslations;
+}
+
+export function CTATreatment({ ctaTranslations }: CTATreatmentProps) {
   return (
     <section className="space-y-8">
             <div className="text-center pt-8">
@@ -15,9 +25,9 @@ export function CTATreatment() {
               <Heart className="h-32 w-32" />
             </div>
             <div className="relative z-10 space-y-4">
-              <h3 className="text-2xl font-bold">Ready for Your Treatment?</h3>
+              <h3 className="text-2xl font-bold">{ctaTranslations.title}</h3>
               <p className="text-white/90 max-w-2xl mx-auto">
-                Our team is here to help you every step of the way. Let us handle the details while you focus on your health.
+                {ctaTranslations.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <motion.div
@@ -25,7 +35,7 @@ export function CTATreatment() {
             whileTap={{ scale: 0.95 }}
           >
             <Button size="lg" variant="outline" className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white">
-            Contact MHTC
+            {ctaTranslations.button}
             </Button>
           </motion.div>
           <motion.div

@@ -7,7 +7,21 @@ import { Card, CardContent } from "@/components/ui/card"
 // import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const aftercareBenefits = [
+interface BenefitsTranslations {
+  title: string;
+  subtitle: string;
+  benefits: Array<{
+    title: string;
+    description: string;
+  }>;
+}
+
+interface MalaysianAftercareBenefitsProps {
+  benefitsTranslations: BenefitsTranslations;
+}
+
+export function MalaysianAftercareBenefits({ benefitsTranslations }: MalaysianAftercareBenefitsProps) {
+  const aftercareBenefits = [
   {
     category: "COST ADVANTAGE",
     icon: DollarSign,
@@ -98,7 +112,6 @@ const aftercareBenefits = [
 //   { value: "12K+", label: "International Patients Annually", icon: Users }
 // ]
 
-export function MalaysianAftercareBenefits() {
   const [activeBenefit, setActiveBenefit] = useState(0)
 
   return (
@@ -110,11 +123,10 @@ export function MalaysianAftercareBenefits() {
           Why Malaysia for Aftercare
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          The Malaysian Advantage
+          {benefitsTranslations.title}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Discover why Malaysia stands out as the premier destination for post-treatment care, 
-          offering unique advantages that accelerate recovery and enhance your wellness journey.
+          {benefitsTranslations.subtitle}
         </p>
       </div>
 
@@ -135,7 +147,7 @@ export function MalaysianAftercareBenefits() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-lg font-bold text-gray-900">{benefit.category}</h3>
+                    <h3 className="text-lg font-bold text-gray-900">{benefitsTranslations.benefits[index]?.title || benefit.category}</h3>
                     <Badge variant="outline" className="text-xs">
                       {benefit.comparison}
                     </Badge>
@@ -144,7 +156,7 @@ export function MalaysianAftercareBenefits() {
                     {benefit.primaryBenefit}
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    {benefit.description}
+                    {benefitsTranslations.benefits[index]?.description || benefit.description}
                   </p>
                 </div>
               </div>
@@ -160,69 +172,6 @@ export function MalaysianAftercareBenefits() {
             </CardContent>
           </Card>
         ))}
-      </div>
-
-      
-
-      {/* Testimonial Statistics */}
-      {/* <div className="bg-gradient-to-r from-[#BE1E2D] to-[#A01825] rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 opacity-10">
-          <Star className="w-32 h-32" />
-        </div>
-        
-        <div className="relative z-10">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-3">
-              Patient Satisfaction Speaks Volumes
-            </h3>
-            <p className="text-white/90 max-w-2xl mx-auto">
-              Join thousands of international patients who have discovered the Malaysian advantage 
-              in post-treatment care and recovery excellence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {testimonialStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-block p-3 bg-white/20 rounded-xl mb-3">
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                <div className="text-white/90 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <blockquote className="text-lg italic text-white/95 mb-6 max-w-3xl mx-auto">
-              &quot;My recovery in Malaysia exceeded all expectations. The combination of excellent medical care, 
-              affordable luxury, and the warm hospitality made my healing journey truly transformative.&quot;
-            </blockquote>
-            <div className="text-white/80 text-sm">
-              — Sarah Chen, Singapore • Orthopedic Recovery Patient
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* Call to Action */}
-      <div className="text-center pt-8 border-t border-gray-200">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
-          Experience the Malaysian Difference
-        </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Discover why Malaysia is becoming the top choice for international patients seeking 
-          exceptional post-treatment care in a welcoming, multicultural environment.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          {/* <Button size="lg" className="bg-[#BE1E2D] hover:bg-[#A01825]">
-            Plan My Recovery
-            <ArrowRight className="h-5 w-5 ml-2" />
-          </Button> */}
-          {/* <Button size="lg" variant="outline" className="border-[#BE1E2D] text-[#BE1E2D]">
-            View Recovery Options
-          </Button> */}
-        </div>
       </div>
     </section>
   )

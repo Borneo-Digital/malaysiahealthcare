@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "PERANCANGAN PRA-KETIBAAN",
+    "title": "Rancang Perjalanan Kesihatan Anda",
+    "description": "Mulakan persediaan perjalanan perubatan anda dengan panduan komprehensif tentang destinasi penjagaan kesihatan, kemudahan, dan perkhidmatan sokongan Malaysia.",
+    "preparationTasks": [
+      "Kaji kemudahan penjagaan kesihatan Malaysia",
+      "Sediakan dokumentasi perubatan", 
+      "Rancang pengaturan perjalanan",
+      "Semak maklumat budaya"
+    ],
+    "malaysiaHighlights": [
+      {
+        "text": "Persekitaran pelbagai budaya"
+      },
+      {
+        "text": "Lokasi hab Asia Tenggara"
+      },
+      {
+        "text": "Bahasa Inggeris digunakan secara meluas"
+      }
+    ],
+    "cta": {
+      "primary": "Mula Merancang",
+      "secondary": "Panduan Kesihatan"
+    }
+  },
+  "planningSteps": {
+    "badge": "Panduan Perancangan",
+    "title": "Perancangan Perjalanan Kesihatan",
+    "subtitle": "Maklumat dan langkah penting untuk membantu anda bersedia untuk perjalanan perubatan ke Malaysia.",
+    "steps": [
+      {
+        "title": "Penyelidikan & Persediaan",
+        "description": "Kumpulkan maklumat tentang pilihan penjagaan kesihatan Malaysia dan sediakan dokumentasi anda.",
+        "details": [
+          "Kaji hospital dan kemudahan bertauliah",
+          "Kumpulkan sejarah perubatan dan rekod",
+          "Periksa kesahihan pasport dan keperluan visa",
+          "Hubungi penyedia penjagaan kesihatan untuk perundingan awal"
+        ]
+      },
+      {
+        "title": "Maklumat Hospital & Pakar",
+        "description": "Ketahui tentang kemudahan penjagaan kesihatan Malaysia dan kepakaran perubatan yang tersedia.",
+        "details": [
+          "Semak hospital bertauliah antarabangsa",
+          "Maklumat tentang kelayakan pakar",
+          "Bandingkan pilihan dan pendekatan rawatan",
+          "Fahami pensijilan dan piawaian kemudahan"
+        ]
+      },
+      {
+        "title": "Perjalanan & Penginapan",
+        "description": "Rancang pengaturan perjalanan dan pilihan penginapan anda di Malaysia.",
+        "details": [
+          "Kaji pilihan penerbangan dan laluan perjalanan",
+          "Terokai penginapan berhampiran kemudahan kesihatan",
+          "Pertimbangkan keperluan visa dan insurans perjalanan",
+          "Rancang untuk penginapan lanjutan jika diperlukan"
+        ]
+      },
+      {
+        "title": "Perancangan Kewangan",
+        "description": "Fahami kos dan pilihan pembayaran untuk perjalanan kesihatan anda.",
+        "details": [
+          "Semak anggaran kos rawatan",
+          "Fahami kaedah pembayaran yang diterima",
+          "Periksa perlindungan insurans dan keperluan",
+          "Rancang untuk perbelanjaan tambahan dan kontingensi"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bersedia untuk Perjalanan Anda?",
+    "description": "Pasukan kami di sini untuk membantu anda di setiap langkah. Biarkan kami mengendalikan butiran sementara anda fokus pada kesihatan anda.",
+    "button": "Hubungi MHTC"
+  }
+}

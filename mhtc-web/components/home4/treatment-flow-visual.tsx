@@ -15,76 +15,90 @@ import { Card, CardContent } from "@/components/ui/card"
 // import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const treatmentSteps = [
+interface FlowTranslations {
+  title: string;
+  subtitle: string;
+  steps: Array<{
+    title: string;
+    subtitle: string;
+    duration: string;
+    description: string;
+    activities: string[];
+    outcome: string;
+  }>;
+}
+
+interface TreatmentFlowVisualProps {
+  flowTranslations: FlowTranslations;
+}
+
+export function TreatmentFlowVisual({ flowTranslations }: TreatmentFlowVisualProps) {
+  const treatmentSteps = [
   {
     id: "consultation",
-    title: "Initial Consultation",
-    subtitle: "Comprehensive health assessment",
+    title: flowTranslations.steps[0]?.title || "Initial Consultation",
+    subtitle: flowTranslations.steps[0]?.subtitle || "Comprehensive health assessment",
     icon: FileText,
     color: "bg-blue-50 border-blue-200 text-blue-700",
-    duration: "1-2 hours",
-    description: "Detailed medical history review, physical examination, and treatment planning with our specialists.",
-    activities: [
+    duration: flowTranslations.steps[0]?.duration || "1-2 hours",
+    description: flowTranslations.steps[0]?.description || "Detailed medical history review, physical examination, and treatment planning with our specialists.",
+    activities: flowTranslations.steps[0]?.activities || [
       "Medical history review",
       "Physical examination", 
       "Diagnostic assessment",
       "Treatment plan discussion"
     ],
-    outcome: "Personalized treatment roadmap"
+    outcome: flowTranslations.steps[0]?.outcome || "Personalized treatment roadmap"
   },
   {
     id: "preparation",
-    title: "Pre-Treatment Preparation",
-    subtitle: "Optimizing your health for treatment",
+    title: flowTranslations.steps[1]?.title || "Pre-Treatment Preparation",
+    subtitle: flowTranslations.steps[1]?.subtitle || "Optimizing your health for treatment",
     icon: Stethoscope,
     color: "bg-green-50 border-green-200 text-green-700",
-    duration: "1-3 days",
-    description: "Pre-operative tests, medication adjustments, and preparation protocols to ensure optimal treatment outcomes.",
-    activities: [
+    duration: flowTranslations.steps[1]?.duration || "1-3 days",
+    description: flowTranslations.steps[1]?.description || "Pre-operative tests, medication adjustments, and preparation protocols to ensure optimal treatment outcomes.",
+    activities: flowTranslations.steps[1]?.activities || [
       "Laboratory tests",
       "Imaging studies",
       "Medication review",
       "Pre-operative planning"
     ],
-    outcome: "Ready for treatment"
+    outcome: flowTranslations.steps[1]?.outcome || "Ready for treatment"
   },
   {
     id: "treatment",
-    title: "Treatment Delivery",
-    subtitle: "Expert care with advanced technology",
+    title: flowTranslations.steps[2]?.title || "Treatment Delivery",
+    subtitle: flowTranslations.steps[2]?.subtitle || "Expert medical intervention",
     icon: Activity,
     color: "bg-red-50 border-red-200 text-red-700",
-    duration: "Varies",
-    description: "State-of-the-art treatment delivery by internationally trained specialists using advanced medical technology.",
-    activities: [
-      "Anesthesia management",
-      "Surgical/medical intervention",
+    duration: flowTranslations.steps[2]?.duration || "Variable",
+    description: flowTranslations.steps[2]?.description || "Professional medical treatment delivered by experienced specialists using advanced technology and proven techniques.",
+    activities: flowTranslations.steps[2]?.activities || [
+      "Procedure execution",
       "Real-time monitoring",
+      "Pain management",
       "Quality assurance"
     ],
-    outcome: "Successful treatment completion"
+    outcome: flowTranslations.steps[2]?.outcome || "Successful treatment completion"
   },
   {
     id: "recovery",
-    title: "Recovery & Monitoring",
-    subtitle: "Comprehensive post-treatment care",
+    title: flowTranslations.steps[3]?.title || "Recovery & Monitoring",
+    subtitle: flowTranslations.steps[3]?.subtitle || "Careful post-treatment care",
     icon: Heart,
     color: "bg-purple-50 border-purple-200 text-purple-700",
-    duration: "1-7 days",
-    description: "Careful monitoring, pain management, and recovery support to ensure optimal healing and comfort.",
-    activities: [
+    duration: flowTranslations.steps[3]?.duration || "Ongoing",
+    description: flowTranslations.steps[3]?.description || "Comprehensive recovery support with continuous monitoring to ensure optimal healing and treatment success.",
+    activities: flowTranslations.steps[3]?.activities || [
+      "Recovery room care",
       "Vital signs monitoring",
-      "Pain management",
-      "Mobility assistance",
+      "Pain and comfort management",
       "Progress evaluation"
     ],
-    outcome: "Stable recovery achieved"
+    outcome: flowTranslations.steps[3]?.outcome || "Optimal recovery progress"
   }
 ]
-
-
-
-export function TreatmentFlowVisual() {
   const [activeStep, setActiveStep] = useState<string>("consultation")
 
   const activeStepData = treatmentSteps.find(step => step.id === activeStep)
@@ -98,11 +112,10 @@ export function TreatmentFlowVisual() {
           Treatment Process
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Your Treatment Journey
+          {flowTranslations.title}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Every step of your treatment is carefully planned and executed by our expert team, 
-          ensuring the highest standards of care and optimal outcomes.
+          {flowTranslations.subtitle}
         </p>
       </div>
 

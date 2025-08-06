@@ -16,86 +16,101 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/home4/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const timelineSteps = [
-  {
-    id: "landing",
-    title: "Arrival at Airport",
-    description: "Land at Kuala Lumpur International Airport (KLIA) or other major Malaysian airports",
-    icon: Plane,
-    duration: "Upon arrival",
-    color: "bg-blue-50 border-blue-200 text-blue-700",
-    details: [
-      "International flights arrive at KLIA or KLIA2",
-      "Immigration and customs procedures",
-      "Currency exchange and SIM card services available",
-      "Airport information desks for assistance"
-    ],
-    tips: [
-      "Keep important documents readily accessible",
-      "Follow airport signage for immigration",
-      "Check for any health screening requirements"
-    ]
-  },
-  {
-    id: "immigration",
-    title: "Immigration & Entry",
-    description: "Complete immigration procedures and entry into Malaysia",
-    icon: UserCheck,
-    duration: "15-30 minutes",
-    color: "bg-green-50 border-green-200 text-green-700",
-    details: [
-      "Present passport and entry documents",
-      "Health declaration (if required)",
-      "Immigration officer verification",
-      "Entry stamp and welcome to Malaysia"
-    ],
-    tips: [
-      "Have medical documentation ready if requested",
-      "Ensure passport validity of 6+ months",
-      "Declare any medications as required"
-    ]
-  },
-  {
-    id: "transportation",
-    title: "Transportation Options",
-    description: "Various transport options available from the airport",
-    icon: Car,
-    duration: "Variable",
-    color: "bg-purple-50 border-purple-200 text-purple-700",
-    details: [
-      "Airport taxi services and ride-hailing apps",
-      "KLIA Express train to city center",
-      "Airport bus services to various destinations",
-      "Private transfer services (can be pre-arranged)"
-    ],
-    tips: [
-      "Compare transport options for your destination",
-      "Consider traffic conditions and journey time",
-      "Pre-arranged transfers can provide convenience"
-    ]
-  },
-  {
-    id: "destination",
-    title: "Reach Your Destination",
-    description: "Arrive at your accommodation or healthcare facility",
-    icon: MapPin,
-    duration: "30 minutes - 2 hours",
-    color: "bg-orange-50 border-orange-200 text-orange-700",
-    details: [
-      "Check-in to your accommodation",
-      "Familiarize yourself with the local area",
-      "Confirm healthcare appointments",
-      "Contact healthcare facility for any immediate needs"
-    ],
-    tips: [
-      "Keep healthcare facility contact information handy",
-      "Note local emergency contacts and services",
-      "Confirm appointment times and locations"
-    ]
-  }
-]
+interface TimelineTranslations {
+  title: string;
+  subtitle: string;
+  steps: Array<{
+    title: string;
+    description: string;
+    duration: string;
+    details: string[];
+    tips: string[];
+  }>;
+}
 
-export function InteractiveArrivalTimeline() {
+interface InteractiveArrivalTimelineProps {
+  timelineTranslations: TimelineTranslations;
+}
+
+export function InteractiveArrivalTimeline({ timelineTranslations }: InteractiveArrivalTimelineProps) {
+  const timelineSteps = [
+    {
+      id: "landing",
+      title: timelineTranslations.steps[0]?.title || "Arrival at Airport",
+      description: timelineTranslations.steps[0]?.description || "Land at Kuala Lumpur International Airport (KLIA) or other major Malaysian airports",
+      icon: Plane,
+      duration: timelineTranslations.steps[0]?.duration || "Upon arrival",
+      color: "bg-blue-50 border-blue-200 text-blue-700",
+      details: timelineTranslations.steps[0]?.details || [
+        "International flights arrive at KLIA or KLIA2",
+        "Immigration and customs procedures",
+        "Currency exchange and SIM card services available",
+        "Airport information desks for assistance"
+      ],
+      tips: timelineTranslations.steps[0]?.tips || [
+        "Keep important documents readily accessible",
+        "Follow airport signage for immigration",
+        "Check for any health screening requirements"
+      ]
+    },
+    {
+      id: "immigration",
+      title: timelineTranslations.steps[1]?.title || "Immigration & Entry",
+      description: timelineTranslations.steps[1]?.description || "Complete immigration procedures and entry into Malaysia",
+      icon: UserCheck,
+      duration: timelineTranslations.steps[1]?.duration || "15-30 minutes",
+      color: "bg-green-50 border-green-200 text-green-700",
+      details: timelineTranslations.steps[1]?.details || [
+        "Present passport and entry documents",
+        "Health declaration (if required)",
+        "Immigration officer verification",
+        "Entry stamp and welcome to Malaysia"
+      ],
+      tips: timelineTranslations.steps[1]?.tips || [
+        "Have medical documentation ready if requested",
+        "Ensure passport validity of 6+ months",
+        "Declare any medications as required"
+      ]
+    },
+    {
+      id: "transportation",
+      title: timelineTranslations.steps[2]?.title || "Transportation Options",
+      description: timelineTranslations.steps[2]?.description || "Choose your transportation to accommodation or healthcare facility",
+      icon: Car,
+      duration: timelineTranslations.steps[2]?.duration || "30-60 minutes",
+      color: "bg-purple-50 border-purple-200 text-purple-700",
+      details: timelineTranslations.steps[2]?.details || [
+        "Airport taxi services available",
+        "Car rental options at airport",
+        "Express rail link to city center",
+        "Pre-arranged transfers if organized"
+      ],
+      tips: timelineTranslations.steps[2]?.tips || [
+        "Book airport transfers in advance for convenience",
+        "Download local transportation apps",
+        "Keep accommodation address handy"
+      ]
+    },
+    {
+      id: "destination",
+      title: timelineTranslations.steps[3]?.title || "Accommodation Check-in",
+      description: timelineTranslations.steps[3]?.description || "Settle into your accommodation and get oriented",
+      icon: MapPin,
+      duration: timelineTranslations.steps[3]?.duration || "Variable",
+      color: "bg-orange-50 border-orange-200 text-orange-700",
+      details: timelineTranslations.steps[3]?.details || [
+        "Hotel or serviced apartment check-in",
+        "Room orientation and amenities overview",
+        "Local area information and services",
+        "Emergency contact information"
+      ],
+      tips: timelineTranslations.steps[3]?.tips || [
+        "Verify contact details for your healthcare facility",
+        "Locate nearest pharmacy and emergency services",
+        "Set up local communication methods"
+      ]
+    }
+  ]
   const [activeStep, setActiveStep] = useState<string>("landing")
   const [completedSteps, setCompletedSteps] = useState<string[]>([])
 
@@ -120,11 +135,10 @@ export function InteractiveArrivalTimeline() {
           Arrival Process
         </Badge>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-          Your Arrival Journey
+          {timelineTranslations.title}
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Understanding the arrival process helps you prepare for a smooth entry into Malaysia 
-          for your healthcare journey.
+          {timelineTranslations.subtitle}
         </p>
       </div>
 

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "DUKUNGAN PASCA-PERAWATAN",
+    "title": "Perjalanan Pemulihan Anda Berlanjut",
+    "description": "Lanjutkan perjalanan pemulihan Anda dengan dukungan pasca-perawatan komprehensif dan sumber daya dari Malaysia Healthcare Travel Council.",
+    "cta": {
+      "primary": "Sumber Pemulihan",
+      "secondary": "Layanan Dukungan"
+    }
+  },
+  "recoveryTimeline": {
+    "title": "Pemulihan & Perawatan Lanjutan",
+    "subtitle": "Dukungan terstruktur untuk perjalanan penyembuhan Anda",
+    "phases": [
+      {
+        "title": "Pemulihan Segera",
+        "duration": "24-48 jam pertama",
+        "description": "Pemantauan ketat dan dukungan pemulihan awal",
+        "activities": [
+          "Pemantauan pasca-prosedur",
+          "Manajemen nyeri",
+          "Penilaian mobilitas awal",
+          "Pemberian obat"
+        ]
+      },
+      {
+        "title": "Pemulihan Jangka Pendek",
+        "duration": "Minggu pertama",
+        "description": "Peningkatan aktivitas bertahap dan perawatan luka",
+        "activities": [
+          "Penilaian kemajuan harian",
+          "Perawatan luka dan penggantian perban",
+          "Inisiasi terapi fisik",
+          "Bimbingan nutrisi"
+        ]
+      },
+      {
+        "title": "Pemulihan Diperpanjang",
+        "duration": "2-4 minggu",
+        "description": "Penyembuhan berkelanjutan dan kemajuan aktivitas",
+        "activities": [
+          "Janji temu tindak lanjut rutin",
+          "Peningkatan aktivitas progresif",
+          "Penyesuaian obat",
+          "Evaluasi izin perjalanan"
+        ]
+      },
+      {
+        "title": "Tindak Lanjut Jangka Panjang",
+        "duration": "Berkelanjutan",
+        "description": "Koordinasi perawatan berkelanjutan dan pemantauan",
+        "activities": [
+          "Konsultasi jarak jauh",
+          "Koordinasi penyedia lokal",
+          "Pemantauan kemajuan",
+          "Akses jaringan dukungan"
+        ]
+      }
+    ]
+  },
+  "aftercareBenefits": {
+    "title": "Manfaat Perawatan Lanjutan Malaysia",
+    "subtitle": "Keuntungan unik pemulihan di Malaysia",
+    "benefits": [
+      {
+        "title": "Iklim & Lingkungan",
+        "description": "Iklim tropis yang kondusif untuk penyembuhan dan pemulihan"
+      },
+      {
+        "title": "Keragaman Budaya",
+        "description": "Lingkungan multikultural dengan kenyamanan yang familiar"
+      },
+      {
+        "title": "Aksesibilitas",
+        "description": "Akses mudah ke fasilitas kesehatan dan layanan dukungan"
+      },
+      {
+        "title": "Efektif Biaya",
+        "description": "Pilihan tinggal diperpanjang dan layanan yang terjangkau"
+      }
+    ]
+  },
+  "continuedSupport": {
+    "title": "Perjalanan Pemulihan Anda Berlanjut",
+    "description": "Akses dukungan berkelanjutan, sumber daya, dan koneksi untuk memastikan kesehatan dan pemulihan berkelanjutan Anda.",
+    "button": "Hubungi Tim Dukungan"
+  }
+}

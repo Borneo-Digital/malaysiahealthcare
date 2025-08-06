@@ -1,14 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter, useParams } from "next/navigation"
 import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Container } from "@/components/home4/ui/container"
 import { cn } from "@/lib/utils"
+import { useTranslation } from "@/hooks/useTranslation"
+import { HeaderTranslations } from "@/types/translations"
 
 interface NavItem {
   title: string
@@ -16,28 +18,48 @@ interface NavItem {
   external?: boolean
 }
 
-const mainNavItems: NavItem[] = [
-  {
-    title: "Member Hospital",
-    href: "/member-hospital",
-  },
-  {
-    title: "MYMT 2026",
-    href: "/mymt2026",
-  },
-]
-
 const languages = [
-  { code: "en", name: "English" },
-  { code: "ms", name: "Bahasa Malaysia" },
-  { code: "ar", name: "العربية" },
-  { code: "zh", name: "中文" },
+  { code: "en", name: "English", nativeName: "English" },
+  { code: "ms", name: "Bahasa Malaysia", nativeName: "Bahasa Melayu" },
+  { code: "id", name: "Indonesian", nativeName: "Bahasa Indonesia" },
+  { code: "ar", name: "Arabic", nativeName: "العربية" },
+  { code: "zh", name: "Chinese", nativeName: "中文" },
 ]
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
+  const params = useParams()
+  
+  // Get current locale and translations
+  const { t } = useTranslation<HeaderTranslations>("header")
+  const currentLocale = (params?.locale as string) || "en"
+  
+  // Get current language info
+  const currentLanguage = languages.find((lang) => lang.code === currentLocale) || languages[0]
+  
+  // Create nav items with translations
+  const mainNavItems: NavItem[] = [
+    {
+      title: t.navigation?.memberHospital || "Member Hospital",
+      href: "/member-hospital",
+    },
+    {
+      title: t.navigation?.mymt2026 || "MYMT 2026",
+      href: "/mymt2026",
+    },
+  ]
+  
+  // Language switching function
+  const switchLanguage = useCallback(
+    (newLocale: string) => {
+      const newPath = pathname.replace(/^\/[^\/]+/, `/${newLocale}`)
+      router.push(newPath)
+    },
+    [pathname, router]
+  )
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +84,7 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between md:h-20">
           <div className="flex items-center">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Link href={`/${currentLocale}`} className="mr-6 flex items-center space-x-2">
               <div className="relative h-10 w-40">
               <Image
               src="/images/logo-malaysiahealthcare.png"
@@ -85,7 +107,7 @@ export function Header() {
                     variant="ghost"
                     className={cn(
                       "text-base transition-colors duration-150",
-                      pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                      pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
                     )}
                   >
                     {item.external ? (
@@ -97,7 +119,7 @@ export function Header() {
                         {item.title}
                       </a>
                     ) : (
-                      <Link href={item.href}>{item.title}</Link>
+                      <Link href={`/${currentLocale}${item.href}`}>{item.title}</Link>
                     )}
                   </Button>
                 </li>
@@ -115,17 +137,17 @@ export function Header() {
                   className="flex items-center space-x-1 transition-colors duration-150"
                 >
                   <Globe className="h-4 w-4" />
-                  <span className="hidden sm:inline-block">English</span>
+                  <span className="hidden sm:inline-block">{currentLanguage.nativeName}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-lg">
                 {languages.map((lang) => (
                   <DropdownMenuItem key={lang.code}>
                     <button
-                      className="w-full text-left transition-colors duration-150"
-                      onClick={() => console.log(`Switch to ${lang.name}`)}
+                      className="w-full text-left transition-colors duration-150 hover:bg-gray-100 px-2 py-1 rounded"
+                      onClick={() => switchLanguage(lang.code)}
                     >
-                      {lang.name}
+                      {lang.nativeName}
                     </button>
                   </DropdownMenuItem>
                 ))}
@@ -138,7 +160,7 @@ export function Header() {
               className="bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]"
               asChild
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href={`/${currentLocale}/contact`}>{t.navigation?.contact || "Contact Us"}</Link>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -169,17 +191,17 @@ export function Header() {
                       rel="noopener noreferrer"
                       className={cn(
                         "block font-medium transition-colors duration-150",
-                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                        pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
                       )}
                     >
                       {item.title}
                     </a>
                   ) : (
                     <Link
-                      href={item.href}
+                      href={`/${currentLocale}${item.href}`}
                       className={cn(
                         "block font-medium transition-colors duration-150",
-                        pathname === item.href ? "text-[#C8102E]" : "text-foreground",
+                        pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
                       )}
                     >
                       {item.title}
@@ -188,7 +210,7 @@ export function Header() {
                 </div>
               ))}
               <Button className="mt-4 w-full bg-mhtc-primary text-white transition-colors duration-150 hover:bg-[#A50E25]" asChild>
-                <Link href="/contact">Contact Us</Link>
+                <Link href={`/${currentLocale}/contact`}>{t.navigation?.contact || "Contact Us"}</Link>
               </Button>
             </nav>
           </Container>

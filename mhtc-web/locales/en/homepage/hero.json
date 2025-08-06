@@ -1,0 +1,18 @@
+{
+  "title": "Experience World-Class Healthcare in Malaysia",
+  "subtitle": "Join thousands of international patients who have chosen Malaysia for their medical journey. Quality care, advanced technology, and warm hospitality await you.",
+  "quickPaths": {
+    "members": {
+      "title": "Members",
+      "description": "Access our network of premier facilities."
+    },
+    "support": {
+      "title": "Dedicated Support", 
+      "description": "Our team is here to assist you."
+    }
+  },
+  "cta": {
+    "primary": "Start Your Journey",
+    "secondary": "Learn More"
+  }
+}

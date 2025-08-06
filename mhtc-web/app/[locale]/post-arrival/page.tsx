@@ -3,10 +3,7 @@ import { Header } from '@/components/home4/header'
 import { Footer } from '@/components/home4/footer'
 import { Container } from '@/components/home4/ui/container'
 import { Home4JourneyNavigation } from '@/components/home4/home4-journey-navigation'
-import { Home4PostTreatmentHero } from '@/components/home4/home4-post-treatment-hero'
-import { RecoveryTimelineView } from '@/components/home4/recovery-timeline-view'
 import { ContinuumOfCareInteractive } from '@/components/home4/continuum-of-care-interactive'
-import { MalaysianAftercareBenefits } from '@/components/home4/malaysian-aftercare-benefits'
 import { Home4ContinuedSupportCTA } from '@/components/home4/home4-continued-support-cta'
 
 export const metadata: Metadata = {
@@ -21,16 +18,22 @@ export default function Home4PostArrival() {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <Home4PostTreatmentHero />
+        <section className="relative min-h-[80vh] bg-gradient-to-br from-purple-50 via-white to-grey-50/30 flex items-center">
+          <Container>
+            <div className="text-center">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Post-Arrival Support
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Your journey continues with comprehensive post-treatment care and support.
+              </p>
+            </div>
+          </Container>
+        </section>
         
         {/* Journey Navigation */}
         <Container className="py-8">
           <Home4JourneyNavigation activeStage="post-treatment" />
-        </Container>
-        
-        {/* Recovery Timeline */}
-        <Container className="py-16">
-          <RecoveryTimelineView />
         </Container>
         
         {/* Continuum of Care */}
@@ -39,11 +42,6 @@ export default function Home4PostArrival() {
             <ContinuumOfCareInteractive />
           </Container>
         </section>
-        
-        {/* Malaysian Aftercare Benefits */}
-        <Container className="py-16">
-          <MalaysianAftercareBenefits />
-        </Container>
         
         {/* Continued Support CTA */}
         <section className="py-16 bg-gradient-to-r from-[#BE1E2D] to-[#A01825]">

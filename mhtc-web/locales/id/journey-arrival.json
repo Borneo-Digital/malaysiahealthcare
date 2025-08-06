@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "badge": "PENGALAMAN KEDATANGAN",
+    "title": "Selamat Datang di Malaysia",
+    "description": "Mulai perjalanan kesehatan Anda di Malaysia dengan informasi berguna tentang prosedur kedatangan, pilihan transportasi, dan layanan dukungan yang tersedia.",
+    "arrivalMilestones": [
+      "Mendarat di Malaysia",
+      "Bantuan bandara (jika diatur)",
+      "Transportasi ke akomodasi",
+      "Check-in dan orientasi"
+    ],
+    "malaysiaWelcome": [
+      {
+        "text": "Akses bandara internasional"
+      },
+      {
+        "text": "Lokasi strategis"
+      },
+      {
+        "text": "Dukungan 24/7 tersedia"
+      }
+    ],
+    "cta": {
+      "primary": "Jelajahi Kedatangan",
+      "secondary": "Layanan Dukungan"
+    }
+  },
+  "timeline": {
+    "title": "Timeline Kedatangan Anda",
+    "subtitle": "Panduan langkah demi langkah untuk kedatangan yang lancar dan jam-jam pertama di Malaysia",
+    "steps": [
+      {
+        "title": "Kedatangan di Bandara",
+        "description": "Mendarat di Kuala Lumpur International Airport (KLIA) atau bandara utama Malaysia lainnya",
+        "duration": "Saat kedatangan",
+        "details": [
+          "Penerbangan internasional tiba di KLIA atau KLIA2",
+          "Prosedur imigrasi dan bea cukai",
+          "Layanan penukaran mata uang dan kartu SIM tersedia",
+          "Meja informasi bandara untuk bantuan"
+        ],
+        "tips": [
+          "Siapkan dokumen penting dengan mudah diakses",
+          "Ikuti petunjuk bandara untuk imigrasi",
+          "Periksa persyaratan pemeriksaan kesehatan"
+        ]
+      },
+      {
+        "title": "Imigrasi & Masuk",
+        "description": "Menyelesaikan prosedur imigrasi dan masuk ke Malaysia",
+        "duration": "15-30 menit",
+        "details": [
+          "Tunjukkan paspor dan dokumen masuk",
+          "Deklarasi kesehatan (jika diperlukan)",
+          "Verifikasi petugas imigrasi",
+          "Stempel masuk dan selamat datang di Malaysia"
+        ],
+        "tips": [
+          "Siapkan dokumentasi medis jika diminta",
+          "Pastikan paspor berlaku 6+ bulan",
+          "Deklarasikan obat-obatan sesuai kebutuhan"
+        ]
+      },
+      {
+        "title": "Pilihan Transportasi",
+        "description": "Pilih transportasi Anda ke akomodasi atau fasilitas kesehatan",
+        "duration": "30-60 menit",
+        "details": [
+          "Layanan taksi bandara tersedia",
+          "Pilihan sewa mobil di bandara",
+          "Express rail link ke pusat kota",
+          "Transfer yang diatur sebelumnya jika diorganisir"
+        ],
+        "tips": [
+          "Pesan transfer bandara sebelumnya untuk kemudahan",
+          "Unduh aplikasi transportasi lokal",
+          "Simpan alamat akomodasi dengan mudah"
+        ]
+      },
+      {
+        "title": "Check-in Akomodasi",
+        "description": "Menetap di akomodasi Anda dan mendapatkan orientasi",
+        "duration": "Bervariasi",
+        "details": [
+          "Check-in hotel atau apartemen serviced",
+          "Orientasi kamar dan tinjauan fasilitas",
+          "Informasi area lokal dan layanan",
+          "Informasi kontak darurat"
+        ],
+        "tips": [
+          "Verifikasi detail kontak fasilitas kesehatan Anda",
+          "Temukan apotek terdekat dan layanan darurat",
+          "Siapkan metode komunikasi lokal"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Siap untuk Kedatangan Anda?",
+    "description": "Tim concierge kami siap memastikan pengalaman kedatangan Anda melampaui harapan. Biarkan kami menangani detailnya sementara Anda fokus pada kesehatan Anda.",
+    "button": "Hubungi MHTC"
+  }
+}

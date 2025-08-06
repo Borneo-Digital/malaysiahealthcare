@@ -20,7 +20,17 @@ export type Namespace =
   | 'mhtc-chronicles'
   | 'navbar'
   | 'footer'
-  | 'mymt2026';
+  | 'mymt2026'
+  | 'homepage/hero'
+  | 'homepage/healing-journey'
+  | 'homepage/cta'
+  | 'homepage/testimonials'
+  | 'homepage/final-cta'
+  | 'homepage-final-cta'
+  | 'journey-pre-arrival'
+  | 'journey-arrival'
+  | 'journey-treatment'
+  | 'journey-post-treatment';
 
 /**
  * Return type for the useTranslation hook
