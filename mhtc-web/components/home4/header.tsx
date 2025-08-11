@@ -85,15 +85,30 @@ export function Header() {
         <div className="grid h-24 grid-cols-3 items-center md:h-24">
           {/* Left: Logo */}
           <div className="flex items-center justify-start">
-            <Link href={`/${currentLocale}`} className="flex items-center space-x-2">
-              <div className="relative h-20 w-80">
-              <Image
-              src="/images/home4/MYMTlogo.png"
-              alt="MYMT Logo"
-              width={240}
-              height={80}
-              className="h-20 w-auto"
-              />
+            <Link href={`/${currentLocale}`} className="flex items-center">
+              {/* Original Malaysia Healthcare Logo */}
+              <div className="relative h-10 w-auto">
+                <Image
+                  src="/images/logo-malaysiahealthcare.png"
+                  alt="Malaysia Healthcare Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </div>
+              
+              {/* Divider */}
+              <div className="h-4 w-px bg-gray-300 mx-2"></div>
+              
+              {/* MYMT Logo */}
+              <div className="relative h-10 w-auto">
+                <Image
+                  src="/images/home4/MYMTlogo.png"
+                  alt="MYMT Logo"
+                  width={100}
+                  height={40}
+                  className="h-10 w-auto"
+                />
               </div>
             </Link>
           </div>
