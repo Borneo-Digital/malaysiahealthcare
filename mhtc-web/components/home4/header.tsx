@@ -82,23 +82,24 @@ export function Header() {
       )}
     >
       <Container>
-        <div className="flex h-16 items-center justify-between md:h-20">
-          <div className="flex items-center">
-            <Link href={`/${currentLocale}`} className="mr-6 flex items-center space-x-2">
-              <div className="relative h-10 w-40">
+        <div className="grid h-24 grid-cols-3 items-center md:h-24">
+          {/* Left: Logo */}
+          <div className="flex items-center justify-start">
+            <Link href={`/${currentLocale}`} className="flex items-center space-x-2">
+              <div className="relative h-20 w-80">
               <Image
-              src="/images/logo-malaysiahealthcare.png"
-              alt="Malaysia Healthcare Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              src="/images/home4/MYMTlogo.png"
+              alt="MYMT Logo"
+              width={240}
+              height={80}
+              className="h-20 w-auto"
               />
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center md:flex">
+          {/* Center: Desktop Navigation */}
+          <nav className="hidden items-center justify-center md:flex">
             <ul className="flex space-x-1">
               {mainNavItems.map((item) => (
                 <li key={item.href} className="relative">
@@ -107,7 +108,9 @@ export function Header() {
                     variant="ghost"
                     className={cn(
                       "text-base transition-colors duration-150",
-                      pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
+                      pathname === `/${currentLocale}${item.href}` 
+                        ? "text-[#C8102E] bg-red-50 font-semibold" 
+                        : "text-foreground hover:text-[#C8102E]",
                     )}
                   >
                     {item.external ? (
@@ -127,7 +130,8 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center space-x-2">
+          {/* Right: Actions */}
+          <div className="flex items-center justify-end space-x-2">
             {/* Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -190,8 +194,10 @@ export function Header() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={cn(
-                        "block font-medium transition-colors duration-150",
-                        pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
+                        "block font-medium transition-colors duration-150 px-3 py-2 rounded-md",
+                        pathname === `/${currentLocale}${item.href}` 
+                          ? "text-[#C8102E] bg-red-50 font-semibold" 
+                          : "text-foreground hover:text-[#C8102E] hover:bg-gray-50",
                       )}
                     >
                       {item.title}
@@ -200,8 +206,10 @@ export function Header() {
                     <Link
                       href={`/${currentLocale}${item.href}`}
                       className={cn(
-                        "block font-medium transition-colors duration-150",
-                        pathname === `/${currentLocale}${item.href}` ? "text-[#C8102E]" : "text-foreground",
+                        "block font-medium transition-colors duration-150 px-3 py-2 rounded-md",
+                        pathname === `/${currentLocale}${item.href}` 
+                          ? "text-[#C8102E] bg-red-50 font-semibold" 
+                          : "text-foreground hover:text-[#C8102E] hover:bg-gray-50",
                       )}
                     >
                       {item.title}
