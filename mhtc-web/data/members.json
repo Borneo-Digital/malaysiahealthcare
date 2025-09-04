@@ -600,19 +600,6 @@
     ],
     "selangor": [
       {
-        "name": "Avisena Specialist Hospital",
-        "address": [
-          "1, Jalan Indah 15/2,",
-          "Seksyen 15, Shah Alam,",
-          "40200 Shah Alam,",
-          "Selangor, Malaysia"
-        ],
-        "phone": "+603-5522 8999",
-        "email": "",
-        "website": "https://www.avisena.com.my/",
-        "specialties": ["Cardiology", "Orthopedics", "Oncology"]
-      },
-      {
         "name": "Ara Damansara Medical Centre",
         "address": [
           "2, Jalan PJU 1A/20,",
@@ -624,19 +611,6 @@
         "email": "",
         "website": "https://aradamansaramedicalcentre.com/",
         "specialties": ["General Medicine", "Emergency Care", "Surgery"]
-      },
-      {
-        "name": "AVISENA Women's & Children's Specialist Hospital",
-        "address": [
-          "26, Jalan Indah 15/2,",
-          "Seksyen 15, Shah Alam,",
-          "40200 Shah Alam,",
-          "Selangor, Malaysia"
-        ],
-        "phone": "+603-5522 8800",
-        "email": "",
-        "website": "https://www.avisena.com.my/",
-        "specialties": ["Women's Health", "Pediatrics", "Obstetrics"]
       },
       {
         "name": "Beacon Hospital",
