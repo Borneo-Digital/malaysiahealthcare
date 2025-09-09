@@ -765,7 +765,7 @@
         ],
         "phone": "+603-7874 2211",
         "email": "",
-        "website": "https://www.sunwaymedical.com/",
+        "website": "https://www.sunwaymedicaldamansara.com.my/en/",
         "specialties": ["General Medicine", "Specialist Services", "Health Screening"]
       },
       {
@@ -778,7 +778,7 @@
         ],
         "phone": "+603-7491 2300",
         "email": "",
-        "website": "https://www.sunwaymedical.com/en/centres-of-excellence/fertility-centre",
+        "website": "https://sunwayfertility.com.my",
         "specialties": ["IVF", "Fertility Preservation", "Reproductive Surgery"]
       },
       {
@@ -821,7 +821,7 @@
         "specialties": ["Dentistry", "Orthodontics", "Maxillofacial Surgery"]
       },
       {
-        "name": "Damansara Specialist Hospital",
+        "name": "Damansara 2 Specialist Hospital",
         "address": [
           "119, Jalan SS20/10,",
           "Damansara Kim,",
@@ -830,7 +830,7 @@
         ],
         "phone": "+603-7718 1000",
         "email": "",
-        "website": "https://kpjhealth.com.my/damansara",
+        "website": "https://kpjhealth.com.my/damansara-2",
         "specialties": ["Cardiology", "Oncology", "Neurology"]
       }
     ],
@@ -948,7 +948,7 @@
         ],
         "phone": "+604-226 9999",
         "email": "",
-        "website": "https://nhearthospital.com/",
+        "website": "https://nhearthospital.com",
         "specialties": ["Cardiology", "Cardiac Surgery", "Interventional Cardiology"]
       },
       {
@@ -972,7 +972,7 @@
         ],
         "phone": "+604-643 3888",
         "email": "",
-        "website": "https://www.sunwaymedical.com/",
+        "website": "https://www.sunwaymedical.com/penang/",
         "specialties": ["Oncology", "Cardiology", "Neurology"]
       },
       {
@@ -984,7 +984,7 @@
         ],
         "phone": "+604-229 1818",
         "email": "",
-        "website": "https://starfertility.life/",
+        "website": "https://starfertility.life",
         "specialties": ["IVF", "Reproductive Medicine", "Fertility Preservation"]
       }
     ],
