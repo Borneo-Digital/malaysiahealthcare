@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { Button } from "@/components/home4/ui/button"
 import { FadeIn } from "@/components/home4/animations/fade-in"
@@ -74,10 +75,12 @@ export function TestimonialCarousel({
           {/* Author */}
           <div className="flex items-center gap-4">
             {currentTestimonial.image && (
-              <img
+              <Image
                 src={currentTestimonial.image}
                 alt={currentTestimonial.name}
-                className="w-12 h-12 rounded-full object-cover"
+                width={48}
+                height={48}
+                className="rounded-full object-cover"
               />
             )}
             <div>

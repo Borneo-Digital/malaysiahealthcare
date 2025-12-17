@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ArrowRight, Calendar, MapPin, Users } from "lucide-react"
 import { Button } from "@/components/home4/ui/button"
 import { Container } from "@/components/home4/ui/container"
@@ -53,10 +54,12 @@ export function InteractiveHero({
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src={backgroundImage}
           alt="Healthcare background"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>

@@ -3,6 +3,7 @@ import { Locale } from "@/types/i18n";
 import { getServerTranslations } from "@/utils/translations";
 import { HomeTranslations } from "@/types/translations";
 import Image from "next/image"
+import Link from "next/link"
 import { Header } from "@/components/home4/header"
 import { Footer } from "@/components/home4/footer"
 import Hero4 from "@/components/home4/hero4"
@@ -16,10 +17,11 @@ import Testimonials from "@/components/home4/testimonials"
 import { ArrowRight } from "lucide-react"
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const homeT = getServerTranslations<HomeTranslations>(locale, "home");
 
   return {
@@ -136,12 +138,12 @@ export default function HomePage() {
                       className="group bg-white text-[#BE1E2D] hover:bg-gray-50 hover:scale-105 transition-all duration-300 text-base md:text-lg px-8 py-4 font-semibold shadow-lg rounded-lg"
                       asChild
                     >
-                      <a href="/contact">
+                      <Link href="/contact">
                         <span className="flex items-center gap-2">
                           Contact Our Team
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                         </span>
-                      </a>
+                      </Link>
                     </Button>
                     
                     <Button 

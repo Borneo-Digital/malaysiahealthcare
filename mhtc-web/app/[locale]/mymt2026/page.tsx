@@ -1,44 +1,17 @@
-import { Metadata } from "next";
+"use client";
+
 import dynamic from "next/dynamic";
+import { Header } from "@/components/home4/header";
+import { Footer } from "@/components/home4/footer";
 
-// Dynamically import components to avoid hydration issues
-const Header = dynamic(() => import("@/components/home4/header").then(mod => ({ default: mod.Header })), { ssr: false });
-const Footer = dynamic(() => import("@/components/home4/footer").then(mod => ({ default: mod.Footer })), { ssr: false });
-const MYMT2026Hero = dynamic(() => import("@/components/home4/mymt2026-hero"), { ssr: false });
-const MYMT2026SocialMedia = dynamic(() => import("@/components/home4/mymt2026-social-media"), { ssr: false });
-const MYMT2026About = dynamic(() => import("@/components/home4/mymt2026-about"), { ssr: false });
-const MYMT2026WhatsHappening = dynamic(() => import("@/components/home4/mymt2026-whats-happening"), { ssr: false });
-const MYMT2026BrandGuideline = dynamic(() => import("@/components/home4/mymt2026-brand-guideline"), { ssr: false });
-const MYMT2026OurPartners = dynamic(() => import("@/components/home4/mymt2026-our-partners"), { ssr: false });
-const MYMT2026SupportedBy = dynamic(() => import("@/components/home4/mymt2026-supported-by"), { ssr: false });
-
-// Generate metadata dynamically based on locale
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  try {
-    const translations = await import(`@/locales/${locale}/mymt2026.json`).then(
-      (module) => module.default || module
-    );
-    
-    return {
-      title: translations.meta.title,
-      description: translations.meta.description,
-    };
-  } catch {
-    // Fallback to English if locale not found
-    const fallbackTranslations = await import(`@/locales/en/mymt2026.json`).then(
-      (module) => module.default || module
-    );
-    
-    return {
-      title: fallbackTranslations.meta.title,
-      description: fallbackTranslations.meta.description,
-    };
-  }
-}
+// Dynamically import heavy components to improve initial load
+const MYMT2026Hero = dynamic(() => import("@/components/home4/mymt2026-hero"));
+const MYMT2026SocialMedia = dynamic(() => import("@/components/home4/mymt2026-social-media"));
+const MYMT2026About = dynamic(() => import("@/components/home4/mymt2026-about"));
+const MYMT2026WhatsHappening = dynamic(() => import("@/components/home4/mymt2026-whats-happening"));
+const MYMT2026BrandGuideline = dynamic(() => import("@/components/home4/mymt2026-brand-guideline"));
+const MYMT2026OurPartners = dynamic(() => import("@/components/home4/mymt2026-our-partners"));
+const MYMT2026SupportedBy = dynamic(() => import("@/components/home4/mymt2026-supported-by"));
 
 export default function MYMT2026Page() {
   return (

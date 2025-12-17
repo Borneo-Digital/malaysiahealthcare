@@ -31,10 +31,11 @@ import { Locale } from "@/types/i18n";
 import { HealthcareTravelGuideTranslations } from "@/types/translations";
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const translations = getServerTranslations<HealthcareTravelGuideTranslations>(
     locale,
     "healthcare-travel-guide"
@@ -94,11 +95,12 @@ export async function generateMetadata({
 //   { title: "Post-Treatment", description: "Recovery and beyond", icon: Users },
 // ];
 
-export default function HealthcareTravelGuide({
-  params: { locale },
+export default async function HealthcareTravelGuide({
+  params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }) {
+  const { locale } = await params;
   const translations = getServerTranslations<HealthcareTravelGuideTranslations>(
     locale,
     "healthcare-travel-guide"

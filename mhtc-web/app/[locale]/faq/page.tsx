@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Header } from '@/components/home4/header'
 import { Footer } from '@/components/home4/footer'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -269,7 +270,7 @@ export default function FAQPage() {
                   className="bg-mhtc-primary hover:bg-mhtc-primary-hover text-white"
                   asChild
                 >
-                  <a href="/contact">Contact Our Team</a>
+                  <Link href="/contact">Contact Our Team</Link>
                 </Button>
                 <Button 
                   size="lg" 
@@ -277,7 +278,7 @@ export default function FAQPage() {
                   className="border-mhtc-primary text-mhtc-primary hover:bg-mhtc-primary hover:text-white"
                   asChild
                 >
-                  <a href="/plan">Plan Your Visit</a>
+                  <Link href="/plan">Plan Your Visit</Link>
                 </Button>
               </div>
             </div>
