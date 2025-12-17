@@ -15,10 +15,11 @@ export const metadata: Metadata = {
 }
 
 interface PostTreatmentPageProps {
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }
 
-export default function Home4PostTreatment({ params: { locale } }: PostTreatmentPageProps) {
+export default async function Home4PostTreatment({ params }: PostTreatmentPageProps) {
+  const { locale } = await params;
   const t = getServerTranslations<JourneyPostTreatmentTranslations>(locale, "journey-post-treatment")
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-grey-50/30">

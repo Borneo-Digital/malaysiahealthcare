@@ -19,10 +19,11 @@ import { MHTCChroniclesTranslations } from "@/types/translations";
 import { Newspaper, Calendar, ArrowRight } from "lucide-react";
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const translations = getServerTranslations<MHTCChroniclesTranslations>(
     locale,
     "mhtc-chronicles"
@@ -97,11 +98,12 @@ const newsArticles = [
   },
 ];
 
-export default function MHTCChronicles({
-  params: { locale },
+export default async function MHTCChronicles({
+  params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }) {
+  const { locale } = await params;
   const translations = getServerTranslations<MHTCChroniclesTranslations>(
     locale,
     "mhtc-chronicles"

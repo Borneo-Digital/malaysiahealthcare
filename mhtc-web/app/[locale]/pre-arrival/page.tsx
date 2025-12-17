@@ -18,10 +18,11 @@ export const metadata: Metadata = {
 }
 
 interface PreArrivalPageProps {
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }
 
-export default function Home4PreArrival({ params: { locale } }: PreArrivalPageProps) {
+export default async function Home4PreArrival({ params }: PreArrivalPageProps) {
+  const { locale } = await params;
   const t = getServerTranslations<JourneyPreArrivalTranslations>(locale, "journey-pre-arrival")
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">

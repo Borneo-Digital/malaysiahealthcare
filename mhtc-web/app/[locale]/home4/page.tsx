@@ -16,10 +16,11 @@ import { HomepageCTATranslations } from "@/types/translations"
 import { Locale } from "@/types/i18n"
 
 interface Home4PageProps {
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }
 
-export default function Home4Page({ params: { locale } }: Home4PageProps) {
+export default async function Home4Page({ params }: Home4PageProps) {
+  const { locale } = await params;
   const t = getServerTranslations<HomepageCTATranslations>(locale, "homepage/cta")
   return (
     <div className="flex min-h-screen flex-col">
